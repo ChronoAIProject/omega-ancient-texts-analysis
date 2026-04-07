@@ -1,0 +1,58 @@
+# Omega Ancient Texts Analysis Pipeline Configuration
+
+# 文本语料库
+texts:
+  sources:
+    - name: yijing
+      title: 易经 / I Ching
+      language: zh
+      path: texts/yijing/
+    - name: daodejing
+      title: 道德经 / Tao Te Ching
+      language: zh
+      path: texts/daodejing/
+    - name: elements
+      title: 几何原本 / Elements
+      language: en
+      path: texts/elements/
+
+# Omega 数学桥接
+omega:
+  automath_path: ../automath
+  discovery_json: ../automath/discovery/discovery_report.json
+  key_modules:
+    - Omega.Core
+    - Omega.Folding
+    - Omega.Zeta
+    - Omega.SPG
+    - Omega.GU
+
+# LLM 配置
+llm:
+  provider: openai  # openai | anthropic
+  model: gpt-5.4
+  temperature: 0.7
+  max_tokens: 4096
+  analysis_prompt: content/prompts/analysis.md
+  summary_prompt: content/prompts/summary.md
+
+# 发布配置
+publish:
+  platforms:
+    - name: twitter
+      enabled: true
+      max_length: 280
+    - name: linkedin
+      enabled: true
+    - name: youtube
+      enabled: false
+      channel_id: null
+  schedule:
+    frequency: daily
+    time: "09:00"
+    timezone: Asia/Singapore
+
+# n8n 集成
+n8n:
+  base_url: http://localhost:5678
+  webhook_path: /webhook/omega-publish

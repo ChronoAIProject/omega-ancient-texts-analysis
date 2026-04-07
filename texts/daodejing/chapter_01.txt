@@ -1,0 +1,20 @@
+道德经 — 第一章
+
+道可道，非常道；
+名可名，非常名。
+无名天地之始；
+有名万物之母。
+故常无，欲以观其妙；
+常有，欲以观其徼。
+此两者，同出而异名，
+同谓之玄。
+玄之又玄，众妙之门。
+
+--- Notes ---
+Source: 道德经 / Tao Te Ching (Laozi)
+Chapter: 1
+Key theme: The named and the nameless; duality generating multiplicity
+Mathematical note: The duality of 有/无 (being/non-being) mirrors the binary
+alphabet {0,1} of the golden-mean shift. The constraint x²=x+1 generates all
+structure from a single relation — "玄之又玄" (mystery upon mystery) resonates
+with the recursive self-similarity of the modular tower X_∞ = lim X_m.

@@ -1,0 +1,24 @@
+乾 — 第一卦
+
+乾：元，亨，利，贞。
+
+初九：潜龙勿用。
+九二：见龙在田，利见大人。
+九三：君子终日乾乾，夕惕若厉，无咎。
+九四：或跃在渊，无咎。
+九五：飞龙在天，利见大人。
+上九：亢龙有悔。
+用九：见群龙无首，吉。
+
+彖曰：大哉乾元，万物资始，乃统天。云行雨施，品物流形。大明终始，六位时成，时乘六龙以御天。乾道变化，各正性命，保合太和，乃利贞。首出庶物，万国咸宁。
+
+象曰：天行健，君子以自强不息。
+
+--- Notes ---
+Source: 周易 / Zhou Yi (Book of Changes)
+Hexagram: 1 (乾 Qian / The Creative)
+Structure: 6 yang lines (111111 in binary)
+Key theme: Pure yang, creative force, heaven
+Mathematical note: The 64 hexagrams form a 6-bit binary encoding (2^6 = 64).
+The golden-mean shift constraint (no consecutive 1s) selects F_8 = 21 valid hexagrams
+from the full set of 64, creating a natural Zeckendorf sublattice.

@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.env
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+*.wav
+*.mp4
+*.pdf
+node_modules/
+.DS_Store
