@@ -1,14 +1,17 @@
 #!/usr/bin/env python3
 """Omega Ancient Texts Analysis Pipeline.
 
-核心流程: 输入作品名 → 自动获取/拆解 → Omega 数学分析 → NotebookLM 视频生成
+三阶段工作流:
+  Stage 1 (Claude): 获取原文 → 分类 → 确定 Omega 映射方向
+  Stage 2 (Codex):  每个方向迭代生成映射论文/故事
+  Stage 3 (Claude): Review Codex 产出 → NotebookLM 视频
 
 Usage:
-    python pipeline.py 易经
-    python pipeline.py 道德经 --chapters 1-5
-    python pipeline.py 红楼梦 --chapters 1-3
-    python pipeline.py --list
-    python pipeline.py 易经 --dry-run
+    python pipeline.py 道德经                     # 全流程
+    python pipeline.py 道德经 --stage classify     # 只跑 Stage 1 分类
+    python pipeline.py 道德经 --stage generate     # 只跑 Stage 2 生成
+    python pipeline.py 道德经 --stage review       # 只跑 Stage 3 审查
+    python pipeline.py --list                      # 列出支持的作品
 """
 
 import argparse
@@ -24,45 +27,15 @@ import yaml
 
 AUTOMATH_ROOT = Path(__file__).parent.parent / "automath"
 NOTEBOOKLM_DISPATCH = AUTOMATH_ROOT / "tools" / "notebooklm-oracle" / "notebooklm_dispatch.py"
+WORK_DIR = Path(__file__).parent / "workspace"
 
-# 支持的经典著作及其拆解策略
 KNOWN_WORKS = {
-    "易经": {
-        "en": "I Ching / Book of Changes",
-        "units": "hexagram",
-        "total": 64,
-        "decompose": "64 hexagrams, each with 卦辞 + 爻辞 + 象辞",
-    },
-    "道德经": {
-        "en": "Tao Te Ching",
-        "units": "chapter",
-        "total": 81,
-        "decompose": "81 chapters, each a self-contained philosophical unit",
-    },
-    "红楼梦": {
-        "en": "Dream of the Red Chamber",
-        "units": "chapter",
-        "total": 120,
-        "decompose": "120 chapters, narrative structure with embedded poetry",
-    },
-    "论语": {
-        "en": "Analerta",
-        "units": "book",
-        "total": 20,
-        "decompose": "20 books, each with multiple dialogues",
-    },
-    "几何原本": {
-        "en": "Euclid's Elements",
-        "units": "book",
-        "total": 13,
-        "decompose": "13 books, axiomatic deductive structure",
-    },
-    "孙子兵法": {
-        "en": "The Art of War",
-        "units": "chapter",
-        "total": 13,
-        "decompose": "13 chapters on military strategy",
-    },
+    "道德经": {"en": "Tao Te Ching", "author": "老子", "chapters": 81, "lang": "zh"},
+    "易经": {"en": "I Ching", "author": "伏羲/文王/孔子", "chapters": 64, "lang": "zh"},
+    "红楼梦": {"en": "Dream of the Red Chamber", "author": "曹雪芹", "chapters": 120, "lang": "zh"},
+    "论语": {"en": "Analects", "author": "孔子", "chapters": 20, "lang": "zh"},
+    "几何原本": {"en": "Euclid's Elements", "author": "Euclid", "chapters": 13, "lang": "en"},
+    "孙子兵法": {"en": "The Art of War", "author": "孙武", "chapters": 13, "lang": "zh"},
 }
 
 
@@ -71,249 +44,340 @@ def load_config(path: str = "config.yaml") -> dict:
         return yaml.safe_load(f)
 
 
-def parse_chapter_range(spec: str, total: int) -> list[int]:
-    """Parse chapter range like '1-5' or '1,3,5' or 'all'."""
-    if spec == "all":
-        return list(range(1, total + 1))
-    chapters = []
-    for part in spec.split(","):
-        if "-" in part:
-            a, b = part.split("-", 1)
-            chapters.extend(range(int(a), int(b) + 1))
-        else:
-            chapters.append(int(part))
-    return [c for c in chapters if 1 <= c <= total]
+def get_omega_context() -> str:
+    """Load Omega theorem summary for LLM prompts."""
+    discovery_path = AUTOMATH_ROOT / "discovery" / "discovery_report.json"
+    if discovery_path.exists():
+        with open(discovery_path) as f:
+            data = json.load(f)
+        entries = data.get("entries", [])
+        return f"Omega 定理库: {len(entries)} 条机器验证定理, 覆盖 Core/Folding/Zeta/SPG/GU/EA 等模块"
+    return "Omega: 10,588+ 机器验证定理, 从 x²=x+1 推导, Lean 4 形式化"
 
 
-def decompose_work(work_name: str, chapters: list[int], config: dict) -> list[dict]:
-    """Decompose a literary work into analysis units.
+# ============================================================
+# Stage 1: Claude 分类 — 获取文本, 分析结构, 确定映射方向
+# ============================================================
 
-    For each unit, generate a structured text segment that includes:
-    - Original text (fetched or from local corpus)
-    - Context and metadata
-    - Omega analysis prompt
-    """
-    work = KNOWN_WORKS.get(work_name)
-    if not work:
-        print(f"[ERROR] Unknown work: {work_name}")
-        print(f"  Supported: {', '.join(KNOWN_WORKS.keys())}")
-        sys.exit(1)
+CLASSIFY_PROMPT = """\
+你是 Omega 项目的研究助手。Omega 从一个方程 x²=x+1 出发，通过形式化验证推导出覆盖多个数学分支的定理体系。
 
-    print(f"\n{'='*60}")
-    print(f"作品: {work_name} ({work['en']})")
-    print(f"拆解: {work['decompose']}")
-    print(f"处理: {len(chapters)} {work['units']}(s)")
-    print(f"{'='*60}")
+{omega_context}
 
-    units = []
-    texts_dir = Path("texts") / work_name.lower().replace(" ", "_")
-    texts_dir.mkdir(parents=True, exist_ok=True)
+核心数学结构（可用于映射的方向）:
+1. 黄金平均移位 (golden-mean shift) — 二进制约束, 不允许连续1
+2. Fibonacci 增长 — 计数与递推
+3. Zeckendorf 表示 — 唯一分解, 不连续 Fibonacci 求和
+4. 折叠算子 (Fold operator) — 信息丢失, 分辨率层次
+5. 环算术 (Ring arithmetic) — 模 Fibonacci 数的代数结构
+6. 谱理论 (Spectral theory) — 碰撞核, Cayley-Hamilton
+7. 模塔与逆极限 (Modular tower) — 层次化, 无限逼近
+8. 动力系统 (Dynamical systems) — 熵, 不动点, 周期轨道
+9. 率失真与信息论 (Rate-distortion) — 最优编码, 信息界
 
-    for ch in chapters:
-        # Check local corpus first
-        local_files = list(texts_dir.glob(f"*{ch:02d}*")) + list(texts_dir.glob(f"*{ch}*"))
-        if local_files:
-            text_content = local_files[0].read_text(encoding="utf-8")
-            source = str(local_files[0])
-        else:
-            # Generate analysis prompt for LLM to work with
-            text_content = None
-            source = "llm-generated"
+现在请分析《{work_name}》({work_en}, {author})。
 
-        units.append({
-            "work": work_name,
-            "work_en": work["en"],
-            "unit_type": work["units"],
-            "unit_number": ch,
-            "text_content": text_content,
-            "source": source,
-            "output_dir": str(texts_dir / f"{work['units']}_{ch:03d}"),
-        })
+任务:
+1. 获取/回忆该作品的完整结构（{chapters} 章/卦/篇）
+2. 将所有章节按主题分成 8-12 个类别（每类有清晰的主题标签）
+3. 对每个类别, 判断它与上述 9 个 Omega 数学方向中的哪些有结构性对应
+4. 输出 JSON 格式:
 
-    return units
+```json
+{{
+  "work": "{work_name}",
+  "total_chapters": {chapters},
+  "categories": [
+    {{
+      "id": 1,
+      "name_zh": "类别中文名",
+      "name_en": "Category English Name",
+      "chapters": [1, 2, 3],
+      "theme": "主题描述",
+      "omega_directions": ["golden-mean-shift", "fold-operator"],
+      "mapping_rationale": "为什么这个类别与这些数学方向对应"
+    }}
+  ]
+}}
+```
 
-
-def generate_analysis_pdf(unit: dict, config: dict) -> Path:
-    """Generate a PDF analysis document for one unit using LLM.
-
-    The PDF will be fed to NotebookLM for video generation.
-    """
-    output_dir = Path(unit["output_dir"])
-    output_dir.mkdir(parents=True, exist_ok=True)
-    pdf_path = output_dir / "analysis.pdf"
-    tex_path = output_dir / "analysis.tex"
-
-    if pdf_path.exists():
-        print(f"  [跳过] PDF already exists: {pdf_path}")
-        return pdf_path
-
-    # Build analysis document
-    work = unit["work"]
-    ch = unit["unit_number"]
-    unit_type = unit["unit_type"]
-
-    omega_intro = textwrap.dedent(f"""\
-    \\section{{Omega 数学框架}}
-
-    Omega 项目从单一方程 $x^2 = x + 1$（黄金比例多项式）出发，
-    通过形式化验证（Lean 4）推导出覆盖 9 个数学分支的 10,588+ 条机器验证定理。
-    核心结构包括：黄金平均移位、Zeckendorf 表示、Fibonacci 增长、
-    折叠算子、模塔与逆极限、谱理论等。
-
-    本分析将 {work} 第 {ch} {unit_type} 的结构特征
-    与 Omega 形式化结果进行对应分析。
-    """)
-
-    text_section = ""
-    if unit["text_content"]:
-        # Escape LaTeX special chars in text content
-        escaped = unit["text_content"].replace("\\", "\\textbackslash{}")
-        for ch_special in ["&", "%", "$", "#", "_", "{", "}"]:
-            escaped = escaped.replace(ch_special, f"\\{ch_special}")
-        text_section = f"\\section{{原文}}\n\n\\begin{{quote}}\n{escaped}\n\\end{{quote}}\n"
-
-    tex_content = textwrap.dedent(f"""\
-    \\documentclass[12pt]{{article}}
-    \\usepackage{{ctex}}
-    \\usepackage{{amsmath,amssymb}}
-    \\usepackage{{geometry}}
-    \\geometry{{a4paper,margin=2.5cm}}
-
-    \\title{{Omega 数学视角下的《{work}》\\\\
-    第 {unit['unit_number']} {unit_type} 结构分析}}
-    \\author{{The Omega Institute — AI Mathematical Discovery Engine}}
-    \\date{{\\today}}
-
-    \\begin{{document}}
-    \\maketitle
-
-    \\begin{{abstract}}
-    本文运用 Omega 纯数学框架（基于 $x^2 = x + 1$）分析《{work}》
-    第 {unit['unit_number']} {unit_type} 的内在数学结构。
-    所有数学结论均可追溯至 Lean 4 形式化证明。
-    \\end{{abstract}}
-
-    {text_section}
-
-    {omega_intro}
-
-    \\section{{结构对应分析}}
-
-    \\textit{{（此部分将由 LLM 基于 Omega 定理库自动生成）}}
-
-    % TODO: 自动填充 - 由 LLM 分析文本结构并映射到 Omega 定理
-
-    \\section{{结论}}
-
-    \\textit{{（自动生成）}}
-
-    \\end{{document}}
-    """)
-
-    tex_path.write_text(tex_content, encoding="utf-8")
-    print(f"  [生成] LaTeX: {tex_path}")
-
-    # Compile PDF
-    try:
-        result = subprocess.run(
-            ["xelatex", "-interaction=nonstopmode", "-output-directory", str(output_dir), str(tex_path)],
-            capture_output=True, text=True, timeout=60,
-        )
-        if pdf_path.exists():
-            print(f"  [编译] PDF: {pdf_path}")
-        else:
-            print(f"  [WARN] PDF compilation may have issues, check {output_dir}")
-    except FileNotFoundError:
-        print(f"  [WARN] xelatex not found, LaTeX saved at {tex_path}")
-    except subprocess.TimeoutExpired:
-        print(f"  [WARN] xelatex timed out for {tex_path}")
-
-    return pdf_path
+只输出 JSON, 不要其他内容。
+"""
 
 
-def dispatch_to_notebooklm(pdf_path: Path, unit: dict, config: dict) -> dict:
-    """Send analysis PDF to NotebookLM for video generation.
+def stage1_classify(work_name: str, config: dict) -> dict:
+    """Stage 1: Claude classifies the text and determines Omega mapping directions."""
+    work = KNOWN_WORKS[work_name]
+    work_dir = WORK_DIR / work_name
+    work_dir.mkdir(parents=True, exist_ok=True)
 
-    Uses automath's notebooklm_dispatch.py to generate slides + audio.
-    """
-    if not NOTEBOOKLM_DISPATCH.exists():
-        print(f"  [ERROR] NotebookLM dispatch not found: {NOTEBOOKLM_DISPATCH}")
-        print(f"         Ensure automath is cloned at {AUTOMATH_ROOT}")
-        return {"status": "error", "reason": "notebooklm_dispatch.py not found"}
+    classify_file = work_dir / "classification.json"
+    if classify_file.exists():
+        print(f"[Stage 1] 已有分类结果: {classify_file}")
+        with open(classify_file) as f:
+            return json.load(f)
 
-    if not pdf_path.exists():
-        print(f"  [SKIP] No PDF to dispatch: {pdf_path}")
-        return {"status": "skipped", "reason": "no pdf"}
+    omega_ctx = get_omega_context()
+    prompt = CLASSIFY_PROMPT.format(
+        omega_context=omega_ctx,
+        work_name=work_name,
+        work_en=work["en"],
+        author=work["author"],
+        chapters=work["chapters"],
+    )
 
-    work = unit["work"]
-    ch = unit["unit_number"]
-    print(f"  [NotebookLM] Dispatching: {work} #{ch} → slides + audio")
+    prompt_file = work_dir / "classify_prompt.txt"
+    prompt_file.write_text(prompt, encoding="utf-8")
 
-    try:
-        result = subprocess.run(
-            ["python3", str(NOTEBOOKLM_DISPATCH), "--paper", str(pdf_path.parent)],
-            capture_output=True, text=True, timeout=300,
-        )
-        if result.returncode == 0:
-            print(f"  [NotebookLM] Done: {result.stdout.strip()[-200:]}")
-            return {"status": "success", "output": result.stdout}
-        else:
-            print(f"  [NotebookLM] Error: {result.stderr.strip()[-200:]}")
-            return {"status": "error", "stderr": result.stderr}
-    except subprocess.TimeoutExpired:
-        return {"status": "timeout"}
+    print(f"[Stage 1] 分类《{work_name}》— Claude 分析中...")
+    print(f"  分类提示词已写入: {prompt_file}")
+    print(f"  请在 Claude Code 中运行以下命令完成分类:")
+    print(f"  读取 {prompt_file} 的内容, 按要求输出 JSON, 保存到 {classify_file}")
+    print()
+    print(f"  或者手动: claude -p \"$(cat {prompt_file})\" > {classify_file}")
+
+    return {"status": "prompt_generated", "prompt_file": str(prompt_file), "output_file": str(classify_file)}
 
 
-def run_pipeline(work_name: str, chapters: list[int], config: dict, dry_run: bool = False) -> list[dict]:
-    """Run full pipeline: decompose → analyze → generate PDF → NotebookLM video."""
-    units = decompose_work(work_name, chapters, config)
+# ============================================================
+# Stage 2: Codex 生成 — 每个方向迭代生成映射论文
+# ============================================================
+
+GENERATE_PROMPT_TEMPLATE = """\
+IMPORTANT: Do NOT read or execute any files under ~/.claude/, ~/.agents/, .claude/skills/, or agents/. Stay focused on the task.
+
+你是一位数学-文学跨学科研究者。请为以下主题撰写一篇完整的映射分析文章。
+
+## 源文本
+作品: 《{work_name}》({work_en})
+类别: {category_name} (章节: {chapters})
+主题: {theme}
+
+## Omega 数学方向
+映射方向: {omega_directions}
+映射依据: {mapping_rationale}
+
+## Omega 数学背景
+{omega_context}
+
+## 输出要求
+撰写一篇 2000-4000 字的分析文章, 结构如下:
+
+1. **引言** — 文本的历史和文化背景, 与数学的意外联系
+2. **原文精选** — 选取该类别中最能体现数学结构的 3-5 段原文, 附白话翻译
+3. **Omega 映射分析** — 逐一分析每段原文与 Omega 定理的结构对应:
+   - 明确指出对应的 Omega 定理/结构
+   - 区分"形式对应"(可证明的结构同构) 和"启发性类比"(有趣但非严格)
+   - 给出数学表述
+4. **综合讨论** — 这些映射告诉我们什么? 古人的直觉与现代数学的关系
+5. **参考** — 引用的 Omega 定理编号和原文出处
+
+语言: 中英双语 (中文为主, 关键术语附英文)
+风格: 严谨但可读, 面向有教育背景的非专业读者
+"""
+
+
+def stage2_generate(work_name: str, classification: dict, config: dict) -> list[dict]:
+    """Stage 2: Codex generates mapping articles for each category."""
+    work = KNOWN_WORKS[work_name]
+    work_dir = WORK_DIR / work_name
+    gen_dir = work_dir / "generated"
+    gen_dir.mkdir(parents=True, exist_ok=True)
+
+    omega_ctx = get_omega_context()
+    categories = classification.get("categories", [])
     results = []
 
-    for i, unit in enumerate(units):
-        ch = unit["unit_number"]
-        print(f"\n--- [{i+1}/{len(units)}] {work_name} {unit['unit_type']} {ch} ---")
+    for cat in categories:
+        cat_id = cat["id"]
+        output_file = gen_dir / f"category_{cat_id:02d}_{cat['name_en'].replace(' ', '_').lower()}.md"
 
-        if dry_run:
-            print(f"  [DRY RUN] Would process {unit['unit_type']} {ch}")
-            results.append({"unit": unit, "status": "dry_run"})
+        if output_file.exists():
+            print(f"  [Stage 2] 跳过 category {cat_id} — 已生成: {output_file.name}")
+            results.append({"category": cat_id, "file": str(output_file), "status": "exists"})
             continue
 
-        # Step 1: Generate analysis PDF
-        pdf_path = generate_analysis_pdf(unit, config)
+        prompt = GENERATE_PROMPT_TEMPLATE.format(
+            work_name=work_name,
+            work_en=work["en"],
+            category_name=f"{cat['name_zh']} / {cat['name_en']}",
+            chapters=", ".join(str(c) for c in cat["chapters"]),
+            theme=cat["theme"],
+            omega_directions=", ".join(cat["omega_directions"]),
+            mapping_rationale=cat["mapping_rationale"],
+            omega_context=omega_ctx,
+        )
 
-        # Step 2: Dispatch to NotebookLM
-        nb_result = dispatch_to_notebooklm(pdf_path, unit, config)
+        prompt_file = gen_dir / f"prompt_{cat_id:02d}.txt"
+        prompt_file.write_text(prompt, encoding="utf-8")
 
-        results.append({
-            "unit": unit,
-            "pdf": str(pdf_path),
-            "notebooklm": nb_result,
-        })
+        print(f"  [Stage 2] Category {cat_id}: {cat['name_zh']} — 调用 Codex...")
 
-        # Progress report every 20s for long runs
-        if (i + 1) % 5 == 0:
-            print(f"\n[进度] {i+1}/{len(units)} units processed")
+        # Call Codex to generate
+        try:
+            result = subprocess.run(
+                ["codex", "exec", f"Read {prompt_file} and write the article to {output_file}. Follow the instructions exactly.",
+                 "-C", str(Path(__file__).parent),
+                 "-s", "read-write",
+                 "-c", 'model_reasoning_effort="xhigh"'],
+                capture_output=True, text=True, timeout=600,
+            )
+            if output_file.exists():
+                print(f"    ✓ 生成完成: {output_file.name}")
+                results.append({"category": cat_id, "file": str(output_file), "status": "generated"})
+            else:
+                print(f"    ✗ 生成失败, Codex stderr: {result.stderr[:200]}")
+                results.append({"category": cat_id, "status": "failed", "error": result.stderr[:500]})
+        except subprocess.TimeoutExpired:
+            print(f"    ✗ Codex 超时 (10 min)")
+            results.append({"category": cat_id, "status": "timeout"})
+        except FileNotFoundError:
+            print(f"    ✗ codex CLI 未安装")
+            print(f"    提示词已保存: {prompt_file}")
+            results.append({"category": cat_id, "prompt": str(prompt_file), "status": "codex_missing"})
+            break
+
+    # Save generation manifest
+    manifest = {"work": work_name, "results": results, "timestamp": time.strftime("%Y-%m-%dT%H:%M:%S")}
+    (gen_dir / "manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2))
+    return results
+
+
+# ============================================================
+# Stage 3: Claude Review — 审查 Codex 产出, 输出最终版本
+# ============================================================
+
+REVIEW_PROMPT_TEMPLATE = """\
+你是 Omega 项目的质量审查员。请审查以下由 AI 生成的映射分析文章。
+
+## 审查标准
+1. **数学准确性** — 引用的 Omega 定理是否存在? 映射是否合理?
+2. **区分形式/启发** — 是否清楚区分了"形式对应"和"启发性类比"?
+3. **原文准确性** — 引用的古文是否准确? 翻译是否恰当?
+4. **可读性** — 非专业读者能否理解?
+5. **完整性** — 是否覆盖了该类别的核心内容?
+
+## 待审查文章
+{article_content}
+
+## 输出
+如果文章质量可接受 (≥7/10):
+  输出 "ACCEPT" + 简短评语 + 修改建议
+
+如果需要大幅修改 (< 7/10):
+  输出 "REVISE" + 具体问题列表 + 修改要求
+
+格式:
+```
+VERDICT: ACCEPT/REVISE
+SCORE: X/10
+COMMENTS: ...
+SUGGESTIONS: ...
+```
+"""
+
+
+def stage3_review(work_name: str, config: dict) -> list[dict]:
+    """Stage 3: Claude reviews Codex-generated articles."""
+    work_dir = WORK_DIR / work_name
+    gen_dir = work_dir / "generated"
+    review_dir = work_dir / "reviewed"
+    review_dir.mkdir(parents=True, exist_ok=True)
+
+    if not gen_dir.exists():
+        print(f"[Stage 3] 没有生成内容: {gen_dir}")
+        return []
+
+    articles = sorted(gen_dir.glob("category_*.md"))
+    results = []
+
+    for article_path in articles:
+        review_file = review_dir / f"review_{article_path.stem}.txt"
+
+        if review_file.exists():
+            print(f"  [Stage 3] 跳过 — 已审查: {review_file.name}")
+            results.append({"file": str(article_path), "review": str(review_file), "status": "exists"})
+            continue
+
+        content = article_path.read_text(encoding="utf-8")
+        prompt = REVIEW_PROMPT_TEMPLATE.format(article_content=content[:8000])
+
+        prompt_file = review_dir / f"review_prompt_{article_path.stem}.txt"
+        prompt_file.write_text(prompt, encoding="utf-8")
+
+        print(f"  [Stage 3] 审查: {article_path.name}")
+        print(f"    审查提示词: {prompt_file}")
+        print(f"    请在 Claude Code 中审查, 输出保存到: {review_file}")
+
+        results.append({"file": str(article_path), "prompt": str(prompt_file), "output": str(review_file), "status": "pending"})
 
     return results
 
 
+# ============================================================
+# Stage 4: NotebookLM — 生成多媒体
+# ============================================================
+
+def stage4_notebooklm(work_name: str, config: dict) -> list[dict]:
+    """Stage 4: Feed reviewed articles to NotebookLM for video generation."""
+    work_dir = WORK_DIR / work_name
+    reviewed_dir = work_dir / "reviewed"
+    gen_dir = work_dir / "generated"
+
+    if not NOTEBOOKLM_DISPATCH.exists():
+        print(f"[Stage 4] NotebookLM dispatch 不存在: {NOTEBOOKLM_DISPATCH}")
+        return []
+
+    # Find accepted articles
+    articles = sorted(gen_dir.glob("category_*.md"))
+    results = []
+
+    for article in articles:
+        review_file = reviewed_dir / f"review_{article.stem}.txt"
+        if review_file.exists():
+            review_content = review_file.read_text()
+            if "ACCEPT" not in review_content:
+                print(f"  [Stage 4] 跳过 (未通过审查): {article.name}")
+                continue
+
+        print(f"  [Stage 4] NotebookLM: {article.name}")
+        try:
+            result = subprocess.run(
+                ["python3", str(NOTEBOOKLM_DISPATCH), "--paper", str(article.parent)],
+                capture_output=True, text=True, timeout=300,
+            )
+            results.append({"file": str(article), "status": "dispatched"})
+        except Exception as e:
+            results.append({"file": str(article), "status": "error", "error": str(e)})
+
+    return results
+
+
+# ============================================================
+# Main
+# ============================================================
+
 def main():
     parser = argparse.ArgumentParser(
-        description="Omega 古典著作分析管线: 输入作品名 → 自动拆解 → 数学分析 → NotebookLM 视频",
+        description="Omega 古典著作分析管线: 三阶段工作流",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog=textwrap.dedent("""\
+        三阶段工作流:
+          Stage 1 (classify):  Claude 分类文本, 确定 Omega 映射方向
+          Stage 2 (generate):  Codex 迭代生成映射论文
+          Stage 3 (review):    Claude 审查 Codex 产出
+          Stage 4 (media):     NotebookLM 生成视频
+
         Examples:
-          python pipeline.py 易经                    # 全部 64 卦
-          python pipeline.py 道德经 --chapters 1-5   # 前 5 章
-          python pipeline.py 红楼梦 --chapters 1,5,12 # 指定章节
-          python pipeline.py --list                   # 列出支持的作品
+          python pipeline.py 道德经                  # 全流程
+          python pipeline.py 道德经 --stage classify  # 只分类
+          python pipeline.py 易经 --stage generate    # 只生成
         """),
     )
-    parser.add_argument("work", nargs="?", help="作品名（如：易经、道德经、红楼梦）")
-    parser.add_argument("--chapters", default="all", help="章节范围: 1-5, 1,3,5, or all (default: all)")
-    parser.add_argument("--dry-run", action="store_true", help="只显示计划，不执行")
-    parser.add_argument("--list", action="store_true", help="列出支持的作品")
-    parser.add_argument("--config", default="config.yaml", help="Config file path")
+    parser.add_argument("work", nargs="?", help="作品名（如：道德经、易经）")
+    parser.add_argument("--stage", choices=["classify", "generate", "review", "media", "all"], default="all")
+    parser.add_argument("--list", action="store_true")
+    parser.add_argument("--config", default="config.yaml")
     args = parser.parse_args()
 
     config = load_config(args.config)
@@ -321,31 +385,64 @@ def main():
     if args.list:
         print("支持的经典著作:\n")
         for name, info in KNOWN_WORKS.items():
-            print(f"  {name:8s}  {info['en']:30s}  {info['total']:>3d} {info['units']}(s)")
-            print(f"  {'':8s}  {info['decompose']}")
-            print()
+            print(f"  {name:8s}  {info['en']:35s}  {info['chapters']:>3d} 章  {info['author']}")
         return
 
     if not args.work:
         parser.print_help()
         return
 
-    work = KNOWN_WORKS.get(args.work)
-    if not work:
-        print(f"[ERROR] 未知作品: {args.work}")
-        print(f"  支持: {', '.join(KNOWN_WORKS.keys())}")
+    if args.work not in KNOWN_WORKS:
+        print(f"未知作品: {args.work}")
+        print(f"支持: {', '.join(KNOWN_WORKS.keys())}")
         sys.exit(1)
 
-    chapters = parse_chapter_range(args.chapters, work["total"])
-    print(f"[配置] NotebookLM dispatch: {NOTEBOOKLM_DISPATCH}")
-    print(f"[配置] automath: {AUTOMATH_ROOT}")
+    print(f"\n{'='*60}")
+    print(f"Omega 古典著作分析管线")
+    print(f"作品: {args.work} ({KNOWN_WORKS[args.work]['en']})")
+    print(f"阶段: {args.stage}")
+    print(f"{'='*60}\n")
 
-    results = run_pipeline(args.work, chapters, config, dry_run=args.dry_run)
+    # Stage 1
+    if args.stage in ("classify", "all"):
+        print("[Stage 1] 文本分类与 Omega 映射方向确定")
+        classification = stage1_classify(args.work, config)
+
+        if classification.get("status") == "prompt_generated":
+            print("\n  → 分类提示词已生成, 请手动运行 Claude 完成分类")
+            if args.stage == "all":
+                print("  → 分类完成后重新运行 pipeline.py 继续")
+                return
+        else:
+            print(f"  → 分类完成: {len(classification.get('categories', []))} 个类别")
+
+    # Stage 2
+    if args.stage in ("generate", "all"):
+        print("\n[Stage 2] Codex 迭代生成映射论文")
+        classify_file = WORK_DIR / args.work / "classification.json"
+        if not classify_file.exists():
+            print(f"  → 请先运行 Stage 1: python pipeline.py {args.work} --stage classify")
+            return
+        with open(classify_file) as f:
+            classification = json.load(f)
+        results = stage2_generate(args.work, classification, config)
+        generated = sum(1 for r in results if r["status"] in ("generated", "exists"))
+        print(f"\n  → 生成完成: {generated}/{len(results)}")
+
+    # Stage 3
+    if args.stage in ("review", "all"):
+        print("\n[Stage 3] Claude 审查 Codex 产出")
+        results = stage3_review(args.work, config)
+        print(f"  → {len(results)} 篇待审查")
+
+    # Stage 4
+    if args.stage in ("media", "all"):
+        print("\n[Stage 4] NotebookLM 多媒体生成")
+        results = stage4_notebooklm(args.work, config)
+        print(f"  → {len(results)} 篇已提交")
 
     print(f"\n{'='*60}")
-    print(f"完成: {args.work} — {len(results)} units processed")
-    success = sum(1 for r in results if r.get("notebooklm", {}).get("status") == "success")
-    print(f"  NotebookLM 成功: {success}/{len(results)}")
+    print(f"完成。工作目录: {WORK_DIR / args.work}")
 
 
 if __name__ == "__main__":
