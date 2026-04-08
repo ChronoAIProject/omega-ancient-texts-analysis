@@ -1,0 +1,212 @@
+{
+  "work": "易经",
+  "total_units": 64,
+  "unit_type": "hexagram",
+  "structural_note": "The 易经 hexagram system is a 6-bit binary encoding: each hexagram consists of 6 lines, each either yin (0) or yang (1), yielding 2^6 = 64 total states. This is not analogy — it IS the complete binary word space {0,1}^6. The golden-mean shift constraint (no consecutive 1s, the No11 predicate) selects exactly F_8 = 21 valid hexagrams from 64, partitioning the system into 21 stable words and 43 unstable words. The 8 trigrams (3-bit sub-units forming upper/lower halves) map to the ring X_3, with 5 GMS-valid trigrams (坤/Earth, 艮/Mountain, 坎/Water, 震/Thunder, 离/Fire) and 3 non-GMS trigrams (巽/Wind, 兑/Lake, 乾/Heaven). The fold operator maps each of the 43 non-GMS hexagrams to a unique GMS hexagram, creating a fiber structure. Hexagram 63 (既济, After Completion = 101010, the maximal alternating pattern) has the largest fiber of size 8, absorbing hexagrams 1, 5, 9, 13, 37, 43, 49, and itself. The traditional pairing structure (28 rotation pairs + 8 palindromes) is preserved under the GMS filter: GMS rotation pairs remain paired. The complement involution (yin↔yang) exchanges GMS and non-GMS hexagrams in all but one case: the pair 63↔64 are both GMS-valid, being the two maximal alternating patterns 101010 and 010101. This is the unique complement-fixed pair within the GMS subspace.",
+  "binary_encoding_detail": {
+    "alphabet": "{0, 1} where 0 = yin (broken line), 1 = yang (solid line)",
+    "word_length": 6,
+    "reading_order": "bottom line (line 1) to top line (line 6)",
+    "total_words": 64,
+    "gms_valid_count": 21,
+    "gms_valid_count_equals": "F_8 = 21 (8th Fibonacci number)",
+    "non_gms_count": 43,
+    "trigram_decomposition": "Each hexagram = lower trigram (lines 1-3) + upper trigram (lines 4-6), giving the product structure {0,1}^3 × {0,1}^3",
+    "gms_valid_trigrams": ["坤 000 (Earth)", "艮 001 (Mountain)", "坎 010 (Water)", "震 100 (Thunder)", "离 101 (Fire)"],
+    "gms_valid_trigram_count_equals": "F_5 = 5 (5th Fibonacci number)",
+    "non_gms_trigrams": ["巽 011 (Wind)", "兑 110 (Lake)", "乾 111 (Heaven)"]
+  },
+  "categories": [
+    {
+      "id": 1,
+      "name_zh": "创生与纯态",
+      "name_en": "Primal Creation and Pure States",
+      "hexagrams": [1, 2, 11, 12],
+      "theme": "The four hexagrams of pure or maximally contrasting trigram combinations. Hex 1 (乾/Qian, 111111) is pure yang — all lines active, the Creative force. Hex 2 (坤/Kun, 000000) is pure yin — all lines receptive, the Receptive ground. Hex 11 (泰/Tai, 111000) is heaven below earth above — dynamic peace through creative interpenetration. Hex 12 (否/Pi, 000111) is earth below heaven above — stagnation from separation. These four define the binary extremes and their primary interactions: the full state space {000000, 111111} and the two fundamental 3+3 partitions.",
+      "omega_directions": ["golden-mean-shift", "fibonacci-growth", "modular-tower-inverse-limit"],
+      "mapping_rationale": "Hex 1 (111111) maximally violates the No11 constraint with five consecutive 11 pairs — it is the furthest from GMS compliance. Hex 2 (000000) trivially satisfies No11 — it is the zero word, the unique GMS element with no yang. Together they define the full binary alphabet's range. The golden-mean shift acts as the fundamental constraint selecting structure from this raw binary space, exactly as the I Ching's generative cosmology derives the 64 hexagrams from the yin-yang duality. The Fibonacci growth law F_{m+2} counts valid states at each word length m, and the passage 太极生两仪, 两仪生四象, 四象生八卦 (Taiji generates two modes, two generate four images, four generate eight trigrams) is precisely the recursive doubling that Fibonacci growth refines under constraint. The modular tower captures how the system at resolution 6 (hexagrams) contains and extends the system at resolution 3 (trigrams): X_6 projects onto X_3 × X_3 with boundary interaction.",
+      "formal_strength": "strong"
+    },
+    {
+      "id": 2,
+      "name_zh": "动态变易与循环",
+      "name_en": "Dynamic Change and Cyclic Completion",
+      "hexagrams": [3, 4, 23, 24, 43, 44, 63, 64],
+      "theme": "Hexagrams of transition, beginning/ending, and cyclic return. Hex 3 (屯/Zhun, 100010) and 4 (蒙/Meng, 010001) open the sequence after the primal pair — difficulty at the beginning and youthful inexperience. Hex 23 (剥/Bo, 000001) and 24 (复/Fu, 100000) are stripping away and return — the single yang line at top vs. bottom, the minimal non-zero GMS states. Hex 43 (夬/Guai, 111110) and 44 (姤/Gou, 011111) are breakthrough and encounter — nearly pure yang/yin with one line flipped. Hex 63 (既济/Ji Ji, 101010) and 64 (未济/Wei Ji, 010101) are 'after completion' and 'before completion,' the maximal alternating patterns that close the entire sequence. The 63-64 pair is structurally unique: they are the only complement pair where BOTH hexagrams are GMS-valid.",
+      "omega_directions": ["dynamical-systems", "golden-mean-shift", "fold-operator"],
+      "mapping_rationale": "Hex 63 (101010) and 64 (010101) are the two fixed points of maximal alternation in {0,1}^6 under the No11 constraint — they achieve the maximum possible yang density (3/6) while remaining GMS-valid. In dynamical systems terms, the alternating patterns ...10101... are the unique period-2 orbit of the shift map σ on X_∞: σ(10101...) = 01010... and σ(01010...) = 10101..., forming a 2-cycle. This precisely mirrors the I Ching's placement of 既济 and 未济 as the terminal pair, encoding perpetual oscillation rather than static completion — 'after completion' immediately becomes 'before completion.' The fold operator maps the maximal-yang hexagram 1 (111111, the Creative) to hexagram 63 (101010, After Completion): the Creative's full yang force, when subjected to the golden-mean constraint, naturally resolves into the balanced alternating pattern. Fiber analysis: hex 63 has the largest fold-fiber (8 preimages: 1, 5, 9, 13, 37, 43, 49, plus itself), making it the maximally absorptive attractor — the dynamical system's primary sink.",
+      "formal_strength": "strong"
+    },
+    {
+      "id": 3,
+      "name_zh": "困阻与险难",
+      "name_en": "Obstruction, Danger, and the Abysmal",
+      "hexagrams": [5, 6, 29, 39, 47, 48],
+      "theme": "Hexagrams centered on the trigram 坎/Kan (Water/Abyss, 010) — danger, obstruction, difficulty requiring patience and depth. Hex 29 (坎/Kan, 010010) is doubled Water — the Abysmal, danger upon danger. Hex 5 (需/Xu, 111010) is waiting before danger. Hex 6 (讼/Song, 010111) is conflict arising from danger. Hex 39 (蹇/Jian, 001010) is obstruction — Mountain over Water. Hex 47 (困/Kun, 010110) is oppression/exhaustion — Lake over Water, drained. Hex 48 (井/Jing, 011010) is the Well — Wood over Water, the inexhaustible source beneath difficulty. Note: hex 29 (010010) is GMS-valid and palindromic — its pattern of isolated yang lines surrounded by yin represents danger that is structurally stable.",
+      "omega_directions": ["golden-mean-shift", "fold-operator", "fiber-structure"],
+      "mapping_rationale": "Hex 29 (坎, 010010) is GMS-valid: its yang lines are maximally separated, never adjacent. This is the structural encoding of 坎's philosophical meaning — danger that is navigable precisely because the yang (active) elements do not cluster. The No11 constraint formalizes the wisdom that concentrated force (consecutive yang) in a dangerous situation is self-defeating; spaced engagement survives. The fold operator reveals the fibers: hex 29's fiber contains hexagrams 48 (011010), 57 (011011), and 59 (010011), all of which involve the 巽/Xun (Wind/Wood, 011) trigram. The fold collapses Wind's consecutive yin-yang-yang into Water's spaced pattern — philosophically, the gentle penetration of Wind resolves into Water's depth. Fiber size 4 (moderate absorption capacity) corresponds to the I Ching's teaching that obstruction can be navigated but not eliminated — it absorbs a bounded number of unstable configurations.",
+      "formal_strength": "strong"
+    },
+    {
+      "id": 4,
+      "name_zh": "止静与内省",
+      "name_en": "Stillness, Restraint, and Inner Contemplation",
+      "hexagrams": [15, 16, 20, 33, 52, 53, 54, 62],
+      "theme": "Hexagrams of keeping still, modesty, contemplation, and gradual development — centered on 艮/Gen (Mountain, 001) and themes of restraint. Hex 52 (艮/Gen, 001001) is doubled Mountain — keeping still, meditation. Hex 15 (谦/Qian, 001000) is Modesty — Mountain beneath Earth. Hex 16 (豫/Yu, 000100) is Enthusiasm/Preparation — Thunder beneath Earth. Hex 20 (观/Guan, 000011) is Contemplation. Hex 33 (遯/Dun, 001111) is Retreat. Hex 53 (渐/Jian, 001011) is Gradual Development. Hex 54 (归妹/Gui Mei, 110100) is the Marrying Maiden — Lake over Thunder, premature movement. Hex 62 (小过/Xiao Guo, 001100) is Small Exceeding — slight transgression of limits. Both hex 52 (001001) and 15 (001000) are GMS-valid, while 33 and 53 violate No11 through their upper-trigram yang clusters.",
+      "omega_directions": ["golden-mean-shift", "zeckendorf-representation", "rate-distortion-information-theory"],
+      "mapping_rationale": "Hex 52 (艮, 001001) is GMS-valid with the pattern of yang lines at positions 1 and 4 (counting from bottom) — maximally spaced with gap 2 between each yang. This is a Zeckendorf-type decomposition: the positions of 1-bits in a No11 word correspond to non-consecutive Fibonacci indices, and 001001 places its weight at exactly the positions that maintain non-adjacency. The Zeckendorf representation's uniqueness theorem (every natural number has exactly one non-consecutive Fibonacci decomposition) is the arithmetic counterpart of Mountain's philosophical teaching: true stillness is a unique, stable configuration, not one of many options. Rate-distortion theory connects through the restraint theme: hex 15 (Modesty) and 52 (Keeping Still) encode the principle that operating below capacity (using fewer yang lines than maximum) preserves fidelity. The rate-distortion bound formalizes this: below the critical rate, the system maintains optimal signal quality; exceeding it (as in hex 62, Small Exceeding, which violates No11) introduces distortion.",
+      "formal_strength": "moderate"
+    },
+    {
+      "id": 5,
+      "name_zh": "刚健与突破",
+      "name_en": "Strength, Power, and Forceful Advance",
+      "hexagrams": [9, 10, 13, 14, 25, 26, 34, 43],
+      "theme": "Hexagrams of strong yang force, creative power, and breakthrough — dominated by 乾/Qian (Heaven, 111) trigram combinations. Hex 9 (小畜/Xiao Xu, 111011) and 10 (履/Lü, 110111) are the first non-trivial Heaven combinations. Hex 13 (同人/Tong Ren, 101111) is Fellowship with Heaven. Hex 14 (大有/Da You, 111101) is Great Possession. Hex 25 (无妄/Wu Wang, 100111) is Innocence with Heaven above. Hex 26 (大畜/Da Xu, 111001) is Great Taming — Heaven contained by Mountain. Hex 34 (大壮/Da Zhuang, 111100) is Great Power — Thunder over Heaven. Hex 43 (夬/Guai, 111110) is Breakthrough — Lake over Heaven, five yang lines surging. ALL eight hexagrams violate the No11 constraint — excessive yang concentration is structurally unstable.",
+      "omega_directions": ["fold-operator", "fiber-structure", "golden-mean-shift"],
+      "mapping_rationale": "Every hexagram in this category violates the No11 constraint, making them structurally unstable in the golden-mean shift. This is the central formal insight: the I Ching's teaching that excessive force is unsustainable maps precisely to GMS instability. The fold operator resolves each: hex 1→63, hex 9→63, hex 13→63, hex 43→63 (all fold to After Completion); hex 10→21, hex 25→21 (fold to Biting Through); hex 14→22, hex 26→22 (fold to Grace); hex 34→36 (folds to Darkening of Light). The fiber structure is revealing: the most yang-heavy hexagrams (5-6 yang lines) all fold to hex 63 (101010), the balanced alternating pattern. This is the Omega formalization of the I Ching's insistence that 亢龙有悔 ('the arrogant dragon will have cause to repent,' hex 1 line 6): maximum yang necessarily collapses to balanced alternation under the constraint. The fiber of hex 63 (size 8) is the largest, precisely because it absorbs all the most forceful configurations.",
+      "formal_strength": "strong"
+    },
+    {
+      "id": 6,
+      "name_zh": "柔顺与养育",
+      "name_en": "Receptivity, Nourishment, and Gentle Cultivation",
+      "hexagrams": [7, 8, 19, 24, 27, 35, 36, 46],
+      "theme": "Hexagrams of yin predominance (0-2 yang lines), nourishment, and gradual cultivation from below. Hex 7 (师/Shi, 010000) is the Army — disciplined force emerging from receptive ground. Hex 8 (比/Bi, 000010) is Holding Together — unity through yielding. Hex 19 (临/Lin, 110000) is Approach — two yang lines advancing from below. Hex 24 (复/Fu, 100000) is Return — the single yang returns at the bottom, seed of renewal. Hex 27 (颐/Yi, 100001) is Nourishment — yang at top and bottom framing receptive emptiness. Hex 35 (晋/Jin, 000101) is Progress — Fire over Earth, the sun rising. Hex 36 (明夷/Ming Yi, 101000) is Darkening of Light — Earth over Fire, light hidden within. Hex 46 (升/Sheng, 011000) is Pushing Upward. All GMS-valid hexagrams here (7, 8, 24, 27, 35, 36) have sparse yang — 1 or 2 lines only.",
+      "omega_directions": ["golden-mean-shift", "fibonacci-growth", "zeckendorf-representation"],
+      "mapping_rationale": "The GMS-valid hexagrams with 0-2 yang lines form the 'sparse' regime of the golden-mean shift — words with few 1-bits, all necessarily non-consecutive. These correspond to the lower Fibonacci ranks in the Zeckendorf decomposition: small numbers have short, sparse Zeckendorf representations. Hex 24 (复/Fu, 100000) encodes the number F_6 = 8 in positional Fibonacci representation (a single 1 in the highest position) — it IS the Fibonacci number as a binary word. Hex 2 (000000) = 0, hex 24 (100000) = F_6, hex 8 (000010) = F_2, hex 7 (010000) = F_4. The Fibonacci growth law |X_m| = F_{m+2} describes how these sparse configurations proliferate: at each resolution level, the count of valid sparse words grows by the Fibonacci recurrence, mirroring the I Ching's teaching that Return (hex 24) — the smallest yang presence — is the seed from which all growth emerges (一阳来复, 'one yang returns').",
+      "formal_strength": "strong"
+    },
+    {
+      "id": 7,
+      "name_zh": "交感与关系",
+      "name_en": "Mutual Influence, Union, and Relationship",
+      "hexagrams": [17, 18, 31, 32, 37, 38, 41, 42, 45, 58, 61],
+      "theme": "Hexagrams of mutual stimulation, decrease/increase pairs, family, and emotional bonds. Hex 31 (咸/Xian, 001110) is Influence/Wooing — Mountain beneath Lake, mutual attraction. Hex 32 (恒/Heng, 011100) is Duration — enduring relationship. Hex 37 (家人/Jia Ren, 101011) is Family — Fire within Wind, domestic order. Hex 38 (睽/Kui, 110101) is Opposition — Fire above Lake, estrangement within connection. Hex 41 (损/Sun, 110001) and 42 (益/Yi, 100011) are Decrease and Increase — the reciprocal transfer pair. Hex 17 (随/Sui, 100110) is Following — Lake over Thunder. Hex 18 (蛊/Gu, 011001) is Decay/Repair — Mountain over Wind. Hex 45 (萃/Cui, 000110) is Gathering Together. Hex 58 (兑/Dui, 110110) is Joyous Lake doubled. Hex 61 (中孚/Zhong Fu, 110011) is Inner Truth — Wind over Lake, mutual trust.",
+      "omega_directions": ["ring-arithmetic", "spectral-theory", "fold-operator"],
+      "mapping_rationale": "The ring arithmetic X_m ≅ Z/F_{m+2}Z formalizes mutual interaction: addition and multiplication in the ring are operations where two elements combine to produce a third, all within the modular structure. The Decrease/Increase pair (hex 41-42) maps directly to the ring's additive inverse: stableAdd(a, stableNeg(a)) = stableZero, and decrease of one party is increase of another, conserving the total modulo F_{m+2}. The spectral theory (collision kernel analysis) captures how hexagrams 'interact': the collision kernel K(a,b) counts fiber overlaps between elements a and b, quantifying how much two hexagrams share in their pre-fold structure. The Cayley-Hamilton theorem for collision matrices gives the characteristic polynomial governing these interactions, with eigenvalues determining the dominant modes of coupling. Hexagrams 31-32 (Influence/Duration) embody the spectral decomposition: attraction (hex 31) is the dominant eigenmode, while duration (hex 32) is the persistent component after transients decay.",
+      "formal_strength": "moderate"
+    },
+    {
+      "id": 8,
+      "name_zh": "变革与重构",
+      "name_en": "Revolution, Transformation, and Structural Renewal",
+      "hexagrams": [21, 22, 28, 30, 49, 50, 55, 56],
+      "theme": "Hexagrams of radical change, excess demanding restructuring, and transformation of form. Hex 49 (革/Ge, 101110) is Revolution — Lake over Fire, fundamental change. Hex 50 (鼎/Ding, 011101) is the Cauldron — Fire over Wind, transformative vessel. Hex 28 (大过/Da Guo, 011110) is Great Exceeding — excess weight bending the beam. Hex 30 (离/Li, 101101) is Clinging Fire doubled — illumination, transformation through clarity. Hex 21 (噬嗑/Shi He, 100101) is Biting Through — Fire over Thunder, breaking through obstruction. Hex 22 (贲/Bi, 101001) is Grace — Mountain over Fire, aesthetic form emerging from transformation. Hex 55 (丰/Feng, 101100) is Abundance — Thunder over Fire, fullness at peak. Hex 56 (旅/Lü, 001101) is the Wanderer — Fire over Mountain, the displaced seeking new form. Hex 21 and 22 are both GMS-valid; 28, 30, 49, 50, 55, 56 are not.",
+      "omega_directions": ["fold-operator", "fiber-structure", "dynamical-systems"],
+      "mapping_rationale": "Revolution and transformation map to the fold operator's action: each non-GMS hexagram in this category is structurally 'excessive' (containing consecutive 1s) and must be resolved. The fold IS the revolution — it rewrites the pattern into a stable configuration. Hex 49 (革/Revolution, 101110) folds to hex 63 (101010, After Completion): revolution resolves into balanced alternation. Hex 50 (鼎/Cauldron, 011101) folds to hex 64 (010101, Before Completion): the transformative vessel produces a state that is complete yet ready for new beginning. The fiber structure reveals the 'cost' of revolution: hex 21 (Biting Through, 100101) has fiber size 4, absorbing hexagrams 10, 25, and 38 — it is the stable form that forceful configurations resolve into when they engage with the lower trigram Thunder (action). In dynamical systems, these hexagrams trace orbits under the shift map that pass through structurally distinct regions — revolution is formally a trajectory that crosses between different symbolic dynamics regimes, with entropy h_top = log(φ) bounding the total complexity of transformative pathways.",
+      "formal_strength": "strong"
+    },
+    {
+      "id": 9,
+      "name_zh": "渐进与发展",
+      "name_en": "Gradual Progress, Development, and Measured Advance",
+      "hexagrams": [40, 46, 48, 51, 53, 57, 59, 60],
+      "theme": "Hexagrams of gradual development, deliverance through measured steps, and progressive unfolding. Hex 40 (解/Xie, 010100) is Deliverance — Thunder over Water, release from tension. Hex 46 (升/Sheng, 011000) is Pushing Upward — Wood growing through Earth, steady ascent. Hex 48 (井/Jing, 011010) is the Well — Water beneath Wood, the deep source accessed gradually. Hex 51 (震/Zhen, 100100) is Arousing Thunder doubled — shock initiating movement. Hex 53 (渐/Jian, 001011) is Gradual Development — Wood on Mountain, the tree growing slowly on high ground. Hex 57 (巽/Xun, 011011) is Gentle Wind doubled — penetration through persistence. Hex 59 (涣/Huan, 010011) is Dispersion — Wind over Water, gentle dissolution. Hex 60 (节/Jie, 110010) is Limitation — Water over Lake, articulated boundaries. Hex 40 (010100) and 51 (100100) are GMS-valid; the others violate No11.",
+      "omega_directions": ["modular-tower-inverse-limit", "fibonacci-growth", "golden-mean-shift"],
+      "mapping_rationale": "The modular tower {X_m}_{m≥0} with projections restrict: X_{m+1} → X_m is the definitive formal structure for gradual development. Each step m → m+1 extends the word by one bit, adding exactly one new line to the hexagram — this is the I Ching's 渐 (gradual advance), formalized. The projection restrict ensures that each extension is compatible with what came before: you cannot add a line that contradicts the existing structure at the coarser level. The Fibonacci growth |X_m| = F_{m+2} quantifies the proliferation of possibilities at each stage: going from 5-line pentagram to 6-line hexagram adds F_8 - F_7 = 21 - 13 = 8 new valid configurations. The inverse limit X_∞ = lim←X_m is the completed development — the fully realized infinite word that all finite stages approximate. Hex 51 (震/Thunder, 100100) is GMS-valid with yang at positions 1 and 4: a pattern of periodic activation with rest periods, formally a period-3 pattern in the golden-mean shift, representing sustained rhythmic development rather than continuous force.",
+      "formal_strength": "strong"
+    },
+    {
+      "id": 10,
+      "name_zh": "明照与分辨",
+      "name_en": "Illumination, Discernment, and Clarity",
+      "hexagrams": [4, 20, 22, 30, 35, 36, 38, 47, 56],
+      "theme": "Hexagrams of seeing, understanding, discernment between light and dark. Hex 30 (离/Li, 101101) is Clinging Fire — illumination, clarity, the discerning intellect. Hex 20 (观/Guan, 000011) is Contemplation — Wind over Earth, the wide view. Hex 4 (蒙/Meng, 010001) is Youthful Folly — Mountain over Water, obscured vision awaiting illumination. Hex 22 (贲/Bi, 101001) is Grace — Fire over Mountain, beauty illuminating stillness. Hex 35 (晋/Jin, 000101) is Progress — Fire over Earth, the sun ascending. Hex 36 (明夷/Ming Yi, 101000) is Darkening of Light — Earth over Fire, brilliance concealed. Hex 38 (睽/Kui, 110101) is Opposition — Fire over Lake, seeing through contradiction. Hex 47 (困/Kun, 010110) is Oppression — vision blocked, the confined. Hex 56 (旅/Lü, 001101) is the Wanderer — Fire over Mountain, the outsider's perception.",
+      "omega_directions": ["spectral-theory", "modular-tower-inverse-limit", "rate-distortion-information-theory"],
+      "mapping_rationale": "Spectral theory is the Omega framework for decomposing structure into its constituent modes — precisely what illumination and discernment do philosophically. The collision kernel's eigenvalues reveal the hidden spectral structure of the hexagram system: dominant eigenvalues correspond to the most 'visible' structural patterns, while subdominant eigenvalues encode subtler correspondences. Hex 30 (离/Li, Fire doubled) as the archetype of clarity maps to the spectral decomposition itself: fire illuminates by separating the visible from the invisible, just as eigendecomposition separates principal from residual components. The modular tower provides resolution-dependent seeing: at level m=3 (trigrams) one sees broad categories; at m=6 (hexagrams) one sees fine distinctions. Hex 4 (Youthful Folly) and hex 20 (Contemplation) represent different resolution levels of the same observation. Rate-distortion theory formalizes the information cost of discernment: the rate-distortion function R(D) gives the minimum information rate needed to achieve distortion level D, quantifying how much 'light' (information) is needed for a given level of clarity.",
+      "formal_strength": "moderate"
+    },
+    {
+      "id": 11,
+      "name_zh": "节制与平衡",
+      "name_en": "Limitation, Moderation, and Balanced Measure",
+      "hexagrams": [9, 15, 41, 42, 60, 61, 62, 63, 64],
+      "theme": "Hexagrams of temperance, proper limits, decrease/increase in balance, and the achievement of measured equilibrium. Hex 60 (节/Jie, 110010) is Limitation — proper boundaries, articulated measure. Hex 15 (谦/Qian, 001000) is Modesty — the single yang line contained within earth, ultimate restraint. Hex 41 (损/Sun, 110001) is Decrease and hex 42 (益/Yi, 100011) is Increase — the complementary adjustments that maintain equilibrium. Hex 61 (中孚/Zhong Fu, 110011) is Inner Truth — centered faithfulness, two yang pairs framing inner emptiness. Hex 62 (小过/Xiao Guo, 001100) is Small Exceeding — minor transgression, slightly beyond the balanced. Hex 9 (小畜/Xiao Xu, 111011) is Small Taming — restraining the great with the small. Hex 63 (既济/Ji Ji, 101010) and 64 (未济/Wei Ji, 010101) as the culmination of balance — perfect yin-yang alternation.",
+      "omega_directions": ["zeckendorf-representation", "ring-arithmetic", "golden-mean-shift"],
+      "mapping_rationale": "The Zeckendorf representation is the Omega formalization of optimal measure: every natural number decomposes uniquely into non-consecutive Fibonacci summands, achieving the sparsest possible representation. This is the arithmetic of 节 (limitation) — not arbitrary restriction but the unique, minimal, complete decomposition. The ring arithmetic X_m ≅ Z/F_{m+2}Z embodies modular balance: stableAdd wraps around at F_{m+2}, so excess beyond the modulus returns to the beginning — this is 损 and 益 (decrease/increase) as ring arithmetic, where adding past the limit cycles back. The golden-mean shift's No11 constraint is itself a limitation principle: it restricts the binary word space from 2^6 = 64 states to F_8 = 21 stable states, and this restriction is what produces structural richness. Hex 63 (101010) and 64 (010101) achieve maximal yang content (3 out of 6) while remaining GMS-valid — they are the balanced optimum, the point where the No11 constraint is exactly saturated without being violated.",
+      "formal_strength": "strong"
+    },
+    {
+      "id": 12,
+      "name_zh": "聚散与流通",
+      "name_en": "Gathering, Dispersal, and Information Flow",
+      "hexagrams": [8, 29, 44, 45, 47, 48, 57, 58, 59],
+      "theme": "Hexagrams of collection and dispersal, flow and blockage, communication channels. Hex 59 (涣/Huan, 010011) is Dispersion — Wind over Water, dissolution of rigid structures. Hex 45 (萃/Cui, 000110) is Gathering Together — Lake over Earth, accumulation. Hex 57 (巽/Xun, 011011) is Gentle Wind doubled — pervasive penetration, information spreading. Hex 58 (兑/Dui, 110110) is Joyous Lake doubled — open communication, shared pleasure. Hex 8 (比/Bi, 000010) is Holding Together — Water over Earth, unifying flow. Hex 29 (坎/Kan, 010010) is the Abysmal Water doubled — the channel itself, the medium of flow. Hex 44 (姤/Gou, 011111) is Coming to Meet — Wind beneath Heaven, encounter. Hex 47 (困/Kun, 010110) is Oppression — flow blocked. Hex 48 (井/Jing, 011010) is the Well — access to the deep source.",
+      "omega_directions": ["rate-distortion-information-theory", "fold-operator", "modular-tower-inverse-limit"],
+      "mapping_rationale": "Rate-distortion theory is the definitive Omega framework for information flow: the rate-distortion function R(D) characterizes the fundamental tradeoff between information rate and fidelity, which is precisely the tension between gathering (high rate, high fidelity) and dispersal (low rate, lossy transmission). Hex 29 (坎/Kan, 010010, GMS-valid) as the channel/medium maps to the channel capacity in information theory — it defines the bandwidth through which information can flow. The fold operator models information compression during transmission: as signals pass through constrained channels, non-compliant patterns (consecutive 1s) are folded into stable forms, with the fiber structure measuring information loss. The modular tower captures hierarchical information aggregation: local information at level m is gathered (projected) into global structure at level m-1, while dispersal corresponds to the lift from coarse to fine resolution. The SPG error threshold κ(ε) = (1+ε)/(1-ε) formalizes when gathering becomes oppression (hex 47): beyond the critical rate, additional information concentration degrades rather than improves the signal.",
+      "formal_strength": "moderate"
+    }
+  ],
+  "structural_summary": {
+    "total_hexagram_assignments": 101,
+    "unique_hexagrams_covered": 64,
+    "hexagrams_in_multiple_categories": [4, 8, 9, 15, 20, 22, 29, 30, 35, 36, 38, 41, 42, 43, 44, 45, 46, 47, 48, 51, 53, 56, 57, 58, 59, 60, 61, 62, 63, 64],
+    "note": "All 64 hexagrams are classified. Some hexagrams appear in 2-3 categories reflecting genuine thematic overlap — this is intrinsic to the I Ching's combinatorial design where each hexagram participates in multiple semantic fields simultaneously.",
+    "gms_analysis": {
+      "gms_valid_hexagrams": [2, 3, 4, 7, 8, 15, 16, 21, 22, 23, 24, 27, 29, 35, 36, 39, 40, 51, 52, 63, 64],
+      "count": 21,
+      "equals_fibonacci": "F_8 = 21",
+      "yang_line_distribution_in_gms": {
+        "0_yang": [2],
+        "1_yang": [7, 8, 15, 16, 23, 24],
+        "2_yang": [3, 4, 27, 29, 35, 36, 39, 40, 51, 52],
+        "3_yang": [21, 22, 63, 64]
+      },
+      "note": "No GMS-valid hexagram has more than 3 yang lines. Maximum yang density under No11 constraint is 3/6 = 1/2, achieved only by the two alternating patterns 101010 and 010101."
+    },
+    "fold_fiber_analysis": {
+      "largest_fiber": {"hexagram": 63, "name": "既济 (After Completion)", "pattern": "101010", "fiber_size": 8, "preimages": [1, 5, 9, 13, 37, 43, 49]},
+      "fiber_size_distribution": {
+        "size_2": [4, 7, 8, 15, 16, 24, 27, 35, 52],
+        "size_4": [3, 21, 22, 29, 36, 39, 40, 51, 64],
+        "size_8": [63]
+      },
+      "note": "Fiber sizes are 2, 4, or 8 — all powers of 2. Hex 2 (000000, pure yin) has fiber size 1 (only itself). Hex 63 (101010, maximal alternation) has fiber size 8, absorbing all maximally yang hexagrams. The fiber size correlates with yang density of the stable word: more yang lines (within GMS) → larger fiber → greater absorptive capacity."
+    },
+    "complement_involution_under_gms": {
+      "both_gms": [[63, 64]],
+      "one_gms_one_not": "All other complement pairs have exactly one GMS member and one non-GMS member",
+      "note": "The complement involution (0↔1 on all 6 lines) almost perfectly separates GMS from non-GMS, with the unique exception of the 63-64 pair (101010 ↔ 010101), both GMS-valid. This is because complement-invariance and No11-compliance are nearly incompatible: if a word has a 1 at position k, its complement has a 0 there, and vice versa. Only the alternating patterns satisfy both simultaneously."
+    },
+    "omega_direction_frequency": {
+      "golden-mean-shift": 9,
+      "fold-operator": 7,
+      "fibonacci-growth": 3,
+      "modular-tower-inverse-limit": 4,
+      "dynamical-systems": 3,
+      "zeckendorf-representation": 3,
+      "ring-arithmetic": 3,
+      "spectral-theory": 2,
+      "fiber-structure": 4,
+      "rate-distortion-information-theory": 4
+    },
+    "strongest_correspondences": [
+      {
+        "text_concept": "The 64 hexagrams as {0,1}^6, the complete 6-bit binary word space",
+        "omega_object": "Word 6 = {0,1}^6 in the golden-mean shift framework",
+        "why_strong": "This is not analogy — the hexagram system IS the mathematical object. Each hexagram is a binary word of length 6. The I Ching's 64 states are exactly |{0,1}^6| = 2^6 = 64. No interpretation or mapping is needed; the identity is structural."
+      },
+      {
+        "text_concept": "The No11 constraint selects 21 'stable' hexagrams from 64",
+        "omega_object": "X_6 = {w ∈ {0,1}^6 : No11(w)}, |X_6| = F_8 = 21",
+        "why_strong": "The golden-mean shift partitions the 64 hexagrams into 21 stable and 43 unstable configurations. The 21 GMS-valid hexagrams have no consecutive yang lines — they are the hexagrams where active force (yang) is always followed by receptive rest (yin). This is the binary-dynamic content of the I Ching's teaching that balance requires alternation. The count 21 = F_8 is an exact Fibonacci number, not approximate."
+      },
+      {
+        "text_concept": "The 8 trigrams as X_3 ∪ (non-GMS 3-bit words)",
+        "omega_object": "Word 3 = {0,1}^3, with |X_3| = F_5 = 5 GMS-valid trigrams",
+        "why_strong": "The 8 trigrams decompose as 5 GMS-valid (坤, 艮, 坎, 震, 离) + 3 non-GMS (巽, 兑, 乾). The excluded trigrams are exactly those containing consecutive yang: 巽=011, 兑=110, 乾=111. The 5 GMS trigrams include the 4 cardinal elements (Earth, Water, Thunder, Fire) plus Mountain, while the 3 excluded include Heaven — the most yang trigram is the most constrained. This 5/3 = F_5/3 partition is structurally significant."
+      },
+      {
+        "text_concept": "既济/未济 (63/64) as the terminal alternating pair",
+        "omega_object": "The period-2 orbit {101010, 010101} of the shift map σ on the golden-mean shift",
+        "why_strong": "Hex 63 (101010) and 64 (010101) are the unique pair that satisfies all three properties simultaneously: (a) they are yin-yang complements, (b) both are GMS-valid, (c) they are related by the shift map σ. They encode the I Ching's deepest structural insight: completion (既济) and incompletion (未济) are the same pattern viewed from different starting positions — formally, σ(101010...) = 010101... This is the period-2 cycle that generates the maximum-entropy behavior h_top = log(φ)."
+      },
+      {
+        "text_concept": "Fold: 乾 (111111) → 既济 (101010), fiber size 8",
+        "omega_object": "Fold: Word 6 → X_6, with fiber(101010) = 8",
+        "why_strong": "Pure Creative (hex 1, all yang) folds to After Completion (hex 63, alternating) — the most forceful configuration resolves into balanced alternation under the No11 constraint. The fiber of size 8 means hex 63 is the attractor for 8 of the 64 hexagrams (12.5%), including all the most yang-heavy ones. This is the quantitative content of 亢龙有悔: maximum yang has maximum instability, and its resolution is maximum balance."
+      }
+    ]
+  }
+}
