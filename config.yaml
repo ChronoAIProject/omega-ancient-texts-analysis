@@ -15,6 +15,10 @@ texts:
       title: 黄帝内经 / Huangdi Neijing
       language: zh
       path: texts/huangdi-neijing/
+    - name: sunzi-bingfa
+      title: 孙子兵法 / The Art of War
+      language: zh
+      path: texts/sunzi-bingfa/
     - name: elements
       title: 几何原本 / Elements
       language: en

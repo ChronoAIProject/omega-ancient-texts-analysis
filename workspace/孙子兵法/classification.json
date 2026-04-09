@@ -1,0 +1,155 @@
+{
+  "work": "孙子兵法",
+  "en": "The Art of War",
+  "total_chapters": 13,
+  "total_units": 13,
+  "unit_type": "chapter",
+  "part_structure": [
+    {
+      "name_zh": "全书",
+      "name_en": "Single treatise in thirteen chapters",
+      "chapters": 13
+    }
+  ],
+  "classification_method": "first-pass structural classification by strategic function, with deliberate overlap where a chapter operates simultaneously as information theory, control theory, and topological state management",
+  "note_on_rigor": "Sunzi is not literally identical to a single Omega object. Its strongest correspondences are formal at the level of strategy structure: partial information, hidden-state inference, adversarial signaling, indirect control, sparse force deployment, topology-constrained motion, and threshold-aware cost management. Claims below distinguish structural correspondence from metaphorical extension.",
+  "structural_note": "The Art of War is best read not as a manual of brute-force combat but as a compact theory of adversarial systems under uncertainty. Victory in Sunzi does not arise primarily from maximal expenditure; it arises from estimation before engagement, shaping the enemy's observables, preserving optionality, exploiting topology, and applying decisive force only at points of instability. This makes the text especially compatible with Omega directions centered on rate-distortion, fold, spectral extraction, modular state spaces, and controlled dynamics.",
+  "categories": [
+    {
+      "id": 1,
+      "name_zh": "庙算、五事与胜负先验",
+      "name_en": "Strategic Estimation and Pre-Battle Computation",
+      "chapters": ["始计第一"],
+      "theme": "Before battle begins, Sunzi insists on structured comparison: 道、天、地、将、法 and the seven strategic calculations. Victory is prepared as a computation over partial indicators rather than as a reaction to events after contact.",
+      "omega_directions": ["rate-distortion-information-theory", "spectral-theory", "modular-tower-inverse-limit"],
+      "mapping_rationale": "This is structurally an inference problem under limited information. The commander compresses noisy observations into a low-dimensional estimate of relative advantage; spectral language captures extraction of dominant factors from mixed signals; modular-tower language captures that judgments move from local factors to a higher-order total estimate rather than remaining flat enumerations."
+    },
+    {
+      "id": 2,
+      "name_zh": "速战、粮秣与战争成本",
+      "name_en": "Speed, Logistics, and the Cost of War",
+      "chapters": ["作战第二"],
+      "theme": "War is expensive in fuel, distance, transport, morale, and political stamina. Sunzi's insistence that war should be decisive and not prolonged is a theory of bounded resources, not merely of impatience.",
+      "omega_directions": ["rate-distortion-information-theory", "ring-arithmetic", "dynamical-systems"],
+      "mapping_rationale": "This chapter is closest to constrained resource allocation. Rate-distortion formalizes why prolonged conflict degrades fidelity across the system; ring arithmetic captures redistribution inside a closed political-military economy; dynamical systems captures the compounding deterioration that follows once a campaign remains too long outside its viable operating band."
+    },
+    {
+      "id": 3,
+      "name_zh": "全胜、伐谋与不战而屈",
+      "name_en": "Total Victory, Strategic Compression, and Winning Without Battle",
+      "chapters": ["谋攻第三"],
+      "theme": "The highest victory is not maximal destruction but maximal outcome with minimal disintegration. To break plans, alliances, and positioning before battle is to collapse the enemy's option space before kinetic expenditure becomes necessary.",
+      "omega_directions": ["fold-operator", "rate-distortion-information-theory", "spectral-theory"],
+      "mapping_rationale": "Winning without battle is a fold-style principle: instead of brute-force replacement, one redirects the adversary into a losing configuration through local strategic pressure. Rate-distortion captures why this is superior in cost and retention of structure, while spectral language captures the identification of the enemy's dominant decision mode and the targeting of that mode rather than the whole surface apparatus."
+    },
+    {
+      "id": 4,
+      "name_zh": "军形、守攻与可胜几何",
+      "name_en": "Dispositions, Defense, and Winnable Geometry",
+      "chapters": ["军形第四"],
+      "theme": "Sunzi distinguishes what can be secured by self-configuration from what depends on the enemy's error. One first makes oneself not losable, then waits for a geometry in which the opponent becomes beatable.",
+      "omega_directions": ["modular-tower-inverse-limit", "dynamical-systems", "ring-arithmetic"],
+      "mapping_rationale": "This is a viability problem: preserve invariant structure on one's own side while monitoring the state space for a winnable transition. Modular-tower language captures how local formations sit inside a higher operational geometry; dynamical-systems language captures stable and unstable regions; ring arithmetic captures lawful relation between defensive sufficiency and offensive surplus."
+    },
+    {
+      "id": 5,
+      "name_zh": "兵势、奇正与涌现倍增",
+      "name_en": "Configuration Energy, Orthogonal Force, and Emergent Multiplication",
+      "chapters": ["兵势第五"],
+      "theme": "Force is not simply accumulated mass. Proper configuration creates 势: a nonlinear amplification by which ordinary elements, correctly ordered, produce extraordinary impact.",
+      "omega_directions": ["dynamical-systems", "spectral-theory", "fold-operator"],
+      "mapping_rationale": "Sunzi's 势 is best read as emergent mode amplification. Dynamical-systems language captures nonlinear gain from configuration; spectral language captures a few dominant modes organizing many local actions; fold captures how small local placements can redirect the whole engagement into a more favorable basin of behavior."
+    },
+    {
+      "id": 6,
+      "name_zh": "虚实、示形与诱导控制",
+      "name_en": "Weakness, Strength, and Adversarial Signaling",
+      "chapters": ["始计第一", "虚实第六"],
+      "theme": "Sunzi repeatedly insists that one should shape what the opponent sees, conceal what is real, and attack where structure is empty. This is the text's most explicit theory of adversarial observability.",
+      "omega_directions": ["spectral-theory", "rate-distortion-information-theory", "fold-operator"],
+      "mapping_rationale": "The core issue is not simple deception but control over the enemy's observational channel. Rate-distortion captures deliberate degradation of the opponent's reconstruction of state; spectral language captures the separation of signal from decoy; fold captures how a well-placed false surface can redirect an opponent into locally irreversible error."
+    },
+    {
+      "id": 7,
+      "name_zh": "军争、九变与机动变通",
+      "name_en": "Maneuver, Variation, and Adaptive Tactics",
+      "chapters": ["军争第七", "九变第八"],
+      "theme": "The campaign is not a fixed script. Maneuvering under contested conditions requires the ability to change paths, refuse simple rules, and preserve flexibility under moving constraints.",
+      "omega_directions": ["dynamical-systems", "fold-operator", "modular-tower-inverse-limit"],
+      "mapping_rationale": "These chapters are about state-dependent control. Dynamical systems captures continuous reconfiguration under pressure; fold captures tactical redirection through small but decisive local shifts; modular-tower language captures nested levels of command, route, and engagement that must stay mutually compatible."
+    },
+    {
+      "id": 8,
+      "name_zh": "行军、观兆与局部观测",
+      "name_en": "Marching, Field Signs, and Local Observation",
+      "chapters": ["行军第九"],
+      "theme": "Dust, birds, silence, disorder, formation, fatigue, and terrain traces become readable indicators of hidden military state. The commander must infer what is not directly visible from what is locally observable.",
+      "omega_directions": ["spectral-theory", "rate-distortion-information-theory", "fiber-structure"],
+      "mapping_rationale": "This chapter is a field-inference manual. Spectral theory captures extraction of dominant hidden structure from surface signals; rate-distortion captures bounded inference under noisy evidence; fiber structure captures that many distinct outward signs can stabilize to the same deeper state class, so observation must be pattern-based rather than literalistic."
+    },
+    {
+      "id": 9,
+      "name_zh": "地形、九地与拓扑约束",
+      "name_en": "Terrain, Topology, and State-Constrained Positioning",
+      "chapters": ["地形第十", "九地第十一"],
+      "theme": "Ground is not a backdrop but a state-space constraint. Different terrains and nine kinds of ground induce different allowed transitions, incentives, risks, and commitment structures.",
+      "omega_directions": ["modular-tower-inverse-limit", "dynamical-systems", "fold-operator"],
+      "mapping_rationale": "Terrain and nine grounds are best read as topology over possible moves. Modular-tower language captures nested spatial scales from local ground to campaign theater; dynamical systems captures how different terrains change state transitions and attractors; fold captures the importance of choosing paths that locally redirect the whole operational picture."
+    },
+    {
+      "id": 10,
+      "name_zh": "火攻、用间与外部信息干预",
+      "name_en": "Fire Attack, Intelligence, and Exogenous Intervention",
+      "chapters": ["火攻第十二", "用间第十三", "谋攻第三"],
+      "theme": "The final chapters treat two decisive asymmetries: perturbing the enemy system from outside, and penetrating the enemy system by information. Fire and spies are both ways of changing battle before direct collision.",
+      "omega_directions": ["rate-distortion-information-theory", "fold-operator", "spectral-theory"],
+      "mapping_rationale": "Fire is exogenous perturbation introduced at the right phase; intelligence is privileged access to hidden state. Rate-distortion captures why information quality becomes decisive near the end of the text; fold captures how small outside inputs can collapse a much larger structure; spectral language captures the extraction of actionable signal from clandestine channels."
+    }
+  ],
+  "structural_summary": {
+    "category_count": 10,
+    "coverage_mode": "functional strategic clusters with deliberate overlap",
+    "overlap_note": "Overlap is intrinsic. Sunzi's chapters often operate simultaneously as theories of information, motion, topology, and controlled expenditure.",
+    "strongest_correspondences": [
+      {
+        "text_concept": "庙算、五事、七计",
+        "omega_object": "rate-distortion style strategic inference from partial observables",
+        "why_strong": "Victory is computed before combat from compressed indicators rather than discovered only through collision."
+      },
+      {
+        "text_concept": "兵者，诡道也 / 虚实之用",
+        "omega_object": "adversarial signaling and observation control",
+        "why_strong": "The text is centrally concerned with shaping what the enemy can reliably reconstruct about one's state."
+      },
+      {
+        "text_concept": "先为不可胜，以待敌之可胜",
+        "omega_object": "viability region and state-space geometry",
+        "why_strong": "One first secures an invariant non-losing region, then acts only when transitions become favorable."
+      },
+      {
+        "text_concept": "奇正相生、势如转圆石",
+        "omega_object": "nonlinear dynamical amplification from configuration",
+        "why_strong": "Force is produced by arrangement and mode interaction rather than by scalar accumulation alone."
+      },
+      {
+        "text_concept": "九地、地形",
+        "omega_object": "topology-constrained transitions and commitment states",
+        "why_strong": "Different grounds alter the allowed action graph, the cost of retreat, and the local meaning of the same force."
+      },
+      {
+        "text_concept": "用间",
+        "omega_object": "privileged access to hidden state under information asymmetry",
+        "why_strong": "The final decisive resource is not sheer force but the ability to reduce uncertainty while increasing the enemy's."
+      }
+    ],
+    "next_step_candidates": [
+      "先把 13 篇原文标题和章节文本正式落到 texts/sunzi-bingfa/",
+      "优先生成 category 01-03 试写稿，验证信息论与折叠对应是否稳定",
+      "后续若发布站点，建议先等 8-10 篇成形后再开完整 cultural track"
+    ]
+  },
+  "sources_used_for_baseline_structure": [
+    "https://ctext.org/art-of-war/zh",
+    "https://zh.wikisource.org/zh-hans/%E5%AD%AB%E5%AD%90%E5%85%B5%E6%B3%95"
+  ]
+}
