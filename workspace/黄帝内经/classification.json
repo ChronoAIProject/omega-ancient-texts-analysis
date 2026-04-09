@@ -1,0 +1,328 @@
+{
+  "work": "黄帝内经",
+  "en": "Huangdi Neijing",
+  "total_chapters": 162,
+  "total_units": 162,
+  "unit_type": "chapter",
+  "part_structure": [
+    {
+      "name_zh": "素问",
+      "name_en": "Suwen / Basic Questions",
+      "chapters": 81
+    },
+    {
+      "name_zh": "灵枢",
+      "name_en": "Lingshu / Spiritual Pivot",
+      "chapters": 81
+    }
+  ],
+  "classification_method": "first-pass structural classification by thematic chapter bands across Suwen and Lingshu",
+  "note_on_rigor": "This is a first-pass systems-level mapping rather than a philologically final line-by-line taxonomy. Unlike the I Ching, Huangdi Neijing is not literally identical to a single Omega object. Its strongest correspondences are organizational and dynamical: seasonal forcing, multiscale regulation, channel flow, local intervention, sparse correction, and inference from partial signals. Chapter coverage is intentionally coarse and expressed as thematic ranges or anchor chapters.",
+  "structural_note": "Huangdi Neijing has a two-part architecture that makes it especially compatible with Omega's multiscale directions. The Suwen supplies cosmology, seasonal regulation, organ governance, diagnosis, pathology, and treatment principles; the Lingshu supplies channel topology, acupuncture methods, qi circulation, needling constraints, and operational medicine. Structurally, this is closer to a coupled regulatory system than to a single symbolic text-object. The strongest mathematical resonances therefore lie in modular towers, constrained dynamics, local fold interventions, sparse regulation, and spectral extraction of hidden state from limited observables.",
+  "categories": [
+    {
+      "id": 1,
+      "name_zh": "天地时序与四时调摄",
+      "name_en": "Cosmic Timing, Seasonal Regulation, and Preventive Alignment",
+      "chapters": [
+        "素问01-07",
+        "素问22",
+        "素问66-74",
+        "素问79",
+        "灵枢19",
+        "灵枢41",
+        "灵枢44",
+        "灵枢77",
+        "灵枢79"
+      ],
+      "theme": "Heaven-human resonance, seasonal timing, yin-yang phase shifts, and long-period regulation. This band includes the opening养生 chapters of Suwen, the藏气法时 logic, and the 运气 chapters on five movements and six qi, together with Lingshu chapters that track day-season analogies and calendrical winds.",
+      "omega_directions": [
+        "dynamical-systems",
+        "modular-tower-inverse-limit",
+        "rate-distortion-information-theory"
+      ],
+      "mapping_rationale": "The strongest correspondence here is to a constrained dynamical system under periodic forcing. Seasonal qi in Neijing functions like a structured external drive: the organism must remain phase-aligned with cyclic inputs rather than override them. The modular-tower direction captures nested temporal scales such as day, season, and longer 运气 cycles, while the rate-distortion direction formalizes the idea that health depends on staying within tolerable adaptation bands rather than maximizing raw response."
+    },
+    {
+      "id": 2,
+      "name_zh": "藏象官制与身体政体",
+      "name_en": "Organ Governance and Somatic Polity",
+      "chapters": [
+        "素问08-12",
+        "素问23-25",
+        "灵枢04-05",
+        "灵枢29",
+        "灵枢33",
+        "灵枢47",
+        "灵枢51"
+      ],
+      "theme": "Organ offices,藏象 patterning, bodily governance, and the relation between local functions and the whole-body polity. This includes 灵兰秘典论, 六节藏象论, and connected Lingshu chapters on藏府病形,师传,海论,本藏,背腧.",
+      "omega_directions": [
+        "ring-arithmetic",
+        "modular-tower-inverse-limit",
+        "fiber-structure"
+      ],
+      "mapping_rationale": "Neijing's organ system is not a bag of isolated parts but a constrained algebra of roles and exchanges. Ring arithmetic gives the best formal analogy for this lawful local-to-global interaction: each subsystem operates with internal consistency but only inside a shared closure relation. The modular tower direction captures how local offices sit inside a higher-order body-state hierarchy, while fiber structure models the fact that many surface presentations can be stabilized by the same underlying organ-functional configuration."
+    },
+    {
+      "id": 3,
+      "name_zh": "经脉网络与营卫流行",
+      "name_en": "Channels, Networks, and Circulatory Coupling",
+      "chapters": [
+        "素问21",
+        "素问56-60",
+        "灵枢10-18",
+        "灵枢52",
+        "灵枢62",
+        "灵枢76"
+      ],
+      "theme": "Channel systems, branch systems, body measures, nutritive and defensive circulation, and the spatialized network through which qi moves. This includes 经脉, 经别, 经筋, 营气, 营卫生会, and associated Suwen chapters on皮部, 经络, 气穴, 气府, 骨空.",
+      "omega_directions": [
+        "modular-tower-inverse-limit",
+        "dynamical-systems",
+        "spectral-theory"
+      ],
+      "mapping_rationale": "The meridian system is best read as a multiscale transport network. Modular-tower language captures nested pathways and projections between coarse and fine body partitions; dynamical-systems language captures circulation, recurrence, and lawful flow; spectral theory captures global patterns inferred from a distributed network. This category is one of the strongest places to read Neijing as a structured systems text rather than a mere list of locations."
+    },
+    {
+      "id": 4,
+      "name_zh": "诊法、脉法与外候分辨",
+      "name_en": "Diagnosis, Pulse, and Diagnostic Resolution",
+      "chapters": [
+        "素问15-20",
+        "素问49",
+        "素问81",
+        "灵枢37",
+        "灵枢45",
+        "灵枢49",
+        "灵枢64",
+        "灵枢74"
+      ],
+      "theme": "Pulse, color, external inference, fine diagnostic discrimination, and extracting the hidden internal state from partial signs. This band includes 診要, 脈要精微, 三部九候, 脈解, 解精微, 五閱五使, 外揣, 五色, 陰陽二十五人, 論疾診尺.",
+      "omega_directions": [
+        "spectral-theory",
+        "modular-tower-inverse-limit",
+        "rate-distortion-information-theory"
+      ],
+      "mapping_rationale": "Diagnosis in Neijing is structurally an inverse problem: infer a hidden total state from sparse, lossy, surface observables. Spectral theory provides the most precise analogy because it formalizes extraction of dominant structure from mixed signals. Modular-tower language captures how diagnostic claims move between local sign and global state at different resolutions, and rate-distortion captures that clinical knowing is always bounded by noisy and partial evidence."
+    },
+    {
+      "id": 5,
+      "name_zh": "病因、邪气与传变",
+      "name_en": "Pathogenesis, Pathogenic Factors, and Transmission",
+      "chapters": [
+        "素问29-48",
+        "素问65",
+        "灵枢20-28",
+        "灵枢42",
+        "灵枢58",
+        "灵枢66",
+        "灵枢70",
+        "灵枢71"
+      ],
+      "theme": "Heat, wind, bi, wei, jue, malaria, strange disease, disease roots, disease transmission, and how pathological patterns transform under changing conditions. This combines the major pathology blocks in Suwen with Lingshu chapters on寒熱病, 癲狂病, 病本, 雜病, 病傳, 賊風, 百病始生, 邪客.",
+      "omega_directions": [
+        "fold-operator",
+        "dynamical-systems",
+        "rate-distortion-information-theory"
+      ],
+      "mapping_rationale": "Neijing pathogenesis is not static classification but rule-governed transformation. The fold operator is the best formal analogue because pathology repeatedly appears as local instability that must either be corrected back toward lawful configuration or else cascade. Dynamical-systems language captures progression, reversal, and transmission across states, while rate-distortion captures how exogenous load pushes the organism beyond recoverable fidelity."
+    },
+    {
+      "id": 6,
+      "name_zh": "针刺法则与操作约束",
+      "name_en": "Needling Law and Local Intervention Constraints",
+      "chapters": [
+        "素问26-28",
+        "素问50-55",
+        "素问61-64",
+        "灵枢01-03",
+        "灵枢07",
+        "灵枢09",
+        "灵枢67",
+        "灵枢75",
+        "灵枢78"
+      ],
+      "theme": "Needling rules, forbidden operations, sequencing, timing, technique, and the local operational grammar of intervention. This includes 八正神明, 離合真邪, 通評虛實, 刺要, 刺禁, 鍼解, 長刺節, and Lingshu's foundational九鍼 and 行鍼 material.",
+      "omega_directions": [
+        "fold-operator",
+        "fiber-structure",
+        "spectral-theory"
+      ],
+      "mapping_rationale": "Needling in Neijing is a constrained local intervention, not a global rewrite of the body. This is closest to the fold operator: apply a local lawful move so that a bad pattern can be redirected without destroying the larger configuration. Fiber structure captures why multiple presenting disorders may funnel to the same operative intervention class, and spectral language captures why timing and placement matter differently depending on which mode of dysfunction dominates."
+    },
+    {
+      "id": 7,
+      "name_zh": "气血津液与代谢分配",
+      "name_en": "Qi, Blood, Fluids, and Metabolic Allocation",
+      "chapters": [
+        "素问14",
+        "素问24",
+        "素问61-62",
+        "灵枢30-36",
+        "灵枢39-40",
+        "灵枢52",
+        "灵枢56-57",
+        "灵枢59",
+        "灵枢63",
+        "灵枢65"
+      ],
+      "theme": "汤液醪醴, blood-qi-shape-will, decisional qi, stomach and sea theory, the five disorders, swelling, fluids, tastes, and defensive circulation. This band tracks how resources are generated, distributed, constrained, and exhausted within the organism.",
+      "omega_directions": [
+        "ring-arithmetic",
+        "fiber-structure",
+        "dynamical-systems"
+      ],
+      "mapping_rationale": "Qi-blood-fluid doctrine in Neijing is fundamentally a constrained allocation problem. Ring arithmetic gives a strong analogy because it formalizes lawful redistribution inside a closed system; fiber structure captures why many local symptom clusters can arise from the same deeper allocation pattern; and dynamical systems captures continuous circulation, blockage, depletion, and replenishment across time."
+    },
+    {
+      "id": 8,
+      "name_zh": "神志情志与梦",
+      "name_en": "Spirit, Emotion, Dream, and Cognitive State",
+      "chapters": [
+        "素问13",
+        "素问75-76",
+        "素问81",
+        "灵枢08",
+        "灵枢43",
+        "灵枢50",
+        "灵枢69",
+        "灵枢72",
+        "灵枢80"
+      ],
+      "theme": "Spirit, essence transformation, dreams, courage, grief, mute affect, constitutional differentiation, perplexity, and subtle comprehension. This category tracks mental, affective, and symbolic states as structured physiological-cognitive configurations.",
+      "omega_directions": [
+        "spectral-theory",
+        "modular-tower-inverse-limit",
+        "rate-distortion-information-theory"
+      ],
+      "mapping_rationale": "Neijing repeatedly treats spirit and emotion as structured pattern states, not as a separate immaterial layer. Spectral theory is the strongest analogy because cognition appears as differentiation among overlapping modes rather than as a single scalar. Modular-tower language captures how spirit is read across multiple resolutions of the same organism, while rate-distortion captures how affective overload degrades clarity and signal fidelity."
+    },
+    {
+      "id": 9,
+      "name_zh": "虚实逆顺与调平",
+      "name_en": "Excess, Deficiency, Reversal, and Rebalancing",
+      "chapters": [
+        "素问28",
+        "素问34",
+        "素问62-64",
+        "素问77-80",
+        "灵枢38",
+        "灵枢46",
+        "灵枢55",
+        "灵枢60-61"
+      ],
+      "theme": "Virtual and replete states, reversal and accord, clinical overcorrection, balanced modulation, and the art of not crossing therapeutic thresholds. This includes 通評虛實, 逆調, 調經, 缪刺, 四時刺逆從, 疏五過, 徵四失, 方盛衰, and Lingshu chapters on肥瘦, 五變, 逆順, 玉版, 五禁.",
+      "omega_directions": [
+        "zeckendorf-representation",
+        "ring-arithmetic",
+        "golden-mean-shift"
+      ],
+      "mapping_rationale": "This category is where sparse optimal regulation becomes most visible. The Zeckendorf direction formalizes the idea that correct balance is not maximal intervention but the unique sparse decomposition that does not over-cluster force. Ring arithmetic models lawful compensatory adjustment, while the golden-mean shift gives the clearest structural warning: once high states cluster too tightly, the configuration loses stability."
+    },
+    {
+      "id": 10,
+      "name_zh": "寿夭养生与生命阈值",
+      "name_en": "Longevity, Nourishing Life, and Vital Thresholds",
+      "chapters": [
+        "素问01-04",
+        "素问25",
+        "灵枢06",
+        "灵枢32",
+        "灵枢54",
+        "灵枢68",
+        "灵枢73"
+      ],
+      "theme": "Aging, vitality, exhaustion, correct养生, life-span modulation, and the boundaries beyond which the organism cannot compensate. This includes the foundational养生 chapters, 寶命全形, 壽夭剛柔, 平人絕穀, 天年, 上膈, and 官能.",
+      "omega_directions": [
+        "dynamical-systems",
+        "rate-distortion-information-theory",
+        "zeckendorf-representation"
+      ],
+      "mapping_rationale": "Longevity in Neijing is a question of staying inside viable operating bands over long time scales. Dynamical systems captures this as long-run bounded evolution under recurring perturbation. Rate-distortion formalizes the notion of threshold and irreversible degradation once adaptation costs become too high, while Zeckendorf gives the sparse-regulation analogy: preserve life not by maximal effort but by non-overloaded, well-spaced correction."
+    },
+    {
+      "id": 11,
+      "name_zh": "痛痹厥逆与临界症候",
+      "name_en": "Pain, Bi, Jue, and Critical Syndromes",
+      "chapters": [
+        "素问37-45",
+        "灵枢21-24",
+        "灵枢27",
+        "灵枢35",
+        "灵枢53",
+        "灵枢70",
+        "灵枢81"
+      ],
+      "theme": "Pain, cough, abdominal disorders, wind-bi-wei-jue clusters, mental collapse, distention, severe cold-heat patterns, and abscesses. This band groups clinical edge syndromes where flow, threshold, and tissue-state instability become especially visible.",
+      "omega_directions": [
+        "fold-operator",
+        "fiber-structure",
+        "rate-distortion-information-theory"
+      ],
+      "mapping_rationale": "These are threshold syndromes: once local disorder clusters, the organism's configuration becomes fragile and visibly nonlinear. Fold is the best analogy because therapy must identify which local corrections can still restore lawful shape; fiber structure captures the fact that many symptom clusters share deeper stabilization classes; and rate-distortion captures the sharp drop in functional fidelity once critical load is crossed."
+    },
+    {
+      "id": 12,
+      "name_zh": "总纲整合与多尺度闭环",
+      "name_en": "Integrative Doctrine and Multiscale Closure",
+      "chapters": [
+        "素问57-60",
+        "素问66-74",
+        "灵枢10-18",
+        "灵枢41",
+        "灵枢76-79"
+      ],
+      "theme": "The closing integration of channels,穴位 topology, seasonal drivers, circulation loops, and large-scale theoretical closure. This category emphasizes the places where Neijing most clearly presents the organism as a nested, law-governed whole rather than a list of parts.",
+      "omega_directions": [
+        "modular-tower-inverse-limit",
+        "spectral-theory",
+        "ring-arithmetic"
+      ],
+      "mapping_rationale": "This is the most overtly systems-level category in the entire first pass. The modular tower direction captures multiscale closure across channels, seasons, and functional levels; spectral theory captures the extraction of coherent global order from distributed local structures; and ring arithmetic captures lawful circulation and compensation inside a closed but differentiated whole. If Huangdi Neijing has a single strongest Omega signature, it is here: medicine as a multiscale closure problem."
+    }
+  ],
+  "structural_summary": {
+    "category_count": 12,
+    "coverage_mode": "coarse thematic bands with deliberate overlap",
+    "overlap_note": "Overlap is intrinsic rather than accidental. Huangdi Neijing is a coupled system-text: the same chapter often belongs simultaneously to cosmology, diagnosis, circulation, and intervention.",
+    "strongest_correspondences": [
+      {
+        "text_concept": "四时调摄 and 运气 cycles",
+        "omega_object": "Constrained dynamical system under periodic forcing",
+        "why_strong": "Seasonal and climatic regulation in Neijing is not decorative cosmology. It treats the organism as a time-dependent system whose lawful behavior depends on phase alignment with nested external cycles."
+      },
+      {
+        "text_concept": "经脉、营卫、背腧 and body-wide circulation",
+        "omega_object": "Multiscale network with modular projections and recurrent flow",
+        "why_strong": "The channel system is naturally read as a coupled transport network. Local branches only make sense inside a larger closed circulation, exactly the kind of local-to-global compatibility captured by modular-tower thinking."
+      },
+      {
+        "text_concept": "脉诊、五色、外揣 and hidden-state inference",
+        "omega_object": "Spectral-style inverse problem from partial observables",
+        "why_strong": "Diagnosis in Neijing infers global internal structure from sparse surface signals. This is formally much closer to a resolution-limited inference problem than to static symbolic exegesis."
+      },
+      {
+        "text_concept": "针刺法度、禁刺 and local therapeutic correction",
+        "omega_object": "Fold operator as lawful local intervention toward stability",
+        "why_strong": "Needling in Neijing does not attempt global replacement. It acts locally and lawfully, aiming to redirect unstable configurations back into a viable regime."
+      },
+      {
+        "text_concept": "虚实、逆顺、损益式调节",
+        "omega_object": "Sparse optimal regulation under No11-style anti-clustering intuition",
+        "why_strong": "Much of Neijing's moderation doctrine says that force must not over-cluster. The best intervention is sparse, timely, and threshold-aware, which is exactly the kind of constraint logic represented by Zeckendorf and the golden-mean shift."
+      }
+    ],
+    "next_step_candidates": [
+      "先把《素问》81篇与《灵枢》81篇的原文目录和章节标题正式落到 texts/huangdi-neijing/",
+      "按当前12类先生成 category 01-03 试写稿，检验 systems-level mapping 是否过宽",
+      "后续若做站点发布，建议先只上线总览页，不急着一次性发完12篇"
+    ]
+  },
+  "sources_used_for_baseline_structure": [
+    "https://www.loc.gov/item/2021666312/",
+    "https://pubmed.ncbi.nlm.nih.gov/9446158/",
+    "https://acupun.site/huangdineijingsuwen.aspx",
+    "https://acupun.site/huangdineijinglingshu.aspx"
+  ]
+}

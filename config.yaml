@@ -11,6 +11,10 @@ texts:
       title: 道德经 / Tao Te Ching
       language: zh
       path: texts/daodejing/
+    - name: huangdi-neijing
+      title: 黄帝内经 / Huangdi Neijing
+      language: zh
+      path: texts/huangdi-neijing/
     - name: elements
       title: 几何原本 / Elements
       language: en

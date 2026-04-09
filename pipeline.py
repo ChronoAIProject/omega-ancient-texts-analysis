@@ -32,6 +32,7 @@ WORK_DIR = Path(__file__).parent / "workspace"
 KNOWN_WORKS = {
     "道德经": {"en": "Tao Te Ching", "author": "老子", "chapters": 81, "lang": "zh"},
     "易经": {"en": "I Ching", "author": "伏羲/文王/孔子", "chapters": 64, "lang": "zh"},
+    "黄帝内经": {"en": "Huangdi Neijing", "author": "黄帝/岐伯", "chapters": 162, "lang": "zh"},
     "红楼梦": {"en": "Dream of the Red Chamber", "author": "曹雪芹", "chapters": 120, "lang": "zh"},
     "论语": {"en": "Analects", "author": "孔子", "chapters": 20, "lang": "zh"},
     "几何原本": {"en": "Euclid's Elements", "author": "Euclid", "chapters": 13, "lang": "en"},
