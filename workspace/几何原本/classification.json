@@ -1,0 +1,204 @@
+{
+  "work": "几何原本",
+  "en": "Euclid's Elements",
+  "author": "Euclid",
+  "total_chapters": 13,
+  "total_units": 13,
+  "unit_type": "book",
+  "part_structure": {
+    "books_1_4": "Plane geometry: definitions, postulates, congruence, parallels, circles, and classical constructions.",
+    "books_5_6": "General proportion theory and similar figures.",
+    "books_7_9": "Arithmetic books: divisibility, continued proportion, and number classification.",
+    "book_10": "Incommensurables and the taxonomy of irrational magnitudes.",
+    "books_11_13": "Solid geometry, measurement by exhaustion, and classification of regular solids."
+  },
+  "classification_method": "This first-pass classification does not force each book into a single non-overlapping theme. Instead it groups the thirteen books by reusable structural functions: admissible construction, rigidity, global coherence, algebraic rewriting, scale transfer, obstruction, and terminal classification. The criterion is not literary influence but mathematical workflow value for Omega.",
+  "note_on_rigor": "Euclid gives much stronger formal correspondence than most classical texts, but not because his propositions already contain Omega. The strong part is methodological: a tiny primitive base, explicitly licensed construction moves, dependency-staged propositions, and a culminating classification. Modern formalization work also matters here because it exposes how much of Euclid depends on diagrammatic assumptions that must be made explicit in a machine-auditable setting.",
+  "structural_note": "For Omega, the deepest Euclidean lesson is that geometry is not 'pictures plus intuition' but a layered program: define primitive objects, constrain the allowed moves, derive canonical constructions, prove rigidity and comparison results, then close the system by classification and measurement. Book II's geometric algebra, Book V-VI's proportion logic, Book X's obstruction taxonomy, and Book XII's exhaustion method are the strongest direct bridges back to the main theory.",
+  "categories": [
+    {
+      "id": 1,
+      "name_zh": "定义、公设与合法构造",
+      "name_en": "Definitions, Postulates, and Admissible Constructions",
+      "chapters": [
+        "Book I (Definitions and Postulates)",
+        "Book I.1-I.3",
+        "Book III (basic circle construction steps)",
+        "Book IV"
+      ],
+      "theme": "Euclid begins by fixing primitive objects and the legal moves that may be applied to them. Straightedge-and-compass geometry is therefore not a free picture language but a constrained construction grammar.",
+      "omega_directions": [
+        "fold-operator",
+        "modular-tower-inverse-limit",
+        "rate-distortion-information-theory"
+      ],
+      "mapping_rationale": "The formal bridge here is procedural. Euclid's postulates act like admissible local rewrite or generation rules: draw a line, extend a line, draw a circle. Omega's fold and projection programs likewise distinguish primitive operations from derived invariants. The modular-tower direction enters because higher-level objects only exist as iterated outputs of lower-level legal moves. The information-theoretic direction appears negatively: once legal moves are fixed, arbitrary diagrammatic freedom is intentionally compressed away.",
+      "formal_strength": "strong",
+      "backflow_targets": [
+        "pom",
+        "folding",
+        "physical_spacetime_skeleton"
+      ]
+    },
+    {
+      "id": 2,
+      "name_zh": "全等、刚性与初等平面构形",
+      "name_en": "Congruence, Rigidity, and Elementary Plane Configurations",
+      "chapters": [
+        "Book I",
+        "Book III",
+        "Book IV"
+      ],
+      "theme": "Once constructions are legal, Euclid proves when they are rigid: triangles, chords, angles, and inscribed figures are not arbitrary but constrained by equality and incidence.",
+      "omega_directions": [
+        "spectral-theory",
+        "fold-operator",
+        "dynamical-systems"
+      ],
+      "mapping_rationale": "The strongest bridge is to rigidity and identifiability. A Euclidean configuration is determined by a small set of compatible relations; the rest is forced. Omega papers repeatedly use the same pattern when shell ratios, degeneracy ledgers, or support constraints pin down a geometry from sparse data. The fold direction appears because many apparent micro-choices collapse to a single canonical macro-configuration.",
+      "formal_strength": "strong",
+      "backflow_targets": [
+        "folding",
+        "group_unification",
+        "physical_spacetime_skeleton"
+      ]
+    },
+    {
+      "id": 3,
+      "name_zh": "平行、公理门槛与整体一致性",
+      "name_en": "Parallelism, Axiom Thresholds, and Global Coherence",
+      "chapters": [
+        "Book I (parallel theory)",
+        "Book VI"
+      ],
+      "theme": "Euclid's geometry changes character once parallelism enters. Local constructions become subject to a global consistency condition whose necessity is not obvious from a single diagram.",
+      "omega_directions": [
+        "modular-tower-inverse-limit",
+        "spectral-theory",
+        "rate-distortion-information-theory"
+      ],
+      "mapping_rationale": "The parallel postulate is methodologically a threshold axiom: below it one has local incidence geometry; with it one gets a globally coherent comparison theory. This resembles Omega situations where local compatibilities do not yet imply a full global model until one adds a closure or regularity condition. The information-theoretic direction enters because a local picture underdetermines global geometry unless a further admissibility criterion is fixed.",
+      "formal_strength": "moderate",
+      "backflow_targets": [
+        "pom",
+        "physical_spacetime_skeleton"
+      ]
+    },
+    {
+      "id": 4,
+      "name_zh": "几何代数与面积演算",
+      "name_en": "Geometric Algebra and Area Identities",
+      "chapters": [
+        "Book II"
+      ],
+      "theme": "Book II rewrites algebraic-looking identities as exact statements about rectangles, squares, and segment decompositions. It is Euclid's most explicit bridge between shape and arithmetic law.",
+      "omega_directions": [
+        "ring-arithmetic",
+        "fold-operator",
+        "spectral-theory"
+      ],
+      "mapping_rationale": "This is one of the strongest Omega correspondences. Euclid does not merely measure figures; he uses geometric decomposition as an algebraic calculus. Omega repeatedly turns combinatorial or operator constraints into geometry and back. Book II suggests a disciplined way to present such passages: each identity should be shown as a legal decomposition and recombination, not only as a symbolic equation.",
+      "formal_strength": "very strong",
+      "backflow_targets": [
+        "emergent_arithmetic",
+        "folding",
+        "circle_dimension_phase_gate"
+      ]
+    },
+    {
+      "id": 5,
+      "name_zh": "比例、相似与跨尺度迁移",
+      "name_en": "Proportion, Similarity, and Cross-Scale Transfer",
+      "chapters": [
+        "Book V",
+        "Book VI"
+      ],
+      "theme": "Books V and VI replace raw equality with proportional comparison. Similarity becomes the tool that moves truths across scales without losing structure.",
+      "omega_directions": [
+        "modular-tower-inverse-limit",
+        "rate-distortion-information-theory",
+        "spectral-theory"
+      ],
+      "mapping_rationale": "This is central for Omega because many of its strongest results are ratio laws, normalized invariants, and cross-resolution transports rather than absolute formulas. Similarity is the classical prototype for passing from one scale to another while preserving a compressed invariant profile. Spectral language enters because proportional structure often captures the leading mode while ignoring inessential absolute size.",
+      "formal_strength": "very strong",
+      "backflow_targets": [
+        "folding",
+        "circle_dimension_phase_gate",
+        "physical_spacetime_skeleton"
+      ]
+    },
+    {
+      "id": 6,
+      "name_zh": "离散算术与结构递推",
+      "name_en": "Discrete Arithmetic and Structural Recurrence",
+      "chapters": [
+        "Book VII",
+        "Book VIII",
+        "Book IX"
+      ],
+      "theme": "The arithmetic books show Euclid moving from magnitude geometry to divisibility, proportion chains, and number classification. They reveal that the Elements is not only spatial but also recursive and discrete.",
+      "omega_directions": [
+        "fibonacci-growth",
+        "ring-arithmetic",
+        "dynamical-systems"
+      ],
+      "mapping_rationale": "This category matters because it prevents a false split between geometry and arithmetic. Omega similarly derives arithmetic, combinatorics, and geometry from a single constrained base. Euclid's arithmetic books provide a historical precedent for embedding discrete recurrence and classification inside a geometric program rather than outside it.",
+      "formal_strength": "moderate",
+      "backflow_targets": [
+        "emergent_arithmetic",
+        "folding"
+      ]
+    },
+    {
+      "id": 7,
+      "name_zh": "不可公度、障碍与规范分层",
+      "name_en": "Incommensurability, Obstruction, and Canonical Stratification",
+      "chapters": [
+        "Book X"
+      ],
+      "theme": "Book X classifies incommensurable magnitudes instead of pretending every pair shares a common measure. It turns failure of reduction into a taxonomy.",
+      "omega_directions": [
+        "zeckendorf-representation",
+        "spectral-theory",
+        "rate-distortion-information-theory"
+      ],
+      "mapping_rationale": "The deepest bridge is negative but powerful: not all structures compress to one common unit. Omega papers often encounter obstruction classes, degeneracy barriers, or non-realizability thresholds; Book X shows how to make those failures systematic instead of embarrassing exceptions. The Zeckendorf direction enters through canonical representation under admissibility constraints: uniqueness is valuable precisely because unrestricted compression fails.",
+      "formal_strength": "strong",
+      "backflow_targets": [
+        "folding",
+        "pom",
+        "group_unification"
+      ]
+    },
+    {
+      "id": 8,
+      "name_zh": "立体、穷竭与终端分类",
+      "name_en": "Solid Geometry, Exhaustion, and Terminal Classification",
+      "chapters": [
+        "Book XI",
+        "Book XII",
+        "Book XIII"
+      ],
+      "theme": "The final books extend geometry to solids, use exhaustion to control measurement, and culminate in the classification of the regular solids.",
+      "omega_directions": [
+        "modular-tower-inverse-limit",
+        "dynamical-systems",
+        "spectral-theory"
+      ],
+      "mapping_rationale": "Book XII's exhaustion arguments are the clearest classical analogue of Omega's repeated finite-approximation logic: truth about a limiting object is obtained through disciplined control of finite stages. Book XIII then closes the program by classifying the canonical terminal objects. This is structurally identical to an Omega paper arc that moves from local admissible construction to limit control to rigidity/classification.",
+      "formal_strength": "very strong",
+      "backflow_targets": [
+        "physical_spacetime_skeleton",
+        "circle_dimension_phase_gate",
+        "pom"
+      ]
+    }
+  ],
+  "structural_summary": "Euclid is the cleanest historical precedent for the Omega claim that a constrained primitive grammar can force an unexpectedly rich mathematical world. The main lessons are: state the primitive objects first, separate construction from theorem, treat ratio and similarity as scale-transfer laws, make obstruction classes explicit, and present limiting arguments as finite-stage control rather than mystical continuum jumps.",
+  "sources_used_for_baseline_structure": [
+    "Clay Mathematics Institute historical archive for the thirteen-book structure",
+    "Jeremy Avigad, Edward Dean, John Mumma, A formal system for Euclid's Elements, arXiv:0810.4315",
+    "Logan Murphy et al., Autoformalizing Euclidean Geometry, arXiv:2405.17216",
+    "Stephen Wolfram, The Empirical Metamathematics of Euclid and Beyond, arXiv:2107.07337"
+  ]
+}
