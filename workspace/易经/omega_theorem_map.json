@@ -1,0 +1,3565 @@
+{
+  "generated_at": "2026-04-09T08:40:20.902986+00:00",
+  "work": "易经",
+  "discovery_path": "/Users/lexa/Desktop/lexa/omega/automath/discovery/discovery_report.json",
+  "classification_path": "/Users/lexa/Desktop/lexa/omega/omega-ancient-texts-analysis/workspace/易经/classification.json",
+  "direction_index": {
+    "golden-mean-shift": {
+      "direction": "golden-mean-shift",
+      "label": "Golden-Mean Shift",
+      "module_hints": [
+        "Omega.Core.No11",
+        "Omega.Graph.Sofic",
+        "Omega.Graph.TransferMatrix",
+        "Omega.Frontier.ConditionalArithmetic",
+        "Omega.Combinatorics.FibonacciCube"
+      ],
+      "candidates": [
+        {
+          "lean_theorem": "fibonacci_cardinality",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem fibonacci_cardinality (m : Nat) :\n    Fintype.card (X m) = Nat.fib (m + 2)",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "fibonacci_cardinality_recurrence",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem fibonacci_cardinality_recurrence (m : Nat) :\n    Fintype.card (X (m + 2)) = Fintype.card (X (m + 1)) + Fintype.card (X m)",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "goldenMean_characteristic_recurrence",
+          "lean_module": "Omega.Graph.Sofic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem goldenMean_characteristic_recurrence (m : Nat) :\n    Fintype.card (X (m + 2)) = Fintype.card (X (m + 1)) + Fintype.card (X m)",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "goldenMeanAdjacency_has_goldenRatio_eigenvector",
+          "lean_module": "Omega.Graph.TransferMatrix",
+          "lean_type": "theorem",
+          "lean_statement": "theorem goldenMeanAdjacency_has_goldenRatio_eigenvector :\n    ∃ v : Fin 2 → ℝ, v ≠ 0 ∧\n      Matrix.mulVec goldenMeanAdjacencyℝ v = fun i => Real.goldenRatio * v i",
+          "paper_labels": [
+            "lem:golden-mean-has-phi-eigenvector"
+          ],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "goldenMeanAdjacency",
+          "lean_module": "Omega.Graph.TransferMatrix",
+          "lean_type": "def",
+          "lean_statement": "def goldenMeanAdjacency : Matrix (Fin 2) (Fin 2) ℤ",
+          "paper_labels": [
+            "def:golden-mean-adjacency-matrix"
+          ],
+          "matched_keywords": [
+            "No11",
+            "goldenMean",
+            "adjacency"
+          ],
+          "score": 11
+        },
+        {
+          "lean_theorem": "goldenMeanAdjacency_cayley_hamilton",
+          "lean_module": "Omega.Graph.TransferMatrix",
+          "lean_type": "theorem",
+          "lean_statement": "theorem goldenMeanAdjacency_cayley_hamilton :\n    goldenMeanAdjacency ^ 2 = goldenMeanAdjacency + 1",
+          "paper_labels": [],
+          "matched_keywords": [
+            "goldenMean",
+            "golden mean",
+            "adjacency"
+          ],
+          "score": 11
+        },
+        {
+          "lean_theorem": "goldenMeanAdjacency_entry_11",
+          "lean_module": "Omega.Graph.TransferMatrix",
+          "lean_type": "theorem",
+          "lean_statement": "theorem goldenMeanAdjacency_entry_11 : goldenMeanAdjacency 1 1 = 0",
+          "paper_labels": [
+            "prop:golden-mean-adjacency-entry-11"
+          ],
+          "matched_keywords": [
+            "No11",
+            "goldenMean",
+            "adjacency"
+          ],
+          "score": 11
+        },
+        {
+          "lean_theorem": "goldenMeanAdjacency_fusion_rule",
+          "lean_module": "Omega.Graph.TransferMatrix",
+          "lean_type": "theorem",
+          "lean_statement": "theorem goldenMeanAdjacency_fusion_rule :\n    goldenMeanAdjacency ^ 2 = goldenMeanAdjacency + 1",
+          "paper_labels": [
+            "thm:folding-stable-syntax-fib-fusion-ring"
+          ],
+          "matched_keywords": [
+            "goldenMean",
+            "adjacency",
+            "fibonacci"
+          ],
+          "score": 11
+        }
+      ]
+    },
+    "fibonacci-growth": {
+      "direction": "fibonacci-growth",
+      "label": "Fibonacci Growth",
+      "module_hints": [
+        "Omega.Frontier.ConditionalArithmetic",
+        "Omega.Core.Fib",
+        "Omega.Graph.Sofic",
+        "Omega.Graph.TransferMatrix"
+      ],
+      "candidates": [
+        {
+          "lean_theorem": "fibonacci_cardinality",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem fibonacci_cardinality (m : Nat) :\n    Fintype.card (X m) = Nat.fib (m + 2)",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "fibonacci_cardinality_recurrence",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem fibonacci_cardinality_recurrence (m : Nat) :\n    Fintype.card (X (m + 2)) = Fintype.card (X (m + 1)) + Fintype.card (X m)",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "goldenMean_characteristic_recurrence",
+          "lean_module": "Omega.Graph.Sofic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem goldenMean_characteristic_recurrence (m : Nat) :\n    Fintype.card (X (m + 2)) = Fintype.card (X (m + 1)) + Fintype.card (X m)",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "cardinality_fibonacci_ratio",
+          "lean_module": "Omega.Graph.Sofic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem cardinality_fibonacci_ratio (m : Nat) :\n    Fintype.card (X (m + 2)) = Fintype.card (X (m + 1)) + Fintype.card (X m)",
+          "paper_labels": [],
+          "matched_keywords": [
+            "fibonacci",
+            "cardinality",
+            "fib"
+          ],
+          "score": 15
+        },
+        {
+          "lean_theorem": "fib_odd_recurrence",
+          "lean_module": "Omega.Core.Fib",
+          "lean_type": "theorem",
+          "lean_statement": "theorem fib_odd_recurrence (n : Nat) :\n    Nat.fib (2 * n + 5) = 3 * Nat.fib (2 * n + 3) - Nat.fib (2 * n + 1)",
+          "paper_labels": [],
+          "matched_keywords": [
+            "fibonacci",
+            "recurrence",
+            "fib"
+          ],
+          "score": 11
+        },
+        {
+          "lean_theorem": "fibonacci_divisibility",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem fibonacci_divisibility {m n : Nat} (h : m ∣ n) : Nat.fib m ∣ Nat.fib n",
+          "paper_labels": [],
+          "matched_keywords": [
+            "fibonacci",
+            "fib"
+          ],
+          "score": 10
+        },
+        {
+          "lean_theorem": "fib_add_fib_eq_fib_succ",
+          "lean_module": "Omega.Core.Fib",
+          "lean_type": "theorem",
+          "lean_statement": "theorem fib_add_fib_eq_fib_succ (n : Nat) :\n    Nat.fib n + Nat.fib (n + 1) = Nat.fib (n + 2)",
+          "paper_labels": [
+            "prop:pom-fib-add-fib-eq-fib-succ"
+          ],
+          "matched_keywords": [
+            "fibonacci",
+            "recurrence",
+            "fib"
+          ],
+          "score": 7
+        },
+        {
+          "lean_theorem": "fib_add_succ",
+          "lean_module": "Omega.Core.Fib",
+          "lean_type": "theorem",
+          "lean_statement": "theorem fib_add_succ (m : Nat) : Nat.fib (m + 2) + Nat.fib (m + 1) = Nat.fib (m + 3)",
+          "paper_labels": [],
+          "matched_keywords": [
+            "fibonacci",
+            "recurrence",
+            "fib"
+          ],
+          "score": 7
+        }
+      ]
+    },
+    "zeckendorf-representation": {
+      "direction": "zeckendorf-representation",
+      "label": "Zeckendorf Representation",
+      "module_hints": [
+        "Omega.Frontier.ConditionalArithmetic",
+        "Omega.Folding.FiberArithmetic",
+        "Omega.Folding.CollisionZetaOperator"
+      ],
+      "candidates": [
+        {
+          "lean_theorem": "zeckendorf_uniqueness",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem zeckendorf_uniqueness {x y : X m} (h : X.zeckIndices x = X.zeckIndices y) : x = y",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "zeckendorf_injective",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem zeckendorf_injective (m : Nat) : Function.Injective (X.zeckIndices (m",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "zeckIndices_injective",
+          "lean_module": "Omega.Folding.FiberArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem zeckIndices_injective (m : Nat) : Function.Injective (X.zeckIndices (m",
+          "paper_labels": [],
+          "matched_keywords": [
+            "zeckendorf",
+            "injective"
+          ],
+          "score": 6
+        },
+        {
+          "lean_theorem": "zeckRep_injective",
+          "lean_module": "Omega.Folding.FiberArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem zeckRep_injective (m : Nat) : Function.Injective (X.zeckRep (m",
+          "paper_labels": [
+            "thm:finite-resolution-mod"
+          ],
+          "matched_keywords": [
+            "zeckendorf",
+            "injective"
+          ],
+          "score": 6
+        },
+        {
+          "lean_theorem": "paper_zeckendorf_primes_no_short_forbidden",
+          "lean_module": "Omega.Folding.CollisionZetaOperator",
+          "lean_type": "theorem",
+          "lean_statement": "theorem paper_zeckendorf_primes_no_short_forbidden :\n    Nat.Prime 2 ∧ Nat.Prime 3 ∧ Nat.Prime 7 ∧ True",
+          "paper_labels": [
+            "prop:zeta-zeckendorf-primes-no-short-forbidden"
+          ],
+          "matched_keywords": [
+            "zeckendorf"
+          ],
+          "score": 5
+        },
+        {
+          "lean_theorem": "primes_at_each_zeckendorf_length",
+          "lean_module": "Omega.Folding.CollisionZetaOperator",
+          "lean_type": "theorem",
+          "lean_statement": "theorem primes_at_each_zeckendorf_length :\n    Nat.Prime (Nat.fib 3) ∧ Nat.Prime (Nat.fib 4) ∧ Nat.Prime (Nat.fib 5) ∧\n    Nat.Prime 7 ∧ Nat.Prime (Nat.fib 7)",
+          "paper_labels": [],
+          "matched_keywords": [
+            "zeckendorf"
+          ],
+          "score": 5
+        },
+        {
+          "lean_theorem": "succ_unique_branch_partial",
+          "lean_module": "Omega.Folding.CollisionZetaOperator",
+          "lean_type": "theorem",
+          "lean_statement": "theorem succ_unique_branch_partial :\n    stableValue (X.ofNat 6 12) = 12 ∧ X.ofNat 6 13 ≠ X.ofNat 6 0 ∧\n    stableValue (X.ofNat 6 0) = 0",
+          "paper_labels": [
+            "thm:terminal-succ-unique-branch-merge"
+          ],
+          "matched_keywords": [
+            "unique"
+          ],
+          "score": 5
+        },
+        {
+          "lean_theorem": "zeckendorf_primes_no_short_forbidden_pattern",
+          "lean_module": "Omega.Folding.CollisionZetaOperator",
+          "lean_type": "theorem",
+          "lean_statement": "theorem zeckendorf_primes_no_short_forbidden_pattern :\n    Nat.Prime 2 ∧ Nat.Prime 3 ∧ Nat.Prime 7 ∧ True",
+          "paper_labels": [],
+          "matched_keywords": [
+            "zeckendorf"
+          ],
+          "score": 5
+        }
+      ]
+    },
+    "fold-operator": {
+      "direction": "fold-operator",
+      "label": "Fold Operator",
+      "module_hints": [
+        "Omega.Frontier.ConditionalArithmetic",
+        "Omega.Folding"
+      ],
+      "candidates": [
+        {
+          "lean_theorem": "fold_is_idempotent",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem fold_is_idempotent (w : Word m) : Fold (Fold w).1 = Fold w",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "fold_fixes_stable",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem fold_fixes_stable (x : X m) : Fold x.1 = x",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "fold_is_surjective",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem fold_is_surjective : Function.Surjective (Fold (m",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "Fold_fiber_covers_val_class",
+          "lean_module": "Omega.Folding.FiberArithmeticProperties",
+          "lean_type": "theorem",
+          "lean_statement": "theorem Fold_fiber_covers_val_class (m : Nat) (x : X m) :\n    ∀ w : Word m, weight w % Nat.fib (m + 2) = stableValue x →\n    Fold w = x",
+          "paper_labels": [
+            "thm:pom-fold-fiber-covers-val-class"
+          ],
+          "matched_keywords": [
+            "fold",
+            "stable",
+            "fiber"
+          ],
+          "score": 13
+        },
+        {
+          "lean_theorem": "conclusion_foldbin_stable_k0_rank_six",
+          "lean_module": "Omega.Folding.Window6",
+          "lean_type": "theorem",
+          "lean_statement": "theorem conclusion_foldbin_stable_k0_rank_six :\n    Fintype.card (X 6) = 21 ∧\n    21 = Nat.fib 8 ∧\n    cBinFiberHist 6 2 + cBinFiberHist 6 3 + cBinFiberHist 6 4 = 21",
+          "paper_labels": [
+            "thm:conclusion-foldbin-stable-collapse-ordered-k0-memory"
+          ],
+          "matched_keywords": [
+            "fold",
+            "stable",
+            "fiber"
+          ],
+          "score": 13
+        },
+        {
+          "lean_theorem": "Fold_periodicWord110_four_stable",
+          "lean_module": "Omega.Folding.Defect",
+          "lean_type": "theorem",
+          "lean_statement": "theorem Fold_periodicWord110_four_stable :\n    Fold (Fold (periodicWord110 4)).1 = Fold (periodicWord110 4)",
+          "paper_labels": [
+            "thm:fold-periodic-word-110-instance"
+          ],
+          "matched_keywords": [
+            "fold",
+            "stable",
+            "idempotent"
+          ],
+          "score": 11
+        },
+        {
+          "lean_theorem": "paper_fold_surjective",
+          "lean_module": "Omega.Folding.Defect",
+          "lean_type": "theorem",
+          "lean_statement": "theorem paper_fold_surjective (m : Nat) : Function.Surjective (fun w : Word m => Fold w)",
+          "paper_labels": [
+            "prop:fold-surjective"
+          ],
+          "matched_keywords": [
+            "fold",
+            "stable",
+            "surjective"
+          ],
+          "score": 11
+        },
+        {
+          "lean_theorem": "mem_fiber_iff_fold",
+          "lean_module": "Omega.Folding.FiberArithmeticProperties",
+          "lean_type": "theorem",
+          "lean_statement": "theorem mem_fiber_iff_fold (x : X m) (w : Word m) :\n    w ∈ fiber x ↔ Fold w = x",
+          "paper_labels": [],
+          "matched_keywords": [
+            "fold",
+            "stable",
+            "fiber"
+          ],
+          "score": 11
+        }
+      ]
+    },
+    "ring-arithmetic": {
+      "direction": "ring-arithmetic",
+      "label": "Ring Arithmetic",
+      "module_hints": [
+        "Omega.Frontier.ConditionalArithmetic",
+        "Omega.Folding.FiberArithmetic",
+        "Omega.Folding.FiberArithmeticProperties"
+      ],
+      "candidates": [
+        {
+          "lean_theorem": "stableValue_ring_isomorphism",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem stableValue_ring_isomorphism (m : Nat) :\n    (∀ x y : X m, stableValue (X.stableAdd x y) =\n      (stableValue x + stableValue y) % Nat.fib (m + 2)) ∧\n    (∀ x y : X m, stableValue (X.stableMul x y) =\n      (stableValue x * stableValue y) % Nat.fib (m + 2)) ∧\n    Function.Injective (stableValue (m",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "modular_projection_add_no_carry",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem modular_projection_add_no_carry (x y : X (m + 1))\n    (h : stableValue x + stableValue y < Nat.fib (m + 3)) :\n    X.modularProject (X.stableAdd x y) =\n      X.stableAdd (X.modularProject x) (X.modularProject y)",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "stableAdd_comm",
+          "lean_module": "Omega.Folding.FiberArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem stableAdd_comm (x y : X m) :\n    stableAdd x y = stableAdd y x",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "stableMul_comm",
+          "lean_module": "Omega.Folding.FiberArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem stableMul_comm (x y : X m) :\n    stableMul x y = stableMul y x",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "stableValue_isomorphism_summary",
+          "lean_module": "Omega.Folding.FiberArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem stableValue_isomorphism_summary (m : Nat) :\n    (∀ x y : X m, stableValue (stableAdd x y) = (stableValue x + stableValue y) % Nat.fib (m + 2)) ∧\n    (∀ x y : X m, stableValue (stableMul x y) = (stableValue x * stableValue y) % Nat.fib (m + 2)) ∧\n    Function.Injective (stableValue (m",
+          "paper_labels": [],
+          "matched_keywords": [
+            "ring",
+            "stableAdd",
+            "stableMul",
+            "isomorphism"
+          ],
+          "score": 12
+        },
+        {
+          "lean_theorem": "complete_ring_axioms",
+          "lean_module": "Omega.Folding.FiberArithmeticProperties",
+          "lean_type": "theorem",
+          "lean_statement": "theorem complete_ring_axioms (m : Nat) :\n    (∀ x y : X m, stableAdd x y = stableAdd y x) ∧\n    (∀ x y z : X m, stableAdd (stableAdd x y) z = stableAdd x (stableAdd y z)) ∧\n    (∀ x : X m, stableAdd stableZero x = x) ∧\n    (∀ x : X m, stableAdd x (stableNeg x) = stableZero) ∧\n    (∀ x y : X m, stableMul x y = stableMul y x) ∧\n    (∀ x y z : X m, stableMul (stableMul x y) z = stableMul x (stableMul y z)) ∧\n    (∀ x y z : X m, stableMul x (stableAdd y z) = stableAdd (stableMul x y) (stableMul x z)) ∧\n    (∀ x y z : X m, stableAdd x y = stableAdd x z → y = z)",
+          "paper_labels": [],
+          "matched_keywords": [
+            "ring",
+            "stableAdd",
+            "stableMul"
+          ],
+          "score": 11
+        },
+        {
+          "lean_theorem": "stableMul_stableAdd_left",
+          "lean_module": "Omega.Folding.FiberArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem stableMul_stableAdd_left (x y z : X m) :\n    stableMul x (stableAdd y z) = stableAdd (stableMul x y) (stableMul x z)",
+          "paper_labels": [],
+          "matched_keywords": [
+            "stableAdd",
+            "stableMul"
+          ],
+          "score": 10
+        },
+        {
+          "lean_theorem": "stableMul_stableAdd_right",
+          "lean_module": "Omega.Folding.FiberArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem stableMul_stableAdd_right (x y z : X m) :\n    stableMul (stableAdd y z) x = stableAdd (stableMul y x) (stableMul z x)",
+          "paper_labels": [],
+          "matched_keywords": [
+            "stableAdd",
+            "stableMul"
+          ],
+          "score": 10
+        }
+      ]
+    },
+    "spectral-theory": {
+      "direction": "spectral-theory",
+      "label": "Spectral Theory",
+      "module_hints": [
+        "Omega.Folding.CollisionZeta",
+        "Omega.Folding.CollisionZetaOperator",
+        "Omega.Graph.TransferMatrix",
+        "Omega.Frontier.ConditionalArithmetic"
+      ],
+      "candidates": [
+        {
+          "lean_theorem": "collision_kernels_all_real_eigenvalues",
+          "lean_module": "Omega.Folding.CollisionZeta",
+          "lean_type": "theorem",
+          "lean_statement": "theorem collision_kernels_all_real_eigenvalues : (148 : ℤ) > 0 ∧ (564 : ℤ) > 0",
+          "paper_labels": [
+            "def:pom-collision-all-real-eigenvalues"
+          ],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "characteristic_polynomial_witness",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem characteristic_polynomial_witness (m : Nat) :\n    Fintype.card (X (m + 2)) = Fintype.card (X (m + 1)) + Fintype.card (X m)",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "eigenvalue_eq_goldenRatio_or_goldenConj",
+          "lean_module": "Omega.Graph.TransferMatrix",
+          "lean_type": "theorem",
+          "lean_statement": "theorem eigenvalue_eq_goldenRatio_or_goldenConj\n    {μ : ℝ} (hμ : μ ^ 2 = μ + 1) :\n    μ = Real.goldenRatio ∨ μ = Real.goldenConj",
+          "paper_labels": [
+            "lem:golden-mean-real-eigenvalue-classification"
+          ],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "three_eigenvalue_regimes",
+          "lean_module": "Omega.Folding.CollisionZetaOperator",
+          "lean_type": "theorem",
+          "lean_statement": "theorem three_eigenvalue_regimes :\n    collisionKernel2.trace = 2 ∧ collisionKernel2.det = -2 ∧\n    ((148 : ℤ) > 0)",
+          "paper_labels": [],
+          "matched_keywords": [
+            "eigen",
+            "collision",
+            "kernel"
+          ],
+          "score": 11
+        },
+        {
+          "lean_theorem": "collisionKernel2_det_pow_2",
+          "lean_module": "Omega.Folding.CollisionZeta",
+          "lean_type": "theorem",
+          "lean_statement": "theorem collisionKernel2_det_pow_2 : (collisionKernel2 ^ 2).det = 4",
+          "paper_labels": [
+            "def:pom-collision-kernel-det-pow-a2-2"
+          ],
+          "matched_keywords": [
+            "collision",
+            "kernel"
+          ],
+          "score": 10
+        },
+        {
+          "lean_theorem": "collisionKernel2_det_pow_3",
+          "lean_module": "Omega.Folding.CollisionZeta",
+          "lean_type": "theorem",
+          "lean_statement": "theorem collisionKernel2_det_pow_3 : (collisionKernel2 ^ 3).det = -8",
+          "paper_labels": [
+            "def:pom-collision-kernel-det-pow-a2-3"
+          ],
+          "matched_keywords": [
+            "collision",
+            "kernel"
+          ],
+          "score": 10
+        },
+        {
+          "lean_theorem": "collisionKernel2_det_pow_general",
+          "lean_module": "Omega.Folding.CollisionZeta",
+          "lean_type": "theorem",
+          "lean_statement": "theorem collisionKernel2_det_pow_general (n : ℕ) :\n    (collisionKernel2 ^ n).det = (-2 : ℤ) ^ n",
+          "paper_labels": [
+            "prop:collision-kernel-det-pow"
+          ],
+          "matched_keywords": [
+            "collision",
+            "kernel"
+          ],
+          "score": 10
+        },
+        {
+          "lean_theorem": "collisionKernel2_trace_pow_0",
+          "lean_module": "Omega.Folding.CollisionZeta",
+          "lean_type": "theorem",
+          "lean_statement": "theorem collisionKernel2_trace_pow_0 : (collisionKernel2 ^ 0).trace = 3",
+          "paper_labels": [
+            "def:pom-collision-zeta-a2-trace-pow-0"
+          ],
+          "matched_keywords": [
+            "collision",
+            "kernel"
+          ],
+          "score": 10
+        }
+      ]
+    },
+    "modular-tower-inverse-limit": {
+      "direction": "modular-tower-inverse-limit",
+      "label": "Modular Tower and Inverse Limit",
+      "module_hints": [
+        "Omega.Frontier.ConditionalArithmetic",
+        "Omega.Frontier.ConditionalSummary"
+      ],
+      "candidates": [
+        {
+          "lean_theorem": "inverse_limit_left",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem inverse_limit_left (F : X.CompatibleFamily) :\n    X.toFamily (X.ofFamily F) = F",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "inverse_limit_right",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem inverse_limit_right (a : X.XInfinity) :\n    X.ofFamily (X.toFamily a) = a",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "inverse_limit_extensionality",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem inverse_limit_extensionality (a b : X.XInfinity) :\n    a = b ↔ ∀ m, X.prefixWord a m = X.prefixWord b m",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "inverse_limit_round_left",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem inverse_limit_round_left (F : X.CompatibleFamily) :\n    X.toFamily (X.ofFamily F) = F",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "inverse_limit_round_right",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem inverse_limit_round_right (a : X.XInfinity) :\n    X.ofFamily (X.toFamily a) = a",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "inverse_limit_bijective",
+          "lean_module": "Omega.Frontier.ConditionalSummary",
+          "lean_type": "theorem",
+          "lean_statement": "theorem inverse_limit_bijective :\n    Function.Bijective (X.ofFamily : X.CompatibleFamily → X.XInfinity)",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "fold_value_roundtrip",
+          "lean_module": "Omega.Frontier.ConditionalSummary",
+          "lean_type": "theorem",
+          "lean_statement": "theorem fold_value_roundtrip (x : X m) : stableValue (Fold x.1) = stableValue x",
+          "paper_labels": [],
+          "matched_keywords": [
+            "round"
+          ],
+          "score": 5
+        },
+        {
+          "lean_theorem": "restrict_distributes_xor",
+          "lean_module": "Omega.Frontier.ConditionalSummary",
+          "lean_type": "theorem",
+          "lean_statement": "theorem restrict_distributes_xor (h : m ≤ n) (a b : Word n) :\n    restrictWord h (xorWord a b) = xorWord (restrictWord h a) (restrictWord h b)",
+          "paper_labels": [],
+          "matched_keywords": [
+            "restrict"
+          ],
+          "score": 5
+        }
+      ]
+    },
+    "dynamical-systems": {
+      "direction": "dynamical-systems",
+      "label": "Dynamical Systems",
+      "module_hints": [
+        "Omega.Folding.Entropy",
+        "Omega.Graph.Sofic",
+        "Omega.Graph.TransferMatrix"
+      ],
+      "candidates": [
+        {
+          "lean_theorem": "topological_entropy_eq_log_phi",
+          "lean_module": "Omega.Folding.Entropy",
+          "lean_type": "theorem",
+          "lean_statement": "theorem topological_entropy_eq_log_phi :\n    Tendsto (fun n => Real.log (Nat.fib (n + 2) : ℝ) / (n : ℝ)) atTop (𝓝 (Real.log φ))",
+          "paper_labels": [
+            "cor:folding-stable-syntax-entropy-logqdim"
+          ],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "goldenMean_characteristic_recurrence",
+          "lean_module": "Omega.Graph.Sofic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem goldenMean_characteristic_recurrence (m : Nat) :\n    Fintype.card (X (m + 2)) = Fintype.card (X (m + 1)) + Fintype.card (X m)",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "goldenMeanAdjacency_has_goldenRatio_eigenvector",
+          "lean_module": "Omega.Graph.TransferMatrix",
+          "lean_type": "theorem",
+          "lean_statement": "theorem goldenMeanAdjacency_has_goldenRatio_eigenvector :\n    ∃ v : Fin 2 → ℝ, v ≠ 0 ∧\n      Matrix.mulVec goldenMeanAdjacencyℝ v = fun i => Real.goldenRatio * v i",
+          "paper_labels": [
+            "lem:golden-mean-has-phi-eigenvector"
+          ],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "entropy_ordering_proxy",
+          "lean_module": "Omega.Folding.Entropy",
+          "lean_type": "theorem",
+          "lean_statement": "theorem entropy_ordering_proxy : Real.log φ < Real.log 2",
+          "paper_labels": [],
+          "matched_keywords": [
+            "entropy",
+            "shift"
+          ],
+          "score": 6
+        },
+        {
+          "lean_theorem": "entropy_comprehensive_certificate",
+          "lean_module": "Omega.Folding.Entropy",
+          "lean_type": "theorem",
+          "lean_statement": "theorem entropy_comprehensive_certificate :\n    Tendsto (fun n => Real.log (Nat.fib (n + 2) : ℝ) / (n : ℝ)) atTop (𝓝 (Real.log φ)) ∧\n    Real.log φ > 0 ∧ Real.log φ < Real.log 2 ∧\n    φ > 3 / 2 ∧ φ < 2 ∧ Irrational φ ∧\n    (∀ n, (Nat.fib n : ℝ) = (φ ^ n - ψ ^ n) / Real.sqrt 5)",
+          "paper_labels": [
+            "thm:entropy-comprehensive-certificate"
+          ],
+          "matched_keywords": [
+            "entropy"
+          ],
+          "score": 5
+        },
+        {
+          "lean_theorem": "entropy_gap_pos",
+          "lean_module": "Omega.Folding.Entropy",
+          "lean_type": "theorem",
+          "lean_statement": "theorem entropy_gap_pos : Real.log 2 - Real.log φ > 0",
+          "paper_labels": [],
+          "matched_keywords": [
+            "entropy"
+          ],
+          "score": 5
+        },
+        {
+          "lean_theorem": "goldenMean_trace_recurrence_verified",
+          "lean_module": "Omega.Graph.TransferMatrix",
+          "lean_type": "theorem",
+          "lean_statement": "theorem goldenMean_trace_recurrence_verified :\n    (goldenMeanAdjacency ^ 2).trace = (goldenMeanAdjacency ^ 1).trace + (goldenMeanAdjacency ^ 0).trace ∧\n    (goldenMeanAdjacency ^ 3).trace = (goldenMeanAdjacency ^ 2).trace + (goldenMeanAdjacency ^ 1).trace ∧\n    (goldenMeanAdjacency ^ 4).trace = (goldenMeanAdjacency ^ 3).trace + (goldenMeanAdjacency ^ 2).trace ∧\n    (goldenMeanAdjacency ^ 5).trace = (goldenMeanAdjacency ^ 4).trace + (goldenMeanAdjacency ^ 3).trace ∧\n    (goldenMeanAdjacency ^ 6).trace = (goldenMeanAdjacency ^ 5).trace + (goldenMeanAdjacency ^ 4).trace",
+          "paper_labels": [
+            "prop:pom-trace-recurrence-verified"
+          ],
+          "matched_keywords": [
+            "recurrence"
+          ],
+          "score": 5
+        },
+        {
+          "lean_theorem": "goldenMeanAdjacency_pow_add_two",
+          "lean_module": "Omega.Graph.TransferMatrix",
+          "lean_type": "theorem",
+          "lean_statement": "theorem goldenMeanAdjacency_pow_add_two (m : Nat) :\n    goldenMeanAdjacency ^ (m + 2) =\n      goldenMeanAdjacency ^ (m + 1) + goldenMeanAdjacency ^ m",
+          "paper_labels": [
+            "cor:folding-stable-syntax-entropy-logqdim-matrix-recurrence"
+          ],
+          "matched_keywords": [
+            "entropy",
+            "recurrence"
+          ],
+          "score": 2
+        }
+      ]
+    },
+    "rate-distortion-information-theory": {
+      "direction": "rate-distortion-information-theory",
+      "label": "Rate-Distortion and Information Theory",
+      "module_hints": [
+        "Omega.Frontier.ConditionalArithmetic",
+        "Omega.Frontier.Conditional",
+        "Omega.Frontier.Certificates",
+        "Omega.SPG.ErrorThreshold"
+      ],
+      "candidates": [
+        {
+          "lean_theorem": "observation_refinement_reduces_error",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem observation_refinement_reduces_error\n    {α β γ : Type*} [Fintype α] [Fintype β] [Fintype γ]\n    (μ : PMF α) (obs₁ : α → β) (obs₂ : α → γ) (f : γ → β)\n    (hRef : ∀ x, obs₁ x = f (obs₂ x)) (P : Set α) :\n    SPG.scanError μ obs₂ P ≤ SPG.scanError μ obs₁ P",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "prefix_resolution_decreases_error",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem prefix_resolution_decreases_error {m₁ m₂ n : Nat}\n    (μ : PMF (Word n)) (h₁ : m₁ ≤ n) (h₂ : m₂ ≤ n) (hm : m₁ ≤ m₂)\n    (P : Set (Word n)) :\n    SPG.prefixScanError μ h₂ P ≤ SPG.prefixScanError μ h₁ P",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "scanError_hasCertificate",
+          "lean_module": "Omega.Frontier.Conditional",
+          "lean_type": "theorem",
+          "lean_statement": "theorem scanError_hasCertificate {α β : Type*} [Fintype α] [Fintype β]\n    (μ : PMF α) (obs : α → β) (P : Set α) :\n    ScanErrorCertificate.Valid\n      ({ μ",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "prefixScanError_hasCertificate",
+          "lean_module": "Omega.Frontier.Conditional",
+          "lean_type": "theorem",
+          "lean_statement": "theorem prefixScanError_hasCertificate {m n : Nat}\n    (μ : PMF (Word n)) (h : m ≤ n) (P : Set (Word n)) :\n    PrefixScanErrorCertificate.Valid\n      ({ m",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "kappa_ge_of_eps_ge",
+          "lean_module": "Omega.SPG.ErrorThreshold",
+          "lean_type": "theorem",
+          "lean_statement": "theorem kappa_ge_of_eps_ge {p ε : ℝ} (hp : 1 < p) (hε_pos : 0 < ε) (hε_lt : ε < 1)\n    (heps : (p - 1) / (p + 1) ≤ ε) :\n    p ≤ kappa ε",
+          "paper_labels": [
+            "prop:spg-relative-error-threshold-sharpness"
+          ],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "eps_lt_of_kappa_lt",
+          "lean_module": "Omega.SPG.ErrorThreshold",
+          "lean_type": "theorem",
+          "lean_statement": "theorem eps_lt_of_kappa_lt {p ε : ℝ} (hp : 1 < p) (hε_pos : 0 < ε) (hε_lt : ε < 1)\n    (hkappa : kappa ε < p) :\n    ε < (p - 1) / (p + 1)",
+          "paper_labels": [
+            "prop:spg-relative-error-threshold-sharpness"
+          ],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "PrefixScanErrorCertificate.Valid",
+          "lean_module": "Omega.Frontier.Certificates",
+          "lean_type": "def",
+          "lean_statement": "def PrefixScanErrorCertificate.Valid (c : PrefixScanErrorCertificate) : Prop",
+          "paper_labels": [],
+          "matched_keywords": [
+            "error",
+            "certificate",
+            "scan"
+          ],
+          "score": 15
+        },
+        {
+          "lean_theorem": "PrefixScanErrorCertificate.sound",
+          "lean_module": "Omega.Frontier.Certificates",
+          "lean_type": "theorem",
+          "lean_statement": "theorem PrefixScanErrorCertificate.sound (c : PrefixScanErrorCertificate) (h : c.Valid) :\n    SPG.prefixScanError c.μ c.h c.event = c.claimed",
+          "paper_labels": [],
+          "matched_keywords": [
+            "error",
+            "certificate",
+            "scan"
+          ],
+          "score": 15
+        }
+      ]
+    },
+    "fiber-structure": {
+      "direction": "fiber-structure",
+      "label": "Fiber Structure",
+      "module_hints": [
+        "Omega.Combinatorics.FibonacciCube",
+        "Omega.Folding.FiberSplit",
+        "Omega.Folding.MaxFiber",
+        "Omega.Folding.MaxFiberHigh",
+        "Omega.Folding.MomentBounds",
+        "Omega.Folding.MomentRecurrence"
+      ],
+      "candidates": [
+        {
+          "lean_theorem": "maxFiberMultiplicity_bounds",
+          "lean_module": "Omega.Combinatorics.FibonacciCube",
+          "lean_type": "theorem",
+          "lean_statement": "theorem maxFiberMultiplicity_bounds (m : Nat) :\n    m / 2 + 1 ≤ X.maxFiberMultiplicity m ∧\n    X.maxFiberMultiplicity m ≤ Nat.fib (m + 2)",
+          "paper_labels": [
+            "thm:pom-maxFiberMultiplicity-bounds"
+          ],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "maxFiberMultiplicity_fibonacci_bound",
+          "lean_module": "Omega.Folding.FiberSplit",
+          "lean_type": "theorem",
+          "lean_statement": "theorem maxFiberMultiplicity_fibonacci_bound (m : Nat) (hm : 4 ≤ m) :\n    maxFiberMultiplicity m ≤ maxFiberMultiplicity (m - 1) + maxFiberMultiplicity (m - 2)",
+          "paper_labels": [
+            "cor:pom-max-fiber-fibonacci-bound"
+          ],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "maxFiberMultiplicity_eight",
+          "lean_module": "Omega.Folding.MaxFiberHigh",
+          "lean_type": "theorem",
+          "lean_statement": "theorem maxFiberMultiplicity_eight : maxFiberMultiplicity 8 = 8",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "maxFiberMultiplicity_nine",
+          "lean_module": "Omega.Folding.MaxFiberHigh",
+          "lean_type": "theorem",
+          "lean_statement": "theorem maxFiberMultiplicity_nine : maxFiberMultiplicity 9 = 10",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "maxFiberMultiplicity_ten",
+          "lean_module": "Omega.Folding.MaxFiberHigh",
+          "lean_type": "theorem",
+          "lean_statement": "theorem maxFiberMultiplicity_ten : maxFiberMultiplicity 10 = 13",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "maxFiberMultiplicity_split_bound",
+          "lean_module": "Omega.Folding.FiberSplit",
+          "lean_type": "theorem",
+          "lean_statement": "theorem maxFiberMultiplicity_split_bound (m : Nat) :\n    maxFiberMultiplicity (m + 2) ≤ maxFiberMultiplicity (m + 1) + maxFiberMultiplicity m",
+          "paper_labels": [
+            "cor:pom-max-fiber-achievers-bsplit-gcd-trichotomy"
+          ],
+          "matched_keywords": [
+            "fiber",
+            "maxFiberMultiplicity",
+            "split",
+            "bound"
+          ],
+          "score": 20
+        },
+        {
+          "lean_theorem": "momentSum_upper_bound'",
+          "lean_module": "Omega.Folding.MomentRecurrence",
+          "lean_type": "theorem",
+          "lean_statement": "theorem momentSum_upper_bound' (q m : Nat) (hq : 1 ≤ q) :\n    momentSum q m ≤ X.maxFiberMultiplicity m ^ (q - 1) * 2 ^ m",
+          "paper_labels": [
+            "thm:pom-sq-upper-bound"
+          ],
+          "matched_keywords": [
+            "fiber",
+            "maxFiberMultiplicity",
+            "moment",
+            "bound"
+          ],
+          "score": 16
+        },
+        {
+          "lean_theorem": "maxFiberMultiplicity_sq_le_momentSum",
+          "lean_module": "Omega.Combinatorics.FibonacciCube",
+          "lean_type": "theorem",
+          "lean_statement": "theorem maxFiberMultiplicity_sq_le_momentSum (m : Nat) :\n    X.maxFiberMultiplicity m ^ 2 ≤ momentSum 2 m",
+          "paper_labels": [
+            "thm:pom-maxFiberMultiplicity-sq-le-momentSum"
+          ],
+          "matched_keywords": [
+            "fiber",
+            "maxFiberMultiplicity",
+            "moment"
+          ],
+          "score": 15
+        }
+      ]
+    }
+  },
+  "category_mappings": [
+    {
+      "id": 1,
+      "name_zh": "创生与纯态",
+      "name_en": "Primal Creation and Pure States",
+      "omega_directions": [
+        "golden-mean-shift",
+        "fibonacci-growth",
+        "modular-tower-inverse-limit"
+      ],
+      "direction_groups": [
+        {
+          "direction": "golden-mean-shift",
+          "label": "Golden-Mean Shift",
+          "module_hints": [
+            "Omega.Core.No11",
+            "Omega.Graph.Sofic",
+            "Omega.Graph.TransferMatrix",
+            "Omega.Frontier.ConditionalArithmetic",
+            "Omega.Combinatorics.FibonacciCube"
+          ],
+          "candidates": [
+            {
+              "lean_theorem": "fibonacci_cardinality",
+              "lean_module": "Omega.Frontier.ConditionalArithmetic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem fibonacci_cardinality (m : Nat) :\n    Fintype.card (X m) = Nat.fib (m + 2)",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            },
+            {
+              "lean_theorem": "fibonacci_cardinality_recurrence",
+              "lean_module": "Omega.Frontier.ConditionalArithmetic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem fibonacci_cardinality_recurrence (m : Nat) :\n    Fintype.card (X (m + 2)) = Fintype.card (X (m + 1)) + Fintype.card (X m)",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            },
+            {
+              "lean_theorem": "goldenMean_characteristic_recurrence",
+              "lean_module": "Omega.Graph.Sofic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem goldenMean_characteristic_recurrence (m : Nat) :\n    Fintype.card (X (m + 2)) = Fintype.card (X (m + 1)) + Fintype.card (X m)",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            }
+          ]
+        },
+        {
+          "direction": "fibonacci-growth",
+          "label": "Fibonacci Growth",
+          "module_hints": [
+            "Omega.Frontier.ConditionalArithmetic",
+            "Omega.Core.Fib",
+            "Omega.Graph.Sofic",
+            "Omega.Graph.TransferMatrix"
+          ],
+          "candidates": [
+            {
+              "lean_theorem": "fibonacci_cardinality",
+              "lean_module": "Omega.Frontier.ConditionalArithmetic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem fibonacci_cardinality (m : Nat) :\n    Fintype.card (X m) = Nat.fib (m + 2)",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            },
+            {
+              "lean_theorem": "fibonacci_cardinality_recurrence",
+              "lean_module": "Omega.Frontier.ConditionalArithmetic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem fibonacci_cardinality_recurrence (m : Nat) :\n    Fintype.card (X (m + 2)) = Fintype.card (X (m + 1)) + Fintype.card (X m)",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            },
+            {
+              "lean_theorem": "goldenMean_characteristic_recurrence",
+              "lean_module": "Omega.Graph.Sofic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem goldenMean_characteristic_recurrence (m : Nat) :\n    Fintype.card (X (m + 2)) = Fintype.card (X (m + 1)) + Fintype.card (X m)",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            }
+          ]
+        },
+        {
+          "direction": "modular-tower-inverse-limit",
+          "label": "Modular Tower and Inverse Limit",
+          "module_hints": [
+            "Omega.Frontier.ConditionalArithmetic",
+            "Omega.Frontier.ConditionalSummary"
+          ],
+          "candidates": [
+            {
+              "lean_theorem": "inverse_limit_left",
+              "lean_module": "Omega.Frontier.ConditionalArithmetic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem inverse_limit_left (F : X.CompatibleFamily) :\n    X.toFamily (X.ofFamily F) = F",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            },
+            {
+              "lean_theorem": "inverse_limit_right",
+              "lean_module": "Omega.Frontier.ConditionalArithmetic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem inverse_limit_right (a : X.XInfinity) :\n    X.ofFamily (X.toFamily a) = a",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            },
+            {
+              "lean_theorem": "inverse_limit_extensionality",
+              "lean_module": "Omega.Frontier.ConditionalArithmetic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem inverse_limit_extensionality (a b : X.XInfinity) :\n    a = b ↔ ∀ m, X.prefixWord a m = X.prefixWord b m",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            }
+          ]
+        }
+      ],
+      "theorem_candidates": [
+        {
+          "lean_theorem": "fibonacci_cardinality",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem fibonacci_cardinality (m : Nat) :\n    Fintype.card (X m) = Nat.fib (m + 2)",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "fibonacci_cardinality_recurrence",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem fibonacci_cardinality_recurrence (m : Nat) :\n    Fintype.card (X (m + 2)) = Fintype.card (X (m + 1)) + Fintype.card (X m)",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "goldenMean_characteristic_recurrence",
+          "lean_module": "Omega.Graph.Sofic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem goldenMean_characteristic_recurrence (m : Nat) :\n    Fintype.card (X (m + 2)) = Fintype.card (X (m + 1)) + Fintype.card (X m)",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "inverse_limit_left",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem inverse_limit_left (F : X.CompatibleFamily) :\n    X.toFamily (X.ofFamily F) = F",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "inverse_limit_right",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem inverse_limit_right (a : X.XInfinity) :\n    X.ofFamily (X.toFamily a) = a",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "inverse_limit_extensionality",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem inverse_limit_extensionality (a b : X.XInfinity) :\n    a = b ↔ ∀ m, X.prefixWord a m = X.prefixWord b m",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name_zh": "动态变易与循环",
+      "name_en": "Dynamic Change and Cyclic Completion",
+      "omega_directions": [
+        "dynamical-systems",
+        "golden-mean-shift",
+        "fold-operator"
+      ],
+      "direction_groups": [
+        {
+          "direction": "dynamical-systems",
+          "label": "Dynamical Systems",
+          "module_hints": [
+            "Omega.Folding.Entropy",
+            "Omega.Graph.Sofic",
+            "Omega.Graph.TransferMatrix"
+          ],
+          "candidates": [
+            {
+              "lean_theorem": "topological_entropy_eq_log_phi",
+              "lean_module": "Omega.Folding.Entropy",
+              "lean_type": "theorem",
+              "lean_statement": "theorem topological_entropy_eq_log_phi :\n    Tendsto (fun n => Real.log (Nat.fib (n + 2) : ℝ) / (n : ℝ)) atTop (𝓝 (Real.log φ))",
+              "paper_labels": [
+                "cor:folding-stable-syntax-entropy-logqdim"
+              ],
+              "matched_keywords": [],
+              "score": 0
+            },
+            {
+              "lean_theorem": "goldenMean_characteristic_recurrence",
+              "lean_module": "Omega.Graph.Sofic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem goldenMean_characteristic_recurrence (m : Nat) :\n    Fintype.card (X (m + 2)) = Fintype.card (X (m + 1)) + Fintype.card (X m)",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            },
+            {
+              "lean_theorem": "goldenMeanAdjacency_has_goldenRatio_eigenvector",
+              "lean_module": "Omega.Graph.TransferMatrix",
+              "lean_type": "theorem",
+              "lean_statement": "theorem goldenMeanAdjacency_has_goldenRatio_eigenvector :\n    ∃ v : Fin 2 → ℝ, v ≠ 0 ∧\n      Matrix.mulVec goldenMeanAdjacencyℝ v = fun i => Real.goldenRatio * v i",
+              "paper_labels": [
+                "lem:golden-mean-has-phi-eigenvector"
+              ],
+              "matched_keywords": [],
+              "score": 0
+            }
+          ]
+        },
+        {
+          "direction": "golden-mean-shift",
+          "label": "Golden-Mean Shift",
+          "module_hints": [
+            "Omega.Core.No11",
+            "Omega.Graph.Sofic",
+            "Omega.Graph.TransferMatrix",
+            "Omega.Frontier.ConditionalArithmetic",
+            "Omega.Combinatorics.FibonacciCube"
+          ],
+          "candidates": [
+            {
+              "lean_theorem": "fibonacci_cardinality",
+              "lean_module": "Omega.Frontier.ConditionalArithmetic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem fibonacci_cardinality (m : Nat) :\n    Fintype.card (X m) = Nat.fib (m + 2)",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            },
+            {
+              "lean_theorem": "fibonacci_cardinality_recurrence",
+              "lean_module": "Omega.Frontier.ConditionalArithmetic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem fibonacci_cardinality_recurrence (m : Nat) :\n    Fintype.card (X (m + 2)) = Fintype.card (X (m + 1)) + Fintype.card (X m)",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            },
+            {
+              "lean_theorem": "goldenMean_characteristic_recurrence",
+              "lean_module": "Omega.Graph.Sofic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem goldenMean_characteristic_recurrence (m : Nat) :\n    Fintype.card (X (m + 2)) = Fintype.card (X (m + 1)) + Fintype.card (X m)",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            }
+          ]
+        },
+        {
+          "direction": "fold-operator",
+          "label": "Fold Operator",
+          "module_hints": [
+            "Omega.Frontier.ConditionalArithmetic",
+            "Omega.Folding"
+          ],
+          "candidates": [
+            {
+              "lean_theorem": "fold_is_idempotent",
+              "lean_module": "Omega.Frontier.ConditionalArithmetic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem fold_is_idempotent (w : Word m) : Fold (Fold w).1 = Fold w",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            },
+            {
+              "lean_theorem": "fold_fixes_stable",
+              "lean_module": "Omega.Frontier.ConditionalArithmetic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem fold_fixes_stable (x : X m) : Fold x.1 = x",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            },
+            {
+              "lean_theorem": "fold_is_surjective",
+              "lean_module": "Omega.Frontier.ConditionalArithmetic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem fold_is_surjective : Function.Surjective (Fold (m",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            }
+          ]
+        }
+      ],
+      "theorem_candidates": [
+        {
+          "lean_theorem": "topological_entropy_eq_log_phi",
+          "lean_module": "Omega.Folding.Entropy",
+          "lean_type": "theorem",
+          "lean_statement": "theorem topological_entropy_eq_log_phi :\n    Tendsto (fun n => Real.log (Nat.fib (n + 2) : ℝ) / (n : ℝ)) atTop (𝓝 (Real.log φ))",
+          "paper_labels": [
+            "cor:folding-stable-syntax-entropy-logqdim"
+          ],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "goldenMean_characteristic_recurrence",
+          "lean_module": "Omega.Graph.Sofic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem goldenMean_characteristic_recurrence (m : Nat) :\n    Fintype.card (X (m + 2)) = Fintype.card (X (m + 1)) + Fintype.card (X m)",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "goldenMeanAdjacency_has_goldenRatio_eigenvector",
+          "lean_module": "Omega.Graph.TransferMatrix",
+          "lean_type": "theorem",
+          "lean_statement": "theorem goldenMeanAdjacency_has_goldenRatio_eigenvector :\n    ∃ v : Fin 2 → ℝ, v ≠ 0 ∧\n      Matrix.mulVec goldenMeanAdjacencyℝ v = fun i => Real.goldenRatio * v i",
+          "paper_labels": [
+            "lem:golden-mean-has-phi-eigenvector"
+          ],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "fibonacci_cardinality",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem fibonacci_cardinality (m : Nat) :\n    Fintype.card (X m) = Nat.fib (m + 2)",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "fibonacci_cardinality_recurrence",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem fibonacci_cardinality_recurrence (m : Nat) :\n    Fintype.card (X (m + 2)) = Fintype.card (X (m + 1)) + Fintype.card (X m)",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "fold_is_idempotent",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem fold_is_idempotent (w : Word m) : Fold (Fold w).1 = Fold w",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "fold_fixes_stable",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem fold_fixes_stable (x : X m) : Fold x.1 = x",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "fold_is_surjective",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem fold_is_surjective : Function.Surjective (Fold (m",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name_zh": "困阻与险难",
+      "name_en": "Obstruction, Danger, and the Abysmal",
+      "omega_directions": [
+        "golden-mean-shift",
+        "fold-operator",
+        "fiber-structure"
+      ],
+      "direction_groups": [
+        {
+          "direction": "golden-mean-shift",
+          "label": "Golden-Mean Shift",
+          "module_hints": [
+            "Omega.Core.No11",
+            "Omega.Graph.Sofic",
+            "Omega.Graph.TransferMatrix",
+            "Omega.Frontier.ConditionalArithmetic",
+            "Omega.Combinatorics.FibonacciCube"
+          ],
+          "candidates": [
+            {
+              "lean_theorem": "fibonacci_cardinality",
+              "lean_module": "Omega.Frontier.ConditionalArithmetic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem fibonacci_cardinality (m : Nat) :\n    Fintype.card (X m) = Nat.fib (m + 2)",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            },
+            {
+              "lean_theorem": "fibonacci_cardinality_recurrence",
+              "lean_module": "Omega.Frontier.ConditionalArithmetic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem fibonacci_cardinality_recurrence (m : Nat) :\n    Fintype.card (X (m + 2)) = Fintype.card (X (m + 1)) + Fintype.card (X m)",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            },
+            {
+              "lean_theorem": "goldenMean_characteristic_recurrence",
+              "lean_module": "Omega.Graph.Sofic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem goldenMean_characteristic_recurrence (m : Nat) :\n    Fintype.card (X (m + 2)) = Fintype.card (X (m + 1)) + Fintype.card (X m)",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            }
+          ]
+        },
+        {
+          "direction": "fold-operator",
+          "label": "Fold Operator",
+          "module_hints": [
+            "Omega.Frontier.ConditionalArithmetic",
+            "Omega.Folding"
+          ],
+          "candidates": [
+            {
+              "lean_theorem": "fold_is_idempotent",
+              "lean_module": "Omega.Frontier.ConditionalArithmetic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem fold_is_idempotent (w : Word m) : Fold (Fold w).1 = Fold w",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            },
+            {
+              "lean_theorem": "fold_fixes_stable",
+              "lean_module": "Omega.Frontier.ConditionalArithmetic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem fold_fixes_stable (x : X m) : Fold x.1 = x",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            },
+            {
+              "lean_theorem": "fold_is_surjective",
+              "lean_module": "Omega.Frontier.ConditionalArithmetic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem fold_is_surjective : Function.Surjective (Fold (m",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            }
+          ]
+        },
+        {
+          "direction": "fiber-structure",
+          "label": "Fiber Structure",
+          "module_hints": [
+            "Omega.Combinatorics.FibonacciCube",
+            "Omega.Folding.FiberSplit",
+            "Omega.Folding.MaxFiber",
+            "Omega.Folding.MaxFiberHigh",
+            "Omega.Folding.MomentBounds",
+            "Omega.Folding.MomentRecurrence"
+          ],
+          "candidates": [
+            {
+              "lean_theorem": "maxFiberMultiplicity_bounds",
+              "lean_module": "Omega.Combinatorics.FibonacciCube",
+              "lean_type": "theorem",
+              "lean_statement": "theorem maxFiberMultiplicity_bounds (m : Nat) :\n    m / 2 + 1 ≤ X.maxFiberMultiplicity m ∧\n    X.maxFiberMultiplicity m ≤ Nat.fib (m + 2)",
+              "paper_labels": [
+                "thm:pom-maxFiberMultiplicity-bounds"
+              ],
+              "matched_keywords": [],
+              "score": 0
+            },
+            {
+              "lean_theorem": "maxFiberMultiplicity_fibonacci_bound",
+              "lean_module": "Omega.Folding.FiberSplit",
+              "lean_type": "theorem",
+              "lean_statement": "theorem maxFiberMultiplicity_fibonacci_bound (m : Nat) (hm : 4 ≤ m) :\n    maxFiberMultiplicity m ≤ maxFiberMultiplicity (m - 1) + maxFiberMultiplicity (m - 2)",
+              "paper_labels": [
+                "cor:pom-max-fiber-fibonacci-bound"
+              ],
+              "matched_keywords": [],
+              "score": 0
+            },
+            {
+              "lean_theorem": "maxFiberMultiplicity_eight",
+              "lean_module": "Omega.Folding.MaxFiberHigh",
+              "lean_type": "theorem",
+              "lean_statement": "theorem maxFiberMultiplicity_eight : maxFiberMultiplicity 8 = 8",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            }
+          ]
+        }
+      ],
+      "theorem_candidates": [
+        {
+          "lean_theorem": "fibonacci_cardinality",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem fibonacci_cardinality (m : Nat) :\n    Fintype.card (X m) = Nat.fib (m + 2)",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "fibonacci_cardinality_recurrence",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem fibonacci_cardinality_recurrence (m : Nat) :\n    Fintype.card (X (m + 2)) = Fintype.card (X (m + 1)) + Fintype.card (X m)",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "goldenMean_characteristic_recurrence",
+          "lean_module": "Omega.Graph.Sofic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem goldenMean_characteristic_recurrence (m : Nat) :\n    Fintype.card (X (m + 2)) = Fintype.card (X (m + 1)) + Fintype.card (X m)",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "fold_is_idempotent",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem fold_is_idempotent (w : Word m) : Fold (Fold w).1 = Fold w",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "fold_fixes_stable",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem fold_fixes_stable (x : X m) : Fold x.1 = x",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "fold_is_surjective",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem fold_is_surjective : Function.Surjective (Fold (m",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "maxFiberMultiplicity_bounds",
+          "lean_module": "Omega.Combinatorics.FibonacciCube",
+          "lean_type": "theorem",
+          "lean_statement": "theorem maxFiberMultiplicity_bounds (m : Nat) :\n    m / 2 + 1 ≤ X.maxFiberMultiplicity m ∧\n    X.maxFiberMultiplicity m ≤ Nat.fib (m + 2)",
+          "paper_labels": [
+            "thm:pom-maxFiberMultiplicity-bounds"
+          ],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "maxFiberMultiplicity_fibonacci_bound",
+          "lean_module": "Omega.Folding.FiberSplit",
+          "lean_type": "theorem",
+          "lean_statement": "theorem maxFiberMultiplicity_fibonacci_bound (m : Nat) (hm : 4 ≤ m) :\n    maxFiberMultiplicity m ≤ maxFiberMultiplicity (m - 1) + maxFiberMultiplicity (m - 2)",
+          "paper_labels": [
+            "cor:pom-max-fiber-fibonacci-bound"
+          ],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "maxFiberMultiplicity_eight",
+          "lean_module": "Omega.Folding.MaxFiberHigh",
+          "lean_type": "theorem",
+          "lean_statement": "theorem maxFiberMultiplicity_eight : maxFiberMultiplicity 8 = 8",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name_zh": "止静与内省",
+      "name_en": "Stillness, Restraint, and Inner Contemplation",
+      "omega_directions": [
+        "golden-mean-shift",
+        "zeckendorf-representation",
+        "rate-distortion-information-theory"
+      ],
+      "direction_groups": [
+        {
+          "direction": "golden-mean-shift",
+          "label": "Golden-Mean Shift",
+          "module_hints": [
+            "Omega.Core.No11",
+            "Omega.Graph.Sofic",
+            "Omega.Graph.TransferMatrix",
+            "Omega.Frontier.ConditionalArithmetic",
+            "Omega.Combinatorics.FibonacciCube"
+          ],
+          "candidates": [
+            {
+              "lean_theorem": "fibonacci_cardinality",
+              "lean_module": "Omega.Frontier.ConditionalArithmetic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem fibonacci_cardinality (m : Nat) :\n    Fintype.card (X m) = Nat.fib (m + 2)",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            },
+            {
+              "lean_theorem": "fibonacci_cardinality_recurrence",
+              "lean_module": "Omega.Frontier.ConditionalArithmetic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem fibonacci_cardinality_recurrence (m : Nat) :\n    Fintype.card (X (m + 2)) = Fintype.card (X (m + 1)) + Fintype.card (X m)",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            },
+            {
+              "lean_theorem": "goldenMean_characteristic_recurrence",
+              "lean_module": "Omega.Graph.Sofic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem goldenMean_characteristic_recurrence (m : Nat) :\n    Fintype.card (X (m + 2)) = Fintype.card (X (m + 1)) + Fintype.card (X m)",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            }
+          ]
+        },
+        {
+          "direction": "zeckendorf-representation",
+          "label": "Zeckendorf Representation",
+          "module_hints": [
+            "Omega.Frontier.ConditionalArithmetic",
+            "Omega.Folding.FiberArithmetic",
+            "Omega.Folding.CollisionZetaOperator"
+          ],
+          "candidates": [
+            {
+              "lean_theorem": "zeckendorf_uniqueness",
+              "lean_module": "Omega.Frontier.ConditionalArithmetic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem zeckendorf_uniqueness {x y : X m} (h : X.zeckIndices x = X.zeckIndices y) : x = y",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            },
+            {
+              "lean_theorem": "zeckendorf_injective",
+              "lean_module": "Omega.Frontier.ConditionalArithmetic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem zeckendorf_injective (m : Nat) : Function.Injective (X.zeckIndices (m",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            },
+            {
+              "lean_theorem": "paper_zeckendorf_primes_no_short_forbidden",
+              "lean_module": "Omega.Folding.CollisionZetaOperator",
+              "lean_type": "theorem",
+              "lean_statement": "theorem paper_zeckendorf_primes_no_short_forbidden :\n    Nat.Prime 2 ∧ Nat.Prime 3 ∧ Nat.Prime 7 ∧ True",
+              "paper_labels": [
+                "prop:zeta-zeckendorf-primes-no-short-forbidden"
+              ],
+              "matched_keywords": [
+                "zeckendorf",
+                "small"
+              ],
+              "score": 6
+            }
+          ]
+        },
+        {
+          "direction": "rate-distortion-information-theory",
+          "label": "Rate-Distortion and Information Theory",
+          "module_hints": [
+            "Omega.Frontier.ConditionalArithmetic",
+            "Omega.Frontier.Conditional",
+            "Omega.Frontier.Certificates",
+            "Omega.SPG.ErrorThreshold"
+          ],
+          "candidates": [
+            {
+              "lean_theorem": "observation_refinement_reduces_error",
+              "lean_module": "Omega.Frontier.ConditionalArithmetic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem observation_refinement_reduces_error\n    {α β γ : Type*} [Fintype α] [Fintype β] [Fintype γ]\n    (μ : PMF α) (obs₁ : α → β) (obs₂ : α → γ) (f : γ → β)\n    (hRef : ∀ x, obs₁ x = f (obs₂ x)) (P : Set α) :\n    SPG.scanError μ obs₂ P ≤ SPG.scanError μ obs₁ P",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            },
+            {
+              "lean_theorem": "prefix_resolution_decreases_error",
+              "lean_module": "Omega.Frontier.ConditionalArithmetic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem prefix_resolution_decreases_error {m₁ m₂ n : Nat}\n    (μ : PMF (Word n)) (h₁ : m₁ ≤ n) (h₂ : m₂ ≤ n) (hm : m₁ ≤ m₂)\n    (P : Set (Word n)) :\n    SPG.prefixScanError μ h₂ P ≤ SPG.prefixScanError μ h₁ P",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            },
+            {
+              "lean_theorem": "scanError_hasCertificate",
+              "lean_module": "Omega.Frontier.Conditional",
+              "lean_type": "theorem",
+              "lean_statement": "theorem scanError_hasCertificate {α β : Type*} [Fintype α] [Fintype β]\n    (μ : PMF α) (obs : α → β) (P : Set α) :\n    ScanErrorCertificate.Valid\n      ({ μ",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            }
+          ]
+        }
+      ],
+      "theorem_candidates": [
+        {
+          "lean_theorem": "fibonacci_cardinality",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem fibonacci_cardinality (m : Nat) :\n    Fintype.card (X m) = Nat.fib (m + 2)",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "fibonacci_cardinality_recurrence",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem fibonacci_cardinality_recurrence (m : Nat) :\n    Fintype.card (X (m + 2)) = Fintype.card (X (m + 1)) + Fintype.card (X m)",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "goldenMean_characteristic_recurrence",
+          "lean_module": "Omega.Graph.Sofic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem goldenMean_characteristic_recurrence (m : Nat) :\n    Fintype.card (X (m + 2)) = Fintype.card (X (m + 1)) + Fintype.card (X m)",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "zeckendorf_uniqueness",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem zeckendorf_uniqueness {x y : X m} (h : X.zeckIndices x = X.zeckIndices y) : x = y",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "zeckendorf_injective",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem zeckendorf_injective (m : Nat) : Function.Injective (X.zeckIndices (m",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "paper_zeckendorf_primes_no_short_forbidden",
+          "lean_module": "Omega.Folding.CollisionZetaOperator",
+          "lean_type": "theorem",
+          "lean_statement": "theorem paper_zeckendorf_primes_no_short_forbidden :\n    Nat.Prime 2 ∧ Nat.Prime 3 ∧ Nat.Prime 7 ∧ True",
+          "paper_labels": [
+            "prop:zeta-zeckendorf-primes-no-short-forbidden"
+          ],
+          "matched_keywords": [
+            "zeckendorf",
+            "small"
+          ],
+          "score": 6
+        },
+        {
+          "lean_theorem": "observation_refinement_reduces_error",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem observation_refinement_reduces_error\n    {α β γ : Type*} [Fintype α] [Fintype β] [Fintype γ]\n    (μ : PMF α) (obs₁ : α → β) (obs₂ : α → γ) (f : γ → β)\n    (hRef : ∀ x, obs₁ x = f (obs₂ x)) (P : Set α) :\n    SPG.scanError μ obs₂ P ≤ SPG.scanError μ obs₁ P",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "prefix_resolution_decreases_error",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem prefix_resolution_decreases_error {m₁ m₂ n : Nat}\n    (μ : PMF (Word n)) (h₁ : m₁ ≤ n) (h₂ : m₂ ≤ n) (hm : m₁ ≤ m₂)\n    (P : Set (Word n)) :\n    SPG.prefixScanError μ h₂ P ≤ SPG.prefixScanError μ h₁ P",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "scanError_hasCertificate",
+          "lean_module": "Omega.Frontier.Conditional",
+          "lean_type": "theorem",
+          "lean_statement": "theorem scanError_hasCertificate {α β : Type*} [Fintype α] [Fintype β]\n    (μ : PMF α) (obs : α → β) (P : Set α) :\n    ScanErrorCertificate.Valid\n      ({ μ",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name_zh": "刚健与突破",
+      "name_en": "Strength, Power, and Forceful Advance",
+      "omega_directions": [
+        "fold-operator",
+        "fiber-structure",
+        "golden-mean-shift"
+      ],
+      "direction_groups": [
+        {
+          "direction": "fold-operator",
+          "label": "Fold Operator",
+          "module_hints": [
+            "Omega.Frontier.ConditionalArithmetic",
+            "Omega.Folding"
+          ],
+          "candidates": [
+            {
+              "lean_theorem": "fold_is_idempotent",
+              "lean_module": "Omega.Frontier.ConditionalArithmetic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem fold_is_idempotent (w : Word m) : Fold (Fold w).1 = Fold w",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            },
+            {
+              "lean_theorem": "fold_fixes_stable",
+              "lean_module": "Omega.Frontier.ConditionalArithmetic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem fold_fixes_stable (x : X m) : Fold x.1 = x",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            },
+            {
+              "lean_theorem": "fold_is_surjective",
+              "lean_module": "Omega.Frontier.ConditionalArithmetic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem fold_is_surjective : Function.Surjective (Fold (m",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            }
+          ]
+        },
+        {
+          "direction": "fiber-structure",
+          "label": "Fiber Structure",
+          "module_hints": [
+            "Omega.Combinatorics.FibonacciCube",
+            "Omega.Folding.FiberSplit",
+            "Omega.Folding.MaxFiber",
+            "Omega.Folding.MaxFiberHigh",
+            "Omega.Folding.MomentBounds",
+            "Omega.Folding.MomentRecurrence"
+          ],
+          "candidates": [
+            {
+              "lean_theorem": "maxFiberMultiplicity_bounds",
+              "lean_module": "Omega.Combinatorics.FibonacciCube",
+              "lean_type": "theorem",
+              "lean_statement": "theorem maxFiberMultiplicity_bounds (m : Nat) :\n    m / 2 + 1 ≤ X.maxFiberMultiplicity m ∧\n    X.maxFiberMultiplicity m ≤ Nat.fib (m + 2)",
+              "paper_labels": [
+                "thm:pom-maxFiberMultiplicity-bounds"
+              ],
+              "matched_keywords": [],
+              "score": 0
+            },
+            {
+              "lean_theorem": "maxFiberMultiplicity_fibonacci_bound",
+              "lean_module": "Omega.Folding.FiberSplit",
+              "lean_type": "theorem",
+              "lean_statement": "theorem maxFiberMultiplicity_fibonacci_bound (m : Nat) (hm : 4 ≤ m) :\n    maxFiberMultiplicity m ≤ maxFiberMultiplicity (m - 1) + maxFiberMultiplicity (m - 2)",
+              "paper_labels": [
+                "cor:pom-max-fiber-fibonacci-bound"
+              ],
+              "matched_keywords": [],
+              "score": 0
+            },
+            {
+              "lean_theorem": "maxFiberMultiplicity_eight",
+              "lean_module": "Omega.Folding.MaxFiberHigh",
+              "lean_type": "theorem",
+              "lean_statement": "theorem maxFiberMultiplicity_eight : maxFiberMultiplicity 8 = 8",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            }
+          ]
+        },
+        {
+          "direction": "golden-mean-shift",
+          "label": "Golden-Mean Shift",
+          "module_hints": [
+            "Omega.Core.No11",
+            "Omega.Graph.Sofic",
+            "Omega.Graph.TransferMatrix",
+            "Omega.Frontier.ConditionalArithmetic",
+            "Omega.Combinatorics.FibonacciCube"
+          ],
+          "candidates": [
+            {
+              "lean_theorem": "fibonacci_cardinality",
+              "lean_module": "Omega.Frontier.ConditionalArithmetic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem fibonacci_cardinality (m : Nat) :\n    Fintype.card (X m) = Nat.fib (m + 2)",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            },
+            {
+              "lean_theorem": "fibonacci_cardinality_recurrence",
+              "lean_module": "Omega.Frontier.ConditionalArithmetic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem fibonacci_cardinality_recurrence (m : Nat) :\n    Fintype.card (X (m + 2)) = Fintype.card (X (m + 1)) + Fintype.card (X m)",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            },
+            {
+              "lean_theorem": "goldenMean_characteristic_recurrence",
+              "lean_module": "Omega.Graph.Sofic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem goldenMean_characteristic_recurrence (m : Nat) :\n    Fintype.card (X (m + 2)) = Fintype.card (X (m + 1)) + Fintype.card (X m)",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            }
+          ]
+        }
+      ],
+      "theorem_candidates": [
+        {
+          "lean_theorem": "fold_is_idempotent",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem fold_is_idempotent (w : Word m) : Fold (Fold w).1 = Fold w",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "fold_fixes_stable",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem fold_fixes_stable (x : X m) : Fold x.1 = x",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "fold_is_surjective",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem fold_is_surjective : Function.Surjective (Fold (m",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "maxFiberMultiplicity_bounds",
+          "lean_module": "Omega.Combinatorics.FibonacciCube",
+          "lean_type": "theorem",
+          "lean_statement": "theorem maxFiberMultiplicity_bounds (m : Nat) :\n    m / 2 + 1 ≤ X.maxFiberMultiplicity m ∧\n    X.maxFiberMultiplicity m ≤ Nat.fib (m + 2)",
+          "paper_labels": [
+            "thm:pom-maxFiberMultiplicity-bounds"
+          ],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "maxFiberMultiplicity_fibonacci_bound",
+          "lean_module": "Omega.Folding.FiberSplit",
+          "lean_type": "theorem",
+          "lean_statement": "theorem maxFiberMultiplicity_fibonacci_bound (m : Nat) (hm : 4 ≤ m) :\n    maxFiberMultiplicity m ≤ maxFiberMultiplicity (m - 1) + maxFiberMultiplicity (m - 2)",
+          "paper_labels": [
+            "cor:pom-max-fiber-fibonacci-bound"
+          ],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "maxFiberMultiplicity_eight",
+          "lean_module": "Omega.Folding.MaxFiberHigh",
+          "lean_type": "theorem",
+          "lean_statement": "theorem maxFiberMultiplicity_eight : maxFiberMultiplicity 8 = 8",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "fibonacci_cardinality",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem fibonacci_cardinality (m : Nat) :\n    Fintype.card (X m) = Nat.fib (m + 2)",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "fibonacci_cardinality_recurrence",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem fibonacci_cardinality_recurrence (m : Nat) :\n    Fintype.card (X (m + 2)) = Fintype.card (X (m + 1)) + Fintype.card (X m)",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "goldenMean_characteristic_recurrence",
+          "lean_module": "Omega.Graph.Sofic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem goldenMean_characteristic_recurrence (m : Nat) :\n    Fintype.card (X (m + 2)) = Fintype.card (X (m + 1)) + Fintype.card (X m)",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name_zh": "柔顺与养育",
+      "name_en": "Receptivity, Nourishment, and Gentle Cultivation",
+      "omega_directions": [
+        "golden-mean-shift",
+        "fibonacci-growth",
+        "zeckendorf-representation"
+      ],
+      "direction_groups": [
+        {
+          "direction": "golden-mean-shift",
+          "label": "Golden-Mean Shift",
+          "module_hints": [
+            "Omega.Core.No11",
+            "Omega.Graph.Sofic",
+            "Omega.Graph.TransferMatrix",
+            "Omega.Frontier.ConditionalArithmetic",
+            "Omega.Combinatorics.FibonacciCube"
+          ],
+          "candidates": [
+            {
+              "lean_theorem": "fibonacci_cardinality",
+              "lean_module": "Omega.Frontier.ConditionalArithmetic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem fibonacci_cardinality (m : Nat) :\n    Fintype.card (X m) = Nat.fib (m + 2)",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            },
+            {
+              "lean_theorem": "fibonacci_cardinality_recurrence",
+              "lean_module": "Omega.Frontier.ConditionalArithmetic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem fibonacci_cardinality_recurrence (m : Nat) :\n    Fintype.card (X (m + 2)) = Fintype.card (X (m + 1)) + Fintype.card (X m)",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            },
+            {
+              "lean_theorem": "goldenMean_characteristic_recurrence",
+              "lean_module": "Omega.Graph.Sofic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem goldenMean_characteristic_recurrence (m : Nat) :\n    Fintype.card (X (m + 2)) = Fintype.card (X (m + 1)) + Fintype.card (X m)",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            }
+          ]
+        },
+        {
+          "direction": "fibonacci-growth",
+          "label": "Fibonacci Growth",
+          "module_hints": [
+            "Omega.Frontier.ConditionalArithmetic",
+            "Omega.Core.Fib",
+            "Omega.Graph.Sofic",
+            "Omega.Graph.TransferMatrix"
+          ],
+          "candidates": [
+            {
+              "lean_theorem": "fibonacci_cardinality",
+              "lean_module": "Omega.Frontier.ConditionalArithmetic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem fibonacci_cardinality (m : Nat) :\n    Fintype.card (X m) = Nat.fib (m + 2)",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            },
+            {
+              "lean_theorem": "fibonacci_cardinality_recurrence",
+              "lean_module": "Omega.Frontier.ConditionalArithmetic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem fibonacci_cardinality_recurrence (m : Nat) :\n    Fintype.card (X (m + 2)) = Fintype.card (X (m + 1)) + Fintype.card (X m)",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            },
+            {
+              "lean_theorem": "goldenMean_characteristic_recurrence",
+              "lean_module": "Omega.Graph.Sofic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem goldenMean_characteristic_recurrence (m : Nat) :\n    Fintype.card (X (m + 2)) = Fintype.card (X (m + 1)) + Fintype.card (X m)",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            }
+          ]
+        },
+        {
+          "direction": "zeckendorf-representation",
+          "label": "Zeckendorf Representation",
+          "module_hints": [
+            "Omega.Frontier.ConditionalArithmetic",
+            "Omega.Folding.FiberArithmetic",
+            "Omega.Folding.CollisionZetaOperator"
+          ],
+          "candidates": [
+            {
+              "lean_theorem": "zeckendorf_uniqueness",
+              "lean_module": "Omega.Frontier.ConditionalArithmetic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem zeckendorf_uniqueness {x y : X m} (h : X.zeckIndices x = X.zeckIndices y) : x = y",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            },
+            {
+              "lean_theorem": "zeckendorf_injective",
+              "lean_module": "Omega.Frontier.ConditionalArithmetic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem zeckendorf_injective (m : Nat) : Function.Injective (X.zeckIndices (m",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            },
+            {
+              "lean_theorem": "stable_language_exponentially_sparse",
+              "lean_module": "Omega.Folding.CollisionZetaOperator",
+              "lean_type": "theorem",
+              "lean_statement": "theorem stable_language_exponentially_sparse (m : Nat) (hm : 2 ≤ m) :\n    Nat.fib (m + 2) < 2 ^ m",
+              "paper_labels": [],
+              "matched_keywords": [
+                "two",
+                "all",
+                "sparse"
+              ],
+              "score": 11
+            }
+          ]
+        }
+      ],
+      "theorem_candidates": [
+        {
+          "lean_theorem": "fibonacci_cardinality",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem fibonacci_cardinality (m : Nat) :\n    Fintype.card (X m) = Nat.fib (m + 2)",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "fibonacci_cardinality_recurrence",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem fibonacci_cardinality_recurrence (m : Nat) :\n    Fintype.card (X (m + 2)) = Fintype.card (X (m + 1)) + Fintype.card (X m)",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "goldenMean_characteristic_recurrence",
+          "lean_module": "Omega.Graph.Sofic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem goldenMean_characteristic_recurrence (m : Nat) :\n    Fintype.card (X (m + 2)) = Fintype.card (X (m + 1)) + Fintype.card (X m)",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "zeckendorf_uniqueness",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem zeckendorf_uniqueness {x y : X m} (h : X.zeckIndices x = X.zeckIndices y) : x = y",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "zeckendorf_injective",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem zeckendorf_injective (m : Nat) : Function.Injective (X.zeckIndices (m",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "stable_language_exponentially_sparse",
+          "lean_module": "Omega.Folding.CollisionZetaOperator",
+          "lean_type": "theorem",
+          "lean_statement": "theorem stable_language_exponentially_sparse (m : Nat) (hm : 2 ≤ m) :\n    Nat.fib (m + 2) < 2 ^ m",
+          "paper_labels": [],
+          "matched_keywords": [
+            "two",
+            "all",
+            "sparse"
+          ],
+          "score": 11
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name_zh": "交感与关系",
+      "name_en": "Mutual Influence, Union, and Relationship",
+      "omega_directions": [
+        "ring-arithmetic",
+        "spectral-theory",
+        "fold-operator"
+      ],
+      "direction_groups": [
+        {
+          "direction": "ring-arithmetic",
+          "label": "Ring Arithmetic",
+          "module_hints": [
+            "Omega.Frontier.ConditionalArithmetic",
+            "Omega.Folding.FiberArithmetic",
+            "Omega.Folding.FiberArithmeticProperties"
+          ],
+          "candidates": [
+            {
+              "lean_theorem": "stableValue_ring_isomorphism",
+              "lean_module": "Omega.Frontier.ConditionalArithmetic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem stableValue_ring_isomorphism (m : Nat) :\n    (∀ x y : X m, stableValue (X.stableAdd x y) =\n      (stableValue x + stableValue y) % Nat.fib (m + 2)) ∧\n    (∀ x y : X m, stableValue (X.stableMul x y) =\n      (stableValue x * stableValue y) % Nat.fib (m + 2)) ∧\n    Function.Injective (stableValue (m",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            },
+            {
+              "lean_theorem": "modular_projection_add_no_carry",
+              "lean_module": "Omega.Frontier.ConditionalArithmetic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem modular_projection_add_no_carry (x y : X (m + 1))\n    (h : stableValue x + stableValue y < Nat.fib (m + 3)) :\n    X.modularProject (X.stableAdd x y) =\n      X.stableAdd (X.modularProject x) (X.modularProject y)",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            },
+            {
+              "lean_theorem": "stableAdd_comm",
+              "lean_module": "Omega.Folding.FiberArithmetic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem stableAdd_comm (x y : X m) :\n    stableAdd x y = stableAdd y x",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            }
+          ]
+        },
+        {
+          "direction": "spectral-theory",
+          "label": "Spectral Theory",
+          "module_hints": [
+            "Omega.Folding.CollisionZeta",
+            "Omega.Folding.CollisionZetaOperator",
+            "Omega.Graph.TransferMatrix",
+            "Omega.Frontier.ConditionalArithmetic"
+          ],
+          "candidates": [
+            {
+              "lean_theorem": "collision_kernels_all_real_eigenvalues",
+              "lean_module": "Omega.Folding.CollisionZeta",
+              "lean_type": "theorem",
+              "lean_statement": "theorem collision_kernels_all_real_eigenvalues : (148 : ℤ) > 0 ∧ (564 : ℤ) > 0",
+              "paper_labels": [
+                "def:pom-collision-all-real-eigenvalues"
+              ],
+              "matched_keywords": [],
+              "score": 0
+            },
+            {
+              "lean_theorem": "characteristic_polynomial_witness",
+              "lean_module": "Omega.Frontier.ConditionalArithmetic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem characteristic_polynomial_witness (m : Nat) :\n    Fintype.card (X (m + 2)) = Fintype.card (X (m + 1)) + Fintype.card (X m)",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            },
+            {
+              "lean_theorem": "eigenvalue_eq_goldenRatio_or_goldenConj",
+              "lean_module": "Omega.Graph.TransferMatrix",
+              "lean_type": "theorem",
+              "lean_statement": "theorem eigenvalue_eq_goldenRatio_or_goldenConj\n    {μ : ℝ} (hμ : μ ^ 2 = μ + 1) :\n    μ = Real.goldenRatio ∨ μ = Real.goldenConj",
+              "paper_labels": [
+                "lem:golden-mean-real-eigenvalue-classification"
+              ],
+              "matched_keywords": [],
+              "score": 0
+            }
+          ]
+        },
+        {
+          "direction": "fold-operator",
+          "label": "Fold Operator",
+          "module_hints": [
+            "Omega.Frontier.ConditionalArithmetic",
+            "Omega.Folding"
+          ],
+          "candidates": [
+            {
+              "lean_theorem": "fold_is_idempotent",
+              "lean_module": "Omega.Frontier.ConditionalArithmetic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem fold_is_idempotent (w : Word m) : Fold (Fold w).1 = Fold w",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            },
+            {
+              "lean_theorem": "fold_fixes_stable",
+              "lean_module": "Omega.Frontier.ConditionalArithmetic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem fold_fixes_stable (x : X m) : Fold x.1 = x",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            },
+            {
+              "lean_theorem": "fold_is_surjective",
+              "lean_module": "Omega.Frontier.ConditionalArithmetic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem fold_is_surjective : Function.Surjective (Fold (m",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            }
+          ]
+        }
+      ],
+      "theorem_candidates": [
+        {
+          "lean_theorem": "stableValue_ring_isomorphism",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem stableValue_ring_isomorphism (m : Nat) :\n    (∀ x y : X m, stableValue (X.stableAdd x y) =\n      (stableValue x + stableValue y) % Nat.fib (m + 2)) ∧\n    (∀ x y : X m, stableValue (X.stableMul x y) =\n      (stableValue x * stableValue y) % Nat.fib (m + 2)) ∧\n    Function.Injective (stableValue (m",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "modular_projection_add_no_carry",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem modular_projection_add_no_carry (x y : X (m + 1))\n    (h : stableValue x + stableValue y < Nat.fib (m + 3)) :\n    X.modularProject (X.stableAdd x y) =\n      X.stableAdd (X.modularProject x) (X.modularProject y)",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "stableAdd_comm",
+          "lean_module": "Omega.Folding.FiberArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem stableAdd_comm (x y : X m) :\n    stableAdd x y = stableAdd y x",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "collision_kernels_all_real_eigenvalues",
+          "lean_module": "Omega.Folding.CollisionZeta",
+          "lean_type": "theorem",
+          "lean_statement": "theorem collision_kernels_all_real_eigenvalues : (148 : ℤ) > 0 ∧ (564 : ℤ) > 0",
+          "paper_labels": [
+            "def:pom-collision-all-real-eigenvalues"
+          ],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "characteristic_polynomial_witness",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem characteristic_polynomial_witness (m : Nat) :\n    Fintype.card (X (m + 2)) = Fintype.card (X (m + 1)) + Fintype.card (X m)",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "eigenvalue_eq_goldenRatio_or_goldenConj",
+          "lean_module": "Omega.Graph.TransferMatrix",
+          "lean_type": "theorem",
+          "lean_statement": "theorem eigenvalue_eq_goldenRatio_or_goldenConj\n    {μ : ℝ} (hμ : μ ^ 2 = μ + 1) :\n    μ = Real.goldenRatio ∨ μ = Real.goldenConj",
+          "paper_labels": [
+            "lem:golden-mean-real-eigenvalue-classification"
+          ],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "fold_is_idempotent",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem fold_is_idempotent (w : Word m) : Fold (Fold w).1 = Fold w",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "fold_fixes_stable",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem fold_fixes_stable (x : X m) : Fold x.1 = x",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "fold_is_surjective",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem fold_is_surjective : Function.Surjective (Fold (m",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name_zh": "变革与重构",
+      "name_en": "Revolution, Transformation, and Structural Renewal",
+      "omega_directions": [
+        "fold-operator",
+        "fiber-structure",
+        "dynamical-systems"
+      ],
+      "direction_groups": [
+        {
+          "direction": "fold-operator",
+          "label": "Fold Operator",
+          "module_hints": [
+            "Omega.Frontier.ConditionalArithmetic",
+            "Omega.Folding"
+          ],
+          "candidates": [
+            {
+              "lean_theorem": "fold_is_idempotent",
+              "lean_module": "Omega.Frontier.ConditionalArithmetic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem fold_is_idempotent (w : Word m) : Fold (Fold w).1 = Fold w",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            },
+            {
+              "lean_theorem": "fold_fixes_stable",
+              "lean_module": "Omega.Frontier.ConditionalArithmetic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem fold_fixes_stable (x : X m) : Fold x.1 = x",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            },
+            {
+              "lean_theorem": "fold_is_surjective",
+              "lean_module": "Omega.Frontier.ConditionalArithmetic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem fold_is_surjective : Function.Surjective (Fold (m",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            }
+          ]
+        },
+        {
+          "direction": "fiber-structure",
+          "label": "Fiber Structure",
+          "module_hints": [
+            "Omega.Combinatorics.FibonacciCube",
+            "Omega.Folding.FiberSplit",
+            "Omega.Folding.MaxFiber",
+            "Omega.Folding.MaxFiberHigh",
+            "Omega.Folding.MomentBounds",
+            "Omega.Folding.MomentRecurrence"
+          ],
+          "candidates": [
+            {
+              "lean_theorem": "maxFiberMultiplicity_bounds",
+              "lean_module": "Omega.Combinatorics.FibonacciCube",
+              "lean_type": "theorem",
+              "lean_statement": "theorem maxFiberMultiplicity_bounds (m : Nat) :\n    m / 2 + 1 ≤ X.maxFiberMultiplicity m ∧\n    X.maxFiberMultiplicity m ≤ Nat.fib (m + 2)",
+              "paper_labels": [
+                "thm:pom-maxFiberMultiplicity-bounds"
+              ],
+              "matched_keywords": [],
+              "score": 0
+            },
+            {
+              "lean_theorem": "maxFiberMultiplicity_fibonacci_bound",
+              "lean_module": "Omega.Folding.FiberSplit",
+              "lean_type": "theorem",
+              "lean_statement": "theorem maxFiberMultiplicity_fibonacci_bound (m : Nat) (hm : 4 ≤ m) :\n    maxFiberMultiplicity m ≤ maxFiberMultiplicity (m - 1) + maxFiberMultiplicity (m - 2)",
+              "paper_labels": [
+                "cor:pom-max-fiber-fibonacci-bound"
+              ],
+              "matched_keywords": [],
+              "score": 0
+            },
+            {
+              "lean_theorem": "maxFiberMultiplicity_eight",
+              "lean_module": "Omega.Folding.MaxFiberHigh",
+              "lean_type": "theorem",
+              "lean_statement": "theorem maxFiberMultiplicity_eight : maxFiberMultiplicity 8 = 8",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            }
+          ]
+        },
+        {
+          "direction": "dynamical-systems",
+          "label": "Dynamical Systems",
+          "module_hints": [
+            "Omega.Folding.Entropy",
+            "Omega.Graph.Sofic",
+            "Omega.Graph.TransferMatrix"
+          ],
+          "candidates": [
+            {
+              "lean_theorem": "topological_entropy_eq_log_phi",
+              "lean_module": "Omega.Folding.Entropy",
+              "lean_type": "theorem",
+              "lean_statement": "theorem topological_entropy_eq_log_phi :\n    Tendsto (fun n => Real.log (Nat.fib (n + 2) : ℝ) / (n : ℝ)) atTop (𝓝 (Real.log φ))",
+              "paper_labels": [
+                "cor:folding-stable-syntax-entropy-logqdim"
+              ],
+              "matched_keywords": [],
+              "score": 0
+            },
+            {
+              "lean_theorem": "goldenMean_characteristic_recurrence",
+              "lean_module": "Omega.Graph.Sofic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem goldenMean_characteristic_recurrence (m : Nat) :\n    Fintype.card (X (m + 2)) = Fintype.card (X (m + 1)) + Fintype.card (X m)",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            },
+            {
+              "lean_theorem": "goldenMeanAdjacency_has_goldenRatio_eigenvector",
+              "lean_module": "Omega.Graph.TransferMatrix",
+              "lean_type": "theorem",
+              "lean_statement": "theorem goldenMeanAdjacency_has_goldenRatio_eigenvector :\n    ∃ v : Fin 2 → ℝ, v ≠ 0 ∧\n      Matrix.mulVec goldenMeanAdjacencyℝ v = fun i => Real.goldenRatio * v i",
+              "paper_labels": [
+                "lem:golden-mean-has-phi-eigenvector"
+              ],
+              "matched_keywords": [],
+              "score": 0
+            }
+          ]
+        }
+      ],
+      "theorem_candidates": [
+        {
+          "lean_theorem": "fold_is_idempotent",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem fold_is_idempotent (w : Word m) : Fold (Fold w).1 = Fold w",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "fold_fixes_stable",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem fold_fixes_stable (x : X m) : Fold x.1 = x",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "fold_is_surjective",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem fold_is_surjective : Function.Surjective (Fold (m",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "maxFiberMultiplicity_bounds",
+          "lean_module": "Omega.Combinatorics.FibonacciCube",
+          "lean_type": "theorem",
+          "lean_statement": "theorem maxFiberMultiplicity_bounds (m : Nat) :\n    m / 2 + 1 ≤ X.maxFiberMultiplicity m ∧\n    X.maxFiberMultiplicity m ≤ Nat.fib (m + 2)",
+          "paper_labels": [
+            "thm:pom-maxFiberMultiplicity-bounds"
+          ],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "maxFiberMultiplicity_fibonacci_bound",
+          "lean_module": "Omega.Folding.FiberSplit",
+          "lean_type": "theorem",
+          "lean_statement": "theorem maxFiberMultiplicity_fibonacci_bound (m : Nat) (hm : 4 ≤ m) :\n    maxFiberMultiplicity m ≤ maxFiberMultiplicity (m - 1) + maxFiberMultiplicity (m - 2)",
+          "paper_labels": [
+            "cor:pom-max-fiber-fibonacci-bound"
+          ],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "maxFiberMultiplicity_eight",
+          "lean_module": "Omega.Folding.MaxFiberHigh",
+          "lean_type": "theorem",
+          "lean_statement": "theorem maxFiberMultiplicity_eight : maxFiberMultiplicity 8 = 8",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "topological_entropy_eq_log_phi",
+          "lean_module": "Omega.Folding.Entropy",
+          "lean_type": "theorem",
+          "lean_statement": "theorem topological_entropy_eq_log_phi :\n    Tendsto (fun n => Real.log (Nat.fib (n + 2) : ℝ) / (n : ℝ)) atTop (𝓝 (Real.log φ))",
+          "paper_labels": [
+            "cor:folding-stable-syntax-entropy-logqdim"
+          ],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "goldenMean_characteristic_recurrence",
+          "lean_module": "Omega.Graph.Sofic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem goldenMean_characteristic_recurrence (m : Nat) :\n    Fintype.card (X (m + 2)) = Fintype.card (X (m + 1)) + Fintype.card (X m)",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "goldenMeanAdjacency_has_goldenRatio_eigenvector",
+          "lean_module": "Omega.Graph.TransferMatrix",
+          "lean_type": "theorem",
+          "lean_statement": "theorem goldenMeanAdjacency_has_goldenRatio_eigenvector :\n    ∃ v : Fin 2 → ℝ, v ≠ 0 ∧\n      Matrix.mulVec goldenMeanAdjacencyℝ v = fun i => Real.goldenRatio * v i",
+          "paper_labels": [
+            "lem:golden-mean-has-phi-eigenvector"
+          ],
+          "matched_keywords": [],
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name_zh": "渐进与发展",
+      "name_en": "Gradual Progress, Development, and Measured Advance",
+      "omega_directions": [
+        "modular-tower-inverse-limit",
+        "fibonacci-growth",
+        "golden-mean-shift"
+      ],
+      "direction_groups": [
+        {
+          "direction": "modular-tower-inverse-limit",
+          "label": "Modular Tower and Inverse Limit",
+          "module_hints": [
+            "Omega.Frontier.ConditionalArithmetic",
+            "Omega.Frontier.ConditionalSummary"
+          ],
+          "candidates": [
+            {
+              "lean_theorem": "inverse_limit_left",
+              "lean_module": "Omega.Frontier.ConditionalArithmetic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem inverse_limit_left (F : X.CompatibleFamily) :\n    X.toFamily (X.ofFamily F) = F",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            },
+            {
+              "lean_theorem": "inverse_limit_right",
+              "lean_module": "Omega.Frontier.ConditionalArithmetic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem inverse_limit_right (a : X.XInfinity) :\n    X.ofFamily (X.toFamily a) = a",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            },
+            {
+              "lean_theorem": "inverse_limit_extensionality",
+              "lean_module": "Omega.Frontier.ConditionalArithmetic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem inverse_limit_extensionality (a b : X.XInfinity) :\n    a = b ↔ ∀ m, X.prefixWord a m = X.prefixWord b m",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            }
+          ]
+        },
+        {
+          "direction": "fibonacci-growth",
+          "label": "Fibonacci Growth",
+          "module_hints": [
+            "Omega.Frontier.ConditionalArithmetic",
+            "Omega.Core.Fib",
+            "Omega.Graph.Sofic",
+            "Omega.Graph.TransferMatrix"
+          ],
+          "candidates": [
+            {
+              "lean_theorem": "fibonacci_cardinality",
+              "lean_module": "Omega.Frontier.ConditionalArithmetic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem fibonacci_cardinality (m : Nat) :\n    Fintype.card (X m) = Nat.fib (m + 2)",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            },
+            {
+              "lean_theorem": "fibonacci_cardinality_recurrence",
+              "lean_module": "Omega.Frontier.ConditionalArithmetic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem fibonacci_cardinality_recurrence (m : Nat) :\n    Fintype.card (X (m + 2)) = Fintype.card (X (m + 1)) + Fintype.card (X m)",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            },
+            {
+              "lean_theorem": "goldenMean_characteristic_recurrence",
+              "lean_module": "Omega.Graph.Sofic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem goldenMean_characteristic_recurrence (m : Nat) :\n    Fintype.card (X (m + 2)) = Fintype.card (X (m + 1)) + Fintype.card (X m)",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            }
+          ]
+        },
+        {
+          "direction": "golden-mean-shift",
+          "label": "Golden-Mean Shift",
+          "module_hints": [
+            "Omega.Core.No11",
+            "Omega.Graph.Sofic",
+            "Omega.Graph.TransferMatrix",
+            "Omega.Frontier.ConditionalArithmetic",
+            "Omega.Combinatorics.FibonacciCube"
+          ],
+          "candidates": [
+            {
+              "lean_theorem": "fibonacci_cardinality",
+              "lean_module": "Omega.Frontier.ConditionalArithmetic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem fibonacci_cardinality (m : Nat) :\n    Fintype.card (X m) = Nat.fib (m + 2)",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            },
+            {
+              "lean_theorem": "fibonacci_cardinality_recurrence",
+              "lean_module": "Omega.Frontier.ConditionalArithmetic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem fibonacci_cardinality_recurrence (m : Nat) :\n    Fintype.card (X (m + 2)) = Fintype.card (X (m + 1)) + Fintype.card (X m)",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            },
+            {
+              "lean_theorem": "goldenMean_characteristic_recurrence",
+              "lean_module": "Omega.Graph.Sofic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem goldenMean_characteristic_recurrence (m : Nat) :\n    Fintype.card (X (m + 2)) = Fintype.card (X (m + 1)) + Fintype.card (X m)",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            }
+          ]
+        }
+      ],
+      "theorem_candidates": [
+        {
+          "lean_theorem": "inverse_limit_left",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem inverse_limit_left (F : X.CompatibleFamily) :\n    X.toFamily (X.ofFamily F) = F",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "inverse_limit_right",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem inverse_limit_right (a : X.XInfinity) :\n    X.ofFamily (X.toFamily a) = a",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "inverse_limit_extensionality",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem inverse_limit_extensionality (a b : X.XInfinity) :\n    a = b ↔ ∀ m, X.prefixWord a m = X.prefixWord b m",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "fibonacci_cardinality",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem fibonacci_cardinality (m : Nat) :\n    Fintype.card (X m) = Nat.fib (m + 2)",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "fibonacci_cardinality_recurrence",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem fibonacci_cardinality_recurrence (m : Nat) :\n    Fintype.card (X (m + 2)) = Fintype.card (X (m + 1)) + Fintype.card (X m)",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "goldenMean_characteristic_recurrence",
+          "lean_module": "Omega.Graph.Sofic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem goldenMean_characteristic_recurrence (m : Nat) :\n    Fintype.card (X (m + 2)) = Fintype.card (X (m + 1)) + Fintype.card (X m)",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name_zh": "明照与分辨",
+      "name_en": "Illumination, Discernment, and Clarity",
+      "omega_directions": [
+        "spectral-theory",
+        "modular-tower-inverse-limit",
+        "rate-distortion-information-theory"
+      ],
+      "direction_groups": [
+        {
+          "direction": "spectral-theory",
+          "label": "Spectral Theory",
+          "module_hints": [
+            "Omega.Folding.CollisionZeta",
+            "Omega.Folding.CollisionZetaOperator",
+            "Omega.Graph.TransferMatrix",
+            "Omega.Frontier.ConditionalArithmetic"
+          ],
+          "candidates": [
+            {
+              "lean_theorem": "collision_kernels_all_real_eigenvalues",
+              "lean_module": "Omega.Folding.CollisionZeta",
+              "lean_type": "theorem",
+              "lean_statement": "theorem collision_kernels_all_real_eigenvalues : (148 : ℤ) > 0 ∧ (564 : ℤ) > 0",
+              "paper_labels": [
+                "def:pom-collision-all-real-eigenvalues"
+              ],
+              "matched_keywords": [],
+              "score": 0
+            },
+            {
+              "lean_theorem": "characteristic_polynomial_witness",
+              "lean_module": "Omega.Frontier.ConditionalArithmetic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem characteristic_polynomial_witness (m : Nat) :\n    Fintype.card (X (m + 2)) = Fintype.card (X (m + 1)) + Fintype.card (X m)",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            },
+            {
+              "lean_theorem": "eigenvalue_eq_goldenRatio_or_goldenConj",
+              "lean_module": "Omega.Graph.TransferMatrix",
+              "lean_type": "theorem",
+              "lean_statement": "theorem eigenvalue_eq_goldenRatio_or_goldenConj\n    {μ : ℝ} (hμ : μ ^ 2 = μ + 1) :\n    μ = Real.goldenRatio ∨ μ = Real.goldenConj",
+              "paper_labels": [
+                "lem:golden-mean-real-eigenvalue-classification"
+              ],
+              "matched_keywords": [],
+              "score": 0
+            }
+          ]
+        },
+        {
+          "direction": "modular-tower-inverse-limit",
+          "label": "Modular Tower and Inverse Limit",
+          "module_hints": [
+            "Omega.Frontier.ConditionalArithmetic",
+            "Omega.Frontier.ConditionalSummary"
+          ],
+          "candidates": [
+            {
+              "lean_theorem": "inverse_limit_left",
+              "lean_module": "Omega.Frontier.ConditionalArithmetic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem inverse_limit_left (F : X.CompatibleFamily) :\n    X.toFamily (X.ofFamily F) = F",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            },
+            {
+              "lean_theorem": "inverse_limit_right",
+              "lean_module": "Omega.Frontier.ConditionalArithmetic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem inverse_limit_right (a : X.XInfinity) :\n    X.ofFamily (X.toFamily a) = a",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            },
+            {
+              "lean_theorem": "inverse_limit_extensionality",
+              "lean_module": "Omega.Frontier.ConditionalArithmetic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem inverse_limit_extensionality (a b : X.XInfinity) :\n    a = b ↔ ∀ m, X.prefixWord a m = X.prefixWord b m",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            }
+          ]
+        },
+        {
+          "direction": "rate-distortion-information-theory",
+          "label": "Rate-Distortion and Information Theory",
+          "module_hints": [
+            "Omega.Frontier.ConditionalArithmetic",
+            "Omega.Frontier.Conditional",
+            "Omega.Frontier.Certificates",
+            "Omega.SPG.ErrorThreshold"
+          ],
+          "candidates": [
+            {
+              "lean_theorem": "observation_refinement_reduces_error",
+              "lean_module": "Omega.Frontier.ConditionalArithmetic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem observation_refinement_reduces_error\n    {α β γ : Type*} [Fintype α] [Fintype β] [Fintype γ]\n    (μ : PMF α) (obs₁ : α → β) (obs₂ : α → γ) (f : γ → β)\n    (hRef : ∀ x, obs₁ x = f (obs₂ x)) (P : Set α) :\n    SPG.scanError μ obs₂ P ≤ SPG.scanError μ obs₁ P",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            },
+            {
+              "lean_theorem": "prefix_resolution_decreases_error",
+              "lean_module": "Omega.Frontier.ConditionalArithmetic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem prefix_resolution_decreases_error {m₁ m₂ n : Nat}\n    (μ : PMF (Word n)) (h₁ : m₁ ≤ n) (h₂ : m₂ ≤ n) (hm : m₁ ≤ m₂)\n    (P : Set (Word n)) :\n    SPG.prefixScanError μ h₂ P ≤ SPG.prefixScanError μ h₁ P",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            },
+            {
+              "lean_theorem": "scanError_hasCertificate",
+              "lean_module": "Omega.Frontier.Conditional",
+              "lean_type": "theorem",
+              "lean_statement": "theorem scanError_hasCertificate {α β : Type*} [Fintype α] [Fintype β]\n    (μ : PMF α) (obs : α → β) (P : Set α) :\n    ScanErrorCertificate.Valid\n      ({ μ",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            }
+          ]
+        }
+      ],
+      "theorem_candidates": [
+        {
+          "lean_theorem": "collision_kernels_all_real_eigenvalues",
+          "lean_module": "Omega.Folding.CollisionZeta",
+          "lean_type": "theorem",
+          "lean_statement": "theorem collision_kernels_all_real_eigenvalues : (148 : ℤ) > 0 ∧ (564 : ℤ) > 0",
+          "paper_labels": [
+            "def:pom-collision-all-real-eigenvalues"
+          ],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "characteristic_polynomial_witness",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem characteristic_polynomial_witness (m : Nat) :\n    Fintype.card (X (m + 2)) = Fintype.card (X (m + 1)) + Fintype.card (X m)",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "eigenvalue_eq_goldenRatio_or_goldenConj",
+          "lean_module": "Omega.Graph.TransferMatrix",
+          "lean_type": "theorem",
+          "lean_statement": "theorem eigenvalue_eq_goldenRatio_or_goldenConj\n    {μ : ℝ} (hμ : μ ^ 2 = μ + 1) :\n    μ = Real.goldenRatio ∨ μ = Real.goldenConj",
+          "paper_labels": [
+            "lem:golden-mean-real-eigenvalue-classification"
+          ],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "inverse_limit_left",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem inverse_limit_left (F : X.CompatibleFamily) :\n    X.toFamily (X.ofFamily F) = F",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "inverse_limit_right",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem inverse_limit_right (a : X.XInfinity) :\n    X.ofFamily (X.toFamily a) = a",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "inverse_limit_extensionality",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem inverse_limit_extensionality (a b : X.XInfinity) :\n    a = b ↔ ∀ m, X.prefixWord a m = X.prefixWord b m",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "observation_refinement_reduces_error",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem observation_refinement_reduces_error\n    {α β γ : Type*} [Fintype α] [Fintype β] [Fintype γ]\n    (μ : PMF α) (obs₁ : α → β) (obs₂ : α → γ) (f : γ → β)\n    (hRef : ∀ x, obs₁ x = f (obs₂ x)) (P : Set α) :\n    SPG.scanError μ obs₂ P ≤ SPG.scanError μ obs₁ P",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "prefix_resolution_decreases_error",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem prefix_resolution_decreases_error {m₁ m₂ n : Nat}\n    (μ : PMF (Word n)) (h₁ : m₁ ≤ n) (h₂ : m₂ ≤ n) (hm : m₁ ≤ m₂)\n    (P : Set (Word n)) :\n    SPG.prefixScanError μ h₂ P ≤ SPG.prefixScanError μ h₁ P",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "scanError_hasCertificate",
+          "lean_module": "Omega.Frontier.Conditional",
+          "lean_type": "theorem",
+          "lean_statement": "theorem scanError_hasCertificate {α β : Type*} [Fintype α] [Fintype β]\n    (μ : PMF α) (obs : α → β) (P : Set α) :\n    ScanErrorCertificate.Valid\n      ({ μ",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "name_zh": "节制与平衡",
+      "name_en": "Limitation, Moderation, and Balanced Measure",
+      "omega_directions": [
+        "zeckendorf-representation",
+        "ring-arithmetic",
+        "golden-mean-shift"
+      ],
+      "direction_groups": [
+        {
+          "direction": "zeckendorf-representation",
+          "label": "Zeckendorf Representation",
+          "module_hints": [
+            "Omega.Frontier.ConditionalArithmetic",
+            "Omega.Folding.FiberArithmetic",
+            "Omega.Folding.CollisionZetaOperator"
+          ],
+          "candidates": [
+            {
+              "lean_theorem": "zeckendorf_uniqueness",
+              "lean_module": "Omega.Frontier.ConditionalArithmetic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem zeckendorf_uniqueness {x y : X m} (h : X.zeckIndices x = X.zeckIndices y) : x = y",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            },
+            {
+              "lean_theorem": "zeckendorf_injective",
+              "lean_module": "Omega.Frontier.ConditionalArithmetic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem zeckendorf_injective (m : Nat) : Function.Injective (X.zeckIndices (m",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            },
+            {
+              "lean_theorem": "scanError_measure_le_complement",
+              "lean_module": "Omega.Frontier.ConditionalArithmetic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem scanError_measure_le_complement [MeasurableSpace α] [Fintype β]\n    [MeasurableSpace β] [MeasurableSingletonClass β]\n    (μ : MeasureTheory.Measure α) (obs : α → β) (hObs : Measurable obs)\n    (P : Set α) (hP : MeasurableSet P) :\n    SPG.scanErrorMeasure μ obs P ≤ μ Pᶜ",
+              "paper_labels": [],
+              "matched_keywords": [
+                "measure",
+                "single"
+              ],
+              "score": 8
+            }
+          ]
+        },
+        {
+          "direction": "ring-arithmetic",
+          "label": "Ring Arithmetic",
+          "module_hints": [
+            "Omega.Frontier.ConditionalArithmetic",
+            "Omega.Folding.FiberArithmetic",
+            "Omega.Folding.FiberArithmeticProperties"
+          ],
+          "candidates": [
+            {
+              "lean_theorem": "stableValue_ring_isomorphism",
+              "lean_module": "Omega.Frontier.ConditionalArithmetic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem stableValue_ring_isomorphism (m : Nat) :\n    (∀ x y : X m, stableValue (X.stableAdd x y) =\n      (stableValue x + stableValue y) % Nat.fib (m + 2)) ∧\n    (∀ x y : X m, stableValue (X.stableMul x y) =\n      (stableValue x * stableValue y) % Nat.fib (m + 2)) ∧\n    Function.Injective (stableValue (m",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            },
+            {
+              "lean_theorem": "modular_projection_add_no_carry",
+              "lean_module": "Omega.Frontier.ConditionalArithmetic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem modular_projection_add_no_carry (x y : X (m + 1))\n    (h : stableValue x + stableValue y < Nat.fib (m + 3)) :\n    X.modularProject (X.stableAdd x y) =\n      X.stableAdd (X.modularProject x) (X.modularProject y)",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            },
+            {
+              "lean_theorem": "stableAdd_comm",
+              "lean_module": "Omega.Folding.FiberArithmetic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem stableAdd_comm (x y : X m) :\n    stableAdd x y = stableAdd y x",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            }
+          ]
+        },
+        {
+          "direction": "golden-mean-shift",
+          "label": "Golden-Mean Shift",
+          "module_hints": [
+            "Omega.Core.No11",
+            "Omega.Graph.Sofic",
+            "Omega.Graph.TransferMatrix",
+            "Omega.Frontier.ConditionalArithmetic",
+            "Omega.Combinatorics.FibonacciCube"
+          ],
+          "candidates": [
+            {
+              "lean_theorem": "fibonacci_cardinality",
+              "lean_module": "Omega.Frontier.ConditionalArithmetic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem fibonacci_cardinality (m : Nat) :\n    Fintype.card (X m) = Nat.fib (m + 2)",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            },
+            {
+              "lean_theorem": "fibonacci_cardinality_recurrence",
+              "lean_module": "Omega.Frontier.ConditionalArithmetic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem fibonacci_cardinality_recurrence (m : Nat) :\n    Fintype.card (X (m + 2)) = Fintype.card (X (m + 1)) + Fintype.card (X m)",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            },
+            {
+              "lean_theorem": "goldenMean_characteristic_recurrence",
+              "lean_module": "Omega.Graph.Sofic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem goldenMean_characteristic_recurrence (m : Nat) :\n    Fintype.card (X (m + 2)) = Fintype.card (X (m + 1)) + Fintype.card (X m)",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            }
+          ]
+        }
+      ],
+      "theorem_candidates": [
+        {
+          "lean_theorem": "zeckendorf_uniqueness",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem zeckendorf_uniqueness {x y : X m} (h : X.zeckIndices x = X.zeckIndices y) : x = y",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "zeckendorf_injective",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem zeckendorf_injective (m : Nat) : Function.Injective (X.zeckIndices (m",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "scanError_measure_le_complement",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem scanError_measure_le_complement [MeasurableSpace α] [Fintype β]\n    [MeasurableSpace β] [MeasurableSingletonClass β]\n    (μ : MeasureTheory.Measure α) (obs : α → β) (hObs : Measurable obs)\n    (P : Set α) (hP : MeasurableSet P) :\n    SPG.scanErrorMeasure μ obs P ≤ μ Pᶜ",
+          "paper_labels": [],
+          "matched_keywords": [
+            "measure",
+            "single"
+          ],
+          "score": 8
+        },
+        {
+          "lean_theorem": "stableValue_ring_isomorphism",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem stableValue_ring_isomorphism (m : Nat) :\n    (∀ x y : X m, stableValue (X.stableAdd x y) =\n      (stableValue x + stableValue y) % Nat.fib (m + 2)) ∧\n    (∀ x y : X m, stableValue (X.stableMul x y) =\n      (stableValue x * stableValue y) % Nat.fib (m + 2)) ∧\n    Function.Injective (stableValue (m",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "modular_projection_add_no_carry",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem modular_projection_add_no_carry (x y : X (m + 1))\n    (h : stableValue x + stableValue y < Nat.fib (m + 3)) :\n    X.modularProject (X.stableAdd x y) =\n      X.stableAdd (X.modularProject x) (X.modularProject y)",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "stableAdd_comm",
+          "lean_module": "Omega.Folding.FiberArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem stableAdd_comm (x y : X m) :\n    stableAdd x y = stableAdd y x",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "fibonacci_cardinality",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem fibonacci_cardinality (m : Nat) :\n    Fintype.card (X m) = Nat.fib (m + 2)",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "fibonacci_cardinality_recurrence",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem fibonacci_cardinality_recurrence (m : Nat) :\n    Fintype.card (X (m + 2)) = Fintype.card (X (m + 1)) + Fintype.card (X m)",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "goldenMean_characteristic_recurrence",
+          "lean_module": "Omega.Graph.Sofic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem goldenMean_characteristic_recurrence (m : Nat) :\n    Fintype.card (X (m + 2)) = Fintype.card (X (m + 1)) + Fintype.card (X m)",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "name_zh": "聚散与流通",
+      "name_en": "Gathering, Dispersal, and Information Flow",
+      "omega_directions": [
+        "rate-distortion-information-theory",
+        "fold-operator",
+        "modular-tower-inverse-limit"
+      ],
+      "direction_groups": [
+        {
+          "direction": "rate-distortion-information-theory",
+          "label": "Rate-Distortion and Information Theory",
+          "module_hints": [
+            "Omega.Frontier.ConditionalArithmetic",
+            "Omega.Frontier.Conditional",
+            "Omega.Frontier.Certificates",
+            "Omega.SPG.ErrorThreshold"
+          ],
+          "candidates": [
+            {
+              "lean_theorem": "observation_refinement_reduces_error",
+              "lean_module": "Omega.Frontier.ConditionalArithmetic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem observation_refinement_reduces_error\n    {α β γ : Type*} [Fintype α] [Fintype β] [Fintype γ]\n    (μ : PMF α) (obs₁ : α → β) (obs₂ : α → γ) (f : γ → β)\n    (hRef : ∀ x, obs₁ x = f (obs₂ x)) (P : Set α) :\n    SPG.scanError μ obs₂ P ≤ SPG.scanError μ obs₁ P",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            },
+            {
+              "lean_theorem": "prefix_resolution_decreases_error",
+              "lean_module": "Omega.Frontier.ConditionalArithmetic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem prefix_resolution_decreases_error {m₁ m₂ n : Nat}\n    (μ : PMF (Word n)) (h₁ : m₁ ≤ n) (h₂ : m₂ ≤ n) (hm : m₁ ≤ m₂)\n    (P : Set (Word n)) :\n    SPG.prefixScanError μ h₂ P ≤ SPG.prefixScanError μ h₁ P",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            },
+            {
+              "lean_theorem": "scanError_hasCertificate",
+              "lean_module": "Omega.Frontier.Conditional",
+              "lean_type": "theorem",
+              "lean_statement": "theorem scanError_hasCertificate {α β : Type*} [Fintype α] [Fintype β]\n    (μ : PMF α) (obs : α → β) (P : Set α) :\n    ScanErrorCertificate.Valid\n      ({ μ",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            }
+          ]
+        },
+        {
+          "direction": "fold-operator",
+          "label": "Fold Operator",
+          "module_hints": [
+            "Omega.Frontier.ConditionalArithmetic",
+            "Omega.Folding"
+          ],
+          "candidates": [
+            {
+              "lean_theorem": "fold_is_idempotent",
+              "lean_module": "Omega.Frontier.ConditionalArithmetic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem fold_is_idempotent (w : Word m) : Fold (Fold w).1 = Fold w",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            },
+            {
+              "lean_theorem": "fold_fixes_stable",
+              "lean_module": "Omega.Frontier.ConditionalArithmetic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem fold_fixes_stable (x : X m) : Fold x.1 = x",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            },
+            {
+              "lean_theorem": "fold_is_surjective",
+              "lean_module": "Omega.Frontier.ConditionalArithmetic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem fold_is_surjective : Function.Surjective (Fold (m",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            }
+          ]
+        },
+        {
+          "direction": "modular-tower-inverse-limit",
+          "label": "Modular Tower and Inverse Limit",
+          "module_hints": [
+            "Omega.Frontier.ConditionalArithmetic",
+            "Omega.Frontier.ConditionalSummary"
+          ],
+          "candidates": [
+            {
+              "lean_theorem": "inverse_limit_left",
+              "lean_module": "Omega.Frontier.ConditionalArithmetic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem inverse_limit_left (F : X.CompatibleFamily) :\n    X.toFamily (X.ofFamily F) = F",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            },
+            {
+              "lean_theorem": "inverse_limit_right",
+              "lean_module": "Omega.Frontier.ConditionalArithmetic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem inverse_limit_right (a : X.XInfinity) :\n    X.ofFamily (X.toFamily a) = a",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            },
+            {
+              "lean_theorem": "inverse_limit_extensionality",
+              "lean_module": "Omega.Frontier.ConditionalArithmetic",
+              "lean_type": "theorem",
+              "lean_statement": "theorem inverse_limit_extensionality (a b : X.XInfinity) :\n    a = b ↔ ∀ m, X.prefixWord a m = X.prefixWord b m",
+              "paper_labels": [],
+              "matched_keywords": [],
+              "score": 0
+            }
+          ]
+        }
+      ],
+      "theorem_candidates": [
+        {
+          "lean_theorem": "observation_refinement_reduces_error",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem observation_refinement_reduces_error\n    {α β γ : Type*} [Fintype α] [Fintype β] [Fintype γ]\n    (μ : PMF α) (obs₁ : α → β) (obs₂ : α → γ) (f : γ → β)\n    (hRef : ∀ x, obs₁ x = f (obs₂ x)) (P : Set α) :\n    SPG.scanError μ obs₂ P ≤ SPG.scanError μ obs₁ P",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "prefix_resolution_decreases_error",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem prefix_resolution_decreases_error {m₁ m₂ n : Nat}\n    (μ : PMF (Word n)) (h₁ : m₁ ≤ n) (h₂ : m₂ ≤ n) (hm : m₁ ≤ m₂)\n    (P : Set (Word n)) :\n    SPG.prefixScanError μ h₂ P ≤ SPG.prefixScanError μ h₁ P",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "scanError_hasCertificate",
+          "lean_module": "Omega.Frontier.Conditional",
+          "lean_type": "theorem",
+          "lean_statement": "theorem scanError_hasCertificate {α β : Type*} [Fintype α] [Fintype β]\n    (μ : PMF α) (obs : α → β) (P : Set α) :\n    ScanErrorCertificate.Valid\n      ({ μ",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "fold_is_idempotent",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem fold_is_idempotent (w : Word m) : Fold (Fold w).1 = Fold w",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "fold_fixes_stable",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem fold_fixes_stable (x : X m) : Fold x.1 = x",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "fold_is_surjective",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem fold_is_surjective : Function.Surjective (Fold (m",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "inverse_limit_left",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem inverse_limit_left (F : X.CompatibleFamily) :\n    X.toFamily (X.ofFamily F) = F",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "inverse_limit_right",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem inverse_limit_right (a : X.XInfinity) :\n    X.ofFamily (X.toFamily a) = a",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        },
+        {
+          "lean_theorem": "inverse_limit_extensionality",
+          "lean_module": "Omega.Frontier.ConditionalArithmetic",
+          "lean_type": "theorem",
+          "lean_statement": "theorem inverse_limit_extensionality (a b : X.XInfinity) :\n    a = b ↔ ∀ m, X.prefixWord a m = X.prefixWord b m",
+          "paper_labels": [],
+          "matched_keywords": [],
+          "score": 0
+        }
+      ]
+    }
+  ]
+}

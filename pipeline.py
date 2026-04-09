@@ -25,6 +25,9 @@ from pathlib import Path
 
 import yaml
 
+from analysis.omega_bridge import OmegaBridge
+from analysis.theorem_mapper import format_category_citations, select_candidates_for_category
+
 AUTOMATH_ROOT = Path(__file__).parent.parent / "automath"
 NOTEBOOKLM_DISPATCH = AUTOMATH_ROOT / "tools" / "notebooklm-oracle" / "notebooklm_dispatch.py"
 WORK_DIR = Path(__file__).parent / "workspace"
@@ -47,12 +50,19 @@ def load_config(path: str = "config.yaml") -> dict:
 
 def get_omega_context() -> str:
     """Load Omega theorem summary for LLM prompts."""
-    discovery_path = AUTOMATH_ROOT / "discovery" / "discovery_report.json"
-    if discovery_path.exists():
-        with open(discovery_path) as f:
-            data = json.load(f)
-        entries = data.get("entries", [])
-        return f"Omega 定理库: {len(entries)} 条机器验证定理, 覆盖 Core/Folding/Zeta/SPG/GU/EA 等模块"
+    candidate_paths = [
+        AUTOMATH_ROOT / "discovery" / "discovery_report.json",
+        AUTOMATH_ROOT / "tools" / "discovery-export" / "discovery" / "discovery_report.json",
+    ]
+    for discovery_path in candidate_paths:
+        if discovery_path.exists():
+            with open(discovery_path) as f:
+                data = json.load(f)
+            entries = data.get("entries", data.get("discoveries", []))
+            return (
+                f"Omega 定理库: {len(entries)} 条机器验证定理, "
+                f"覆盖 Core/Folding/Zeta/SPG/GU/EA/Frontier 等模块"
+            )
     return "Omega: 10,588+ 机器验证定理, 从 x²=x+1 推导, Lean 4 形式化"
 
 
@@ -161,20 +171,34 @@ IMPORTANT: Do NOT read or execute any files under ~/.claude/, ~/.agents/, .claud
 ## Omega 数学背景
 {omega_context}
 
-## 输出要求
-撰写一篇 2000-4000 字的分析文章, 结构如下:
+## 候选 Omega 定理
+{omega_theorem_candidates}
 
-1. **引言** — 文本的历史和文化背景, 与数学的意外联系
-2. **原文精选** — 选取该类别中最能体现数学结构的 3-5 段原文, 附白话翻译
-3. **Omega 映射分析** — 逐一分析每段原文与 Omega 定理的结构对应:
-   - 明确指出对应的 Omega 定理/结构
-   - 区分"形式对应"(可证明的结构同构) 和"启发性类比"(有趣但非严格)
-   - 给出数学表述
-4. **综合讨论** — 这些映射告诉我们什么? 古人的直觉与现代数学的关系
-5. **参考** — 引用的 Omega 定理编号和原文出处
+## 输出要求
+撰写一篇 2000-4000 字的**映射分析文章**。重点不是给读者做古籍导读，而是用古籍确认 Omega 数学结构的美与强度。
+
+结构如下:
+
+1. **结构入口** — 只用最少背景说明该类别的核心文本结构
+2. **原文锚点** — 选取 3-5 段最能承载结构映射的原文, 附简洁翻译
+3. **Omega 映射分析** — 这是全文核心:
+   - 明确指出对应的 Omega 对象与具体定理
+   - 优先给出 theorem-level mapping, 不要停留在方向级标签
+   - 区分"形式对应"(可证明的结构同构/同型) 和"启发性类比"(有趣但非严格)
+   - 说明为什么这个映射能体现 Omega 数学结构的美
+4. **结构综合** — 总结该类别最终确认了 Omega 的哪些核心结构
+5. **参考** — 原文出处 + Lean 定理名/模块名
+
+额外约束:
+- 文本解释要有, 但只能服务于映射, 不能喧宾夺主
+- 不要写“对主论文的直接回流”“给我们写作的建议”之类面向内部的口吻
+- 不要把文章写成古籍导论、文学赏析或论文写作 memo
+- 尽量引用具体 Lean 定理名, 例如 `fibonacci_cardinality`, `fold_is_idempotent`, `inverse_limit_equiv`
+- 若提供了候选定理, 优先使用其中最贴切的 2-6 条, 不要虚构 Lean 名称
+- 若缺少精确定理, 才退回到模块/对象级映射
 
 语言: 中英双语 (中文为主, 关键术语附英文)
-风格: 严谨但可读, 面向有教育背景的非专业读者
+风格: 严谨、凝练、映射优先, 面向有教育背景的非专业读者
 """
 
 
@@ -188,6 +212,14 @@ def stage2_generate(work_name: str, classification: dict, config: dict) -> list[
     omega_ctx = get_omega_context()
     categories = classification.get("categories", [])
     results = []
+    theorem_bridge = None
+    theorem_bridge_error = None
+
+    try:
+        theorem_bridge = OmegaBridge()
+    except Exception as exc:
+        theorem_bridge_error = str(exc)
+        print(f"  [Stage 2] 定理库加载失败, 回退到方向级映射: {exc}")
 
     for cat in categories:
         cat_id = cat["id"]
@@ -198,6 +230,18 @@ def stage2_generate(work_name: str, classification: dict, config: dict) -> list[
             results.append({"category": cat_id, "file": str(output_file), "status": "exists"})
             continue
 
+        theorem_candidates = "暂未提供自动筛出的候选定理，请至少落到明确的 Omega 对象或模块。"
+        theorem_mapping = None
+        if theorem_bridge:
+            theorem_mapping = select_candidates_for_category(theorem_bridge, cat)
+            if theorem_mapping.get("theorem_candidates"):
+                theorem_candidates = format_category_citations(theorem_mapping)
+            theorem_file = gen_dir / f"theorem_candidates_{cat_id:02d}.json"
+            theorem_file.write_text(
+                json.dumps(theorem_mapping, ensure_ascii=False, indent=2),
+                encoding="utf-8",
+            )
+
         prompt = GENERATE_PROMPT_TEMPLATE.format(
             work_name=work_name,
             work_en=work["en"],
@@ -207,6 +251,7 @@ def stage2_generate(work_name: str, classification: dict, config: dict) -> list[
             omega_directions=", ".join(cat["omega_directions"]),
             mapping_rationale=cat["mapping_rationale"],
             omega_context=omega_ctx,
+            omega_theorem_candidates=theorem_candidates,
         )
 
         prompt_file = gen_dir / f"prompt_{cat_id:02d}.txt"
@@ -225,7 +270,12 @@ def stage2_generate(work_name: str, classification: dict, config: dict) -> list[
             )
             if output_file.exists():
                 print(f"    ✓ 生成完成: {output_file.name}")
-                results.append({"category": cat_id, "file": str(output_file), "status": "generated"})
+                result_entry = {"category": cat_id, "file": str(output_file), "status": "generated"}
+                if theorem_mapping:
+                    result_entry["theorem_candidates"] = [
+                        item["lean_theorem"] for item in theorem_mapping.get("theorem_candidates", [])
+                    ]
+                results.append(result_entry)
             else:
                 print(f"    ✗ 生成失败, Codex stderr: {result.stderr[:200]}")
                 results.append({"category": cat_id, "status": "failed", "error": result.stderr[:500]})
@@ -239,7 +289,15 @@ def stage2_generate(work_name: str, classification: dict, config: dict) -> list[
             break
 
     # Save generation manifest
-    manifest = {"work": work_name, "results": results, "timestamp": time.strftime("%Y-%m-%dT%H:%M:%S")}
+    manifest = {
+        "work": work_name,
+        "results": results,
+        "timestamp": time.strftime("%Y-%m-%dT%H:%M:%S"),
+    }
+    if theorem_bridge and theorem_bridge.discovery_path:
+        manifest["discovery_path"] = str(theorem_bridge.discovery_path)
+    if theorem_bridge_error:
+        manifest["theorem_bridge_error"] = theorem_bridge_error
     (gen_dir / "manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2))
     return results
 
