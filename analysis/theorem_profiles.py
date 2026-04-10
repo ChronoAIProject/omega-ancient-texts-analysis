@@ -120,9 +120,9 @@ DIRECTION_PROFILES = {
             "Omega.Frontier.ConditionalArithmetic",
         ],
         "preferred_theorems": [
-            "collision_kernels_all_real_eigenvalues",
-            "characteristic_polynomial_witness",
+            "goldenMeanAdjacency_has_goldenRatio_eigenvector",
             "eigenvalue_eq_goldenRatio_or_goldenConj",
+            "characteristic_polynomial_witness",
         ],
     },
     "modular-tower-inverse-limit": {
@@ -139,12 +139,12 @@ DIRECTION_PROFILES = {
             "Omega.Frontier.ConditionalSummary",
         ],
         "preferred_theorems": [
+            "inverse_limit_extensionality",
+            "inverse_limit_bijective",
             "inverse_limit_left",
             "inverse_limit_right",
-            "inverse_limit_extensionality",
             "inverse_limit_round_left",
             "inverse_limit_round_right",
-            "inverse_limit_bijective",
         ],
     },
     "dynamical-systems": {
@@ -163,8 +163,8 @@ DIRECTION_PROFILES = {
         ],
         "preferred_theorems": [
             "topological_entropy_eq_log_phi",
-            "goldenMean_characteristic_recurrence",
             "goldenMeanAdjacency_has_goldenRatio_eigenvector",
+            "goldenMean_characteristic_recurrence",
         ],
     },
     "rate-distortion-information-theory": {
@@ -211,10 +211,10 @@ DIRECTION_PROFILES = {
         ],
         "preferred_theorems": [
             "maxFiberMultiplicity_bounds",
-            "maxFiberMultiplicity_fibonacci_bound",
             "maxFiberMultiplicity_eight",
             "maxFiberMultiplicity_nine",
             "maxFiberMultiplicity_ten",
+            "maxFiberMultiplicity_fibonacci_bound",
         ],
     },
 }

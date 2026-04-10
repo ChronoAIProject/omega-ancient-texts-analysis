@@ -54,6 +54,14 @@
 
 超出这三点的宇宙论、政治论、伦理论，都应标明为解释性延伸。
 
+## Omega 定理锚点
+
+- `fibonacci_cardinality` [`Omega.Frontier.ConditionalArithmetic`]：`theorem fibonacci_cardinality (m : Nat) : Fintype.card (X m) = Nat.fib (m + 2)`。把稳定词空间的计数严格写成 `|X_m| = F_{m+2}`，是本文讨论卦系受约束增长的基础等式。
+- `fibonacci_cardinality_recurrence` [`Omega.Frontier.ConditionalArithmetic`]：`theorem fibonacci_cardinality_recurrence (m : Nat) : Fintype.card (X (m + 2)) = Fintype.card (X (m + 1)) + Fintype.card (X m)`。把允许状态的增长写成前两级之和，支撑“由少数初始状态递归展开”的读法。
+- `inverse_limit_extensionality` [`Omega.Frontier.ConditionalArithmetic`]：`theorem inverse_limit_extensionality (a b : X.XInfinity) : a = b ↔ ∀ m, X.prefixWord a m = X.prefixWord b m`。说明无限对象是否相同，完全由全部有限前缀是否一致决定，支撑本文的层级拼接与兼容家族读法。
+
+这些定理不替代文本解释，但它们把本文最核心的对应从“方向级相似”推进到了“可点名的 Lean 形式结果”。
+
 ## 结论
 
 “创生与纯态”这一类说明，《易经》与 Omega 的关系首先不是诗意共鸣，而是结构同一：六爻卦本身就是 6-bit 状态空间。乾与坤是二元全域的两极，泰与否则是三爻块拼接的最原始通塞模型。再往上，golden-mean shift 与 Fibonacci 计数展示了何种状态在约束下可持续、何种状态只是原始空间的极限点。如此看来，《易经》的创生论并不神秘，它在卦画层面已经包含一个严整的组合学宇宙，而 Omega 所做的，是把这个宇宙的约束、计数与层级关系彻底数学化。

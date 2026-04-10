@@ -46,6 +46,14 @@ classification.json 给出的一个很有力的洞见是：以井、巽类为代
 
 因此，形式对应集中在位串约束与 fold/fiber 关系上；“深”“险”“困”的人文感受仍保留为解释层。
 
+## Omega 定理锚点
+
+- `fibonacci_cardinality` [`Omega.Frontier.ConditionalArithmetic`]：`theorem fibonacci_cardinality (m : Nat) : Fintype.card (X m) = Nat.fib (m + 2)`。把稳定词空间的计数严格写成 `|X_m| = F_{m+2}`，是本文讨论卦系受约束增长的基础等式。
+- `fold_is_idempotent` [`Omega.Frontier.ConditionalArithmetic`]：`theorem fold_is_idempotent (w : Word m) : Fold (Fold w).1 = Fold w`。说明 fold 一旦把词折回稳定域，再施加一次不会继续改写，因此可把稳定态看成真正的吸引结果。
+- `maxFiberMultiplicity_bounds` [`Omega.Combinatorics.FibonacciCube`]：`theorem maxFiberMultiplicity_bounds (m : Nat) : m / 2 + 1 ≤ X.maxFiberMultiplicity m ∧ X.maxFiberMultiplicity m ≤ Nat.fib (m + 2)`。给出最大 fiber 多重性的上下界，支撑本文把某些稳定卦象写成更强吸引子的判断。
+
+这些定理不替代文本解释，但它们把本文最核心的对应从“方向级相似”推进到了“可点名的 Lean 形式结果”。
+
 ## 结论
 
 “困阻与险难”这一类显示，《易经》对危险的理解并不是情绪化的，而是高度结构化的。坎之险之所以可渡，在于阳爻被分隔；需与讼之所以危险升级，在于高压聚集；蹇、困、井则说明阻滞如何从边界、压迫、深源三种形式展开。Omega 的 `No11`、Fold 与 fiber 使这种差别不再只是象义直觉，而成为可写出的离散结构判断。《易经》在这里真正教人的，不是如何消灭危险，而是如何让危险保持为可以穿越的形。

@@ -40,6 +40,14 @@ classification 中把复解释为某个 Fibonacci 位值的单一激活，这一
 
 因此，复、比、师、颐、晋、明夷等 GMS-valid 卦是本类 formal core；临、升等边界卦则说明，从低密度发展到更高活性时，系统如何开始接近约束阈值。
 
+## Omega 定理锚点
+
+- `fibonacci_cardinality` [`Omega.Frontier.ConditionalArithmetic`]：`theorem fibonacci_cardinality (m : Nat) : Fintype.card (X m) = Nat.fib (m + 2)`。把稳定词空间的计数严格写成 `|X_m| = F_{m+2}`，是本文讨论卦系受约束增长的基础等式。
+- `fibonacci_cardinality_recurrence` [`Omega.Frontier.ConditionalArithmetic`]：`theorem fibonacci_cardinality_recurrence (m : Nat) : Fintype.card (X (m + 2)) = Fintype.card (X (m + 1)) + Fintype.card (X m)`。把允许状态的增长写成前两级之和，支撑“由少数初始状态递归展开”的读法。
+- `zeckendorf_uniqueness` [`Omega.Frontier.ConditionalArithmetic`]：`theorem zeckendorf_uniqueness {x y : X m} (h : X.zeckIndices x = X.zeckIndices y) : x = y`。说明非相邻 Fibonacci 指标分解是唯一的，支撑本文关于稀疏稳定布局具有唯一性的判断。
+
+这些定理不替代文本解释，但它们把本文最核心的对应从“方向级相似”推进到了“可点名的 Lean 形式结果”。
+
 ## 结论
 
 “柔顺与养育”这一类显示，《易经》对成长的理解与现代系统论极近：健康增长不是从饱和开始，而是从稀疏种子开始；不是先堆满资源，而是先保证配置唯一、非连续、可延展。Omega 的 GMS、Fibonacci growth 与 Zeckendorf 表示把这一点讲得极清楚。尤其复卦，它几乎就是“一阳来复”这一古典洞见的位串化表达：最小的正确返回，足以重新开启全部成长。

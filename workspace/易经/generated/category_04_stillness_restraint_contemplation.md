@@ -40,6 +40,14 @@
 
 也就是说，本类的 formal core 是：唯一、非连续、最小而足够的阳布局；其余卦则围绕这一核心展示如何靠近、偏离或重返这一布局。
 
+## Omega 定理锚点
+
+- `fibonacci_cardinality` [`Omega.Frontier.ConditionalArithmetic`]：`theorem fibonacci_cardinality (m : Nat) : Fintype.card (X m) = Nat.fib (m + 2)`。把稳定词空间的计数严格写成 `|X_m| = F_{m+2}`，是本文讨论卦系受约束增长的基础等式。
+- `zeckendorf_uniqueness` [`Omega.Frontier.ConditionalArithmetic`]：`theorem zeckendorf_uniqueness {x y : X m} (h : X.zeckIndices x = X.zeckIndices y) : x = y`。说明非相邻 Fibonacci 指标分解是唯一的，支撑本文关于稀疏稳定布局具有唯一性的判断。
+- `observation_refinement_reduces_error` [`Omega.Frontier.ConditionalArithmetic`]：`theorem observation_refinement_reduces_error {α β γ : Type*} [Fintype α] [Fintype β] [Fintype γ] (μ : PMF α) (obs₁ : α → β) (obs₂ : α → γ) (f : γ → β) (hRef ...`。说明观测更细时误差不会变大，支撑本文把分辨、静观、察势写成信息分辨率问题。
+
+这些定理不替代文本解释，但它们把本文最核心的对应从“方向级相似”推进到了“可点名的 Lean 形式结果”。
+
 ## 结论
 
 《易经》的“止静与内省”不是撤空一切，而是把行动压缩到最少必要结构，并使该结构保持非连续、可辨与可守。艮与谦因此最接近 Omega 的 Zeckendorf/No11 世界：它们不是无阳，而是以唯一正确的方式保留阳。渐、小过、观、遯、归妹则显示节制并非静止不变，而是持续与阈值相处的工夫。从这个角度看，《易经》真正教人的不是“别动”，而是“怎样让你的每一次动，都仍然落在可持续配置之内”。

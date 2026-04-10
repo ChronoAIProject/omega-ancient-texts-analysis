@@ -46,6 +46,14 @@ classification.json 里最重要的结论之一，是多个高阳卦都会 fold 
 
 只要守住这三点，就不会把《易经》读成“反对力量”，也不会把 Omega 读成“只崇拜静态”。
 
+## Omega 定理锚点
+
+- `fold_is_idempotent` [`Omega.Frontier.ConditionalArithmetic`]：`theorem fold_is_idempotent (w : Word m) : Fold (Fold w).1 = Fold w`。说明 fold 一旦把词折回稳定域，再施加一次不会继续改写，因此可把稳定态看成真正的吸引结果。
+- `maxFiberMultiplicity_bounds` [`Omega.Combinatorics.FibonacciCube`]：`theorem maxFiberMultiplicity_bounds (m : Nat) : m / 2 + 1 ≤ X.maxFiberMultiplicity m ∧ X.maxFiberMultiplicity m ≤ Nat.fib (m + 2)`。给出最大 fiber 多重性的上下界，支撑本文把某些稳定卦象写成更强吸引子的判断。
+- `fibonacci_cardinality` [`Omega.Frontier.ConditionalArithmetic`]：`theorem fibonacci_cardinality (m : Nat) : Fintype.card (X m) = Nat.fib (m + 2)`。把稳定词空间的计数严格写成 `|X_m| = F_{m+2}`，是本文讨论卦系受约束增长的基础等式。
+
+这些定理不替代文本解释，但它们把本文最核心的对应从“方向级相似”推进到了“可点名的 Lean 形式结果”。
+
 ## 结论
 
 “刚健与突破”这一类揭示了《易经》与 Omega 的一个尖锐共同点：力量当然重要，但力量一旦自我连缀、持续堆叠，就会迅速脱离可持续结构。乾系诸卦之所以壮盛，也正因此危险；它们必须经 fold，才能进入真正长期有效的节律形态。于是《易经》对刚健的态度便显得极现代：它既承认力量的必要性，也承认任何不受约束的力量终会要求重构。Omega 只不过把这一点写成了位串约束与吸引结构。

@@ -40,6 +40,14 @@ modular tower 的核心不是“层数越来越多”，而是“每上一层都
 
 因此，最强 formal correspondence 应集中于：渐 = compatible extension，震/解 = lawful initiation and release，节 = growth-with-boundary。井、巽、涣、升则是围绕这一中心的通道与流动问题。
 
+## Omega 定理锚点
+
+- `inverse_limit_extensionality` [`Omega.Frontier.ConditionalArithmetic`]：`theorem inverse_limit_extensionality (a b : X.XInfinity) : a = b ↔ ∀ m, X.prefixWord a m = X.prefixWord b m`。说明无限对象是否相同，完全由全部有限前缀是否一致决定，支撑本文的层级拼接与兼容家族读法。
+- `fibonacci_cardinality` [`Omega.Frontier.ConditionalArithmetic`]：`theorem fibonacci_cardinality (m : Nat) : Fintype.card (X m) = Nat.fib (m + 2)`。把稳定词空间的计数严格写成 `|X_m| = F_{m+2}`，是本文讨论卦系受约束增长的基础等式。
+- `fibonacci_cardinality_recurrence` [`Omega.Frontier.ConditionalArithmetic`]：`theorem fibonacci_cardinality_recurrence (m : Nat) : Fintype.card (X (m + 2)) = Fintype.card (X (m + 1)) + Fintype.card (X m)`。把允许状态的增长写成前两级之和，支撑“由少数初始状态递归展开”的读法。
+
+这些定理不替代文本解释，但它们把本文最核心的对应从“方向级相似”推进到了“可点名的 Lean 形式结果”。
+
 ## 结论
 
 《易经》的“渐进与发展”不是时间拖延，而是一种层级兼容原则。真正的成长，既要求新增结构，又要求新增能被旧结构承接；既要求活化，又要求节律；既要求上升，又要求限度。Omega 的 modular tower、Fibonacci growth 与 GMS 约束，把这种思想从经验智慧提升为可写出的分层系统逻辑。由此再看“渐”“升”“节”，它们就不只是人生劝诫，而是关于复杂系统如何合法展开的精密判断。

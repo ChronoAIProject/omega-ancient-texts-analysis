@@ -64,6 +64,14 @@
 
 超出这一层的德性解释，应保持为启发性阐释。
 
+## Omega 定理锚点
+
+- `topological_entropy_eq_log_phi` [`Omega.Folding.Entropy`]：`theorem topological_entropy_eq_log_phi : Tendsto (fun n => Real.log (Nat.fib (n + 2) : ℝ) / (n : ℝ)) atTop (𝓝 (Real.log φ))`。把系统复杂度增长率写成 `log φ`，支撑本文关于变易具有受控节律而非任意散乱的判断。
+- `fibonacci_cardinality` [`Omega.Frontier.ConditionalArithmetic`]：`theorem fibonacci_cardinality (m : Nat) : Fintype.card (X m) = Nat.fib (m + 2)`。把稳定词空间的计数严格写成 `|X_m| = F_{m+2}`，是本文讨论卦系受约束增长的基础等式。
+- `fold_is_idempotent` [`Omega.Frontier.ConditionalArithmetic`]：`theorem fold_is_idempotent (w : Word m) : Fold (Fold w).1 = Fold w`。说明 fold 一旦把词折回稳定域，再施加一次不会继续改写，因此可把稳定态看成真正的吸引结果。
+
+这些定理不替代文本解释，但它们把本文最核心的对应从“方向级相似”推进到了“可点名的 Lean 形式结果”。
+
 ## 结论
 
 “动态变易与循环”一类说明，《易经》的终局观从来不是静止封闭，而是把完成写成可持续循环，把开始写成低密度启动，把临界翻转写成非稳定边缘。Omega 的 shift 轨道、golden-mean 稳定域与 Fold 吸引结构，使这一切得到了非常精确的形式化。尤其是既济/未济这对终卦：它们不是象征意义上“像”循环，而是在位串结构上就是可写出的交替周期。由此可见，《易经》所谓变易，其实已经是一种高度离散化的动力系统思想。
