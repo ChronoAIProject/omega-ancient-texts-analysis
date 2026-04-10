@@ -57,7 +57,8 @@ def ensure_artifacts_dir(slug: str) -> Path:
 
 
 def slug_from_path(path: Path) -> str:
-    return path.stem.replace(" ", "_")
+    stem = path.stem.replace(" ", "_")
+    return stem[:-7] if stem.endswith("_source") else stem
 
 
 def build_generation_brief(language_profile: str, input_path: Path) -> str:
@@ -91,7 +92,7 @@ def create_notebook(client: NotebookLM, input_path: Path, title: str = None, lan
     """Create a NotebookLM notebook from a markdown/text file."""
     brief = build_generation_brief(language_profile, input_path)
     content = f"{brief}\n\n---\n\n{input_path.read_text(encoding='utf-8')}"
-    title = title or f"Omega: {input_path.stem}"
+    title = title or f"Omega: {slug_from_path(input_path)}"
 
     print(f"  Creating notebook: {title}")
     nb = client.create_notebook(title=title)

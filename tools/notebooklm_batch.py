@@ -33,6 +33,10 @@ ARTIFACTS_DIR = Path(__file__).parent.parent / "workspace" / "artifacts"
 MAX_RETRIES = 3
 RETRY_DELAY = 10
 DEFAULT_LANGUAGE_PROFILE = "zh_primary_bilingual"
+SLIDES_TIMEOUT = 900
+INFOGRAPHIC_TIMEOUT = 900
+AUDIO_TIMEOUT = 900
+VIDEO_TIMEOUT = 1200
 
 
 def build_generation_brief(language_profile: str, filepath: Path) -> str:
@@ -63,6 +67,10 @@ def build_generation_brief(language_profile: str, filepath: Path) -> str:
     )
 
 
+def normalize_slug(stem: str) -> str:
+    return stem[:-7] if stem.endswith("_source") else stem
+
+
 def load_source_content(filepath: Path, language_profile: str) -> str:
     content = filepath.read_text(encoding="utf-8")
     brief = build_generation_brief(language_profile, filepath)
@@ -71,7 +79,7 @@ def load_source_content(filepath: Path, language_profile: str) -> str:
 
 async def create_notebook_from_file(client, filepath: Path, language_profile: str) -> str:
     """Create a notebook and add the file as a source."""
-    title = f"Omega: {filepath.stem}"
+    title = f"Omega: {normalize_slug(filepath.stem)}"
     content = load_source_content(filepath, language_profile)
 
     nb = await client.notebooks.create(title=title)
@@ -90,7 +98,7 @@ async def generate_slides(client, nb_id: str, output_dir: Path, slug: str, slide
     """Generate slide deck."""
     print(f"  Generating slides...")
     status = await client.artifacts.generate_slide_deck(nb_id, language=slide_language)
-    await client.artifacts.wait_for_completion(nb_id, status.task_id, timeout=300)
+    await client.artifacts.wait_for_completion(nb_id, status.task_id, timeout=SLIDES_TIMEOUT)
     output = output_dir / f"{slug}_slides.pdf"
     await client.artifacts.download_slide_deck(nb_id, str(output))
     print(f"  ✓ Slides: {output}")
@@ -101,7 +109,7 @@ async def generate_infographic(client, nb_id: str, output_dir: Path, slug: str, 
     """Generate infographic."""
     print(f"  Generating infographic...")
     status = await client.artifacts.generate_infographic(nb_id, language=slide_language)
-    await client.artifacts.wait_for_completion(nb_id, status.task_id, timeout=300)
+    await client.artifacts.wait_for_completion(nb_id, status.task_id, timeout=INFOGRAPHIC_TIMEOUT)
     output = output_dir / f"{slug}_infographic.png"
     await client.artifacts.download_infographic(nb_id, str(output))
     print(f"  ✓ Infographic: {output}")
@@ -112,7 +120,7 @@ async def generate_audio(client, nb_id: str, output_dir: Path, slug: str):
     """Generate audio overview."""
     print(f"  Generating audio (1-3 min)...")
     status = await client.artifacts.generate_audio(nb_id)
-    await client.artifacts.wait_for_completion(nb_id, status.task_id, timeout=600)
+    await client.artifacts.wait_for_completion(nb_id, status.task_id, timeout=AUDIO_TIMEOUT)
     output = output_dir / f"{slug}_audio.wav"
     await client.artifacts.download_audio(nb_id, str(output))
     print(f"  ✓ Audio: {output}")
@@ -124,7 +132,7 @@ async def generate_video(client, nb_id: str, output_dir: Path, slug: str):
     print(f"  Generating video (2-5 min)...")
     try:
         status = await client.artifacts.generate_video(nb_id)
-        await client.artifacts.wait_for_completion(nb_id, status.task_id, timeout=600)
+        await client.artifacts.wait_for_completion(nb_id, status.task_id, timeout=VIDEO_TIMEOUT)
         output = output_dir / f"{slug}_video.mp4"
         await client.artifacts.download_video(nb_id, str(output))
         print(f"  ✓ Video: {output}")
@@ -134,16 +142,42 @@ async def generate_video(client, nb_id: str, output_dir: Path, slug: str):
         return None
 
 
-async def process_file(client, filepath: Path, gen_type: str = "all", language_profile: str = DEFAULT_LANGUAGE_PROFILE):
+def resolve_types(gen_type: str, gen_types: list[str] | None) -> list[str]:
+    if gen_types:
+        return gen_types
+    if gen_type == "all":
+        return ["slides", "infographic", "audio"]
+    return [gen_type]
+
+
+def collect_existing_artifacts(output_dir: Path, slug: str) -> dict[str, str]:
+    mapping = {
+        "slides": output_dir / f"{slug}_slides.pdf",
+        "infographic": output_dir / f"{slug}_infographic.png",
+        "audio": output_dir / f"{slug}_audio.wav",
+        "video": output_dir / f"{slug}_video.mp4",
+    }
+    return {name: str(path) for name, path in mapping.items() if path.exists()}
+
+
+async def process_file(
+    client,
+    filepath: Path,
+    gen_type: str = "all",
+    language_profile: str = DEFAULT_LANGUAGE_PROFILE,
+    gen_types: list[str] | None = None,
+):
     """Process a single file through NotebookLM."""
-    slug = filepath.stem
+    slug = normalize_slug(filepath.stem)
     output_dir = ARTIFACTS_DIR / slug
     output_dir.mkdir(parents=True, exist_ok=True)
     slide_language = "en" if language_profile == "en" else "zh"
+    types_to_run = resolve_types(gen_type, gen_types)
 
     print(f"\n{'='*60}")
     print(f"Processing: {filepath.name}")
     print(f"Language profile: {language_profile}")
+    print(f"Types: {', '.join(types_to_run)}")
     print(f"{'='*60}")
 
     nb_id = await create_notebook_from_file(client, filepath, language_profile)
@@ -155,11 +189,6 @@ async def process_file(client, filepath: Path, gen_type: str = "all", language_p
         "audio": generate_audio,
         "video": generate_video,
     }
-
-    if gen_type == "all":
-        types_to_run = ["slides", "infographic", "audio"]  # skip video by default (slow)
-    else:
-        types_to_run = [gen_type]
 
     for t in types_to_run:
         for attempt in range(1, MAX_RETRIES + 1):
@@ -176,8 +205,24 @@ async def process_file(client, filepath: Path, gen_type: str = "all", language_p
                     print(f"  ✗ {t} failed after {MAX_RETRIES} attempts: {e}")
                     results[t] = f"error: {e}"
 
-    manifest = {**results, "timestamp": time.strftime("%Y-%m-%dT%H:%M:%S")}
-    (output_dir / "manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2))
+    manifest_path = output_dir / "manifest.json"
+    manifest = {}
+    if manifest_path.exists():
+        try:
+            manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            manifest = {}
+    manifest.update(
+        {
+            "source": str(filepath),
+            "notebook_id": nb_id,
+            "language_profile": language_profile,
+            **collect_existing_artifacts(output_dir, slug),
+            **results,
+            "timestamp": time.strftime("%Y-%m-%dT%H:%M:%S"),
+        }
+    )
+    manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2))
     print(f"  Done → {output_dir}")
     return results
 
@@ -209,7 +254,7 @@ async def main_async(args):
             if not path.exists():
                 print(f"文件不存在: {path}")
                 sys.exit(1)
-            await process_file(client, path, args.type)
+            await process_file(client, path, args.type, args.language_profile, args.types)
 
         elif args.batch:
             batch_dir = Path(args.batch)
@@ -221,7 +266,7 @@ async def main_async(args):
             for i, f in enumerate(files):
                 print(f"\n[{i+1}/{len(files)}]")
                 try:
-                    await process_file(client, f, args.type, args.language_profile)
+                    await process_file(client, f, args.type, args.language_profile, args.types)
                 except Exception as e:
                     print(f"  ✗ 失败: {f.name} — {e}")
                     continue
@@ -232,6 +277,12 @@ def main():
     parser.add_argument("--input", help="单个文件")
     parser.add_argument("--batch", help="批量处理目录")
     parser.add_argument("--type", choices=["slides", "infographic", "audio", "video", "all"], default="all")
+    parser.add_argument(
+        "--types",
+        nargs="+",
+        choices=["slides", "infographic", "audio", "video"],
+        help="显式指定多个生成类型，例如: --types slides infographic",
+    )
     parser.add_argument(
         "--language-profile",
         choices=["zh_primary_bilingual", "zh", "en"],

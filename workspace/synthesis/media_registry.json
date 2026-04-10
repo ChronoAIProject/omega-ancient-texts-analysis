@@ -35,7 +35,7 @@
         "fibonacci-stabilization-sharp-threshold-conjugacy-nonlinearity",
         "resolution-folding-core-symbolic-dynamics"
       ],
-      "status": "published",
+      "status": "media_partially_published",
       "source_markdown": "workspace/synthesis/synthesis_01_no11_golden_mean_shift.md",
       "notebooklm_source": "workspace/synthesis/notebooklm_sources/synthesis_01_no11_golden_mean_shift_source.md",
       "artifact_slug": "synthesis_01_no11_golden_mean_shift",
@@ -44,6 +44,9 @@
         "infographic": "workspace/artifacts/synthesis_01_no11_golden_mean_shift/synthesis_01_no11_golden_mean_shift_infographic.png",
         "audio": "workspace/artifacts/synthesis_01_no11_golden_mean_shift/synthesis_01_no11_golden_mean_shift_audio.wav",
         "video": "workspace/artifacts/synthesis_01_no11_golden_mean_shift/synthesis_01_no11_golden_mean_shift_video.mp4"
+      },
+      "published_assets": {
+        "slides": "https://github.com/the-omega-institute/Omega-paper-series/releases/download/cultural-media-v1/synthesis_01_no11_golden_mean_shift_slides.pdf"
       }
     },
     {
@@ -74,7 +77,7 @@
         "fibonacci-stabilization-sharp-threshold-conjugacy-nonlinearity",
         "resolution-folding-core-symbolic-dynamics"
       ],
-      "status": "published",
+      "status": "media_partially_published",
       "source_markdown": "workspace/synthesis/synthesis_02_fibonacci_growth_recurrence.md",
       "notebooklm_source": "workspace/synthesis/notebooklm_sources/synthesis_02_fibonacci_growth_recurrence_source.md",
       "artifact_slug": "synthesis_02_fibonacci_growth_recurrence",
@@ -83,6 +86,9 @@
         "infographic": "workspace/artifacts/synthesis_02_fibonacci_growth_recurrence/synthesis_02_fibonacci_growth_recurrence_infographic.png",
         "audio": "workspace/artifacts/synthesis_02_fibonacci_growth_recurrence/synthesis_02_fibonacci_growth_recurrence_audio.wav",
         "video": "workspace/artifacts/synthesis_02_fibonacci_growth_recurrence/synthesis_02_fibonacci_growth_recurrence_video.mp4"
+      },
+      "published_assets": {
+        "slides": "https://github.com/the-omega-institute/Omega-paper-series/releases/download/cultural-media-v1/synthesis_02_fibonacci_growth_recurrence_slides.pdf"
       }
     },
     {
@@ -114,7 +120,7 @@
         "resolution-folding-core-symbolic-dynamics",
         "fibonacci-stabilization-sharp-threshold-conjugacy-nonlinearity"
       ],
-      "status": "published",
+      "status": "media_partially_published",
       "source_markdown": "workspace/synthesis/synthesis_03_fold_operator.md",
       "notebooklm_source": "workspace/synthesis/notebooklm_sources/synthesis_03_fold_operator_source.md",
       "artifact_slug": "synthesis_03_fold_operator",
@@ -123,6 +129,9 @@
         "infographic": "workspace/artifacts/synthesis_03_fold_operator/synthesis_03_fold_operator_infographic.png",
         "audio": "workspace/artifacts/synthesis_03_fold_operator/synthesis_03_fold_operator_audio.wav",
         "video": "workspace/artifacts/synthesis_03_fold_operator/synthesis_03_fold_operator_video.mp4"
+      },
+      "published_assets": {
+        "slides": "https://github.com/the-omega-institute/Omega-paper-series/releases/download/cultural-media-v1/synthesis_03_fold_operator_slides.pdf"
       }
     },
     {
