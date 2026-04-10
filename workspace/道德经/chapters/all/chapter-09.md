@@ -1,8 +1,8 @@
 ---
 title: "09. 持而盈之，不如其已，"
-subtitle: "Tao Te Ching Chapter Page"
+subtitle: "《道德经》逐章映射页"
 order: 9
-description: "Tao Te Ching chapter 9 with source text and Omega chapter-level mapping."
+description: "《道德经》第 9 章原文与 Omega 章节级映射页。"
 categories: [tao-te-ching, chapter-page, cultural, omega]
 ---
 
@@ -11,11 +11,11 @@ categories: [tao-te-ching, chapter-page, cultural, omega]
 - 章号：第 9 章
 - 章首：持而盈之，不如其已；
 - 归属类别：知足与限度
-- 当前主方向：golden-mean-shift, zeckendorf-representation, rate-distortion-information-theory
+- 当前主方向：golden-mean-shift、zeckendorf-representation、rate-distortion-information-theory
 
 ## 对应说明
 
-第 9 章首先落在「知足与限度」这条走廊上。它首先确认 sufficiency 的核心不是贫乏，而是稀疏、不过载、不过界的最优结构。 当前最强的 Omega 方向集中在 golden-mean-shift、zeckendorf-representation、rate-distortion-information-theory。
+第 9 章首先落在「知足与限度」这条走廊上。它首先确认知足的核心不是贫乏，而是稀疏、不过载、不过界的最优结构。 当前最强的 Omega 方向集中在 golden-mean-shift、zeckendorf-representation、rate-distortion-information-theory。
 
 ## 原文
 
@@ -28,8 +28,8 @@ categories: [tao-te-ching, chapter-page, cultural, omega]
 ## Omega 对象
 
 - `X_m = {w ∈ {0,1}^m : No11(w)}`
-- Zeckendorf sparse decomposition
-- resolution-error certificate corridor
+- Zeckendorf 稀疏分解
+- 分辨率-误差证书通道
 
 ## Omega 定理锚点
 
@@ -41,7 +41,7 @@ categories: [tao-te-ching, chapter-page, cultural, omega]
 
 ## 边界说明
 
-- 本章的 strongest claim 是结构级 formal correspondence，不是历史预言或逐句等式翻译。
+- 本章最强的主张是结构级 formal correspondence，不是历史预言或逐句等式翻译。
 - 本页不声称《道德经》直接陈述了 Lean 定理；它只确认文本结构与这些定理承载的数学对象之间存在可辩护的映射。
 
 ## 原文来源
@@ -51,6 +51,6 @@ categories: [tao-te-ching, chapter-page, cultural, omega]
 
 ## 小结
 
-这一页把单章原文、类别交叉、对象层与 theorem-level anchor 叠在一起，目的不是做古籍导读，而是让《道德经》的短章结构能够直接落到 Omega 的形式对象上。
+这一页把单章原文、类别交叉、对象层与定理级锚点叠在一起，目的不是做古籍导读，而是让《道德经》的短章结构能够直接落到 Omega 的形式对象上。
 
-[Back to Chapter Index](index.qmd) | [Back to Tao Te Ching Index](../index.qmd)
+[返回逐章索引](index.qmd) | [返回《道德经》总览](../index.qmd)

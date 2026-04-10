@@ -1,8 +1,8 @@
 ---
-title: "24. 復 / Fu"
-subtitle: "I Ching Hexagram Page"
+title: "24. 復"
+subtitle: "《易经》单卦映射页"
 order: 24
-description: "Hexagram 24 復 as `100000`, GMS-valid, categories 动态变易与循环 / 柔顺与养育."
+description: "第 24 卦 復，二进制 `100000`，已在 `X_6` 稳定域内，归属 动态变易与循环 / 柔顺与养育。"
 categories: [i-ching, hexagram-dossier, cultural, omega]
 ---
 
@@ -10,19 +10,19 @@ categories: [i-ching, hexagram-dossier, cultural, omega]
 
 - 卦符：䷗
 - 二进制：`100000`
-- 下卦：震 / Thunder / `100`
-- 上卦：坤 / Earth / `000`
+- 下卦：震 / `100`
+- 上卦：坤 / `000`
 - 阳爻数：1
 - 连续阳对数：0
 - 最长阳串：1
-- GMS 状态：valid
+- `X_6` 状态：已在稳定域内
 - 互补卦：第 44 卦 / `011111`
 - 综卦：第 23 卦 / `000001`
 - 所属类别：动态变易与循环 / 柔顺与养育
 
 ## 映射定位
 
-在当前的 Omega 文化映射计划里，第 24 卦 復 首先不是被当作抽象象义，而是被当作二元词 `100000` 来读取。该卦直接位于 `X_6` 内，因此不需要先经过 fold 才能进入稳定域。 它只保留一个孤立阳位，因此属于最小非零稳定激活，可视作稀疏启动态。 它目前横跨的主题类别是 动态变易与循环、柔顺与养育，因此其 strongest reading corridor 集中在 dynamical-systems、golden-mean-shift、fold-operator、fibonacci-growth、zeckendorf-representation 这些方向上。
+在当前的 Omega 文化映射计划里，第 24 卦 復 首先不是被当作抽象象义，而是被当作二元词 `100000` 来读取。该卦直接位于 `X_6` 内，因此不需要先经过 fold 才能进入稳定域。 它只保留一个孤立阳位，因此属于最小非零稳定激活，可视作稀疏启动态。 它目前横跨的主题类别是 动态变易与循环、柔顺与养育，因此其最强对应主要集中在 dynamical-systems、golden-mean-shift、fold-operator、fibonacci-growth、zeckendorf-representation 这些方向上。
 
 ## 对应说明
 
@@ -31,8 +31,8 @@ categories: [i-ching, hexagram-dossier, cultural, omega]
 ## Omega 对象
 
 - `Word 6 = {0,1}^6`
-- `X_6` stable subspace
-- 当前主方向：dynamical-systems, golden-mean-shift, fold-operator, fibonacci-growth, zeckendorf-representation
+- `X_6` 稳定子空间
+- 当前主方向：dynamical-systems、golden-mean-shift、fold-operator、fibonacci-growth、zeckendorf-representation
 
 ## 原文锚点
 
@@ -60,6 +60,6 @@ categories: [i-ching, hexagram-dossier, cultural, omega]
 
 ## 小结
 
-这一页已经构成逐卦层的正式发布单元：它把原文锚点、位串结构、类别交叉与 theorem anchor 放在同一坐标系里，重点不是替代传统注疏，而是展示该卦与 Omega 数学结构之间最可点名的映射位置。
+这一页已经构成逐卦层的正式发布单元：它把原文锚点、位串结构、类别交叉与定理锚点放在同一坐标系里，重点不是替代传统注疏，而是展示该卦与 Omega 数学结构之间最可点名的映射位置。
 
-[Back to Hexagram Index](index.qmd) | [Back to I Ching Index](../index.qmd)
+[返回六十四卦索引](index.qmd) | [返回《易经》总览](../index.qmd)

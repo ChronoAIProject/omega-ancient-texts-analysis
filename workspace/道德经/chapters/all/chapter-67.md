@@ -1,8 +1,8 @@
 ---
 title: "67. 天下皆謂我道大，似不肖夫唯大，故似…"
-subtitle: "Tao Te Ching Chapter Page"
+subtitle: "《道德经》逐章映射页"
 order: 67
-description: "Tao Te Ching chapter 67 with source text and Omega chapter-level mapping."
+description: "《道德经》第 67 章原文与 Omega 章节级映射页。"
 categories: [tao-te-ching, chapter-page, cultural, omega]
 ---
 
@@ -11,7 +11,7 @@ categories: [tao-te-ching, chapter-page, cultural, omega]
 - 章号：第 67 章
 - 章首：天下皆謂我道大，似不肖。夫唯大，故似不肖。若肖，久矣其細也夫！
 - 归属类别：自然与朴素
-- 当前主方向：golden-mean-shift, zeckendorf-representation
+- 当前主方向：golden-mean-shift、zeckendorf-representation
 
 ## 对应说明
 
@@ -32,7 +32,7 @@ categories: [tao-te-ching, chapter-page, cultural, omega]
 ## Omega 对象
 
 - `X_m = {w ∈ {0,1}^m : No11(w)}`
-- Zeckendorf sparse decomposition
+- Zeckendorf 稀疏分解
 
 ## Omega 定理锚点
 
@@ -44,7 +44,7 @@ categories: [tao-te-ching, chapter-page, cultural, omega]
 
 ## 边界说明
 
-- 本章以对象级和 theorem-level 映射为主，但仍需把感性意象与严格形式区分开。
+- 本章以对象级和定理级映射为主，但仍需把感性意象与严格形式区分开。
 - 本页不声称《道德经》直接陈述了 Lean 定理；它只确认文本结构与这些定理承载的数学对象之间存在可辩护的映射。
 
 ## 原文来源
@@ -54,6 +54,6 @@ categories: [tao-te-ching, chapter-page, cultural, omega]
 
 ## 小结
 
-这一页把单章原文、类别交叉、对象层与 theorem-level anchor 叠在一起，目的不是做古籍导读，而是让《道德经》的短章结构能够直接落到 Omega 的形式对象上。
+这一页把单章原文、类别交叉、对象层与定理级锚点叠在一起，目的不是做古籍导读，而是让《道德经》的短章结构能够直接落到 Omega 的形式对象上。
 
-[Back to Chapter Index](index.qmd) | [Back to Tao Te Ching Index](../index.qmd)
+[返回逐章索引](index.qmd) | [返回《道德经》总览](../index.qmd)

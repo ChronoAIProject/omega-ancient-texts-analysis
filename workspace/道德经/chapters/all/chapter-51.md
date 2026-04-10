@@ -1,8 +1,8 @@
 ---
 title: "51. 道生之，德畜之，物形之，勢成之"
-subtitle: "Tao Te Ching Chapter Page"
+subtitle: "《道德经》逐章映射页"
 order: 51
-description: "Tao Te Ching chapter 51 with source text and Omega chapter-level mapping."
+description: "《道德经》第 51 章原文与 Omega 章节级映射页。"
 categories: [tao-te-ching, chapter-page, cultural, omega]
 ---
 
@@ -11,11 +11,11 @@ categories: [tao-te-ching, chapter-page, cultural, omega]
 - 章号：第 51 章
 - 章首：道生之，德畜之，物形之，勢成之。
 - 归属类别：道体与不可名状 / 德与滋养
-- 当前主方向：golden-mean-shift, fibonacci-growth, modular-tower-inverse-limit, ring-arithmetic, fiber-structure
+- 当前主方向：golden-mean-shift、fibonacci-growth、modular-tower-inverse-limit、ring-arithmetic、fiber-structure
 
 ## 对应说明
 
-第 51 章首先落在「道体与不可名状」这条走廊上。它首先确认“单一生成根据导出层级多样性”的结构，这一层最靠近 generative ground 与 inverse limit 的结合。 同时它还跨到 德与滋养，所以不是单线映射，而是一个重叠走廊。 当前最强的 Omega 方向集中在 golden-mean-shift、fibonacci-growth、modular-tower-inverse-limit、ring-arithmetic、fiber-structure。
+第 51 章首先落在「道体与不可名状」这条走廊上。它首先确认“单一生成根据导出层级多样性”的结构，这一层最靠近生成根基与 inverse limit 的结合。 同时它还跨到 德与滋养，所以不是单线映射，而是一个重叠走廊。 当前最强的 Omega 方向集中在 golden-mean-shift、fibonacci-growth、modular-tower-inverse-limit、ring-arithmetic、fiber-structure。
 
 ## 原文
 
@@ -44,7 +44,7 @@ categories: [tao-te-ching, chapter-page, cultural, omega]
 
 ## 边界说明
 
-- 本章的 strongest claim 是结构级 formal correspondence，不是历史预言或逐句等式翻译。
+- 本章最强的主张是结构级 formal correspondence，不是历史预言或逐句等式翻译。
 - 本页不声称《道德经》直接陈述了 Lean 定理；它只确认文本结构与这些定理承载的数学对象之间存在可辩护的映射。
 
 ## 原文来源
@@ -54,6 +54,6 @@ categories: [tao-te-ching, chapter-page, cultural, omega]
 
 ## 小结
 
-这一页把单章原文、类别交叉、对象层与 theorem-level anchor 叠在一起，目的不是做古籍导读，而是让《道德经》的短章结构能够直接落到 Omega 的形式对象上。
+这一页把单章原文、类别交叉、对象层与定理级锚点叠在一起，目的不是做古籍导读，而是让《道德经》的短章结构能够直接落到 Omega 的形式对象上。
 
-[Back to Chapter Index](index.qmd) | [Back to Tao Te Ching Index](../index.qmd)
+[返回逐章索引](index.qmd) | [返回《道德经》总览](../index.qmd)

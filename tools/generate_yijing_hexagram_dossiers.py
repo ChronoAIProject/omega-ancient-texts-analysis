@@ -51,7 +51,7 @@ def feature_sentence(item: dict) -> str:
     """Create a short structural reading from binary features."""
     yang_count = item["yang_count"]
     if item["binary"] == "000000":
-        return "它是整个 6-bit 卦系里的 zero word，也是唯一完全没有阳位的稳定词。"
+        return "它是整个 6-bit 卦系里的零词，也是唯一完全没有阳位的稳定词。"
     if item["binary"] == "111111":
         return "它是整个 6-bit 卦系里的全阳极值词，也是离 `No11` 稳定域最远的极端配置。"
     if item["gms_valid"] and yang_count == 1:
@@ -61,10 +61,10 @@ def feature_sentence(item: dict) -> str:
     if item["gms_valid"] and yang_count == 3:
         return "它以三阳达到了 `No11` 允许的最大阳密度，因此是交替或近交替结构中的高密度稳定态。"
     if not item["gms_valid"] and item["max_one_run"] >= 3:
-        return "它包含长阳串，因此第一层读法不是 stable word，而是需要经 fold 才能进入稳定域的 raw word。"
+        return "它包含长阳串，因此第一层读法不是稳定词，而是需要经 fold 才能进入稳定域的原始词。"
     if not item["gms_valid"]:
         return "它虽不是极端全阳，但已出现连续阳段，因此其形式位置是 fold 之前的临界或过载态。"
-    return "它位于《易经》位串系统中的一个中间结构位置，适合从分类交叉与 theorem anchor 两侧同时读取。"
+    return "它位于《易经》位串系统中的一个中间结构位置，适合从分类交叉与定理锚点两侧同时读取。"
 
 
 def mapping_position(item: dict) -> str:
@@ -75,13 +75,13 @@ def mapping_position(item: dict) -> str:
     stable_clause = (
         "该卦直接位于 `X_6` 内，因此不需要先经过 fold 才能进入稳定域。"
         if item["gms_valid"]
-        else "该卦不在 `X_6` 内，因此其第一层数学位置是 raw 6-bit word，而不是 stable word。"
+        else "该卦不在 `X_6` 内，因此其第一层数学位置是原始 6-bit 词，而不是稳定词。"
     )
     return (
         f"在当前的 Omega 文化映射计划里，第 {item['number']} 卦 {item['name_zh']} 首先不是被当作抽象象义，"
         f"而是被当作二元词 `{item['binary']}` 来读取。{stable_clause} "
         f"{feature_sentence(item)} 它目前横跨的主题类别是 {category_names}，"
-        f"因此其 strongest reading corridor 集中在 {directions} 这些方向上。"
+        f"因此其最强对应主要集中在 {directions} 这些方向上。"
     )
 
 
@@ -171,7 +171,7 @@ def source_mapping_comment(item: dict) -> str:
         )
     else:
         domain_clause = (
-            "它不直接落在 `X_6` 内，因此原文在这里首先对应的是 raw word 的极端、临界或过载位置，"
+            "它不直接落在 `X_6` 内，因此原文在这里首先对应的是原始词的极端、临界或过载位置，"
             "数学上要先经过 `Fold : Word 6 → X_6` 才能进入稳定域。"
         )
     return (
@@ -216,15 +216,15 @@ def corpus_status(item: dict) -> list[str]:
 
 def render_dossier(item: dict) -> str:
     """Render one per-hexagram dossier."""
-    category_names = " / ".join(ref["name_zh"] for ref in item["category_refs"]) or "Unassigned"
+    category_names = " / ".join(ref["name_zh"] for ref in item["category_refs"]) or "未分配"
     description = (
-        f"Hexagram {item['number']} {item['name_zh']} as `{item['binary']}`, "
-        f"{'GMS-valid' if item['gms_valid'] else 'fold-required'}, categories {category_names}."
+        f"第 {item['number']} 卦 {item['name_zh']}，二进制 `{item['binary']}`，"
+        f"{'已在 `X_6` 稳定域内' if item['gms_valid'] else '需经 fold 进入稳定域'}，归属 {category_names}。"
     )
     lines = [
         "---",
-        f'title: "{item["number"]:02d}. {item["name_zh"]} / {item["pinyin"].title()}"',
-        'subtitle: "I Ching Hexagram Page"',
+        f'title: "{item["number"]:02d}. {item["name_zh"]}"',
+        'subtitle: "《易经》单卦映射页"',
         f"order: {item['number']}",
         f'description: "{description}"',
         "categories: [i-ching, hexagram-dossier, cultural, omega]",
@@ -234,12 +234,12 @@ def render_dossier(item: dict) -> str:
         "",
         f"- 卦符：{item['symbol']}",
         f"- 二进制：`{item['binary']}`",
-        f"- 下卦：{item['lower_trigram']['name_zh']} / {item['lower_trigram']['name_en']} / `{item['lower_trigram']['bits']}`",
-        f"- 上卦：{item['upper_trigram']['name_zh']} / {item['upper_trigram']['name_en']} / `{item['upper_trigram']['bits']}`",
+        f"- 下卦：{item['lower_trigram']['name_zh']} / `{item['lower_trigram']['bits']}`",
+        f"- 上卦：{item['upper_trigram']['name_zh']} / `{item['upper_trigram']['bits']}`",
         f"- 阳爻数：{item['yang_count']}",
         f"- 连续阳对数：{item['adjacent_one_pairs']}",
         f"- 最长阳串：{item['max_one_run']}",
-        f"- GMS 状态：{'valid' if item['gms_valid'] else 'not valid'}",
+        f"- `X_6` 状态：{'已在稳定域内' if item['gms_valid'] else '需经 fold 进入稳定域'}",
         f"- 互补卦：第 {item['complement_hexagram']} 卦 / `{item['complement_binary']}`",
         f"- 综卦：第 {item['reverse_hexagram']} 卦 / `{item['reverse_binary']}`",
         f"- 所属类别：{category_names}",
@@ -255,8 +255,8 @@ def render_dossier(item: dict) -> str:
         "## Omega 对象",
         "",
         "- `Word 6 = {0,1}^6`",
-        f"- {'`X_6` stable subspace' if item['gms_valid'] else '`Fold : Word 6 → X_6` entry corridor'}",
-        f"- 当前主方向：{', '.join(item['omega_directions']) if item['omega_directions'] else '基础位串结构'}",
+        f"- {'`X_6` 稳定子空间' if item['gms_valid'] else '`Fold : Word 6 → X_6` 进入稳定域的通道'}",
+        f"- 当前主方向：{'、'.join(item['omega_directions']) if item['omega_directions'] else '基础位串结构'}",
         "",
     ]
     lines.extend(source_anchor_section(item))
@@ -266,10 +266,10 @@ def render_dossier(item: dict) -> str:
         [
             "## 小结",
             "",
-            "这一页已经构成逐卦层的正式发布单元：它把原文锚点、位串结构、类别交叉与 theorem anchor 放在同一坐标系里，"
+            "这一页已经构成逐卦层的正式发布单元：它把原文锚点、位串结构、类别交叉与定理锚点放在同一坐标系里，"
             "重点不是替代传统注疏，而是展示该卦与 Omega 数学结构之间最可点名的映射位置。",
             "",
-            "[Back to Hexagram Index](index.qmd) | [Back to I Ching Index](../index.qmd)",
+            "[返回六十四卦索引](index.qmd) | [返回《易经》总览](../index.qmd)",
             "",
         ]
     )

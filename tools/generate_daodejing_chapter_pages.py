@@ -41,29 +41,29 @@ THEOREM_NOTES = {
 OBJECT_NOTES = {
     "golden-mean-shift": "`X_m = {w ∈ {0,1}^m : No11(w)}`",
     "fibonacci-growth": "`|X_m| = F_{m+2}`",
-    "zeckendorf-representation": "Zeckendorf sparse decomposition",
+    "zeckendorf-representation": "Zeckendorf 稀疏分解",
     "fold-operator": "`Fold : Word m → X_m`",
     "ring-arithmetic": "`X_m ≅ Z/F_{m+2}Z`",
-    "spectral-theory": "golden-mean spectral / eigen-structure",
+    "spectral-theory": "golden-mean 谱结构 / 本征结构",
     "modular-tower-inverse-limit": "`X_∞ = lim← X_m`",
-    "dynamical-systems": "shift / entropy / orbit structure",
-    "rate-distortion-information-theory": "resolution-error certificate corridor",
+    "dynamical-systems": "移位 / 熵 / 轨道结构",
+    "rate-distortion-information-theory": "分辨率-误差证书通道",
     "fiber-structure": "`fiber(x) = {w : Fold(w)=x}`",
 }
 
 CATEGORY_COMMENTARY = {
-    1: "它首先确认“单一生成根据导出层级多样性”的结构，这一层最靠近 generative ground 与 inverse limit 的结合。",
-    2: "它首先确认 opposites 并非彼此孤立，而是在受约束的二元系统中互相条件、互相校正。",
-    3: "它首先确认秩序不是靠外加命令维持，而是由 constraint 自发收敛出的稳定结果。",
+    1: "它首先确认“单一生成根据导出层级多样性”的结构，这一层最靠近生成根基与 inverse limit 的结合。",
+    2: "它首先确认对立项并非彼此孤立，而是在受约束的二元系统中互相条件、互相校正。",
+    3: "它首先确认秩序不是靠外加命令维持，而是由约束自发收敛出的稳定结果。",
     4: "它首先确认“空”不是缺失，而是可承接多种前像与功能的容量结构。",
     5: "它首先确认“德”不是抽象美德标签，而是生成原则在有限层中的具体可运作实现。",
-    6: "它首先确认 return / reversal 不是修辞，而是层级系统里真实存在的投影、周期与回返结构。",
+    6: "它首先确认回归与反转不是修辞，而是层级系统里真实存在的投影、周期与回返结构。",
     7: "它首先确认治理问题可被读成局部干预、失真边界与系统稳态的问题。",
     8: "它首先确认弱与柔不是消极退让，而是在受约束系统中更可持续的稳定策略。",
-    9: "它首先确认 sufficiency 的核心不是贫乏，而是稀疏、不过载、不过界的最优结构。",
-    10: "它首先确认 knowing 具有分辨率层次，整体只能借有限层逐步逼近。",
+    9: "它首先确认知足的核心不是贫乏，而是稀疏、不过载、不过界的最优结构。",
+    10: "它首先确认知具有分辨率层次，整体只能借有限层逐步逼近。",
     11: "它首先确认朴素不是空白，而是带最小充分约束的活结构。",
-    12: "它首先确认众多有限显现可以在一个 compatible whole 中得到统一。 ",
+    12: "它首先确认众多有限显现可以在一个相容整体中得到统一。 ",
 }
 
 
@@ -128,7 +128,7 @@ def theorem_section(item: dict) -> list[str]:
     lines = ["## Omega 定理锚点", ""]
     candidates = item.get("theorem_candidates", [])[:5]
     if not candidates:
-        lines.append("- 当前 chapter registry 还没有为本章筛出 theorem candidates。")
+        lines.append("- 当前章节注册表还没有为本章筛出定理候选。")
         lines.append("")
         return lines
 
@@ -175,9 +175,9 @@ def boundary_section(item: dict) -> list[str]:
     if refs:
         strengths = {ref.get("formal_strength", "") for ref in refs if ref.get("formal_strength", "")}
         if "strong" in strengths:
-            lines.append("- 本章的 strongest claim 是结构级 formal correspondence，不是历史预言或逐句等式翻译。")
+            lines.append("- 本章最强的主张是结构级 formal correspondence，不是历史预言或逐句等式翻译。")
         else:
-            lines.append("- 本章以对象级和 theorem-level 映射为主，但仍需把感性意象与严格形式区分开。")
+            lines.append("- 本章以对象级和定理级映射为主，但仍需把感性意象与严格形式区分开。")
     else:
         lines.append("- 当前页面还没有足够类别上下文来判断 formal strength。")
     lines.append("- 本页不声称《道德经》直接陈述了 Lean 定理；它只确认文本结构与这些定理承载的数学对象之间存在可辩护的映射。")
@@ -189,12 +189,12 @@ def render_page(item: dict) -> str:
     """Render one chapter page."""
     source_lines = load_source_lines(item["source_text_path"])
     title = item["short_title"]
-    categories = " / ".join(ref["name_zh"] for ref in item.get("category_refs", [])) or "Unassigned"
-    description = f"Tao Te Ching chapter {item['number']} with source text and Omega chapter-level mapping."
+    categories = " / ".join(ref["name_zh"] for ref in item.get("category_refs", [])) or "未分配"
+    description = f"《道德经》第 {item['number']} 章原文与 Omega 章节级映射页。"
     lines = [
         "---",
         f'title: "{item["number"]:02d}. {title}"',
-        'subtitle: "Tao Te Ching Chapter Page"',
+        'subtitle: "《道德经》逐章映射页"',
         f"order: {item['number']}",
         f'description: "{description}"',
         "categories: [tao-te-ching, chapter-page, cultural, omega]",
@@ -205,7 +205,7 @@ def render_page(item: dict) -> str:
         f"- 章号：第 {item['number']} 章",
         f"- 章首：{item['incipit']}",
         f"- 归属类别：{categories}",
-        f"- 当前主方向：{', '.join(item.get('omega_directions', [])) or '未指定'}",
+        f"- 当前主方向：{'、'.join(item.get('omega_directions', [])) or '未指定'}",
         "",
         "## 对应说明",
         "",
@@ -221,9 +221,9 @@ def render_page(item: dict) -> str:
         [
             "## 小结",
             "",
-            "这一页把单章原文、类别交叉、对象层与 theorem-level anchor 叠在一起，目的不是做古籍导读，而是让《道德经》的短章结构能够直接落到 Omega 的形式对象上。",
+            "这一页把单章原文、类别交叉、对象层与定理级锚点叠在一起，目的不是做古籍导读，而是让《道德经》的短章结构能够直接落到 Omega 的形式对象上。",
             "",
-            "[Back to Chapter Index](index.qmd) | [Back to Tao Te Ching Index](../index.qmd)",
+            "[返回逐章索引](index.qmd) | [返回《道德经》总览](../index.qmd)",
             "",
         ]
     )

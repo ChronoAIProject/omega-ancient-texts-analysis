@@ -1,8 +1,8 @@
 ---
 title: "36. 將欲歙之，必固張之，將欲弱之，必固…"
-subtitle: "Tao Te Ching Chapter Page"
+subtitle: "《道德经》逐章映射页"
 order: 36
-description: "Tao Te Ching chapter 36 with source text and Omega chapter-level mapping."
+description: "《道德经》第 36 章原文与 Omega 章节级映射页。"
 categories: [tao-te-ching, chapter-page, cultural, omega]
 ---
 
@@ -11,11 +11,11 @@ categories: [tao-te-ching, chapter-page, cultural, omega]
 - 章号：第 36 章
 - 章首：將欲歙之，必固張之；將欲弱之，必固強之；將欲廢之，必固興之；將欲奪之，必固與之。是謂微明。
 - 归属类别：对立互生与二元结构 / 柔弱胜刚强
-- 当前主方向：golden-mean-shift, fold-operator, rate-distortion-information-theory
+- 当前主方向：golden-mean-shift、fold-operator、rate-distortion-information-theory
 
 ## 对应说明
 
-第 36 章首先落在「对立互生与二元结构」这条走廊上。它首先确认 opposites 并非彼此孤立，而是在受约束的二元系统中互相条件、互相校正。 同时它还跨到 柔弱胜刚强，所以不是单线映射，而是一个重叠走廊。 当前最强的 Omega 方向集中在 golden-mean-shift、fold-operator、rate-distortion-information-theory。
+第 36 章首先落在「对立互生与二元结构」这条走廊上。它首先确认对立项并非彼此孤立，而是在受约束的二元系统中互相条件、互相校正。 同时它还跨到 柔弱胜刚强，所以不是单线映射，而是一个重叠走廊。 当前最强的 Omega 方向集中在 golden-mean-shift、fold-operator、rate-distortion-information-theory。
 
 ## 原文
 
@@ -26,7 +26,7 @@ categories: [tao-te-ching, chapter-page, cultural, omega]
 
 - `X_m = {w ∈ {0,1}^m : No11(w)}`
 - `Fold : Word m → X_m`
-- resolution-error certificate corridor
+- 分辨率-误差证书通道
 
 ## Omega 定理锚点
 
@@ -38,7 +38,7 @@ categories: [tao-te-ching, chapter-page, cultural, omega]
 
 ## 边界说明
 
-- 本章的 strongest claim 是结构级 formal correspondence，不是历史预言或逐句等式翻译。
+- 本章最强的主张是结构级 formal correspondence，不是历史预言或逐句等式翻译。
 - 本页不声称《道德经》直接陈述了 Lean 定理；它只确认文本结构与这些定理承载的数学对象之间存在可辩护的映射。
 
 ## 原文来源
@@ -48,6 +48,6 @@ categories: [tao-te-ching, chapter-page, cultural, omega]
 
 ## 小结
 
-这一页把单章原文、类别交叉、对象层与 theorem-level anchor 叠在一起，目的不是做古籍导读，而是让《道德经》的短章结构能够直接落到 Omega 的形式对象上。
+这一页把单章原文、类别交叉、对象层与定理级锚点叠在一起，目的不是做古籍导读，而是让《道德经》的短章结构能够直接落到 Omega 的形式对象上。
 
-[Back to Chapter Index](index.qmd) | [Back to Tao Te Ching Index](../index.qmd)
+[返回逐章索引](index.qmd) | [返回《道德经》总览](../index.qmd)

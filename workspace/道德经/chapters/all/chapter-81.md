@@ -1,8 +1,8 @@
 ---
 title: "81. 信言不美，"
-subtitle: "Tao Te Ching Chapter Page"
+subtitle: "《道德经》逐章映射页"
 order: 81
-description: "Tao Te Ching chapter 81 with source text and Omega chapter-level mapping."
+description: "《道德经》第 81 章原文与 Omega 章节级映射页。"
 categories: [tao-te-ching, chapter-page, cultural, omega]
 ---
 
@@ -11,7 +11,7 @@ categories: [tao-te-ching, chapter-page, cultural, omega]
 - 章号：第 81 章
 - 章首：信言不美，
 - 归属类别：德与滋养 / 知足与限度 / 层级与分辨 / 自然与朴素
-- 当前主方向：ring-arithmetic, fiber-structure, golden-mean-shift, zeckendorf-representation, rate-distortion-information-theory, modular-tower-inverse-limit, fold-operator, spectral-theory
+- 当前主方向：ring-arithmetic、fiber-structure、golden-mean-shift、zeckendorf-representation、rate-distortion-information-theory、modular-tower-inverse-limit、fold-operator、spectral-theory
 
 ## 对应说明
 
@@ -35,11 +35,11 @@ categories: [tao-te-ching, chapter-page, cultural, omega]
 - `X_m ≅ Z/F_{m+2}Z`
 - `fiber(x) = {w : Fold(w)=x}`
 - `X_m = {w ∈ {0,1}^m : No11(w)}`
-- Zeckendorf sparse decomposition
-- resolution-error certificate corridor
+- Zeckendorf 稀疏分解
+- 分辨率-误差证书通道
 - `X_∞ = lim← X_m`
 - `Fold : Word m → X_m`
-- golden-mean spectral / eigen-structure
+- golden-mean 谱结构 / 本征结构
 
 ## Omega 定理锚点
 
@@ -51,7 +51,7 @@ categories: [tao-te-ching, chapter-page, cultural, omega]
 
 ## 边界说明
 
-- 本章的 strongest claim 是结构级 formal correspondence，不是历史预言或逐句等式翻译。
+- 本章最强的主张是结构级 formal correspondence，不是历史预言或逐句等式翻译。
 - 本页不声称《道德经》直接陈述了 Lean 定理；它只确认文本结构与这些定理承载的数学对象之间存在可辩护的映射。
 
 ## 原文来源
@@ -61,6 +61,6 @@ categories: [tao-te-ching, chapter-page, cultural, omega]
 
 ## 小结
 
-这一页把单章原文、类别交叉、对象层与 theorem-level anchor 叠在一起，目的不是做古籍导读，而是让《道德经》的短章结构能够直接落到 Omega 的形式对象上。
+这一页把单章原文、类别交叉、对象层与定理级锚点叠在一起，目的不是做古籍导读，而是让《道德经》的短章结构能够直接落到 Omega 的形式对象上。
 
-[Back to Chapter Index](index.qmd) | [Back to Tao Te Ching Index](../index.qmd)
+[返回逐章索引](index.qmd) | [返回《道德经》总览](../index.qmd)

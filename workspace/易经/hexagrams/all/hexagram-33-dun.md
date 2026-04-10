@@ -1,8 +1,8 @@
 ---
-title: "33. 遯 / Dun"
-subtitle: "I Ching Hexagram Page"
+title: "33. 遯"
+subtitle: "《易经》单卦映射页"
 order: 33
-description: "Hexagram 33 遯 as `001111`, fold-required, categories 止静与内省."
+description: "第 33 卦 遯，二进制 `001111`，需经 fold 进入稳定域，归属 止静与内省。"
 categories: [i-ching, hexagram-dossier, cultural, omega]
 ---
 
@@ -10,29 +10,29 @@ categories: [i-ching, hexagram-dossier, cultural, omega]
 
 - 卦符：䷠
 - 二进制：`001111`
-- 下卦：艮 / Mountain / `001`
-- 上卦：乾 / Heaven / `111`
+- 下卦：艮 / `001`
+- 上卦：乾 / `111`
 - 阳爻数：4
 - 连续阳对数：2
 - 最长阳串：4
-- GMS 状态：not valid
+- `X_6` 状态：需经 fold 进入稳定域
 - 互补卦：第 19 卦 / `110000`
 - 综卦：第 34 卦 / `111100`
 - 所属类别：止静与内省
 
 ## 映射定位
 
-在当前的 Omega 文化映射计划里，第 33 卦 遯 首先不是被当作抽象象义，而是被当作二元词 `001111` 来读取。该卦不在 `X_6` 内，因此其第一层数学位置是 raw 6-bit word，而不是 stable word。 它包含长阳串，因此第一层读法不是 stable word，而是需要经 fold 才能进入稳定域的 raw word。 它目前横跨的主题类别是 止静与内省，因此其 strongest reading corridor 集中在 golden-mean-shift、zeckendorf-representation、rate-distortion-information-theory 这些方向上。
+在当前的 Omega 文化映射计划里，第 33 卦 遯 首先不是被当作抽象象义，而是被当作二元词 `001111` 来读取。该卦不在 `X_6` 内，因此其第一层数学位置是原始 6-bit 词，而不是稳定词。 它包含长阳串，因此第一层读法不是稳定词，而是需要经 fold 才能进入稳定域的原始词。 它目前横跨的主题类别是 止静与内省，因此其最强对应主要集中在 golden-mean-shift、zeckendorf-representation、rate-distortion-information-theory 这些方向上。
 
 ## 对应说明
 
-这一页保留原文，不是为了把卦辞和爻辞逐句翻译成公式，而是为了固定该卦的语义张力实际落在什么结构位置上。它不直接落在 `X_6` 内，因此原文在这里首先对应的是 raw word 的极端、临界或过载位置，数学上要先经过 `Fold : Word 6 → X_6` 才能进入稳定域。 在 Lean 锚点上，本页最强地落向 `fibonacci_cardinality` 与 `fibonacci_cardinality_recurrence`。
+这一页保留原文，不是为了把卦辞和爻辞逐句翻译成公式，而是为了固定该卦的语义张力实际落在什么结构位置上。它不直接落在 `X_6` 内，因此原文在这里首先对应的是原始词的极端、临界或过载位置，数学上要先经过 `Fold : Word 6 → X_6` 才能进入稳定域。 在 Lean 锚点上，本页最强地落向 `fibonacci_cardinality` 与 `fibonacci_cardinality_recurrence`。
 
 ## Omega 对象
 
 - `Word 6 = {0,1}^6`
-- `Fold : Word 6 → X_6` entry corridor
-- 当前主方向：golden-mean-shift, zeckendorf-representation, rate-distortion-information-theory
+- `Fold : Word 6 → X_6` 进入稳定域的通道
+- 当前主方向：golden-mean-shift、zeckendorf-representation、rate-distortion-information-theory
 
 ## 原文锚点
 
@@ -60,6 +60,6 @@ categories: [i-ching, hexagram-dossier, cultural, omega]
 
 ## 小结
 
-这一页已经构成逐卦层的正式发布单元：它把原文锚点、位串结构、类别交叉与 theorem anchor 放在同一坐标系里，重点不是替代传统注疏，而是展示该卦与 Omega 数学结构之间最可点名的映射位置。
+这一页已经构成逐卦层的正式发布单元：它把原文锚点、位串结构、类别交叉与定理锚点放在同一坐标系里，重点不是替代传统注疏，而是展示该卦与 Omega 数学结构之间最可点名的映射位置。
 
-[Back to Hexagram Index](index.qmd) | [Back to I Ching Index](../index.qmd)
+[返回六十四卦索引](index.qmd) | [返回《易经》总览](../index.qmd)

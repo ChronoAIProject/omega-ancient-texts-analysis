@@ -1,8 +1,8 @@
 ---
-title: "34. 大壯 / Dazhuang"
-subtitle: "I Ching Hexagram Page"
+title: "34. 大壯"
+subtitle: "《易经》单卦映射页"
 order: 34
-description: "Hexagram 34 大壯 as `111100`, fold-required, categories 刚健与突破."
+description: "第 34 卦 大壯，二进制 `111100`，需经 fold 进入稳定域，归属 刚健与突破。"
 categories: [i-ching, hexagram-dossier, cultural, omega]
 ---
 
@@ -10,29 +10,29 @@ categories: [i-ching, hexagram-dossier, cultural, omega]
 
 - 卦符：䷡
 - 二进制：`111100`
-- 下卦：乾 / Heaven / `111`
-- 上卦：震 / Thunder / `100`
+- 下卦：乾 / `111`
+- 上卦：震 / `100`
 - 阳爻数：4
 - 连续阳对数：2
 - 最长阳串：4
-- GMS 状态：not valid
+- `X_6` 状态：需经 fold 进入稳定域
 - 互补卦：第 20 卦 / `000011`
 - 综卦：第 33 卦 / `001111`
 - 所属类别：刚健与突破
 
 ## 映射定位
 
-在当前的 Omega 文化映射计划里，第 34 卦 大壯 首先不是被当作抽象象义，而是被当作二元词 `111100` 来读取。该卦不在 `X_6` 内，因此其第一层数学位置是 raw 6-bit word，而不是 stable word。 它包含长阳串，因此第一层读法不是 stable word，而是需要经 fold 才能进入稳定域的 raw word。 它目前横跨的主题类别是 刚健与突破，因此其 strongest reading corridor 集中在 fold-operator、fiber-structure、golden-mean-shift 这些方向上。
+在当前的 Omega 文化映射计划里，第 34 卦 大壯 首先不是被当作抽象象义，而是被当作二元词 `111100` 来读取。该卦不在 `X_6` 内，因此其第一层数学位置是原始 6-bit 词，而不是稳定词。 它包含长阳串，因此第一层读法不是稳定词，而是需要经 fold 才能进入稳定域的原始词。 它目前横跨的主题类别是 刚健与突破，因此其最强对应主要集中在 fold-operator、fiber-structure、golden-mean-shift 这些方向上。
 
 ## 对应说明
 
-这一页保留原文，不是为了把卦辞和爻辞逐句翻译成公式，而是为了固定该卦的语义张力实际落在什么结构位置上。它不直接落在 `X_6` 内，因此原文在这里首先对应的是 raw word 的极端、临界或过载位置，数学上要先经过 `Fold : Word 6 → X_6` 才能进入稳定域。 在 Lean 锚点上，本页最强地落向 `fold_is_idempotent` 与 `fold_fixes_stable`。
+这一页保留原文，不是为了把卦辞和爻辞逐句翻译成公式，而是为了固定该卦的语义张力实际落在什么结构位置上。它不直接落在 `X_6` 内，因此原文在这里首先对应的是原始词的极端、临界或过载位置，数学上要先经过 `Fold : Word 6 → X_6` 才能进入稳定域。 在 Lean 锚点上，本页最强地落向 `fold_is_idempotent` 与 `fold_fixes_stable`。
 
 ## Omega 对象
 
 - `Word 6 = {0,1}^6`
-- `Fold : Word 6 → X_6` entry corridor
-- 当前主方向：fold-operator, fiber-structure, golden-mean-shift
+- `Fold : Word 6 → X_6` 进入稳定域的通道
+- 当前主方向：fold-operator、fiber-structure、golden-mean-shift
 
 ## 原文锚点
 
@@ -60,6 +60,6 @@ categories: [i-ching, hexagram-dossier, cultural, omega]
 
 ## 小结
 
-这一页已经构成逐卦层的正式发布单元：它把原文锚点、位串结构、类别交叉与 theorem anchor 放在同一坐标系里，重点不是替代传统注疏，而是展示该卦与 Omega 数学结构之间最可点名的映射位置。
+这一页已经构成逐卦层的正式发布单元：它把原文锚点、位串结构、类别交叉与定理锚点放在同一坐标系里，重点不是替代传统注疏，而是展示该卦与 Omega 数学结构之间最可点名的映射位置。
 
-[Back to Hexagram Index](index.qmd) | [Back to I Ching Index](../index.qmd)
+[返回六十四卦索引](index.qmd) | [返回《易经》总览](../index.qmd)

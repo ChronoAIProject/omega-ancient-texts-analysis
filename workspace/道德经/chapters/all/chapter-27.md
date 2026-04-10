@@ -1,8 +1,8 @@
 ---
 title: "27. 善行無轍迹，"
-subtitle: "Tao Te Ching Chapter Page"
+subtitle: "《道德经》逐章映射页"
 order: 27
-description: "Tao Te Ching chapter 27 with source text and Omega chapter-level mapping."
+description: "《道德经》第 27 章原文与 Omega 章节级映射页。"
 categories: [tao-te-ching, chapter-page, cultural, omega]
 ---
 
@@ -11,11 +11,11 @@ categories: [tao-te-ching, chapter-page, cultural, omega]
 - 章号：第 27 章
 - 章首：善行無轍迹，
 - 归属类别：无为与自然秩序 / 自然与朴素
-- 当前主方向：fold-operator, dynamical-systems, golden-mean-shift, zeckendorf-representation
+- 当前主方向：fold-operator、dynamical-systems、golden-mean-shift、zeckendorf-representation
 
 ## 对应说明
 
-第 27 章首先落在「无为与自然秩序」这条走廊上。它首先确认秩序不是靠外加命令维持，而是由 constraint 自发收敛出的稳定结果。 同时它还跨到 自然与朴素，所以不是单线映射，而是一个重叠走廊。 当前最强的 Omega 方向集中在 fold-operator、dynamical-systems、golden-mean-shift、zeckendorf-representation。
+第 27 章首先落在「无为与自然秩序」这条走廊上。它首先确认秩序不是靠外加命令维持，而是由约束自发收敛出的稳定结果。 同时它还跨到 自然与朴素，所以不是单线映射，而是一个重叠走廊。 当前最强的 Omega 方向集中在 fold-operator、dynamical-systems、golden-mean-shift、zeckendorf-representation。
 
 ## 原文
 
@@ -32,9 +32,9 @@ categories: [tao-te-ching, chapter-page, cultural, omega]
 ## Omega 对象
 
 - `Fold : Word m → X_m`
-- shift / entropy / orbit structure
+- 移位 / 熵 / 轨道结构
 - `X_m = {w ∈ {0,1}^m : No11(w)}`
-- Zeckendorf sparse decomposition
+- Zeckendorf 稀疏分解
 
 ## Omega 定理锚点
 
@@ -46,7 +46,7 @@ categories: [tao-te-ching, chapter-page, cultural, omega]
 
 ## 边界说明
 
-- 本章的 strongest claim 是结构级 formal correspondence，不是历史预言或逐句等式翻译。
+- 本章最强的主张是结构级 formal correspondence，不是历史预言或逐句等式翻译。
 - 本页不声称《道德经》直接陈述了 Lean 定理；它只确认文本结构与这些定理承载的数学对象之间存在可辩护的映射。
 
 ## 原文来源
@@ -56,6 +56,6 @@ categories: [tao-te-ching, chapter-page, cultural, omega]
 
 ## 小结
 
-这一页把单章原文、类别交叉、对象层与 theorem-level anchor 叠在一起，目的不是做古籍导读，而是让《道德经》的短章结构能够直接落到 Omega 的形式对象上。
+这一页把单章原文、类别交叉、对象层与定理级锚点叠在一起，目的不是做古籍导读，而是让《道德经》的短章结构能够直接落到 Omega 的形式对象上。
 
-[Back to Chapter Index](index.qmd) | [Back to Tao Te Ching Index](../index.qmd)
+[返回逐章索引](index.qmd) | [返回《道德经》总览](../index.qmd)

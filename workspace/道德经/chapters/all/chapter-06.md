@@ -1,8 +1,8 @@
 ---
 title: "06. 谷神不死，是謂玄牝玄牝之門，是謂天…"
-subtitle: "Tao Te Ching Chapter Page"
+subtitle: "《道德经》逐章映射页"
 order: 6
-description: "Tao Te Ching chapter 6 with source text and Omega chapter-level mapping."
+description: "《道德经》第 6 章原文与 Omega 章节级映射页。"
 categories: [tao-te-ching, chapter-page, cultural, omega]
 ---
 
@@ -11,7 +11,7 @@ categories: [tao-te-ching, chapter-page, cultural, omega]
 - 章号：第 6 章
 - 章首：谷神不死，是謂玄牝。玄牝之門，是謂天地根。緜緜若存，用之不勤。
 - 归属类别：虚空与容纳 / 玄同与整体统一
-- 当前主方向：fiber-structure, zeckendorf-representation, modular-tower-inverse-limit, spectral-theory, dynamical-systems
+- 当前主方向：fiber-structure、zeckendorf-representation、modular-tower-inverse-limit、spectral-theory、dynamical-systems
 
 ## 对应说明
 
@@ -24,10 +24,10 @@ categories: [tao-te-ching, chapter-page, cultural, omega]
 ## Omega 对象
 
 - `fiber(x) = {w : Fold(w)=x}`
-- Zeckendorf sparse decomposition
+- Zeckendorf 稀疏分解
 - `X_∞ = lim← X_m`
-- golden-mean spectral / eigen-structure
-- shift / entropy / orbit structure
+- golden-mean 谱结构 / 本征结构
+- 移位 / 熵 / 轨道结构
 
 ## Omega 定理锚点
 
@@ -39,7 +39,7 @@ categories: [tao-te-ching, chapter-page, cultural, omega]
 
 ## 边界说明
 
-- 本章的 strongest claim 是结构级 formal correspondence，不是历史预言或逐句等式翻译。
+- 本章最强的主张是结构级 formal correspondence，不是历史预言或逐句等式翻译。
 - 本页不声称《道德经》直接陈述了 Lean 定理；它只确认文本结构与这些定理承载的数学对象之间存在可辩护的映射。
 
 ## 原文来源
@@ -49,6 +49,6 @@ categories: [tao-te-ching, chapter-page, cultural, omega]
 
 ## 小结
 
-这一页把单章原文、类别交叉、对象层与 theorem-level anchor 叠在一起，目的不是做古籍导读，而是让《道德经》的短章结构能够直接落到 Omega 的形式对象上。
+这一页把单章原文、类别交叉、对象层与定理级锚点叠在一起，目的不是做古籍导读，而是让《道德经》的短章结构能够直接落到 Omega 的形式对象上。
 
-[Back to Chapter Index](index.qmd) | [Back to Tao Te Ching Index](../index.qmd)
+[返回逐章索引](index.qmd) | [返回《道德经》总览](../index.qmd)

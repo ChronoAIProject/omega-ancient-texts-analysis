@@ -1,8 +1,8 @@
 ---
 title: "50. 出生入死"
-subtitle: "Tao Te Ching Chapter Page"
+subtitle: "《道德经》逐章映射页"
 order: 50
-description: "Tao Te Ching chapter 50 with source text and Omega chapter-level mapping."
+description: "《道德经》第 50 章原文与 Omega 章节级映射页。"
 categories: [tao-te-ching, chapter-page, cultural, omega]
 ---
 
@@ -11,11 +11,11 @@ categories: [tao-te-ching, chapter-page, cultural, omega]
 - 章号：第 50 章
 - 章首：出生入死。
 - 归属类别：回归与循环
-- 当前主方向：dynamical-systems, modular-tower-inverse-limit
+- 当前主方向：dynamical-systems、modular-tower-inverse-limit
 
 ## 对应说明
 
-第 50 章首先落在「回归与循环」这条走廊上。它首先确认 return / reversal 不是修辞，而是层级系统里真实存在的投影、周期与回返结构。 当前最强的 Omega 方向集中在 dynamical-systems、modular-tower-inverse-limit。
+第 50 章首先落在「回归与循环」这条走廊上。它首先确认回归与反转不是修辞，而是层级系统里真实存在的投影、周期与回返结构。 当前最强的 Omega 方向集中在 dynamical-systems、modular-tower-inverse-limit。
 
 ## 原文
 
@@ -24,7 +24,7 @@ categories: [tao-te-ching, chapter-page, cultural, omega]
 
 ## Omega 对象
 
-- shift / entropy / orbit structure
+- 移位 / 熵 / 轨道结构
 - `X_∞ = lim← X_m`
 
 ## Omega 定理锚点
@@ -37,7 +37,7 @@ categories: [tao-te-ching, chapter-page, cultural, omega]
 
 ## 边界说明
 
-- 本章的 strongest claim 是结构级 formal correspondence，不是历史预言或逐句等式翻译。
+- 本章最强的主张是结构级 formal correspondence，不是历史预言或逐句等式翻译。
 - 本页不声称《道德经》直接陈述了 Lean 定理；它只确认文本结构与这些定理承载的数学对象之间存在可辩护的映射。
 
 ## 原文来源
@@ -47,6 +47,6 @@ categories: [tao-te-ching, chapter-page, cultural, omega]
 
 ## 小结
 
-这一页把单章原文、类别交叉、对象层与 theorem-level anchor 叠在一起，目的不是做古籍导读，而是让《道德经》的短章结构能够直接落到 Omega 的形式对象上。
+这一页把单章原文、类别交叉、对象层与定理级锚点叠在一起，目的不是做古籍导读，而是让《道德经》的短章结构能够直接落到 Omega 的形式对象上。
 
-[Back to Chapter Index](index.qmd) | [Back to Tao Te Ching Index](../index.qmd)
+[返回逐章索引](index.qmd) | [返回《道德经》总览](../index.qmd)

@@ -1,8 +1,8 @@
 ---
 title: "46. 天下有道，卻走馬以糞"
-subtitle: "Tao Te Ching Chapter Page"
+subtitle: "《道德经》逐章映射页"
 order: 46
-description: "Tao Te Ching chapter 46 with source text and Omega chapter-level mapping."
+description: "《道德经》第 46 章原文与 Omega 章节级映射页。"
 categories: [tao-te-ching, chapter-page, cultural, omega]
 ---
 
@@ -11,7 +11,7 @@ categories: [tao-te-ching, chapter-page, cultural, omega]
 - 章号：第 46 章
 - 章首：天下有道，卻走馬以糞。
 - 归属类别：治国之道 / 知足与限度
-- 当前主方向：fold-operator, rate-distortion-information-theory, golden-mean-shift, zeckendorf-representation
+- 当前主方向：fold-operator、rate-distortion-information-theory、golden-mean-shift、zeckendorf-representation
 
 ## 对应说明
 
@@ -26,9 +26,9 @@ categories: [tao-te-ching, chapter-page, cultural, omega]
 ## Omega 对象
 
 - `Fold : Word m → X_m`
-- resolution-error certificate corridor
+- 分辨率-误差证书通道
 - `X_m = {w ∈ {0,1}^m : No11(w)}`
-- Zeckendorf sparse decomposition
+- Zeckendorf 稀疏分解
 
 ## Omega 定理锚点
 
@@ -40,7 +40,7 @@ categories: [tao-te-ching, chapter-page, cultural, omega]
 
 ## 边界说明
 
-- 本章的 strongest claim 是结构级 formal correspondence，不是历史预言或逐句等式翻译。
+- 本章最强的主张是结构级 formal correspondence，不是历史预言或逐句等式翻译。
 - 本页不声称《道德经》直接陈述了 Lean 定理；它只确认文本结构与这些定理承载的数学对象之间存在可辩护的映射。
 
 ## 原文来源
@@ -50,6 +50,6 @@ categories: [tao-te-ching, chapter-page, cultural, omega]
 
 ## 小结
 
-这一页把单章原文、类别交叉、对象层与 theorem-level anchor 叠在一起，目的不是做古籍导读，而是让《道德经》的短章结构能够直接落到 Omega 的形式对象上。
+这一页把单章原文、类别交叉、对象层与定理级锚点叠在一起，目的不是做古籍导读，而是让《道德经》的短章结构能够直接落到 Omega 的形式对象上。
 
-[Back to Chapter Index](index.qmd) | [Back to Tao Te Ching Index](../index.qmd)
+[返回逐章索引](index.qmd) | [返回《道德经》总览](../index.qmd)

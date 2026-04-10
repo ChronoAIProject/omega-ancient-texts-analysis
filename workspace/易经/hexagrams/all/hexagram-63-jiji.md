@@ -1,8 +1,8 @@
 ---
-title: "63. 既濟 / Jiji"
-subtitle: "I Ching Hexagram Page"
+title: "63. 既濟"
+subtitle: "《易经》单卦映射页"
 order: 63
-description: "Hexagram 63 既濟 as `101010`, GMS-valid, categories 动态变易与循环 / 节制与平衡."
+description: "第 63 卦 既濟，二进制 `101010`，已在 `X_6` 稳定域内，归属 动态变易与循环 / 节制与平衡。"
 categories: [i-ching, hexagram-dossier, cultural, omega]
 ---
 
@@ -10,19 +10,19 @@ categories: [i-ching, hexagram-dossier, cultural, omega]
 
 - 卦符：䷾
 - 二进制：`101010`
-- 下卦：離 / Flame / `101`
-- 上卦：坎 / Water / `010`
+- 下卦：離 / `101`
+- 上卦：坎 / `010`
 - 阳爻数：3
 - 连续阳对数：0
 - 最长阳串：1
-- GMS 状态：valid
+- `X_6` 状态：已在稳定域内
 - 互补卦：第 64 卦 / `010101`
 - 综卦：第 64 卦 / `010101`
 - 所属类别：动态变易与循环 / 节制与平衡
 
 ## 映射定位
 
-在当前的 Omega 文化映射计划里，第 63 卦 既濟 首先不是被当作抽象象义，而是被当作二元词 `101010` 来读取。该卦直接位于 `X_6` 内，因此不需要先经过 fold 才能进入稳定域。 它以三阳达到了 `No11` 允许的最大阳密度，因此是交替或近交替结构中的高密度稳定态。 它目前横跨的主题类别是 动态变易与循环、节制与平衡，因此其 strongest reading corridor 集中在 dynamical-systems、golden-mean-shift、fold-operator、zeckendorf-representation、ring-arithmetic 这些方向上。
+在当前的 Omega 文化映射计划里，第 63 卦 既濟 首先不是被当作抽象象义，而是被当作二元词 `101010` 来读取。该卦直接位于 `X_6` 内，因此不需要先经过 fold 才能进入稳定域。 它以三阳达到了 `No11` 允许的最大阳密度，因此是交替或近交替结构中的高密度稳定态。 它目前横跨的主题类别是 动态变易与循环、节制与平衡，因此其最强对应主要集中在 dynamical-systems、golden-mean-shift、fold-operator、zeckendorf-representation、ring-arithmetic 这些方向上。
 
 ## 对应说明
 
@@ -31,8 +31,8 @@ categories: [i-ching, hexagram-dossier, cultural, omega]
 ## Omega 对象
 
 - `Word 6 = {0,1}^6`
-- `X_6` stable subspace
-- 当前主方向：dynamical-systems, golden-mean-shift, fold-operator, zeckendorf-representation, ring-arithmetic
+- `X_6` 稳定子空间
+- 当前主方向：dynamical-systems、golden-mean-shift、fold-operator、zeckendorf-representation、ring-arithmetic
 
 ## 原文锚点
 
@@ -60,6 +60,6 @@ categories: [i-ching, hexagram-dossier, cultural, omega]
 
 ## 小结
 
-这一页已经构成逐卦层的正式发布单元：它把原文锚点、位串结构、类别交叉与 theorem anchor 放在同一坐标系里，重点不是替代传统注疏，而是展示该卦与 Omega 数学结构之间最可点名的映射位置。
+这一页已经构成逐卦层的正式发布单元：它把原文锚点、位串结构、类别交叉与定理锚点放在同一坐标系里，重点不是替代传统注疏，而是展示该卦与 Omega 数学结构之间最可点名的映射位置。
 
-[Back to Hexagram Index](index.qmd) | [Back to I Ching Index](../index.qmd)
+[返回六十四卦索引](index.qmd) | [返回《易经》总览](../index.qmd)

@@ -1,8 +1,8 @@
 ---
 title: "38. 上德不德，是以有德，下德不失德，是…"
-subtitle: "Tao Te Ching Chapter Page"
+subtitle: "《道德经》逐章映射页"
 order: 38
-description: "Tao Te Ching chapter 38 with source text and Omega chapter-level mapping."
+description: "《道德经》第 38 章原文与 Omega 章节级映射页。"
 categories: [tao-te-ching, chapter-page, cultural, omega]
 ---
 
@@ -11,7 +11,7 @@ categories: [tao-te-ching, chapter-page, cultural, omega]
 - 章号：第 38 章
 - 章首：上德不德，是以有德；下德不失德，是以無德。上德無為而無以為，下德為之而有以為。上仁為之而無以為，上義為之而有以為。上禮為之而莫之應， 則攘臂而扔之。故失道而後德，失德而後仁，失仁而後義，失義而後禮。夫禮者，忠信之薄，而亂之首。前識者，道之華，而愚之始。是以大丈夫處其厚，不居其薄；處其實，不居其華。故去彼取此。
 - 归属类别：德与滋养 / 层级与分辨
-- 当前主方向：ring-arithmetic, fiber-structure, modular-tower-inverse-limit, fold-operator, spectral-theory
+- 当前主方向：ring-arithmetic、fiber-structure、modular-tower-inverse-limit、fold-operator、spectral-theory
 
 ## 对应说明
 
@@ -27,7 +27,7 @@ categories: [tao-te-ching, chapter-page, cultural, omega]
 - `fiber(x) = {w : Fold(w)=x}`
 - `X_∞ = lim← X_m`
 - `Fold : Word m → X_m`
-- golden-mean spectral / eigen-structure
+- golden-mean 谱结构 / 本征结构
 
 ## Omega 定理锚点
 
@@ -39,7 +39,7 @@ categories: [tao-te-ching, chapter-page, cultural, omega]
 
 ## 边界说明
 
-- 本章的 strongest claim 是结构级 formal correspondence，不是历史预言或逐句等式翻译。
+- 本章最强的主张是结构级 formal correspondence，不是历史预言或逐句等式翻译。
 - 本页不声称《道德经》直接陈述了 Lean 定理；它只确认文本结构与这些定理承载的数学对象之间存在可辩护的映射。
 
 ## 原文来源
@@ -49,6 +49,6 @@ categories: [tao-te-ching, chapter-page, cultural, omega]
 
 ## 小结
 
-这一页把单章原文、类别交叉、对象层与 theorem-level anchor 叠在一起，目的不是做古籍导读，而是让《道德经》的短章结构能够直接落到 Omega 的形式对象上。
+这一页把单章原文、类别交叉、对象层与定理级锚点叠在一起，目的不是做古籍导读，而是让《道德经》的短章结构能够直接落到 Omega 的形式对象上。
 
-[Back to Chapter Index](index.qmd) | [Back to Tao Te Ching Index](../index.qmd)
+[返回逐章索引](index.qmd) | [返回《道德经》总览](../index.qmd)

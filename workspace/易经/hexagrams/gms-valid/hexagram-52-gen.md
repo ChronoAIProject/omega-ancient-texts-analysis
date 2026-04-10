@@ -1,8 +1,8 @@
 ---
-title: "52. 艮 / Gen"
-subtitle: "I Ching Hexagram Page"
+title: "52. 艮"
+subtitle: "《易经》单卦映射页"
 order: 52
-description: "Hexagram 52 艮 as `001001`, GMS-valid, categories 止静与内省."
+description: "第 52 卦 艮，二进制 `001001`，已在 `X_6` 稳定域内，归属 止静与内省。"
 categories: [i-ching, hexagram-dossier, cultural, omega]
 ---
 
@@ -10,19 +10,19 @@ categories: [i-ching, hexagram-dossier, cultural, omega]
 
 - 卦符：䷳
 - 二进制：`001001`
-- 下卦：艮 / Mountain / `001`
-- 上卦：艮 / Mountain / `001`
+- 下卦：艮 / `001`
+- 上卦：艮 / `001`
 - 阳爻数：2
 - 连续阳对数：0
 - 最长阳串：1
-- GMS 状态：valid
+- `X_6` 状态：已在稳定域内
 - 互补卦：第 58 卦 / `110110`
 - 综卦：第 51 卦 / `100100`
 - 所属类别：止静与内省
 
 ## 映射定位
 
-在当前的 Omega 文化映射计划里，第 52 卦 艮 首先不是被当作抽象象义，而是被当作二元词 `001001` 来读取。该卦直接位于 `X_6` 内，因此不需要先经过 fold 才能进入稳定域。 它包含两个彼此分离的阳位，因此是典型的低密度稳定词，适合承接稀疏与间隔结构。 它目前横跨的主题类别是 止静与内省，因此其 strongest reading corridor 集中在 golden-mean-shift、zeckendorf-representation、rate-distortion-information-theory 这些方向上。
+在当前的 Omega 文化映射计划里，第 52 卦 艮 首先不是被当作抽象象义，而是被当作二元词 `001001` 来读取。该卦直接位于 `X_6` 内，因此不需要先经过 fold 才能进入稳定域。 它包含两个彼此分离的阳位，因此是典型的低密度稳定词，适合承接稀疏与间隔结构。 它目前横跨的主题类别是 止静与内省，因此其最强对应主要集中在 golden-mean-shift、zeckendorf-representation、rate-distortion-information-theory 这些方向上。
 
 ## 对应说明
 
@@ -31,8 +31,8 @@ categories: [i-ching, hexagram-dossier, cultural, omega]
 ## Omega 对象
 
 - `Word 6 = {0,1}^6`
-- `X_6` stable subspace
-- 当前主方向：golden-mean-shift, zeckendorf-representation, rate-distortion-information-theory
+- `X_6` 稳定子空间
+- 当前主方向：golden-mean-shift、zeckendorf-representation、rate-distortion-information-theory
 
 ## 原文锚点
 
@@ -60,6 +60,6 @@ categories: [i-ching, hexagram-dossier, cultural, omega]
 
 ## 小结
 
-这一页已经构成逐卦层的正式发布单元：它把原文锚点、位串结构、类别交叉与 theorem anchor 放在同一坐标系里，重点不是替代传统注疏，而是展示该卦与 Omega 数学结构之间最可点名的映射位置。
+这一页已经构成逐卦层的正式发布单元：它把原文锚点、位串结构、类别交叉与定理锚点放在同一坐标系里，重点不是替代传统注疏，而是展示该卦与 Omega 数学结构之间最可点名的映射位置。
 
-[Back to Hexagram Index](index.qmd) | [Back to I Ching Index](../index.qmd)
+[返回六十四卦索引](index.qmd) | [返回《易经》总览](../index.qmd)

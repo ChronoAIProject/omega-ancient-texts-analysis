@@ -1,8 +1,8 @@
 ---
-title: "44. 姤 / Gou"
-subtitle: "I Ching Hexagram Page"
+title: "44. 姤"
+subtitle: "《易经》单卦映射页"
 order: 44
-description: "Hexagram 44 姤 as `011111`, fold-required, categories 动态变易与循环 / 聚散与流通."
+description: "第 44 卦 姤，二进制 `011111`，需经 fold 进入稳定域，归属 动态变易与循环 / 聚散与流通。"
 categories: [i-ching, hexagram-dossier, cultural, omega]
 ---
 
@@ -10,29 +10,29 @@ categories: [i-ching, hexagram-dossier, cultural, omega]
 
 - 卦符：䷫
 - 二进制：`011111`
-- 下卦：巽 / Wind / `011`
-- 上卦：乾 / Heaven / `111`
+- 下卦：巽 / `011`
+- 上卦：乾 / `111`
 - 阳爻数：5
 - 连续阳对数：2
 - 最长阳串：5
-- GMS 状态：not valid
+- `X_6` 状态：需经 fold 进入稳定域
 - 互补卦：第 24 卦 / `100000`
 - 综卦：第 43 卦 / `111110`
 - 所属类别：动态变易与循环 / 聚散与流通
 
 ## 映射定位
 
-在当前的 Omega 文化映射计划里，第 44 卦 姤 首先不是被当作抽象象义，而是被当作二元词 `011111` 来读取。该卦不在 `X_6` 内，因此其第一层数学位置是 raw 6-bit word，而不是 stable word。 它包含长阳串，因此第一层读法不是 stable word，而是需要经 fold 才能进入稳定域的 raw word。 它目前横跨的主题类别是 动态变易与循环、聚散与流通，因此其 strongest reading corridor 集中在 dynamical-systems、golden-mean-shift、fold-operator、rate-distortion-information-theory、modular-tower-inverse-limit 这些方向上。
+在当前的 Omega 文化映射计划里，第 44 卦 姤 首先不是被当作抽象象义，而是被当作二元词 `011111` 来读取。该卦不在 `X_6` 内，因此其第一层数学位置是原始 6-bit 词，而不是稳定词。 它包含长阳串，因此第一层读法不是稳定词，而是需要经 fold 才能进入稳定域的原始词。 它目前横跨的主题类别是 动态变易与循环、聚散与流通，因此其最强对应主要集中在 dynamical-systems、golden-mean-shift、fold-operator、rate-distortion-information-theory、modular-tower-inverse-limit 这些方向上。
 
 ## 对应说明
 
-这一页保留原文，不是为了把卦辞和爻辞逐句翻译成公式，而是为了固定该卦的语义张力实际落在什么结构位置上。它不直接落在 `X_6` 内，因此原文在这里首先对应的是 raw word 的极端、临界或过载位置，数学上要先经过 `Fold : Word 6 → X_6` 才能进入稳定域。 在 Lean 锚点上，本页最强地落向 `topological_entropy_eq_log_phi` 与 `goldenMeanAdjacency_has_goldenRatio_eigenvector`。
+这一页保留原文，不是为了把卦辞和爻辞逐句翻译成公式，而是为了固定该卦的语义张力实际落在什么结构位置上。它不直接落在 `X_6` 内，因此原文在这里首先对应的是原始词的极端、临界或过载位置，数学上要先经过 `Fold : Word 6 → X_6` 才能进入稳定域。 在 Lean 锚点上，本页最强地落向 `topological_entropy_eq_log_phi` 与 `goldenMeanAdjacency_has_goldenRatio_eigenvector`。
 
 ## Omega 对象
 
 - `Word 6 = {0,1}^6`
-- `Fold : Word 6 → X_6` entry corridor
-- 当前主方向：dynamical-systems, golden-mean-shift, fold-operator, rate-distortion-information-theory, modular-tower-inverse-limit
+- `Fold : Word 6 → X_6` 进入稳定域的通道
+- 当前主方向：dynamical-systems、golden-mean-shift、fold-operator、rate-distortion-information-theory、modular-tower-inverse-limit
 
 ## 原文锚点
 
@@ -60,6 +60,6 @@ categories: [i-ching, hexagram-dossier, cultural, omega]
 
 ## 小结
 
-这一页已经构成逐卦层的正式发布单元：它把原文锚点、位串结构、类别交叉与 theorem anchor 放在同一坐标系里，重点不是替代传统注疏，而是展示该卦与 Omega 数学结构之间最可点名的映射位置。
+这一页已经构成逐卦层的正式发布单元：它把原文锚点、位串结构、类别交叉与定理锚点放在同一坐标系里，重点不是替代传统注疏，而是展示该卦与 Omega 数学结构之间最可点名的映射位置。
 
-[Back to Hexagram Index](index.qmd) | [Back to I Ching Index](../index.qmd)
+[返回六十四卦索引](index.qmd) | [返回《易经》总览](../index.qmd)

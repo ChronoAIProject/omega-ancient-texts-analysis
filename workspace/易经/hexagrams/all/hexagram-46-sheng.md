@@ -1,8 +1,8 @@
 ---
-title: "46. 升 / Sheng"
-subtitle: "I Ching Hexagram Page"
+title: "46. 升"
+subtitle: "《易经》单卦映射页"
 order: 46
-description: "Hexagram 46 升 as `011000`, fold-required, categories 柔顺与养育 / 渐进与发展."
+description: "第 46 卦 升，二进制 `011000`，需经 fold 进入稳定域，归属 柔顺与养育 / 渐进与发展。"
 categories: [i-ching, hexagram-dossier, cultural, omega]
 ---
 
@@ -10,29 +10,29 @@ categories: [i-ching, hexagram-dossier, cultural, omega]
 
 - 卦符：䷭
 - 二进制：`011000`
-- 下卦：巽 / Wind / `011`
-- 上卦：坤 / Earth / `000`
+- 下卦：巽 / `011`
+- 上卦：坤 / `000`
 - 阳爻数：2
 - 连续阳对数：1
 - 最长阳串：2
-- GMS 状态：not valid
+- `X_6` 状态：需经 fold 进入稳定域
 - 互补卦：第 25 卦 / `100111`
 - 综卦：第 45 卦 / `000110`
 - 所属类别：柔顺与养育 / 渐进与发展
 
 ## 映射定位
 
-在当前的 Omega 文化映射计划里，第 46 卦 升 首先不是被当作抽象象义，而是被当作二元词 `011000` 来读取。该卦不在 `X_6` 内，因此其第一层数学位置是 raw 6-bit word，而不是 stable word。 它虽不是极端全阳，但已出现连续阳段，因此其形式位置是 fold 之前的临界或过载态。 它目前横跨的主题类别是 柔顺与养育、渐进与发展，因此其 strongest reading corridor 集中在 golden-mean-shift、fibonacci-growth、zeckendorf-representation、modular-tower-inverse-limit 这些方向上。
+在当前的 Omega 文化映射计划里，第 46 卦 升 首先不是被当作抽象象义，而是被当作二元词 `011000` 来读取。该卦不在 `X_6` 内，因此其第一层数学位置是原始 6-bit 词，而不是稳定词。 它虽不是极端全阳，但已出现连续阳段，因此其形式位置是 fold 之前的临界或过载态。 它目前横跨的主题类别是 柔顺与养育、渐进与发展，因此其最强对应主要集中在 golden-mean-shift、fibonacci-growth、zeckendorf-representation、modular-tower-inverse-limit 这些方向上。
 
 ## 对应说明
 
-这一页保留原文，不是为了把卦辞和爻辞逐句翻译成公式，而是为了固定该卦的语义张力实际落在什么结构位置上。它不直接落在 `X_6` 内，因此原文在这里首先对应的是 raw word 的极端、临界或过载位置，数学上要先经过 `Fold : Word 6 → X_6` 才能进入稳定域。 在 Lean 锚点上，本页最强地落向 `fibonacci_cardinality` 与 `fibonacci_cardinality_recurrence`。
+这一页保留原文，不是为了把卦辞和爻辞逐句翻译成公式，而是为了固定该卦的语义张力实际落在什么结构位置上。它不直接落在 `X_6` 内，因此原文在这里首先对应的是原始词的极端、临界或过载位置，数学上要先经过 `Fold : Word 6 → X_6` 才能进入稳定域。 在 Lean 锚点上，本页最强地落向 `fibonacci_cardinality` 与 `fibonacci_cardinality_recurrence`。
 
 ## Omega 对象
 
 - `Word 6 = {0,1}^6`
-- `Fold : Word 6 → X_6` entry corridor
-- 当前主方向：golden-mean-shift, fibonacci-growth, zeckendorf-representation, modular-tower-inverse-limit
+- `Fold : Word 6 → X_6` 进入稳定域的通道
+- 当前主方向：golden-mean-shift、fibonacci-growth、zeckendorf-representation、modular-tower-inverse-limit
 
 ## 原文锚点
 
@@ -60,6 +60,6 @@ categories: [i-ching, hexagram-dossier, cultural, omega]
 
 ## 小结
 
-这一页已经构成逐卦层的正式发布单元：它把原文锚点、位串结构、类别交叉与 theorem anchor 放在同一坐标系里，重点不是替代传统注疏，而是展示该卦与 Omega 数学结构之间最可点名的映射位置。
+这一页已经构成逐卦层的正式发布单元：它把原文锚点、位串结构、类别交叉与定理锚点放在同一坐标系里，重点不是替代传统注疏，而是展示该卦与 Omega 数学结构之间最可点名的映射位置。
 
-[Back to Hexagram Index](index.qmd) | [Back to I Ching Index](../index.qmd)
+[返回六十四卦索引](index.qmd) | [返回《易经》总览](../index.qmd)
