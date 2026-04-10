@@ -13,16 +13,16 @@
 
 | # | 主题 | 主定理核 | 当前状态 |
 |---|---|---|---|
-| 01 | No11 / Golden-Mean Shift | `fibonacci_cardinality` | drafted |
-| 02 | Fibonacci 递推增长 | `fibonacci_cardinality_recurrence` | drafted |
-| 03 | Fold 算子 | `fold_is_idempotent` | drafted |
-| 04 | Zeckendorf 唯一分解 | `zeckendorf_uniqueness` | drafted |
-| 05 | Inverse limit / modular tower | `inverse_limit_extensionality` | drafted |
-| 06 | 谱结构 | `goldenMeanAdjacency_has_goldenRatio_eigenvector` | drafted |
-| 07 | Rate-distortion | `scanError_hasCertificate` 等 | drafted |
-| 08 | 环算术 | `stableValue_ring_isomorphism` | drafted |
-| 09 | 动力系统 | `topological_entropy_eq_log_phi` / `restrict` 族 | drafted |
-| 10 | Fiber / scan / observation | `observation_refinement_reduces_error` | drafted |
+| 01 | No11 / Golden-Mean Shift | `fibonacci_cardinality` | published |
+| 02 | Fibonacci 递推增长 | `fibonacci_cardinality_recurrence` | published |
+| 03 | Fold 算子 | `fold_is_idempotent` | published |
+| 04 | Zeckendorf 唯一分解 | `zeckendorf_uniqueness` | published |
+| 05 | Inverse limit / modular tower | `inverse_limit_extensionality` | published |
+| 06 | 谱结构 | `goldenMeanAdjacency_has_goldenRatio_eigenvector` | published |
+| 07 | Rate-distortion | `scanError_hasCertificate` 等 | published |
+| 08 | 环算术 | `stableValue_ring_isomorphism` | published |
+| 09 | 动力系统 | `topological_entropy_eq_log_phi` / `restrict` 族 | published |
+| 10 | Fiber / scan / observation | `observation_refinement_reduces_error` | published |
 
 当前文件：
 

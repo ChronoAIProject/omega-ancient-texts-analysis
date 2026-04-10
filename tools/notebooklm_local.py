@@ -22,6 +22,7 @@ Usage:
 """
 
 import argparse
+import site
 import sys
 import time
 from pathlib import Path
@@ -29,9 +30,20 @@ from pathlib import Path
 try:
     from notebooklm import NotebookLM
 except ImportError:
-    print("notebooklm-py 未安装。运行: pip install notebooklm-py")
-    print("然后运行: notebooklm login (浏览器 Google 登录)")
-    sys.exit(1)
+    version = f"python{sys.version_info.major}.{sys.version_info.minor}"
+    candidates = [
+        Path(sys.executable).resolve().parent.parent / "lib" / version / "site-packages",
+        Path(__file__).resolve().parent.parent / ".venv" / "lib" / version / "site-packages",
+    ]
+    for candidate in candidates:
+        if candidate.exists():
+            site.addsitedir(str(candidate))
+    try:
+        from notebooklm import NotebookLM
+    except ImportError:
+        print("notebooklm-py 未安装。运行: pip install notebooklm-py")
+        print("然后运行: notebooklm login (浏览器 Google 登录)")
+        sys.exit(1)
 
 
 ARTIFACTS_DIR = Path(__file__).parent.parent / "workspace" / "artifacts"

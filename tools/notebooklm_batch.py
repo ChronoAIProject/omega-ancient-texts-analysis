@@ -11,11 +11,23 @@ Usage:
 import argparse
 import asyncio
 import json
+import site
 import sys
 import time
 from pathlib import Path
 
-from notebooklm import NotebookLMClient
+try:
+    from notebooklm import NotebookLMClient
+except ModuleNotFoundError:
+    version = f"python{sys.version_info.major}.{sys.version_info.minor}"
+    candidates = [
+        Path(sys.executable).resolve().parent.parent / "lib" / version / "site-packages",
+        Path(__file__).resolve().parent.parent / ".venv" / "lib" / version / "site-packages",
+    ]
+    for candidate in candidates:
+        if candidate.exists():
+            site.addsitedir(str(candidate))
+    from notebooklm import NotebookLMClient
 
 ARTIFACTS_DIR = Path(__file__).parent.parent / "workspace" / "artifacts"
 MAX_RETRIES = 3

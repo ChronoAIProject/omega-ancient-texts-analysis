@@ -1,0 +1,397 @@
+{
+  "series": "Omega cross-text synthesis essays",
+  "generated_at": "2026-04-10",
+  "language_policy": "zh-primary-with-en-rigor-summary",
+  "release_pack": "cross-text synthesis media pack",
+  "entries": [
+    {
+      "id": 1,
+      "slug": "no11_golden_mean_shift",
+      "title_zh": "No11 与知止之美",
+      "title_en": "No11 and the Beauty of Knowing When to Stop",
+      "primary_theorem": "fibonacci_cardinality",
+      "support_theorems": [
+        "fibonacci_cardinality_recurrence",
+        "goldenMean_characteristic_recurrence",
+        "goldenMeanAdjacency_cayley_hamilton"
+      ],
+      "works": [
+        "道德经",
+        "易经",
+        "孙子兵法",
+        "黄帝内经",
+        "几何原本"
+      ],
+      "work_links": {
+        "道德经": "cultural/tao-te-ching/index.qmd",
+        "易经": "cultural/i-ching/index.qmd",
+        "孙子兵法": "cultural/sunzi/index.qmd",
+        "黄帝内经": "cultural/huangdi-neijing/index.qmd",
+        "几何原本": "cultural/elements/index.qmd"
+      },
+      "paper_refs": [
+        "fibonacci-stabilization-sharp-threshold-conjugacy-nonlinearity",
+        "resolution-folding-core-symbolic-dynamics"
+      ],
+      "status": "published",
+      "source_markdown": "workspace/synthesis/synthesis_01_no11_golden_mean_shift.md",
+      "notebooklm_source": "workspace/synthesis/notebooklm_sources/synthesis_01_no11_golden_mean_shift_source.md",
+      "artifact_slug": "synthesis_01_no11_golden_mean_shift",
+      "expected_artifacts": {
+        "slides": "workspace/artifacts/synthesis_01_no11_golden_mean_shift/synthesis_01_no11_golden_mean_shift_slides.pdf",
+        "infographic": "workspace/artifacts/synthesis_01_no11_golden_mean_shift/synthesis_01_no11_golden_mean_shift_infographic.png",
+        "audio": "workspace/artifacts/synthesis_01_no11_golden_mean_shift/synthesis_01_no11_golden_mean_shift_audio.wav",
+        "video": "workspace/artifacts/synthesis_01_no11_golden_mean_shift/synthesis_01_no11_golden_mean_shift_video.mp4"
+      }
+    },
+    {
+      "id": 2,
+      "slug": "fibonacci_growth_recurrence",
+      "title_zh": "递推增长与由一而多",
+      "title_en": "Recursive Growth and the Emergence of Multiplicity",
+      "primary_theorem": "fibonacci_cardinality_recurrence",
+      "support_theorems": [
+        "goldenMean_characteristic_recurrence"
+      ],
+      "works": [
+        "道德经",
+        "易经",
+        "孙子兵法",
+        "黄帝内经",
+        "几何原本"
+      ],
+      "work_links": {
+        "道德经": "cultural/tao-te-ching/index.qmd",
+        "易经": "cultural/i-ching/index.qmd",
+        "孙子兵法": "cultural/sunzi/index.qmd",
+        "黄帝内经": "cultural/huangdi-neijing/index.qmd",
+        "几何原本": "cultural/elements/index.qmd"
+      },
+      "paper_refs": [
+        "fibonacci-stabilization-sharp-threshold-conjugacy-nonlinearity",
+        "resolution-folding-core-symbolic-dynamics"
+      ],
+      "status": "published",
+      "source_markdown": "workspace/synthesis/synthesis_02_fibonacci_growth_recurrence.md",
+      "notebooklm_source": "workspace/synthesis/notebooklm_sources/synthesis_02_fibonacci_growth_recurrence_source.md",
+      "artifact_slug": "synthesis_02_fibonacci_growth_recurrence",
+      "expected_artifacts": {
+        "slides": "workspace/artifacts/synthesis_02_fibonacci_growth_recurrence/synthesis_02_fibonacci_growth_recurrence_slides.pdf",
+        "infographic": "workspace/artifacts/synthesis_02_fibonacci_growth_recurrence/synthesis_02_fibonacci_growth_recurrence_infographic.png",
+        "audio": "workspace/artifacts/synthesis_02_fibonacci_growth_recurrence/synthesis_02_fibonacci_growth_recurrence_audio.wav",
+        "video": "workspace/artifacts/synthesis_02_fibonacci_growth_recurrence/synthesis_02_fibonacci_growth_recurrence_video.mp4"
+      }
+    },
+    {
+      "id": 3,
+      "slug": "fold_operator",
+      "title_zh": "Fold：过量如何被折回稳定域",
+      "title_en": "Fold: How Excess Is Returned to Stability",
+      "primary_theorem": "fold_is_idempotent",
+      "support_theorems": [
+        "fold_fixes_stable",
+        "fold_is_surjective"
+      ],
+      "works": [
+        "道德经",
+        "易经",
+        "孙子兵法",
+        "黄帝内经",
+        "几何原本"
+      ],
+      "work_links": {
+        "道德经": "cultural/tao-te-ching/index.qmd",
+        "易经": "cultural/i-ching/index.qmd",
+        "孙子兵法": "cultural/sunzi/index.qmd",
+        "黄帝内经": "cultural/huangdi-neijing/index.qmd",
+        "几何原本": "cultural/elements/index.qmd"
+      },
+      "paper_refs": [
+        "resolution-folding-core-symbolic-dynamics",
+        "fibonacci-stabilization-sharp-threshold-conjugacy-nonlinearity"
+      ],
+      "status": "published",
+      "source_markdown": "workspace/synthesis/synthesis_03_fold_operator.md",
+      "notebooklm_source": "workspace/synthesis/notebooklm_sources/synthesis_03_fold_operator_source.md",
+      "artifact_slug": "synthesis_03_fold_operator",
+      "expected_artifacts": {
+        "slides": "workspace/artifacts/synthesis_03_fold_operator/synthesis_03_fold_operator_slides.pdf",
+        "infographic": "workspace/artifacts/synthesis_03_fold_operator/synthesis_03_fold_operator_infographic.png",
+        "audio": "workspace/artifacts/synthesis_03_fold_operator/synthesis_03_fold_operator_audio.wav",
+        "video": "workspace/artifacts/synthesis_03_fold_operator/synthesis_03_fold_operator_video.mp4"
+      }
+    },
+    {
+      "id": 4,
+      "slug": "zeckendorf_uniqueness",
+      "title_zh": "唯一稀疏分解与规范形",
+      "title_en": "Unique Sparse Decomposition and Canonical Form",
+      "primary_theorem": "zeckendorf_uniqueness",
+      "support_theorems": [
+        "zeckendorf_injective"
+      ],
+      "works": [
+        "道德经",
+        "易经",
+        "孙子兵法",
+        "黄帝内经",
+        "几何原本"
+      ],
+      "work_links": {
+        "道德经": "cultural/tao-te-ching/index.qmd",
+        "易经": "cultural/i-ching/index.qmd",
+        "孙子兵法": "cultural/sunzi/index.qmd",
+        "黄帝内经": "cultural/huangdi-neijing/index.qmd",
+        "几何原本": "cultural/elements/index.qmd"
+      },
+      "paper_refs": [
+        "zeckendorf-streaming-normalization-automata-rairo",
+        "resolution-folding-core-symbolic-dynamics"
+      ],
+      "status": "published",
+      "source_markdown": "workspace/synthesis/synthesis_04_zeckendorf_uniqueness.md",
+      "notebooklm_source": "workspace/synthesis/notebooklm_sources/synthesis_04_zeckendorf_uniqueness_source.md",
+      "artifact_slug": "synthesis_04_zeckendorf_uniqueness",
+      "expected_artifacts": {
+        "slides": "workspace/artifacts/synthesis_04_zeckendorf_uniqueness/synthesis_04_zeckendorf_uniqueness_slides.pdf",
+        "infographic": "workspace/artifacts/synthesis_04_zeckendorf_uniqueness/synthesis_04_zeckendorf_uniqueness_infographic.png",
+        "audio": "workspace/artifacts/synthesis_04_zeckendorf_uniqueness/synthesis_04_zeckendorf_uniqueness_audio.wav",
+        "video": "workspace/artifacts/synthesis_04_zeckendorf_uniqueness/synthesis_04_zeckendorf_uniqueness_video.mp4"
+      }
+    },
+    {
+      "id": 5,
+      "slug": "inverse_limit_modular_tower",
+      "title_zh": "逆极限与层级整体",
+      "title_en": "Inverse Limit and Layered Totality",
+      "primary_theorem": "inverse_limit_extensionality",
+      "support_theorems": [
+        "inverse_limit_bijective",
+        "inverse_limit_left"
+      ],
+      "works": [
+        "道德经",
+        "易经",
+        "孙子兵法",
+        "黄帝内经",
+        "几何原本"
+      ],
+      "work_links": {
+        "道德经": "cultural/tao-te-ching/index.qmd",
+        "易经": "cultural/i-ching/index.qmd",
+        "孙子兵法": "cultural/sunzi/index.qmd",
+        "黄帝内经": "cultural/huangdi-neijing/index.qmd",
+        "几何原本": "cultural/elements/index.qmd"
+      },
+      "paper_refs": [
+        "grg-shell-geometry-from-stationary-detector-thermality",
+        "fibonacci-stabilization-sharp-threshold-conjugacy-nonlinearity"
+      ],
+      "status": "published",
+      "source_markdown": "workspace/synthesis/synthesis_05_inverse_limit_modular_tower.md",
+      "notebooklm_source": "workspace/synthesis/notebooklm_sources/synthesis_05_inverse_limit_modular_tower_source.md",
+      "artifact_slug": "synthesis_05_inverse_limit_modular_tower",
+      "expected_artifacts": {
+        "slides": "workspace/artifacts/synthesis_05_inverse_limit_modular_tower/synthesis_05_inverse_limit_modular_tower_slides.pdf",
+        "infographic": "workspace/artifacts/synthesis_05_inverse_limit_modular_tower/synthesis_05_inverse_limit_modular_tower_infographic.png",
+        "audio": "workspace/artifacts/synthesis_05_inverse_limit_modular_tower/synthesis_05_inverse_limit_modular_tower_audio.wav",
+        "video": "workspace/artifacts/synthesis_05_inverse_limit_modular_tower/synthesis_05_inverse_limit_modular_tower_video.mp4"
+      }
+    },
+    {
+      "id": 6,
+      "slug": "spectral_theory",
+      "title_zh": "主模态、兵势与脉象",
+      "title_en": "Dominant Modes, Strategic Force, and Pulse Patterns",
+      "primary_theorem": "goldenMeanAdjacency_has_goldenRatio_eigenvector",
+      "support_theorems": [
+        "topological_entropy_eq_log_phi",
+        "eigenvalue_eq_goldenRatio_or_goldenConj"
+      ],
+      "works": [
+        "道德经",
+        "易经",
+        "孙子兵法",
+        "黄帝内经",
+        "几何原本"
+      ],
+      "work_links": {
+        "道德经": "cultural/tao-te-ching/index.qmd",
+        "易经": "cultural/i-ching/index.qmd",
+        "孙子兵法": "cultural/sunzi/index.qmd",
+        "黄帝内经": "cultural/huangdi-neijing/index.qmd",
+        "几何原本": "cultural/elements/index.qmd"
+      },
+      "paper_refs": [
+        "zero-jitter-information-clocks-parry-gibbs-rigidity",
+        "fibonacci-stabilization-sharp-threshold-conjugacy-nonlinearity"
+      ],
+      "status": "published",
+      "source_markdown": "workspace/synthesis/synthesis_06_spectral_theory.md",
+      "notebooklm_source": "workspace/synthesis/notebooklm_sources/synthesis_06_spectral_theory_source.md",
+      "artifact_slug": "synthesis_06_spectral_theory",
+      "expected_artifacts": {
+        "slides": "workspace/artifacts/synthesis_06_spectral_theory/synthesis_06_spectral_theory_slides.pdf",
+        "infographic": "workspace/artifacts/synthesis_06_spectral_theory/synthesis_06_spectral_theory_infographic.png",
+        "audio": "workspace/artifacts/synthesis_06_spectral_theory/synthesis_06_spectral_theory_audio.wav",
+        "video": "workspace/artifacts/synthesis_06_spectral_theory/synthesis_06_spectral_theory_video.mp4"
+      }
+    },
+    {
+      "id": 7,
+      "slug": "rate_distortion",
+      "title_zh": "最小公设、最少破坏与最优保真",
+      "title_en": "Minimal Axioms, Minimal Damage, and Optimal Fidelity",
+      "primary_theorem": "scanError_hasCertificate",
+      "support_theorems": [
+        "observation_refinement_reduces_error",
+        "prefix_resolution_decreases_error"
+      ],
+      "works": [
+        "道德经",
+        "易经",
+        "孙子兵法",
+        "黄帝内经",
+        "几何原本"
+      ],
+      "work_links": {
+        "道德经": "cultural/tao-te-ching/index.qmd",
+        "易经": "cultural/i-ching/index.qmd",
+        "孙子兵法": "cultural/sunzi/index.qmd",
+        "黄帝内经": "cultural/huangdi-neijing/index.qmd",
+        "几何原本": "cultural/elements/index.qmd"
+      },
+      "paper_refs": [
+        "folded-rotation-histogram-certificates",
+        "grg-shell-geometry-from-stationary-detector-thermality"
+      ],
+      "status": "published",
+      "source_markdown": "workspace/synthesis/synthesis_07_rate_distortion.md",
+      "notebooklm_source": "workspace/synthesis/notebooklm_sources/synthesis_07_rate_distortion_source.md",
+      "artifact_slug": "synthesis_07_rate_distortion",
+      "expected_artifacts": {
+        "slides": "workspace/artifacts/synthesis_07_rate_distortion/synthesis_07_rate_distortion_slides.pdf",
+        "infographic": "workspace/artifacts/synthesis_07_rate_distortion/synthesis_07_rate_distortion_infographic.png",
+        "audio": "workspace/artifacts/synthesis_07_rate_distortion/synthesis_07_rate_distortion_audio.wav",
+        "video": "workspace/artifacts/synthesis_07_rate_distortion/synthesis_07_rate_distortion_video.mp4"
+      }
+    },
+    {
+      "id": 8,
+      "slug": "ring_arithmetic",
+      "title_zh": "相生相克与稳定环",
+      "title_en": "Mutual Generation, Counteraction, and Stable Rings",
+      "primary_theorem": "stableValue_ring_isomorphism",
+      "support_theorems": [
+        "modular_projection_add_no_carry",
+        "stableAdd_comm"
+      ],
+      "works": [
+        "道德经",
+        "易经",
+        "孙子兵法",
+        "黄帝内经",
+        "几何原本"
+      ],
+      "work_links": {
+        "道德经": "cultural/tao-te-ching/index.qmd",
+        "易经": "cultural/i-ching/index.qmd",
+        "孙子兵法": "cultural/sunzi/index.qmd",
+        "黄帝内经": "cultural/huangdi-neijing/index.qmd",
+        "几何原本": "cultural/elements/index.qmd"
+      },
+      "paper_refs": [
+        "fibonacci-moduli-cross-resolution-arithmetic",
+        "resolution-folding-core-symbolic-dynamics"
+      ],
+      "status": "published",
+      "source_markdown": "workspace/synthesis/synthesis_08_ring_arithmetic.md",
+      "notebooklm_source": "workspace/synthesis/notebooklm_sources/synthesis_08_ring_arithmetic_source.md",
+      "artifact_slug": "synthesis_08_ring_arithmetic",
+      "expected_artifacts": {
+        "slides": "workspace/artifacts/synthesis_08_ring_arithmetic/synthesis_08_ring_arithmetic_slides.pdf",
+        "infographic": "workspace/artifacts/synthesis_08_ring_arithmetic/synthesis_08_ring_arithmetic_infographic.png",
+        "audio": "workspace/artifacts/synthesis_08_ring_arithmetic/synthesis_08_ring_arithmetic_audio.wav",
+        "video": "workspace/artifacts/synthesis_08_ring_arithmetic/synthesis_08_ring_arithmetic_video.mp4"
+      }
+    },
+    {
+      "id": 9,
+      "slug": "dynamical_systems",
+      "title_zh": "四时、反者道之动与势",
+      "title_en": "Seasons, Reversal, and Strategic Dynamics",
+      "primary_theorem": "topological_entropy_eq_log_phi",
+      "support_theorems": [
+        "goldenMean_characteristic_recurrence",
+        "restrict_tower_transitivity"
+      ],
+      "works": [
+        "道德经",
+        "易经",
+        "孙子兵法",
+        "黄帝内经",
+        "几何原本"
+      ],
+      "work_links": {
+        "道德经": "cultural/tao-te-ching/index.qmd",
+        "易经": "cultural/i-ching/index.qmd",
+        "孙子兵法": "cultural/sunzi/index.qmd",
+        "黄帝内经": "cultural/huangdi-neijing/index.qmd",
+        "几何原本": "cultural/elements/index.qmd"
+      },
+      "paper_refs": [
+        "zero-jitter-information-clocks-parry-gibbs-rigidity",
+        "fibonacci-stabilization-sharp-threshold-conjugacy-nonlinearity"
+      ],
+      "status": "published",
+      "source_markdown": "workspace/synthesis/synthesis_09_dynamical_systems.md",
+      "notebooklm_source": "workspace/synthesis/notebooklm_sources/synthesis_09_dynamical_systems_source.md",
+      "artifact_slug": "synthesis_09_dynamical_systems",
+      "expected_artifacts": {
+        "slides": "workspace/artifacts/synthesis_09_dynamical_systems/synthesis_09_dynamical_systems_slides.pdf",
+        "infographic": "workspace/artifacts/synthesis_09_dynamical_systems/synthesis_09_dynamical_systems_infographic.png",
+        "audio": "workspace/artifacts/synthesis_09_dynamical_systems/synthesis_09_dynamical_systems_audio.wav",
+        "video": "workspace/artifacts/synthesis_09_dynamical_systems/synthesis_09_dynamical_systems_video.mp4"
+      }
+    },
+    {
+      "id": 10,
+      "slug": "fiber_scan_observation",
+      "title_zh": "看不见的东西如何被看见",
+      "title_en": "How the Unseen Becomes Observable",
+      "primary_theorem": "observation_refinement_reduces_error",
+      "support_theorems": [
+        "prefix_resolution_decreases_error",
+        "maxFiberMultiplicity_bounds"
+      ],
+      "works": [
+        "道德经",
+        "易经",
+        "孙子兵法",
+        "黄帝内经",
+        "几何原本"
+      ],
+      "work_links": {
+        "道德经": "cultural/tao-te-ching/index.qmd",
+        "易经": "cultural/i-ching/index.qmd",
+        "孙子兵法": "cultural/sunzi/index.qmd",
+        "黄帝内经": "cultural/huangdi-neijing/index.qmd",
+        "几何原本": "cultural/elements/index.qmd"
+      },
+      "paper_refs": [
+        "folded-rotation-histogram-certificates",
+        "grg-shell-geometry-from-stationary-detector-thermality"
+      ],
+      "status": "published",
+      "source_markdown": "workspace/synthesis/synthesis_10_fiber_scan_observation.md",
+      "notebooklm_source": "workspace/synthesis/notebooklm_sources/synthesis_10_fiber_scan_observation_source.md",
+      "artifact_slug": "synthesis_10_fiber_scan_observation",
+      "expected_artifacts": {
+        "slides": "workspace/artifacts/synthesis_10_fiber_scan_observation/synthesis_10_fiber_scan_observation_slides.pdf",
+        "infographic": "workspace/artifacts/synthesis_10_fiber_scan_observation/synthesis_10_fiber_scan_observation_infographic.png",
+        "audio": "workspace/artifacts/synthesis_10_fiber_scan_observation/synthesis_10_fiber_scan_observation_audio.wav",
+        "video": "workspace/artifacts/synthesis_10_fiber_scan_observation/synthesis_10_fiber_scan_observation_video.mp4"
+      }
+    }
+  ]
+}

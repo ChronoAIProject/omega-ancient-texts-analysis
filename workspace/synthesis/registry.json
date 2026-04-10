@@ -26,7 +26,7 @@
         "fibonacci-stabilization-sharp-threshold-conjugacy-nonlinearity",
         "resolution-folding-core-symbolic-dynamics"
       ],
-      "status": "drafted",
+      "status": "published",
       "file": "workspace/synthesis/synthesis_01_no11_golden_mean_shift.md"
     },
     {
@@ -49,7 +49,7 @@
         "fibonacci-stabilization-sharp-threshold-conjugacy-nonlinearity",
         "resolution-folding-core-symbolic-dynamics"
       ],
-      "status": "drafted",
+      "status": "published",
       "file": "workspace/synthesis/synthesis_02_fibonacci_growth_recurrence.md"
     },
     {
@@ -73,7 +73,7 @@
         "resolution-folding-core-symbolic-dynamics",
         "fibonacci-stabilization-sharp-threshold-conjugacy-nonlinearity"
       ],
-      "status": "drafted",
+      "status": "published",
       "file": "workspace/synthesis/synthesis_03_fold_operator.md"
     },
     {
@@ -96,7 +96,7 @@
         "zeckendorf-streaming-normalization-automata-rairo",
         "resolution-folding-core-symbolic-dynamics"
       ],
-      "status": "drafted",
+      "status": "published",
       "file": "workspace/synthesis/synthesis_04_zeckendorf_uniqueness.md"
     },
     {
@@ -120,7 +120,7 @@
         "grg-shell-geometry-from-stationary-detector-thermality",
         "fibonacci-stabilization-sharp-threshold-conjugacy-nonlinearity"
       ],
-      "status": "drafted",
+      "status": "published",
       "file": "workspace/synthesis/synthesis_05_inverse_limit_modular_tower.md"
     },
     {
@@ -144,7 +144,7 @@
         "zero-jitter-information-clocks-parry-gibbs-rigidity",
         "fibonacci-stabilization-sharp-threshold-conjugacy-nonlinearity"
       ],
-      "status": "drafted",
+      "status": "published",
       "file": "workspace/synthesis/synthesis_06_spectral_theory.md"
     },
     {
@@ -168,7 +168,7 @@
         "folded-rotation-histogram-certificates",
         "grg-shell-geometry-from-stationary-detector-thermality"
       ],
-      "status": "drafted",
+      "status": "published",
       "file": "workspace/synthesis/synthesis_07_rate_distortion.md"
     },
     {
@@ -192,7 +192,7 @@
         "fibonacci-moduli-cross-resolution-arithmetic",
         "resolution-folding-core-symbolic-dynamics"
       ],
-      "status": "drafted",
+      "status": "published",
       "file": "workspace/synthesis/synthesis_08_ring_arithmetic.md"
     },
     {
@@ -216,7 +216,7 @@
         "zero-jitter-information-clocks-parry-gibbs-rigidity",
         "fibonacci-stabilization-sharp-threshold-conjugacy-nonlinearity"
       ],
-      "status": "drafted",
+      "status": "published",
       "file": "workspace/synthesis/synthesis_09_dynamical_systems.md"
     },
     {
@@ -240,7 +240,7 @@
         "folded-rotation-histogram-certificates",
         "grg-shell-geometry-from-stationary-detector-thermality"
       ],
-      "status": "drafted",
+      "status": "published",
       "file": "workspace/synthesis/synthesis_10_fiber_scan_observation.md"
     }
   ]
