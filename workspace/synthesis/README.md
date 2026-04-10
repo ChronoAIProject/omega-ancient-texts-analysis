@@ -11,6 +11,12 @@
 
 当前规划为 `10` 篇旗舰综合文，每篇聚焦一个 Omega 定理核。
 
+媒体默认策略：
+
+- 中文主叙事，适配中文社交媒体传播
+- 英文只承担 theorem names、关键术语、短 rigor summary
+- 古籍引文优先保留中文，不做英文主讲替代
+
 | # | 主题 | 主定理核 | 当前状态 |
 |---|---|---|---|
 | 01 | No11 / Golden-Mean Shift | `fibonacci_cardinality` | published |

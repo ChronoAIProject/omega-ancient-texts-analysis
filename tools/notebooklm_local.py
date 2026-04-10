@@ -47,6 +47,7 @@ except ImportError:
 
 
 ARTIFACTS_DIR = Path(__file__).parent.parent / "workspace" / "artifacts"
+DEFAULT_LANGUAGE_PROFILE = "zh_primary_bilingual"
 
 
 def ensure_artifacts_dir(slug: str) -> Path:
@@ -59,9 +60,37 @@ def slug_from_path(path: Path) -> str:
     return path.stem.replace(" ", "_")
 
 
-def create_notebook(client: NotebookLM, input_path: Path, title: str = None) -> str:
+def build_generation_brief(language_profile: str, input_path: Path) -> str:
+    if language_profile == "en":
+        return (
+            f"# Media Generation Brief\n\n"
+            f"Source file: {input_path.name}\n\n"
+            f"- Primary language: English\n"
+            f"- Keep theorem names exact.\n"
+        )
+    if language_profile == "zh":
+        return (
+            f"# 媒体生成说明\n\n"
+            f"源文件: {input_path.name}\n\n"
+            f"- 主语言: 中文\n"
+            f"- 原文引文优先保留中文\n"
+            f"- 定理名可保留英文\n"
+        )
+    return (
+        f"# 媒体生成说明 / Media Generation Brief\n\n"
+        f"源文件 / Source: {input_path.name}\n\n"
+        f"- 主语言 / Primary language: 中文\n"
+        f"- 辅助语言 / Secondary language: English\n"
+        f"- 中文负责主叙事与古籍传播适配\n"
+        f"- English only for theorem names, key terms, and short rigor summaries\n"
+        f"- Keep classical quotations in Chinese whenever possible\n"
+    )
+
+
+def create_notebook(client: NotebookLM, input_path: Path, title: str = None, language_profile: str = DEFAULT_LANGUAGE_PROFILE) -> str:
     """Create a NotebookLM notebook from a markdown/text file."""
-    content = input_path.read_text(encoding="utf-8")
+    brief = build_generation_brief(language_profile, input_path)
+    content = f"{brief}\n\n---\n\n{input_path.read_text(encoding='utf-8')}"
     title = title or f"Omega: {input_path.stem}"
 
     print(f"  Creating notebook: {title}")
@@ -127,7 +156,7 @@ def generate_video(client: NotebookLM, nb_id: str, output_dir: Path, slug: str) 
         return None
 
 
-def process_file(input_path: Path, gen_type: str = "all"):
+def process_file(input_path: Path, gen_type: str = "all", language_profile: str = DEFAULT_LANGUAGE_PROFILE):
     """Process a single file through NotebookLM."""
     slug = slug_from_path(input_path)
     output_dir = ensure_artifacts_dir(slug)
@@ -136,10 +165,11 @@ def process_file(input_path: Path, gen_type: str = "all"):
     print(f"Processing: {input_path.name}")
     print(f"Output dir: {output_dir}")
     print(f"Type: {gen_type}")
+    print(f"Language profile: {language_profile}")
     print(f"{'='*60}")
 
     client = NotebookLM()
-    nb_id = create_notebook(client, input_path)
+    nb_id = create_notebook(client, input_path, language_profile=language_profile)
 
     results = {}
 
@@ -159,6 +189,7 @@ def process_file(input_path: Path, gen_type: str = "all"):
     manifest = {
         "source": str(input_path),
         "notebook_id": nb_id,
+        "language_profile": language_profile,
         "artifacts": results,
         "timestamp": time.strftime("%Y-%m-%dT%H:%M:%S"),
     }
@@ -175,6 +206,12 @@ def main():
     parser.add_argument("--batch", help="批量处理目录下所有 .md 文件")
     parser.add_argument("--type", choices=["slides", "audio", "video", "all"], default="all",
                         help="生成类型 (default: all)")
+    parser.add_argument(
+        "--language-profile",
+        choices=["zh_primary_bilingual", "zh", "en"],
+        default=DEFAULT_LANGUAGE_PROFILE,
+        help="媒体语言策略 (default: zh_primary_bilingual)",
+    )
     parser.add_argument("--list", action="store_true", help="列出已有 notebooks")
     args = parser.parse_args()
 
@@ -191,7 +228,7 @@ def main():
         if not path.exists():
             print(f"文件不存在: {path}")
             sys.exit(1)
-        process_file(path, args.type)
+        process_file(path, args.type, args.language_profile)
 
     elif args.batch:
         batch_dir = Path(args.batch)
@@ -205,7 +242,7 @@ def main():
         print(f"批量处理: {len(files)} 个文件")
         for f in files:
             try:
-                process_file(f, args.type)
+                process_file(f, args.type, args.language_profile)
             except Exception as e:
                 print(f"  ✗ 失败: {f.name} — {e}")
                 continue

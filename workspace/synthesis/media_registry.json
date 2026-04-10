@@ -2,6 +2,7 @@
   "series": "Omega cross-text synthesis essays",
   "generated_at": "2026-04-10",
   "language_policy": "zh-primary-with-en-rigor-summary",
+  "media_language_policy": "zh_primary_bilingual",
   "release_pack": "cross-text synthesis media pack",
   "entries": [
     {
@@ -9,6 +10,7 @@
       "slug": "no11_golden_mean_shift",
       "title_zh": "No11 与知止之美",
       "title_en": "No11 and the Beauty of Knowing When to Stop",
+      "media_language_profile": "zh_primary_bilingual",
       "primary_theorem": "fibonacci_cardinality",
       "support_theorems": [
         "fibonacci_cardinality_recurrence",
@@ -49,6 +51,7 @@
       "slug": "fibonacci_growth_recurrence",
       "title_zh": "递推增长与由一而多",
       "title_en": "Recursive Growth and the Emergence of Multiplicity",
+      "media_language_profile": "zh_primary_bilingual",
       "primary_theorem": "fibonacci_cardinality_recurrence",
       "support_theorems": [
         "goldenMean_characteristic_recurrence"
@@ -87,6 +90,7 @@
       "slug": "fold_operator",
       "title_zh": "Fold：过量如何被折回稳定域",
       "title_en": "Fold: How Excess Is Returned to Stability",
+      "media_language_profile": "zh_primary_bilingual",
       "primary_theorem": "fold_is_idempotent",
       "support_theorems": [
         "fold_fixes_stable",
@@ -126,6 +130,7 @@
       "slug": "zeckendorf_uniqueness",
       "title_zh": "唯一稀疏分解与规范形",
       "title_en": "Unique Sparse Decomposition and Canonical Form",
+      "media_language_profile": "zh_primary_bilingual",
       "primary_theorem": "zeckendorf_uniqueness",
       "support_theorems": [
         "zeckendorf_injective"
@@ -164,6 +169,7 @@
       "slug": "inverse_limit_modular_tower",
       "title_zh": "逆极限与层级整体",
       "title_en": "Inverse Limit and Layered Totality",
+      "media_language_profile": "zh_primary_bilingual",
       "primary_theorem": "inverse_limit_extensionality",
       "support_theorems": [
         "inverse_limit_bijective",
@@ -203,6 +209,7 @@
       "slug": "spectral_theory",
       "title_zh": "主模态、兵势与脉象",
       "title_en": "Dominant Modes, Strategic Force, and Pulse Patterns",
+      "media_language_profile": "zh_primary_bilingual",
       "primary_theorem": "goldenMeanAdjacency_has_goldenRatio_eigenvector",
       "support_theorems": [
         "topological_entropy_eq_log_phi",
@@ -242,6 +249,7 @@
       "slug": "rate_distortion",
       "title_zh": "最小公设、最少破坏与最优保真",
       "title_en": "Minimal Axioms, Minimal Damage, and Optimal Fidelity",
+      "media_language_profile": "zh_primary_bilingual",
       "primary_theorem": "scanError_hasCertificate",
       "support_theorems": [
         "observation_refinement_reduces_error",
@@ -281,6 +289,7 @@
       "slug": "ring_arithmetic",
       "title_zh": "相生相克与稳定环",
       "title_en": "Mutual Generation, Counteraction, and Stable Rings",
+      "media_language_profile": "zh_primary_bilingual",
       "primary_theorem": "stableValue_ring_isomorphism",
       "support_theorems": [
         "modular_projection_add_no_carry",
@@ -320,6 +329,7 @@
       "slug": "dynamical_systems",
       "title_zh": "四时、反者道之动与势",
       "title_en": "Seasons, Reversal, and Strategic Dynamics",
+      "media_language_profile": "zh_primary_bilingual",
       "primary_theorem": "topological_entropy_eq_log_phi",
       "support_theorems": [
         "goldenMean_characteristic_recurrence",
@@ -359,6 +369,7 @@
       "slug": "fiber_scan_observation",
       "title_zh": "看不见的东西如何被看见",
       "title_en": "How the Unseen Becomes Observable",
+      "media_language_profile": "zh_primary_bilingual",
       "primary_theorem": "observation_refinement_reduces_error",
       "support_theorems": [
         "prefix_resolution_decreases_error",
