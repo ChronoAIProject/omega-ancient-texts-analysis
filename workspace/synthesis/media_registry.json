@@ -162,7 +162,7 @@
         "zeckendorf-streaming-normalization-automata-rairo",
         "resolution-folding-core-symbolic-dynamics"
       ],
-      "status": "published",
+      "status": "media_partially_published",
       "source_markdown": "workspace/synthesis/synthesis_04_zeckendorf_uniqueness.md",
       "notebooklm_source": "workspace/synthesis/notebooklm_sources/synthesis_04_zeckendorf_uniqueness_source.md",
       "artifact_slug": "synthesis_04_zeckendorf_uniqueness",
@@ -171,6 +171,9 @@
         "infographic": "workspace/artifacts/synthesis_04_zeckendorf_uniqueness/synthesis_04_zeckendorf_uniqueness_infographic.png",
         "audio": "workspace/artifacts/synthesis_04_zeckendorf_uniqueness/synthesis_04_zeckendorf_uniqueness_audio.wav",
         "video": "workspace/artifacts/synthesis_04_zeckendorf_uniqueness/synthesis_04_zeckendorf_uniqueness_video.mp4"
+      },
+      "published_assets": {
+        "slides": "https://github.com/the-omega-institute/Omega-paper-series/releases/download/cultural-media-v1/synthesis_04_zeckendorf_uniqueness_slides.pdf"
       }
     },
     {
@@ -202,7 +205,7 @@
         "grg-shell-geometry-from-stationary-detector-thermality",
         "fibonacci-stabilization-sharp-threshold-conjugacy-nonlinearity"
       ],
-      "status": "published",
+      "status": "media_partially_published",
       "source_markdown": "workspace/synthesis/synthesis_05_inverse_limit_modular_tower.md",
       "notebooklm_source": "workspace/synthesis/notebooklm_sources/synthesis_05_inverse_limit_modular_tower_source.md",
       "artifact_slug": "synthesis_05_inverse_limit_modular_tower",
@@ -211,6 +214,9 @@
         "infographic": "workspace/artifacts/synthesis_05_inverse_limit_modular_tower/synthesis_05_inverse_limit_modular_tower_infographic.png",
         "audio": "workspace/artifacts/synthesis_05_inverse_limit_modular_tower/synthesis_05_inverse_limit_modular_tower_audio.wav",
         "video": "workspace/artifacts/synthesis_05_inverse_limit_modular_tower/synthesis_05_inverse_limit_modular_tower_video.mp4"
+      },
+      "published_assets": {
+        "slides": "https://github.com/the-omega-institute/Omega-paper-series/releases/download/cultural-media-v1/synthesis_05_inverse_limit_modular_tower_slides.pdf"
       }
     },
     {
@@ -242,7 +248,7 @@
         "zero-jitter-information-clocks-parry-gibbs-rigidity",
         "fibonacci-stabilization-sharp-threshold-conjugacy-nonlinearity"
       ],
-      "status": "published",
+      "status": "media_partially_published",
       "source_markdown": "workspace/synthesis/synthesis_06_spectral_theory.md",
       "notebooklm_source": "workspace/synthesis/notebooklm_sources/synthesis_06_spectral_theory_source.md",
       "artifact_slug": "synthesis_06_spectral_theory",
@@ -251,6 +257,9 @@
         "infographic": "workspace/artifacts/synthesis_06_spectral_theory/synthesis_06_spectral_theory_infographic.png",
         "audio": "workspace/artifacts/synthesis_06_spectral_theory/synthesis_06_spectral_theory_audio.wav",
         "video": "workspace/artifacts/synthesis_06_spectral_theory/synthesis_06_spectral_theory_video.mp4"
+      },
+      "published_assets": {
+        "slides": "https://github.com/the-omega-institute/Omega-paper-series/releases/download/cultural-media-v1/synthesis_06_spectral_theory_slides.pdf"
       }
     },
     {
@@ -282,7 +291,7 @@
         "folded-rotation-histogram-certificates",
         "grg-shell-geometry-from-stationary-detector-thermality"
       ],
-      "status": "published",
+      "status": "media_partially_published",
       "source_markdown": "workspace/synthesis/synthesis_07_rate_distortion.md",
       "notebooklm_source": "workspace/synthesis/notebooklm_sources/synthesis_07_rate_distortion_source.md",
       "artifact_slug": "synthesis_07_rate_distortion",
@@ -291,6 +300,9 @@
         "infographic": "workspace/artifacts/synthesis_07_rate_distortion/synthesis_07_rate_distortion_infographic.png",
         "audio": "workspace/artifacts/synthesis_07_rate_distortion/synthesis_07_rate_distortion_audio.wav",
         "video": "workspace/artifacts/synthesis_07_rate_distortion/synthesis_07_rate_distortion_video.mp4"
+      },
+      "published_assets": {
+        "slides": "https://github.com/the-omega-institute/Omega-paper-series/releases/download/cultural-media-v1/synthesis_07_rate_distortion_slides.pdf"
       }
     },
     {
@@ -322,7 +334,7 @@
         "fibonacci-moduli-cross-resolution-arithmetic",
         "resolution-folding-core-symbolic-dynamics"
       ],
-      "status": "published",
+      "status": "media_partially_published",
       "source_markdown": "workspace/synthesis/synthesis_08_ring_arithmetic.md",
       "notebooklm_source": "workspace/synthesis/notebooklm_sources/synthesis_08_ring_arithmetic_source.md",
       "artifact_slug": "synthesis_08_ring_arithmetic",
@@ -331,6 +343,9 @@
         "infographic": "workspace/artifacts/synthesis_08_ring_arithmetic/synthesis_08_ring_arithmetic_infographic.png",
         "audio": "workspace/artifacts/synthesis_08_ring_arithmetic/synthesis_08_ring_arithmetic_audio.wav",
         "video": "workspace/artifacts/synthesis_08_ring_arithmetic/synthesis_08_ring_arithmetic_video.mp4"
+      },
+      "published_assets": {
+        "slides": "https://github.com/the-omega-institute/Omega-paper-series/releases/download/cultural-media-v1/synthesis_08_ring_arithmetic_slides.pdf"
       }
     },
     {
@@ -362,7 +377,7 @@
         "zero-jitter-information-clocks-parry-gibbs-rigidity",
         "fibonacci-stabilization-sharp-threshold-conjugacy-nonlinearity"
       ],
-      "status": "published",
+      "status": "media_partially_published",
       "source_markdown": "workspace/synthesis/synthesis_09_dynamical_systems.md",
       "notebooklm_source": "workspace/synthesis/notebooklm_sources/synthesis_09_dynamical_systems_source.md",
       "artifact_slug": "synthesis_09_dynamical_systems",
@@ -371,6 +386,9 @@
         "infographic": "workspace/artifacts/synthesis_09_dynamical_systems/synthesis_09_dynamical_systems_infographic.png",
         "audio": "workspace/artifacts/synthesis_09_dynamical_systems/synthesis_09_dynamical_systems_audio.wav",
         "video": "workspace/artifacts/synthesis_09_dynamical_systems/synthesis_09_dynamical_systems_video.mp4"
+      },
+      "published_assets": {
+        "slides": "https://github.com/the-omega-institute/Omega-paper-series/releases/download/cultural-media-v1/synthesis_09_dynamical_systems_slides.pdf"
       }
     },
     {
@@ -402,7 +420,7 @@
         "folded-rotation-histogram-certificates",
         "grg-shell-geometry-from-stationary-detector-thermality"
       ],
-      "status": "published",
+      "status": "media_partially_published",
       "source_markdown": "workspace/synthesis/synthesis_10_fiber_scan_observation.md",
       "notebooklm_source": "workspace/synthesis/notebooklm_sources/synthesis_10_fiber_scan_observation_source.md",
       "artifact_slug": "synthesis_10_fiber_scan_observation",
@@ -411,6 +429,9 @@
         "infographic": "workspace/artifacts/synthesis_10_fiber_scan_observation/synthesis_10_fiber_scan_observation_infographic.png",
         "audio": "workspace/artifacts/synthesis_10_fiber_scan_observation/synthesis_10_fiber_scan_observation_audio.wav",
         "video": "workspace/artifacts/synthesis_10_fiber_scan_observation/synthesis_10_fiber_scan_observation_video.mp4"
+      },
+      "published_assets": {
+        "slides": "https://github.com/the-omega-institute/Omega-paper-series/releases/download/cultural-media-v1/synthesis_10_fiber_scan_observation_slides.pdf"
       }
     }
   ]
