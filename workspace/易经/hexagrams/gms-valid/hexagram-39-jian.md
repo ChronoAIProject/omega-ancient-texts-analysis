@@ -1,6 +1,6 @@
 ---
 title: "39. 蹇 / Jian"
-subtitle: "I Ching Hexagram Dossier"
+subtitle: "I Ching Hexagram Page"
 order: 39
 description: "Hexagram 39 蹇 as `001010`, GMS-valid, categories 困阻与险难."
 categories: [i-ching, hexagram-dossier, cultural, omega]
@@ -24,11 +24,26 @@ categories: [i-ching, hexagram-dossier, cultural, omega]
 
 在当前的 Omega 文化映射计划里，第 39 卦 蹇 首先不是被当作抽象象义，而是被当作二元词 `001010` 来读取。该卦直接位于 `X_6` 内，因此不需要先经过 fold 才能进入稳定域。 它包含两个彼此分离的阳位，因此是典型的低密度稳定词，适合承接稀疏与间隔结构。 它目前横跨的主题类别是 困阻与险难，因此其 strongest reading corridor 集中在 golden-mean-shift、fold-operator、fiber-structure 这些方向上。
 
+## 对应说明
+
+这一页保留原文，不是为了把卦辞和爻辞逐句翻译成公式，而是为了固定该卦的语义张力实际落在什么结构位置上。它已经直接落在 `X_6` 内，因此原文在这里首先对应的是一个稳定词的内部差异，而不是先经过 fold 才能成立的外部修正。 在 Lean 锚点上，本页最强地落向 `fibonacci_cardinality` 与 `fibonacci_cardinality_recurrence`。
+
 ## Omega 对象
 
 - `Word 6 = {0,1}^6`
 - `X_6` stable subspace
 - 当前主方向：golden-mean-shift, fold-operator, fiber-structure
+
+## 原文锚点
+
+> 蹇：利西南，不利東北；利見大人，貞吉。
+> 初六：往蹇，來譽。
+> 六二：王臣蹇蹇，匪躬之故。
+> 九三：往蹇來反。
+> 彖曰：
+> 蹇，難也，險在前也。見險而能止，知矣哉！蹇利西南，往得中也；不利東北，其道窮也。利見大人，往有功也。當位貞吉，以正邦也。蹇之時用大矣哉！
+> 象曰：
+> 山上有水，蹇；君子以反身修德。
 
 ## Omega 定理锚点
 
@@ -38,11 +53,13 @@ categories: [i-ching, hexagram-dossier, cultural, omega]
 - `fold_is_idempotent` [`Omega.Frontier.ConditionalArithmetic`]：`theorem fold_is_idempotent (w : Word m) : Fold (Fold w).1 = Fold w`。说明 fold 一旦把原始词折回稳定域，再施一次不会继续改写。
 - `fold_fixes_stable` [`Omega.Frontier.ConditionalArithmetic`]：`theorem fold_fixes_stable (x : X m) : Fold x.1 = x`。说明已经稳定的卦象在 fold 下保持不动，适合区分 stable word 与 raw word。
 
-## 语料状态
+## 原文来源
 
-- 当前本地语料库还没有该卦的单独原文文件。
-- 本页因此暂时采取“结构 dossier”写法：先锁定 binary / theorem / category 位置，再等待原文补齐后扩写。
+- 本仓库原文文件：`texts/yijing/hexagram_39_jian.txt`
+- 原文来自维基文库《周易》分卦页，经规范化后入库。
 
 ## 小结
 
-这一页不是终稿长文，而是逐卦展开的正式底稿：它先把卦位、位串、分类交叉和 theorem anchor 锁死，之后再叠加原文细读与更细的传统注疏材料。
+这一页已经构成逐卦层的正式发布单元：它把原文锚点、位串结构、类别交叉与 theorem anchor 放在同一坐标系里，重点不是替代传统注疏，而是展示该卦与 Omega 数学结构之间最可点名的映射位置。
+
+[Back to Hexagram Index](index.qmd) | [Back to I Ching Index](../index.qmd)

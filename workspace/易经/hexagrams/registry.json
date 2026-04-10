@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-10T06:23:21.044612+00:00",
+  "generated_at": "2026-04-10T07:05:14.690534+00:00",
   "source_note": "Hexagram number/name/trigram lookup derived from the King Wen lookup table.",
   "total_hexagrams": 64,
   "gms_valid_hexagrams": [
@@ -234,7 +234,7 @@
           "score": 0
         }
       ],
-      "source_text_path": "",
+      "source_text_path": "texts/yijing/hexagram_02_kun.txt",
       "complement_binary": "111111",
       "complement_hexagram": 1,
       "reverse_binary": "000000",
@@ -363,7 +363,7 @@
           "score": 0
         }
       ],
-      "source_text_path": "",
+      "source_text_path": "texts/yijing/hexagram_03_zhun.txt",
       "complement_binary": "011101",
       "complement_hexagram": 50,
       "reverse_binary": "010001",
@@ -506,7 +506,7 @@
           "score": 0
         }
       ],
-      "source_text_path": "",
+      "source_text_path": "texts/yijing/hexagram_04_meng.txt",
       "complement_binary": "101110",
       "complement_hexagram": 49,
       "reverse_binary": "100010",
@@ -633,7 +633,7 @@
           "score": 0
         }
       ],
-      "source_text_path": "",
+      "source_text_path": "texts/yijing/hexagram_05_xu.txt",
       "complement_binary": "000101",
       "complement_hexagram": 35,
       "reverse_binary": "010111",
@@ -760,7 +760,7 @@
           "score": 0
         }
       ],
-      "source_text_path": "",
+      "source_text_path": "texts/yijing/hexagram_06_song.txt",
       "complement_binary": "101000",
       "complement_hexagram": 36,
       "reverse_binary": "111010",
@@ -871,7 +871,7 @@
           "score": 11
         }
       ],
-      "source_text_path": "",
+      "source_text_path": "texts/yijing/hexagram_07_shi.txt",
       "complement_binary": "101111",
       "complement_hexagram": 13,
       "reverse_binary": "000010",
@@ -1014,7 +1014,7 @@
           "score": 0
         }
       ],
-      "source_text_path": "",
+      "source_text_path": "texts/yijing/hexagram_08_bi.txt",
       "complement_binary": "111101",
       "complement_hexagram": 14,
       "reverse_binary": "010000",
@@ -1154,7 +1154,7 @@
           "score": 0
         }
       ],
-      "source_text_path": "",
+      "source_text_path": "texts/yijing/hexagram_09_xiaoxu.txt",
       "complement_binary": "000100",
       "complement_hexagram": 16,
       "reverse_binary": "110111",
@@ -1281,7 +1281,7 @@
           "score": 0
         }
       ],
-      "source_text_path": "",
+      "source_text_path": "texts/yijing/hexagram_10_lu.txt",
       "complement_binary": "001000",
       "complement_hexagram": 15,
       "reverse_binary": "111011",
@@ -1388,7 +1388,7 @@
           "score": 0
         }
       ],
-      "source_text_path": "",
+      "source_text_path": "texts/yijing/hexagram_11_tai.txt",
       "complement_binary": "000111",
       "complement_hexagram": 12,
       "reverse_binary": "000111",
@@ -1495,7 +1495,7 @@
           "score": 0
         }
       ],
-      "source_text_path": "",
+      "source_text_path": "texts/yijing/hexagram_12_pi.txt",
       "complement_binary": "111000",
       "complement_hexagram": 11,
       "reverse_binary": "111000",
@@ -1622,7 +1622,7 @@
           "score": 0
         }
       ],
-      "source_text_path": "",
+      "source_text_path": "texts/yijing/hexagram_13_tongren.txt",
       "complement_binary": "010000",
       "complement_hexagram": 7,
       "reverse_binary": "111101",
@@ -1749,7 +1749,7 @@
           "score": 0
         }
       ],
-      "source_text_path": "",
+      "source_text_path": "texts/yijing/hexagram_14_dayou.txt",
       "complement_binary": "000010",
       "complement_hexagram": 8,
       "reverse_binary": "101111",
@@ -1891,7 +1891,7 @@
           "score": 0
         }
       ],
-      "source_text_path": "",
+      "source_text_path": "texts/yijing/hexagram_15_qian.txt",
       "complement_binary": "110111",
       "complement_hexagram": 10,
       "reverse_binary": "000100",
@@ -2021,7 +2021,7 @@
           "score": 0
         }
       ],
-      "source_text_path": "",
+      "source_text_path": "texts/yijing/hexagram_16_yu.txt",
       "complement_binary": "111011",
       "complement_hexagram": 9,
       "reverse_binary": "001000",
@@ -2150,7 +2150,7 @@
           "score": 0
         }
       ],
-      "source_text_path": "",
+      "source_text_path": "texts/yijing/hexagram_17_sui.txt",
       "complement_binary": "011001",
       "complement_hexagram": 18,
       "reverse_binary": "011001",
@@ -2279,7 +2279,7 @@
           "score": 0
         }
       ],
-      "source_text_path": "",
+      "source_text_path": "texts/yijing/hexagram_18_gu.txt",
       "complement_binary": "100110",
       "complement_hexagram": 17,
       "reverse_binary": "100110",
@@ -2390,7 +2390,7 @@
           "score": 11
         }
       ],
-      "source_text_path": "",
+      "source_text_path": "texts/yijing/hexagram_19_lin.txt",
       "complement_binary": "001111",
       "complement_hexagram": 33,
       "reverse_binary": "000011",
@@ -2533,7 +2533,7 @@
           "score": 0
         }
       ],
-      "source_text_path": "",
+      "source_text_path": "texts/yijing/hexagram_20_guan.txt",
       "complement_binary": "111100",
       "complement_hexagram": 34,
       "reverse_binary": "110000",
@@ -2664,7 +2664,7 @@
           "score": 0
         }
       ],
-      "source_text_path": "",
+      "source_text_path": "texts/yijing/hexagram_21_shihe.txt",
       "complement_binary": "011010",
       "complement_hexagram": 48,
       "reverse_binary": "101001",
@@ -2809,7 +2809,7 @@
           "score": 0
         }
       ],
-      "source_text_path": "",
+      "source_text_path": "texts/yijing/hexagram_22_bi.txt",
       "complement_binary": "010110",
       "complement_hexagram": 47,
       "reverse_binary": "100101",
@@ -2938,7 +2938,7 @@
           "score": 0
         }
       ],
-      "source_text_path": "",
+      "source_text_path": "texts/yijing/hexagram_23_bo.txt",
       "complement_binary": "111110",
       "complement_hexagram": 43,
       "reverse_binary": "100000",
@@ -3080,7 +3080,7 @@
           "score": 0
         }
       ],
-      "source_text_path": "",
+      "source_text_path": "texts/yijing/hexagram_24_fu.txt",
       "complement_binary": "011111",
       "complement_hexagram": 44,
       "reverse_binary": "000001",
@@ -3207,7 +3207,7 @@
           "score": 0
         }
       ],
-      "source_text_path": "",
+      "source_text_path": "texts/yijing/hexagram_25_wuwang.txt",
       "complement_binary": "011000",
       "complement_hexagram": 46,
       "reverse_binary": "111001",
@@ -3334,7 +3334,7 @@
           "score": 0
         }
       ],
-      "source_text_path": "",
+      "source_text_path": "texts/yijing/hexagram_26_dachu.txt",
       "complement_binary": "000110",
       "complement_hexagram": 45,
       "reverse_binary": "100111",
@@ -3445,7 +3445,7 @@
           "score": 11
         }
       ],
-      "source_text_path": "",
+      "source_text_path": "texts/yijing/hexagram_27_yi.txt",
       "complement_binary": "011110",
       "complement_hexagram": 28,
       "reverse_binary": "100001",
@@ -3576,7 +3576,7 @@
           "score": 0
         }
       ],
-      "source_text_path": "",
+      "source_text_path": "texts/yijing/hexagram_28_daguo.txt",
       "complement_binary": "100001",
       "complement_hexagram": 27,
       "reverse_binary": "011110",
@@ -3716,7 +3716,7 @@
           "score": 0
         }
       ],
-      "source_text_path": "",
+      "source_text_path": "texts/yijing/hexagram_29_kan.txt",
       "complement_binary": "101101",
       "complement_hexagram": 30,
       "reverse_binary": "010010",
@@ -3861,7 +3861,7 @@
           "score": 0
         }
       ],
-      "source_text_path": "",
+      "source_text_path": "texts/yijing/hexagram_30_li.txt",
       "complement_binary": "010010",
       "complement_hexagram": 29,
       "reverse_binary": "101101",
@@ -3990,7 +3990,7 @@
           "score": 0
         }
       ],
-      "source_text_path": "",
+      "source_text_path": "texts/yijing/hexagram_31_xian.txt",
       "complement_binary": "110001",
       "complement_hexagram": 41,
       "reverse_binary": "011100",
@@ -4119,7 +4119,7 @@
           "score": 0
         }
       ],
-      "source_text_path": "",
+      "source_text_path": "texts/yijing/hexagram_32_heng.txt",
       "complement_binary": "100011",
       "complement_hexagram": 42,
       "reverse_binary": "001110",
@@ -4249,7 +4249,7 @@
           "score": 0
         }
       ],
-      "source_text_path": "",
+      "source_text_path": "texts/yijing/hexagram_33_dun.txt",
       "complement_binary": "110000",
       "complement_hexagram": 19,
       "reverse_binary": "111100",
@@ -4376,7 +4376,7 @@
           "score": 0
         }
       ],
-      "source_text_path": "",
+      "source_text_path": "texts/yijing/hexagram_34_dazhuang.txt",
       "complement_binary": "000011",
       "complement_hexagram": 20,
       "reverse_binary": "001111",
@@ -4523,7 +4523,7 @@
           "score": 0
         }
       ],
-      "source_text_path": "",
+      "source_text_path": "texts/yijing/hexagram_35_jin.txt",
       "complement_binary": "111010",
       "complement_hexagram": 5,
       "reverse_binary": "101000",
@@ -4670,7 +4670,7 @@
           "score": 0
         }
       ],
-      "source_text_path": "",
+      "source_text_path": "texts/yijing/hexagram_36_mingyi.txt",
       "complement_binary": "010111",
       "complement_hexagram": 6,
       "reverse_binary": "000101",
@@ -4799,7 +4799,7 @@
           "score": 0
         }
       ],
-      "source_text_path": "",
+      "source_text_path": "texts/yijing/hexagram_37_jiaren.txt",
       "complement_binary": "010100",
       "complement_hexagram": 40,
       "reverse_binary": "110101",
@@ -4941,7 +4941,7 @@
           "score": 0
         }
       ],
-      "source_text_path": "",
+      "source_text_path": "texts/yijing/hexagram_38_kui.txt",
       "complement_binary": "001010",
       "complement_hexagram": 39,
       "reverse_binary": "101011",
@@ -5068,7 +5068,7 @@
           "score": 0
         }
       ],
-      "source_text_path": "",
+      "source_text_path": "texts/yijing/hexagram_39_jian.txt",
       "complement_binary": "110101",
       "complement_hexagram": 38,
       "reverse_binary": "010100",
@@ -5175,7 +5175,7 @@
           "score": 0
         }
       ],
-      "source_text_path": "",
+      "source_text_path": "texts/yijing/hexagram_40_jie.txt",
       "complement_binary": "101011",
       "complement_hexagram": 37,
       "reverse_binary": "001010",
@@ -5317,7 +5317,7 @@
           "score": 0
         }
       ],
-      "source_text_path": "",
+      "source_text_path": "texts/yijing/hexagram_41_sun.txt",
       "complement_binary": "001110",
       "complement_hexagram": 31,
       "reverse_binary": "100011",
@@ -5459,7 +5459,7 @@
           "score": 0
         }
       ],
-      "source_text_path": "",
+      "source_text_path": "texts/yijing/hexagram_42_yi.txt",
       "complement_binary": "011100",
       "complement_hexagram": 32,
       "reverse_binary": "110001",
@@ -5600,7 +5600,7 @@
           "score": 0
         }
       ],
-      "source_text_path": "",
+      "source_text_path": "texts/yijing/hexagram_43_guai.txt",
       "complement_binary": "000001",
       "complement_hexagram": 23,
       "reverse_binary": "011111",
@@ -5742,7 +5742,7 @@
           "score": 0
         }
       ],
-      "source_text_path": "",
+      "source_text_path": "texts/yijing/hexagram_44_gou.txt",
       "complement_binary": "100000",
       "complement_hexagram": 24,
       "reverse_binary": "111110",
@@ -5884,7 +5884,7 @@
           "score": 0
         }
       ],
-      "source_text_path": "",
+      "source_text_path": "texts/yijing/hexagram_45_cui.txt",
       "complement_binary": "111001",
       "complement_hexagram": 26,
       "reverse_binary": "011000",
@@ -6025,7 +6025,7 @@
           "score": 0
         }
       ],
-      "source_text_path": "",
+      "source_text_path": "texts/yijing/hexagram_46_sheng.txt",
       "complement_binary": "100111",
       "complement_hexagram": 25,
       "reverse_binary": "000110",
@@ -6177,7 +6177,7 @@
           "score": 0
         }
       ],
-      "source_text_path": "",
+      "source_text_path": "texts/yijing/hexagram_47_kun.txt",
       "complement_binary": "101001",
       "complement_hexagram": 22,
       "reverse_binary": "011010",
@@ -6329,7 +6329,7 @@
           "score": 0
         }
       ],
-      "source_text_path": "",
+      "source_text_path": "texts/yijing/hexagram_48_jing.txt",
       "complement_binary": "100101",
       "complement_hexagram": 21,
       "reverse_binary": "010110",
@@ -6460,7 +6460,7 @@
           "score": 0
         }
       ],
-      "source_text_path": "",
+      "source_text_path": "texts/yijing/hexagram_49_ge.txt",
       "complement_binary": "010001",
       "complement_hexagram": 4,
       "reverse_binary": "011101",
@@ -6591,7 +6591,7 @@
           "score": 0
         }
       ],
-      "source_text_path": "",
+      "source_text_path": "texts/yijing/hexagram_50_ding.txt",
       "complement_binary": "100010",
       "complement_hexagram": 3,
       "reverse_binary": "101110",
@@ -6698,7 +6698,7 @@
           "score": 0
         }
       ],
-      "source_text_path": "",
+      "source_text_path": "texts/yijing/hexagram_51_zhen.txt",
       "complement_binary": "011011",
       "complement_hexagram": 57,
       "reverse_binary": "001001",
@@ -6828,7 +6828,7 @@
           "score": 0
         }
       ],
-      "source_text_path": "",
+      "source_text_path": "texts/yijing/hexagram_52_gen.txt",
       "complement_binary": "110110",
       "complement_hexagram": 58,
       "reverse_binary": "100100",
@@ -6971,7 +6971,7 @@
           "score": 0
         }
       ],
-      "source_text_path": "",
+      "source_text_path": "texts/yijing/hexagram_53_jian.txt",
       "complement_binary": "110100",
       "complement_hexagram": 54,
       "reverse_binary": "110100",
@@ -7101,7 +7101,7 @@
           "score": 0
         }
       ],
-      "source_text_path": "",
+      "source_text_path": "texts/yijing/hexagram_54_guimei.txt",
       "complement_binary": "001011",
       "complement_hexagram": 53,
       "reverse_binary": "001011",
@@ -7232,7 +7232,7 @@
           "score": 0
         }
       ],
-      "source_text_path": "",
+      "source_text_path": "texts/yijing/hexagram_55_feng.txt",
       "complement_binary": "010011",
       "complement_hexagram": 59,
       "reverse_binary": "001101",
@@ -7377,7 +7377,7 @@
           "score": 0
         }
       ],
-      "source_text_path": "",
+      "source_text_path": "texts/yijing/hexagram_56_lu.txt",
       "complement_binary": "110010",
       "complement_hexagram": 60,
       "reverse_binary": "101100",
@@ -7515,7 +7515,7 @@
           "score": 0
         }
       ],
-      "source_text_path": "",
+      "source_text_path": "texts/yijing/hexagram_57_xun.txt",
       "complement_binary": "100100",
       "complement_hexagram": 51,
       "reverse_binary": "110110",
@@ -7657,7 +7657,7 @@
           "score": 0
         }
       ],
-      "source_text_path": "",
+      "source_text_path": "texts/yijing/hexagram_58_dui.txt",
       "complement_binary": "001001",
       "complement_hexagram": 52,
       "reverse_binary": "011011",
@@ -7795,7 +7795,7 @@
           "score": 0
         }
       ],
-      "source_text_path": "",
+      "source_text_path": "texts/yijing/hexagram_59_huan.txt",
       "complement_binary": "101100",
       "complement_hexagram": 55,
       "reverse_binary": "110010",
@@ -7933,7 +7933,7 @@
           "score": 0
         }
       ],
-      "source_text_path": "",
+      "source_text_path": "texts/yijing/hexagram_60_jie.txt",
       "complement_binary": "001101",
       "complement_hexagram": 56,
       "reverse_binary": "010011",
@@ -8075,7 +8075,7 @@
           "score": 0
         }
       ],
-      "source_text_path": "",
+      "source_text_path": "texts/yijing/hexagram_61_zhongfu.txt",
       "complement_binary": "001100",
       "complement_hexagram": 62,
       "reverse_binary": "110011",
@@ -8217,7 +8217,7 @@
           "score": 0
         }
       ],
-      "source_text_path": "",
+      "source_text_path": "texts/yijing/hexagram_62_xiaoguo.txt",
       "complement_binary": "110011",
       "complement_hexagram": 61,
       "reverse_binary": "001100",
@@ -8359,7 +8359,7 @@
           "score": 0
         }
       ],
-      "source_text_path": "",
+      "source_text_path": "texts/yijing/hexagram_63_jiji.txt",
       "complement_binary": "010101",
       "complement_hexagram": 64,
       "reverse_binary": "010101",
@@ -8501,7 +8501,7 @@
           "score": 0
         }
       ],
-      "source_text_path": "",
+      "source_text_path": "texts/yijing/hexagram_64_weiji.txt",
       "complement_binary": "101010",
       "complement_hexagram": 63,
       "reverse_binary": "101010",

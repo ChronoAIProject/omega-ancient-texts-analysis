@@ -1,6 +1,6 @@
 ---
 title: "44. 姤 / Gou"
-subtitle: "I Ching Hexagram Dossier"
+subtitle: "I Ching Hexagram Page"
 order: 44
 description: "Hexagram 44 姤 as `011111`, fold-required, categories 动态变易与循环 / 聚散与流通."
 categories: [i-ching, hexagram-dossier, cultural, omega]
@@ -24,11 +24,26 @@ categories: [i-ching, hexagram-dossier, cultural, omega]
 
 在当前的 Omega 文化映射计划里，第 44 卦 姤 首先不是被当作抽象象义，而是被当作二元词 `011111` 来读取。该卦不在 `X_6` 内，因此其第一层数学位置是 raw 6-bit word，而不是 stable word。 它包含长阳串，因此第一层读法不是 stable word，而是需要经 fold 才能进入稳定域的 raw word。 它目前横跨的主题类别是 动态变易与循环、聚散与流通，因此其 strongest reading corridor 集中在 dynamical-systems、golden-mean-shift、fold-operator、rate-distortion-information-theory、modular-tower-inverse-limit 这些方向上。
 
+## 对应说明
+
+这一页保留原文，不是为了把卦辞和爻辞逐句翻译成公式，而是为了固定该卦的语义张力实际落在什么结构位置上。它不直接落在 `X_6` 内，因此原文在这里首先对应的是 raw word 的极端、临界或过载位置，数学上要先经过 `Fold : Word 6 → X_6` 才能进入稳定域。 在 Lean 锚点上，本页最强地落向 `topological_entropy_eq_log_phi` 与 `goldenMeanAdjacency_has_goldenRatio_eigenvector`。
+
 ## Omega 对象
 
 - `Word 6 = {0,1}^6`
 - `Fold : Word 6 → X_6` entry corridor
 - 当前主方向：dynamical-systems, golden-mean-shift, fold-operator, rate-distortion-information-theory, modular-tower-inverse-limit
+
+## 原文锚点
+
+> 姤：女壯，勿用取女。
+> 初六：系于金柅，貞吉，有攸往，見凶，羸豕孚踟躅。
+> 九二：包有魚，无咎，不利賓。
+> 九三：臀无膚，其行次且，厲，无大咎。
+> 彖曰：
+> 姤，遇也，柔遇剛也。勿用取女，不可與長也。天地相遇，品物咸章也。剛遇中正，天下大行也。姤之時義大矣哉！
+> 象曰：
+> 天下有風，姤；后以施命誥四方。
 
 ## Omega 定理锚点
 
@@ -38,11 +53,13 @@ categories: [i-ching, hexagram-dossier, cultural, omega]
 - `fibonacci_cardinality` [`Omega.Frontier.ConditionalArithmetic`]：`theorem fibonacci_cardinality (m : Nat) :     Fintype.card (X m) = Nat.fib (m + 2)`。把稳定词空间的计数压到 `|X_m| = F_{m+2}`，适合解释卦系在单一约束下的增长。
 - `fibonacci_cardinality_recurrence` [`Omega.Frontier.ConditionalArithmetic`]：`theorem fibonacci_cardinality_recurrence (m : Nat) :     Fintype.card (X (m + 2)) = Fintype.card (X (m + 1)) + Fintype.card (X m)`。把增长写成前两级之和，适合解释由少量初始状态递归展开的结构。
 
-## 语料状态
+## 原文来源
 
-- 当前本地语料库还没有该卦的单独原文文件。
-- 本页因此暂时采取“结构 dossier”写法：先锁定 binary / theorem / category 位置，再等待原文补齐后扩写。
+- 本仓库原文文件：`texts/yijing/hexagram_44_gou.txt`
+- 原文来自维基文库《周易》分卦页，经规范化后入库。
 
 ## 小结
 
-这一页不是终稿长文，而是逐卦展开的正式底稿：它先把卦位、位串、分类交叉和 theorem anchor 锁死，之后再叠加原文细读与更细的传统注疏材料。
+这一页已经构成逐卦层的正式发布单元：它把原文锚点、位串结构、类别交叉与 theorem anchor 放在同一坐标系里，重点不是替代传统注疏，而是展示该卦与 Omega 数学结构之间最可点名的映射位置。
+
+[Back to Hexagram Index](index.qmd) | [Back to I Ching Index](../index.qmd)

@@ -1,6 +1,6 @@
 ---
 title: "47. 困 / Kun"
-subtitle: "I Ching Hexagram Dossier"
+subtitle: "I Ching Hexagram Page"
 order: 47
 description: "Hexagram 47 困 as `010110`, fold-required, categories 困阻与险难 / 明照与分辨 / 聚散与流通."
 categories: [i-ching, hexagram-dossier, cultural, omega]
@@ -24,11 +24,26 @@ categories: [i-ching, hexagram-dossier, cultural, omega]
 
 在当前的 Omega 文化映射计划里，第 47 卦 困 首先不是被当作抽象象义，而是被当作二元词 `010110` 来读取。该卦不在 `X_6` 内，因此其第一层数学位置是 raw 6-bit word，而不是 stable word。 它虽不是极端全阳，但已出现连续阳段，因此其形式位置是 fold 之前的临界或过载态。 它目前横跨的主题类别是 困阻与险难、明照与分辨、聚散与流通，因此其 strongest reading corridor 集中在 golden-mean-shift、fold-operator、fiber-structure、spectral-theory、modular-tower-inverse-limit、rate-distortion-information-theory 这些方向上。
 
+## 对应说明
+
+这一页保留原文，不是为了把卦辞和爻辞逐句翻译成公式，而是为了固定该卦的语义张力实际落在什么结构位置上。它不直接落在 `X_6` 内，因此原文在这里首先对应的是 raw word 的极端、临界或过载位置，数学上要先经过 `Fold : Word 6 → X_6` 才能进入稳定域。 在 Lean 锚点上，本页最强地落向 `fibonacci_cardinality` 与 `fibonacci_cardinality_recurrence`。
+
 ## Omega 对象
 
 - `Word 6 = {0,1}^6`
 - `Fold : Word 6 → X_6` entry corridor
 - 当前主方向：golden-mean-shift, fold-operator, fiber-structure, spectral-theory, modular-tower-inverse-limit, rate-distortion-information-theory
+
+## 原文锚点
+
+> alt=䷮ 坎下兌上
+> 困：亨，貞大人吉，无咎，有言不信。
+> 初六：臀困于株木，入于幽谷，三歲不覿。
+> 九二：困于酒食，朱紱方來，利用亨祀，征凶，无咎。
+> 彖曰：
+> 困，剛掩也。險以說，困而不失其所，亨；其唯君子乎？ 貞大人吉，以剛中也。有言不信，尚口乃窮也。
+> 象曰：
+> 澤无水，困；君子以致命遂志。
 
 ## Omega 定理锚点
 
@@ -38,11 +53,13 @@ categories: [i-ching, hexagram-dossier, cultural, omega]
 - `fold_is_idempotent` [`Omega.Frontier.ConditionalArithmetic`]：`theorem fold_is_idempotent (w : Word m) : Fold (Fold w).1 = Fold w`。说明 fold 一旦把原始词折回稳定域，再施一次不会继续改写。
 - `fold_fixes_stable` [`Omega.Frontier.ConditionalArithmetic`]：`theorem fold_fixes_stable (x : X m) : Fold x.1 = x`。说明已经稳定的卦象在 fold 下保持不动，适合区分 stable word 与 raw word。
 
-## 语料状态
+## 原文来源
 
-- 当前本地语料库还没有该卦的单独原文文件。
-- 本页因此暂时采取“结构 dossier”写法：先锁定 binary / theorem / category 位置，再等待原文补齐后扩写。
+- 本仓库原文文件：`texts/yijing/hexagram_47_kun.txt`
+- 原文来自维基文库《周易》分卦页，经规范化后入库。
 
 ## 小结
 
-这一页不是终稿长文，而是逐卦展开的正式底稿：它先把卦位、位串、分类交叉和 theorem anchor 锁死，之后再叠加原文细读与更细的传统注疏材料。
+这一页已经构成逐卦层的正式发布单元：它把原文锚点、位串结构、类别交叉与 theorem anchor 放在同一坐标系里，重点不是替代传统注疏，而是展示该卦与 Omega 数学结构之间最可点名的映射位置。
+
+[Back to Hexagram Index](index.qmd) | [Back to I Ching Index](../index.qmd)

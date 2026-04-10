@@ -1,6 +1,6 @@
 ---
 title: "01. 乾 / Qian"
-subtitle: "I Ching Hexagram Dossier"
+subtitle: "I Ching Hexagram Page"
 order: 1
 description: "Hexagram 1 乾 as `111111`, fold-required, categories 创生与纯态."
 categories: [i-ching, hexagram-dossier, cultural, omega]
@@ -24,11 +24,26 @@ categories: [i-ching, hexagram-dossier, cultural, omega]
 
 在当前的 Omega 文化映射计划里，第 1 卦 乾 首先不是被当作抽象象义，而是被当作二元词 `111111` 来读取。该卦不在 `X_6` 内，因此其第一层数学位置是 raw 6-bit word，而不是 stable word。 它是整个 6-bit 卦系里的全阳极值词，也是离 `No11` 稳定域最远的极端配置。 它目前横跨的主题类别是 创生与纯态，因此其 strongest reading corridor 集中在 golden-mean-shift、fibonacci-growth、modular-tower-inverse-limit 这些方向上。
 
+## 对应说明
+
+这一页保留原文，不是为了把卦辞和爻辞逐句翻译成公式，而是为了固定该卦的语义张力实际落在什么结构位置上。它不直接落在 `X_6` 内，因此原文在这里首先对应的是 raw word 的极端、临界或过载位置，数学上要先经过 `Fold : Word 6 → X_6` 才能进入稳定域。 在 Lean 锚点上，本页最强地落向 `fibonacci_cardinality` 与 `fibonacci_cardinality_recurrence`。
+
 ## Omega 对象
 
 - `Word 6 = {0,1}^6`
 - `Fold : Word 6 → X_6` entry corridor
 - 当前主方向：golden-mean-shift, fibonacci-growth, modular-tower-inverse-limit
+
+## 原文锚点
+
+> 乾：元亨。利貞。
+> 初九：潛龍勿用。
+> 九二：見龍在田，利見大人。
+> 九三：君子終日乾乾，夕惕若；厲，无咎。
+> 彖曰：
+> 大哉乾元，萬物資始，乃統天。雲行雨施，品物流形，大明終始，六位時成。
+> 象曰：
+> 天行健，君子以自強不息。
 
 ## Omega 定理锚点
 
@@ -38,11 +53,13 @@ categories: [i-ching, hexagram-dossier, cultural, omega]
 - `inverse_limit_extensionality` [`Omega.Frontier.ConditionalArithmetic`]：`theorem inverse_limit_extensionality (a b : X.XInfinity) :     a = b ↔ ∀ m, X.prefixWord a m = X.prefixWord b m`。说明整体是否相同完全由全部前缀是否相同决定，适合解释层级兼容。
 - `inverse_limit_bijective` [`Omega.Frontier.ConditionalSummary`]：`theorem inverse_limit_bijective :     Function.Bijective (X.ofFamily : X.CompatibleFamily → X.XInfinity)`。说明 compatible family 与逆极限对象之间是双射，适合解释整体由有限层闭合产生。
 
-## 语料状态
+## 原文来源
 
-- 已有本地原文文件：`texts/yijing/hexagram_01_qian.txt`
-- 这一页可以继续往完整逐卦长文扩展，不需要再补基础元数据。
+- 本仓库原文文件：`texts/yijing/hexagram_01_qian.txt`
+- 原文来自维基文库《周易》分卦页，经规范化后入库。
 
 ## 小结
 
-这一页不是终稿长文，而是逐卦展开的正式底稿：它先把卦位、位串、分类交叉和 theorem anchor 锁死，之后再叠加原文细读与更细的传统注疏材料。
+这一页已经构成逐卦层的正式发布单元：它把原文锚点、位串结构、类别交叉与 theorem anchor 放在同一坐标系里，重点不是替代传统注疏，而是展示该卦与 Omega 数学结构之间最可点名的映射位置。
+
+[Back to Hexagram Index](index.qmd) | [Back to I Ching Index](../index.qmd)

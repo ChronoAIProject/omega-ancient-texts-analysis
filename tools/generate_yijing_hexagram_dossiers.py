@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -84,6 +85,101 @@ def mapping_position(item: dict) -> str:
     )
 
 
+def load_source_lines(path_str: str) -> list[str]:
+    """Load source-text lines without local notes."""
+    if not path_str:
+        return []
+    path = REPO_ROOT / path_str
+    if not path.exists():
+        return []
+
+    lines = []
+    for raw_line in path.read_text(encoding="utf-8").splitlines():
+        line = raw_line.strip()
+        if not line:
+            continue
+        if line == "--- Notes ---":
+            break
+        lines.append(line)
+    return lines
+
+
+def source_anchor_lines(path_str: str) -> list[str]:
+    """Select compact source anchors for the page."""
+    lines = load_source_lines(path_str)
+    if not lines:
+        return []
+
+    content = []
+    heading_pattern = re.compile(r"^.+\s—\s第\d+卦$")
+    for line in lines:
+        if heading_pattern.match(line):
+            continue
+        if line == "易經：":
+            continue
+        if re.fullmatch(r"[乾兌离離震巽坎艮坤无妄需訟訟比剝復夬姤咸恆遯晉明夷家人睽蹇解損益困井革鼎旅渙中孚小過既濟未濟]+下[乾兌离離震巽坎艮坤无妄需訟訟比剝復夬姤咸恆遯晉明夷家人睽蹇解損益困井革鼎旅渙中孚小過既濟未濟]+上", line):
+            continue
+        content.append(line)
+
+    anchors = []
+    before_commentary = []
+    for line in content:
+        if line in {"彖曰：", "象曰：", "文言曰："}:
+            break
+        before_commentary.append(line)
+    anchors.extend(before_commentary[:4])
+
+    for marker in ("彖曰：", "象曰："):
+        if marker in content:
+            idx = content.index(marker)
+            anchors.append(marker)
+            if idx + 1 < len(content):
+                anchors.append(content[idx + 1])
+
+    return anchors[:8]
+
+
+def source_anchor_section(item: dict) -> list[str]:
+    """Render source anchors if available."""
+    lines = ["## 原文锚点", ""]
+    anchors = source_anchor_lines(item.get("source_text_path", ""))
+    if not anchors:
+        lines.append("- 当前页还没有抽出原文锚点。")
+        lines.append("")
+        return lines
+
+    for line in anchors:
+        lines.append(f"> {line}")
+    lines.append("")
+    return lines
+
+
+def source_mapping_comment(item: dict) -> str:
+    """Explain how the source anchors connect to the math mapping."""
+    theorem_names = [candidate["lean_theorem"] for candidate in item.get("theorem_candidates", [])[:2]]
+    theorem_clause = (
+        f"在 Lean 锚点上，本页最强地落向 `{theorem_names[0]}` 与 `{theorem_names[1]}`。"
+        if len(theorem_names) >= 2
+        else f"在 Lean 锚点上，本页目前主要落向 `{theorem_names[0]}`。"
+        if theorem_names
+        else "在 Lean 锚点上，本页目前仍以类别级对应为主。"
+    )
+    if item["gms_valid"]:
+        domain_clause = (
+            "它已经直接落在 `X_6` 内，因此原文在这里首先对应的是一个稳定词的内部差异，"
+            "而不是先经过 fold 才能成立的外部修正。"
+        )
+    else:
+        domain_clause = (
+            "它不直接落在 `X_6` 内，因此原文在这里首先对应的是 raw word 的极端、临界或过载位置，"
+            "数学上要先经过 `Fold : Word 6 → X_6` 才能进入稳定域。"
+        )
+    return (
+        "这一页保留原文，不是为了把卦辞和爻辞逐句翻译成公式，而是为了固定该卦的语义张力实际落在什么结构位置上。"
+        f"{domain_clause} {theorem_clause}"
+    )
+
+
 def theorem_section(item: dict) -> list[str]:
     """Render a compact theorem-anchor section."""
     lines = ["## Omega 定理锚点", ""]
@@ -106,14 +202,14 @@ def theorem_section(item: dict) -> list[str]:
 
 
 def corpus_status(item: dict) -> list[str]:
-    """Render text-source status honestly."""
-    lines = ["## 语料状态", ""]
+    """Render source information compactly."""
+    lines = ["## 原文来源", ""]
     if item["source_text_path"]:
-        lines.append(f"- 已有本地原文文件：`{item['source_text_path']}`")
-        lines.append("- 这一页可以继续往完整逐卦长文扩展，不需要再补基础元数据。")
+        lines.append(f"- 本仓库原文文件：`{item['source_text_path']}`")
+        lines.append("- 原文来自维基文库《周易》分卦页，经规范化后入库。")
     else:
-        lines.append("- 当前本地语料库还没有该卦的单独原文文件。")
-        lines.append("- 本页因此暂时采取“结构 dossier”写法：先锁定 binary / theorem / category 位置，再等待原文补齐后扩写。")
+        lines.append("- 当前仓库还没有该卦的单独原文文件。")
+        lines.append("- 当前页面仍只显示结构层和 theorem 层映射。")
     lines.append("")
     return lines
 
@@ -128,7 +224,7 @@ def render_dossier(item: dict) -> str:
     lines = [
         "---",
         f'title: "{item["number"]:02d}. {item["name_zh"]} / {item["pinyin"].title()}"',
-        'subtitle: "I Ching Hexagram Dossier"',
+        'subtitle: "I Ching Hexagram Page"',
         f"order: {item['number']}",
         f'description: "{description}"',
         "categories: [i-ching, hexagram-dossier, cultural, omega]",
@@ -152,6 +248,10 @@ def render_dossier(item: dict) -> str:
         "",
         mapping_position(item),
         "",
+        "## 对应说明",
+        "",
+        source_mapping_comment(item),
+        "",
         "## Omega 对象",
         "",
         "- `Word 6 = {0,1}^6`",
@@ -159,14 +259,17 @@ def render_dossier(item: dict) -> str:
         f"- 当前主方向：{', '.join(item['omega_directions']) if item['omega_directions'] else '基础位串结构'}",
         "",
     ]
+    lines.extend(source_anchor_section(item))
     lines.extend(theorem_section(item))
     lines.extend(corpus_status(item))
     lines.extend(
         [
             "## 小结",
             "",
-            "这一页不是终稿长文，而是逐卦展开的正式底稿：它先把卦位、位串、分类交叉和 theorem anchor 锁死，"
-            "之后再叠加原文细读与更细的传统注疏材料。",
+            "这一页已经构成逐卦层的正式发布单元：它把原文锚点、位串结构、类别交叉与 theorem anchor 放在同一坐标系里，"
+            "重点不是替代传统注疏，而是展示该卦与 Omega 数学结构之间最可点名的映射位置。",
+            "",
+            "[Back to Hexagram Index](index.qmd) | [Back to I Ching Index](../index.qmd)",
             "",
         ]
     )

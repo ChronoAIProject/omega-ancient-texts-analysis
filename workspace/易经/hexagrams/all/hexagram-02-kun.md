@@ -1,6 +1,6 @@
 ---
 title: "02. 坤 / Kun"
-subtitle: "I Ching Hexagram Dossier"
+subtitle: "I Ching Hexagram Page"
 order: 2
 description: "Hexagram 2 坤 as `000000`, GMS-valid, categories 创生与纯态."
 categories: [i-ching, hexagram-dossier, cultural, omega]
@@ -24,11 +24,26 @@ categories: [i-ching, hexagram-dossier, cultural, omega]
 
 在当前的 Omega 文化映射计划里，第 2 卦 坤 首先不是被当作抽象象义，而是被当作二元词 `000000` 来读取。该卦直接位于 `X_6` 内，因此不需要先经过 fold 才能进入稳定域。 它是整个 6-bit 卦系里的 zero word，也是唯一完全没有阳位的稳定词。 它目前横跨的主题类别是 创生与纯态，因此其 strongest reading corridor 集中在 golden-mean-shift、fibonacci-growth、modular-tower-inverse-limit 这些方向上。
 
+## 对应说明
+
+这一页保留原文，不是为了把卦辞和爻辞逐句翻译成公式，而是为了固定该卦的语义张力实际落在什么结构位置上。它已经直接落在 `X_6` 内，因此原文在这里首先对应的是一个稳定词的内部差异，而不是先经过 fold 才能成立的外部修正。 在 Lean 锚点上，本页最强地落向 `fibonacci_cardinality` 与 `fibonacci_cardinality_recurrence`。
+
 ## Omega 对象
 
 - `Word 6 = {0,1}^6`
 - `X_6` stable subspace
 - 当前主方向：golden-mean-shift, fibonacci-growth, modular-tower-inverse-limit
+
+## 原文锚点
+
+> 坤：元亨。利牝馬之貞。
+> 君子有攸往，先迷後得主。
+> 利西南得朋，東北喪朋。安貞，吉。
+> 初六：履霜，堅冰至。
+> 彖曰：
+> 至哉坤元，萬物資生，乃順承天。坤厚載物，德合无疆；含弘光大，品物咸亨。牝馬地類，行地无疆，柔順利貞。
+> 象曰：
+> 地勢坤，君子以厚德載物。
 
 ## Omega 定理锚点
 
@@ -38,11 +53,13 @@ categories: [i-ching, hexagram-dossier, cultural, omega]
 - `inverse_limit_extensionality` [`Omega.Frontier.ConditionalArithmetic`]：`theorem inverse_limit_extensionality (a b : X.XInfinity) :     a = b ↔ ∀ m, X.prefixWord a m = X.prefixWord b m`。说明整体是否相同完全由全部前缀是否相同决定，适合解释层级兼容。
 - `inverse_limit_bijective` [`Omega.Frontier.ConditionalSummary`]：`theorem inverse_limit_bijective :     Function.Bijective (X.ofFamily : X.CompatibleFamily → X.XInfinity)`。说明 compatible family 与逆极限对象之间是双射，适合解释整体由有限层闭合产生。
 
-## 语料状态
+## 原文来源
 
-- 当前本地语料库还没有该卦的单独原文文件。
-- 本页因此暂时采取“结构 dossier”写法：先锁定 binary / theorem / category 位置，再等待原文补齐后扩写。
+- 本仓库原文文件：`texts/yijing/hexagram_02_kun.txt`
+- 原文来自维基文库《周易》分卦页，经规范化后入库。
 
 ## 小结
 
-这一页不是终稿长文，而是逐卦展开的正式底稿：它先把卦位、位串、分类交叉和 theorem anchor 锁死，之后再叠加原文细读与更细的传统注疏材料。
+这一页已经构成逐卦层的正式发布单元：它把原文锚点、位串结构、类别交叉与 theorem anchor 放在同一坐标系里，重点不是替代传统注疏，而是展示该卦与 Omega 数学结构之间最可点名的映射位置。
+
+[Back to Hexagram Index](index.qmd) | [Back to I Ching Index](../index.qmd)
