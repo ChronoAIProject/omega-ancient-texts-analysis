@@ -14,8 +14,8 @@
 | # | 主题 | 主定理核 | 当前状态 |
 |---|---|---|---|
 | 01 | No11 / Golden-Mean Shift | `fibonacci_cardinality` | drafted |
-| 02 | Fibonacci 递推增长 | `fibonacci_cardinality_recurrence` | planned |
-| 03 | Fold 算子 | `fold_is_idempotent` | planned |
+| 02 | Fibonacci 递推增长 | `fibonacci_cardinality_recurrence` | drafted |
+| 03 | Fold 算子 | `fold_is_idempotent` | drafted |
 | 04 | Zeckendorf 唯一分解 | `zeckendorf_uniqueness` | planned |
 | 05 | Inverse limit / modular tower | `inverse_limit_extensionality` | planned |
 | 06 | 谱结构 | `goldenMeanAdjacency_has_goldenRatio_eigenvector` | planned |
@@ -28,3 +28,5 @@
 
 - [registry.json](/Users/lexa/Desktop/lexa/omega/omega-ancient-texts-analysis/workspace/synthesis/registry.json)
 - [synthesis_01_no11_golden_mean_shift.md](/Users/lexa/Desktop/lexa/omega/omega-ancient-texts-analysis/workspace/synthesis/synthesis_01_no11_golden_mean_shift.md)
+- [synthesis_02_fibonacci_growth_recurrence.md](/Users/lexa/Desktop/lexa/omega/omega-ancient-texts-analysis/workspace/synthesis/synthesis_02_fibonacci_growth_recurrence.md)
+- [synthesis_03_fold_operator.md](/Users/lexa/Desktop/lexa/omega/omega-ancient-texts-analysis/workspace/synthesis/synthesis_03_fold_operator.md)

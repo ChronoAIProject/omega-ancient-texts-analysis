@@ -38,8 +38,19 @@
       "support_theorems": [
         "goldenMean_characteristic_recurrence"
       ],
-      "works": ["道德经", "易经", "黄帝内经", "几何原本"],
-      "status": "planned"
+      "works": [
+        "道德经",
+        "易经",
+        "孙子兵法",
+        "黄帝内经",
+        "几何原本"
+      ],
+      "paper_refs": [
+        "fibonacci-stabilization-sharp-threshold-conjugacy-nonlinearity",
+        "resolution-folding-core-symbolic-dynamics"
+      ],
+      "status": "drafted",
+      "file": "workspace/synthesis/synthesis_02_fibonacci_growth_recurrence.md"
     },
     {
       "id": 3,
@@ -51,8 +62,19 @@
         "fold_fixes_stable",
         "fold_is_surjective"
       ],
-      "works": ["道德经", "易经", "孙子兵法", "黄帝内经", "几何原本"],
-      "status": "planned"
+      "works": [
+        "道德经",
+        "易经",
+        "孙子兵法",
+        "黄帝内经",
+        "几何原本"
+      ],
+      "paper_refs": [
+        "resolution-folding-core-symbolic-dynamics",
+        "fibonacci-stabilization-sharp-threshold-conjugacy-nonlinearity"
+      ],
+      "status": "drafted",
+      "file": "workspace/synthesis/synthesis_03_fold_operator.md"
     },
     {
       "id": 4,
