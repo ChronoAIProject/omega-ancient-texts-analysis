@@ -16,13 +16,13 @@
 | 01 | No11 / Golden-Mean Shift | `fibonacci_cardinality` | drafted |
 | 02 | Fibonacci 递推增长 | `fibonacci_cardinality_recurrence` | drafted |
 | 03 | Fold 算子 | `fold_is_idempotent` | drafted |
-| 04 | Zeckendorf 唯一分解 | `zeckendorf_uniqueness` | planned |
-| 05 | Inverse limit / modular tower | `inverse_limit_extensionality` | planned |
-| 06 | 谱结构 | `goldenMeanAdjacency_has_goldenRatio_eigenvector` | planned |
-| 07 | Rate-distortion | `scanError_hasCertificate` 等 | planned |
-| 08 | 环算术 | `stableValue_ring_isomorphism` | planned |
-| 09 | 动力系统 | `topological_entropy_eq_log_phi` / `restrict` 族 | planned |
-| 10 | Fiber / scan / observation | `observation_refinement_reduces_error` | planned |
+| 04 | Zeckendorf 唯一分解 | `zeckendorf_uniqueness` | drafted |
+| 05 | Inverse limit / modular tower | `inverse_limit_extensionality` | drafted |
+| 06 | 谱结构 | `goldenMeanAdjacency_has_goldenRatio_eigenvector` | drafted |
+| 07 | Rate-distortion | `scanError_hasCertificate` 等 | drafted |
+| 08 | 环算术 | `stableValue_ring_isomorphism` | drafted |
+| 09 | 动力系统 | `topological_entropy_eq_log_phi` / `restrict` 族 | drafted |
+| 10 | Fiber / scan / observation | `observation_refinement_reduces_error` | drafted |
 
 当前文件：
 
@@ -30,3 +30,10 @@
 - [synthesis_01_no11_golden_mean_shift.md](/Users/lexa/Desktop/lexa/omega/omega-ancient-texts-analysis/workspace/synthesis/synthesis_01_no11_golden_mean_shift.md)
 - [synthesis_02_fibonacci_growth_recurrence.md](/Users/lexa/Desktop/lexa/omega/omega-ancient-texts-analysis/workspace/synthesis/synthesis_02_fibonacci_growth_recurrence.md)
 - [synthesis_03_fold_operator.md](/Users/lexa/Desktop/lexa/omega/omega-ancient-texts-analysis/workspace/synthesis/synthesis_03_fold_operator.md)
+- [synthesis_04_zeckendorf_uniqueness.md](/Users/lexa/Desktop/lexa/omega/omega-ancient-texts-analysis/workspace/synthesis/synthesis_04_zeckendorf_uniqueness.md)
+- [synthesis_05_inverse_limit_modular_tower.md](/Users/lexa/Desktop/lexa/omega/omega-ancient-texts-analysis/workspace/synthesis/synthesis_05_inverse_limit_modular_tower.md)
+- [synthesis_06_spectral_theory.md](/Users/lexa/Desktop/lexa/omega/omega-ancient-texts-analysis/workspace/synthesis/synthesis_06_spectral_theory.md)
+- [synthesis_07_rate_distortion.md](/Users/lexa/Desktop/lexa/omega/omega-ancient-texts-analysis/workspace/synthesis/synthesis_07_rate_distortion.md)
+- [synthesis_08_ring_arithmetic.md](/Users/lexa/Desktop/lexa/omega/omega-ancient-texts-analysis/workspace/synthesis/synthesis_08_ring_arithmetic.md)
+- [synthesis_09_dynamical_systems.md](/Users/lexa/Desktop/lexa/omega/omega-ancient-texts-analysis/workspace/synthesis/synthesis_09_dynamical_systems.md)
+- [synthesis_10_fiber_scan_observation.md](/Users/lexa/Desktop/lexa/omega/omega-ancient-texts-analysis/workspace/synthesis/synthesis_10_fiber_scan_observation.md)

@@ -85,8 +85,19 @@
       "support_theorems": [
         "zeckendorf_injective"
       ],
-      "works": ["道德经", "易经", "孙子兵法", "黄帝内经", "几何原本"],
-      "status": "planned"
+      "works": [
+        "道德经",
+        "易经",
+        "孙子兵法",
+        "黄帝内经",
+        "几何原本"
+      ],
+      "paper_refs": [
+        "zeckendorf-streaming-normalization-automata-rairo",
+        "resolution-folding-core-symbolic-dynamics"
+      ],
+      "status": "drafted",
+      "file": "workspace/synthesis/synthesis_04_zeckendorf_uniqueness.md"
     },
     {
       "id": 5,
@@ -98,8 +109,19 @@
         "inverse_limit_bijective",
         "inverse_limit_left"
       ],
-      "works": ["道德经", "易经", "黄帝内经", "几何原本"],
-      "status": "planned"
+      "works": [
+        "道德经",
+        "易经",
+        "孙子兵法",
+        "黄帝内经",
+        "几何原本"
+      ],
+      "paper_refs": [
+        "grg-shell-geometry-from-stationary-detector-thermality",
+        "fibonacci-stabilization-sharp-threshold-conjugacy-nonlinearity"
+      ],
+      "status": "drafted",
+      "file": "workspace/synthesis/synthesis_05_inverse_limit_modular_tower.md"
     },
     {
       "id": 6,
@@ -111,8 +133,19 @@
         "topological_entropy_eq_log_phi",
         "eigenvalue_eq_goldenRatio_or_goldenConj"
       ],
-      "works": ["易经", "孙子兵法", "黄帝内经"],
-      "status": "planned"
+      "works": [
+        "道德经",
+        "易经",
+        "孙子兵法",
+        "黄帝内经",
+        "几何原本"
+      ],
+      "paper_refs": [
+        "zero-jitter-information-clocks-parry-gibbs-rigidity",
+        "fibonacci-stabilization-sharp-threshold-conjugacy-nonlinearity"
+      ],
+      "status": "drafted",
+      "file": "workspace/synthesis/synthesis_06_spectral_theory.md"
     },
     {
       "id": 7,
@@ -124,8 +157,19 @@
         "observation_refinement_reduces_error",
         "prefix_resolution_decreases_error"
       ],
-      "works": ["道德经", "孙子兵法", "黄帝内经", "几何原本"],
-      "status": "planned"
+      "works": [
+        "道德经",
+        "易经",
+        "孙子兵法",
+        "黄帝内经",
+        "几何原本"
+      ],
+      "paper_refs": [
+        "folded-rotation-histogram-certificates",
+        "grg-shell-geometry-from-stationary-detector-thermality"
+      ],
+      "status": "drafted",
+      "file": "workspace/synthesis/synthesis_07_rate_distortion.md"
     },
     {
       "id": 8,
@@ -137,8 +181,19 @@
         "modular_projection_add_no_carry",
         "stableAdd_comm"
       ],
-      "works": ["易经", "黄帝内经", "几何原本"],
-      "status": "planned"
+      "works": [
+        "道德经",
+        "易经",
+        "孙子兵法",
+        "黄帝内经",
+        "几何原本"
+      ],
+      "paper_refs": [
+        "fibonacci-moduli-cross-resolution-arithmetic",
+        "resolution-folding-core-symbolic-dynamics"
+      ],
+      "status": "drafted",
+      "file": "workspace/synthesis/synthesis_08_ring_arithmetic.md"
     },
     {
       "id": 9,
@@ -147,10 +202,22 @@
       "title_en": "Seasons, Reversal, and Strategic Dynamics",
       "primary_theorem": "topological_entropy_eq_log_phi",
       "support_theorems": [
-        "goldenMean_characteristic_recurrence"
+        "goldenMean_characteristic_recurrence",
+        "restrict_tower_transitivity"
       ],
-      "works": ["道德经", "易经", "黄帝内经", "孙子兵法"],
-      "status": "planned"
+      "works": [
+        "道德经",
+        "易经",
+        "孙子兵法",
+        "黄帝内经",
+        "几何原本"
+      ],
+      "paper_refs": [
+        "zero-jitter-information-clocks-parry-gibbs-rigidity",
+        "fibonacci-stabilization-sharp-threshold-conjugacy-nonlinearity"
+      ],
+      "status": "drafted",
+      "file": "workspace/synthesis/synthesis_09_dynamical_systems.md"
     },
     {
       "id": 10,
@@ -162,8 +229,19 @@
         "prefix_resolution_decreases_error",
         "maxFiberMultiplicity_bounds"
       ],
-      "works": ["道德经", "易经", "黄帝内经", "孙子兵法"],
-      "status": "planned"
+      "works": [
+        "道德经",
+        "易经",
+        "孙子兵法",
+        "黄帝内经",
+        "几何原本"
+      ],
+      "paper_refs": [
+        "folded-rotation-histogram-certificates",
+        "grg-shell-geometry-from-stationary-detector-thermality"
+      ],
+      "status": "drafted",
+      "file": "workspace/synthesis/synthesis_10_fiber_scan_observation.md"
     }
   ]
 }
