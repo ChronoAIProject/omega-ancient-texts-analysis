@@ -46,6 +46,13 @@
 
 因此，第40、16、25、52章强于第50章；第14、56、65章是认识论与工夫论支撑。凡文本明确谈“复”“反”“守母”“归根”，且把它们当作秩序成立方式而非怀旧情绪时，形式对应就更稳。
 
+## Omega 定理锚点
+
+- `topological_entropy_eq_log_phi` [`Omega.Folding.Entropy`]：`theorem topological_entropy_eq_log_phi : Tendsto (fun n => Real.log (Nat.fib (n + 2) : ℝ) / (n : ℝ)) atTop (𝓝 (Real.log φ))`。把系统复杂度增长率写成 `log φ`，支撑本文关于变易具有受控节律而非任意散乱的判断。
+- `inverse_limit_extensionality` [`Omega.Frontier.ConditionalArithmetic`]：`theorem inverse_limit_extensionality (a b : X.XInfinity) : a = b ↔ ∀ m, X.prefixWord a m = X.prefixWord b m`。说明无限对象是否相同，完全由全部有限前缀是否一致决定，支撑本文的层级拼接与兼容家族读法。
+
+这些定理不替代文本解释，但它们把本文最核心的对应从“方向级相似”推进到了“可点名的 Lean 形式结果”。
+
 ## 结论
 
 《道德经》的“回归”不是消极退缩，而是一种对复杂系统本性的深刻把握：所有真正稳定的展开，都必须保留回返根基的路径；所有真正持久的运动，都不是只朝一个方向冲刺，而是在展开、收束、再展开之间形成闭合秩序。Omega 的逆极限与动力系统把这一点形式化了出来。`restrict` 说明更高层总含回返；周期轨道说明回返可以成为系统的不变量。于是“反者道之动”便不再只是玄学格言，而成为一种极严密的结构判断：没有反，就没有真正的动；没有复，就没有真正的成。

@@ -1,0 +1,14 @@
+道德经 — 第51章
+
+道生之，德畜之，物形之，勢成之。
+是以萬物莫不尊道而貴德。
+道之尊，德之貴，夫莫之命而常自然。
+故道生之，德畜之。長之育之，亭之毒之，蓋之覆之。
+生而不有，為而不恃，
+長而不宰。是謂玄德。
+
+--- Notes ---
+Source: 維基文庫《道德經（王弼本）》
+Chapter: 51
+Incipit: 道生之，德畜之，物形之，勢成之。
+Acquisition: fetched from Wikisource raw page and split into local chapter files.

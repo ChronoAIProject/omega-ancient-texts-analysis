@@ -1,0 +1,10 @@
+道德经 — 第11章
+
+三十輻共一轂，當其無，有車之用。
+埏埴以為器，當其無，有器之用。鑿戶牖以為室，當其無，有室之用。故有之以為利，無之以為用。
+
+--- Notes ---
+Source: 維基文庫《道德經（王弼本）》
+Chapter: 11
+Incipit: 三十輻共一轂，當其無，有車之用。
+Acquisition: fetched from Wikisource raw page and split into local chapter files.

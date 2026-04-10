@@ -1,0 +1,13 @@
+道德经 — 第68章
+
+善為士者不武，
+善戰者不怒，
+善勝敵者不與，
+善用人者為之下，是謂不爭之德，是謂用人之力，
+是謂配天古之極。
+
+--- Notes ---
+Source: 維基文庫《道德經（王弼本）》
+Chapter: 68
+Incipit: 善為士者不武，
+Acquisition: fetched from Wikisource raw page and split into local chapter files.

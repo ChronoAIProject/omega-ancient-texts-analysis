@@ -1,0 +1,13 @@
+道德经 — 第57章
+
+以正治國，以奇用兵，以無事取天下。
+吾何以知其然哉？以此。天下多忌諱，而民彌貧；民多利器，國家滋昬；
+人多伎巧，奇物滋起；
+法令滋彰，盜賊多有。
+故聖人云﹕「我無為而民自化，我好靜而民自正，我無事而民自富，我無欲而民自樸。」
+
+--- Notes ---
+Source: 維基文庫《道德經（王弼本）》
+Chapter: 57
+Incipit: 以正治國，以奇用兵，以無事取天下。
+Acquisition: fetched from Wikisource raw page and split into local chapter files.

@@ -1,0 +1,13 @@
+道德经 — 第80章
+
+小國寡民，
+使有什伯之器而不用，
+使民重死而不遠徙。
+雖有舟輿，無所乘之；雖有甲兵，無所陳之。
+使人復結繩而用之，甘其食，美其服，安其居，樂其俗。鄰國相望，雞犬之聲相聞，民至老死，不相往來。
+
+--- Notes ---
+Source: 維基文庫《道德經（王弼本）》
+Chapter: 80
+Incipit: 小國寡民，
+Acquisition: fetched from Wikisource raw page and split into local chapter files.

@@ -1,0 +1,246 @@
+{
+  "work": "道德经",
+  "author": "老子 (Laozi)",
+  "total_chapters": 81,
+  "classification_method": "Thematic clustering of all 81 chapters, followed by rigorous identification of structural (not merely metaphorical) correspondences with Omega mathematical objects formalized in Lean 4.",
+  "note_on_rigor": "Each omega_directions entry claims genuine structural correspondence: the organizational or conceptual architecture of the textual theme mirrors the mathematical object's formal properties. Entries under 'loose_analogies_rejected' note tempting but non-rigorous parallels that were considered and excluded.",
+  "categories": [
+    {
+      "id": 1,
+      "name_zh": "道体与不可名状",
+      "name_en": "The Dao as Generative Ground",
+      "chapters": [1, 4, 14, 21, 25, 34, 42, 51],
+      "theme": "The Dao as the ineffable source from which all structure arises. Chapter 1: the nameable/unnameable duality. Chapter 4: Dao as empty vessel, inexhaustible. Chapter 14: formless, soundless, intangible yet unified. Chapter 21: Dao as dim and obscure yet containing essence. Chapter 25: something formless preceding heaven and earth. Chapter 34: the great Dao flows everywhere. Chapter 42: Dao generates one, one generates two, two generates three, three generates the ten thousand things. Chapter 51: Dao gives birth, De nourishes.",
+      "omega_directions": [
+        "golden-mean-shift",
+        "fibonacci-growth",
+        "modular-tower-inverse-limit"
+      ],
+      "mapping_rationale": "The golden ratio polynomial x^2 = x + 1 is the single generative equation from which all Omega structure derives — this is a precise structural analogue to 道生一，一生二，二生三，三生万物 (Ch. 42). The polynomial is a single constraint that produces the entire hierarchy. The modular tower X_∞ = lim X_m is the formal object where the full Dao 'lives': it is defined only as the inverse limit of finite approximations, never directly accessible at any finite resolution — structurally matching the Dao's ineffability (道可道，非常道). Each finite X_m is a 'named' approximation; the limit X_∞ is the 'nameless' totality. The Fibonacci growth law |X_m| = F_{m+2} is the precise counting consequence of x^2 = x+1, mirroring how the single Dao generates increasing multiplicity through recursive self-application.",
+      "formal_strength": "strong",
+      "loose_analogies_rejected": [
+        "Tempting to map 'Dao as emptiness' to the zero element of the ring — rejected because stableZero is a specific element, not a generative ground."
+      ]
+    },
+    {
+      "id": 2,
+      "name_zh": "对立互生与二元结构",
+      "name_en": "Complementary Opposition and Binary Duality",
+      "chapters": [2, 5, 11, 20, 26, 36, 40, 41, 45, 58, 78],
+      "theme": "The interdependence and mutual generation of opposites: being/non-being, beauty/ugliness, difficulty/ease, high/low, strong/weak. Chapter 2: mutual arising of opposites. Chapter 5: heaven and earth as impartial. Chapter 11: the utility of emptiness (spokes/hub, clay/vessel, doors/room). Chapter 20: the solitary one vs. the crowd. Chapter 26: heaviness as root of lightness. Chapter 36: what would shrink must first expand. Chapter 40: reversal is the movement of Dao; weakness is the function of Dao. Chapter 41: paradoxes of the Dao. Chapter 45: great fullness seems empty. Chapter 58: fortune/misfortune interdependence. Chapter 78: water overcomes the hard.",
+      "omega_directions": [
+        "golden-mean-shift",
+        "fold-operator"
+      ],
+      "mapping_rationale": "The golden-mean shift operates on the binary alphabet {0,1} with the constraint No11 (no consecutive 1s). This is a system where binary opposition is fundamental but constrained — the two symbols are not freely independent but mutually condition each other, just as 有/无 (being/non-being) in Ch. 2 co-arise and cannot exist independently. The constraint 'no consecutive 1s' is a formal version of 'yang cannot follow yang without intervening yin.' The Fold operator maps arbitrary binary words to stable (No11) words, collapsing violations into compliant structure. This is a precise model of the Daoist principle that excess self-corrects: Fold literally enforces the constraint that no polarity persists unchecked. Chapter 36's 'what would shrink must first expand' is the rewrite rule in action — a local 11 pattern (excess) is folded away.",
+      "formal_strength": "strong",
+      "loose_analogies_rejected": [
+        "The yin-yang symbol as a 'golden spiral' — this is visual metaphor with no formal backing in either the text or the mathematics."
+      ]
+    },
+    {
+      "id": 3,
+      "name_zh": "无为与自然秩序",
+      "name_en": "Wu Wei and Spontaneous Order",
+      "chapters": [3, 7, 10, 17, 23, 27, 37, 43, 48, 57, 63, 64],
+      "theme": "Non-coercive action (无为) and the self-organizing principle. Chapter 3: not exalting the worthy prevents contention. Chapter 10: can you govern without interference? Chapter 17: the best ruler is barely known. Chapter 23: nature does not persist — even storms end. Chapter 37: Dao does nothing yet nothing is undone. Chapter 43: the softest thing overcomes the hardest. Chapter 48: in pursuit of learning one accumulates daily; in pursuit of Dao one reduces daily. Chapter 57: govern the state with rectitude; use the extraordinary for military; gain the world through non-action. Chapter 63: act without acting. Chapter 64: a journey of a thousand miles begins with a single step.",
+      "omega_directions": [
+        "fold-operator",
+        "dynamical-systems"
+      ],
+      "mapping_rationale": "The Fold operator is the Omega formalization of spontaneous order from constraint: it takes any binary word and produces the unique stable word in its equivalence class, with no external 'choice' — the rewrite rules are local and deterministic. This is a precise structural analogue to 无为而无不为 (acting without acting yet leaving nothing undone). The Fold does not 'choose' an outcome; it simply applies the constraint until stability emerges. In dynamical systems terms, the shift map on X_∞ is continuous and surjective, and the system's behavior is entirely determined by the topological constraint (golden-mean subshift). The dynamics are 'effortless' — the orbit structure follows from the constraint alone, requiring no external forcing. The topological entropy h_top = log(φ) quantifies exactly how much complexity this 'effortless' constraint permits.",
+      "formal_strength": "strong",
+      "loose_analogies_rejected": [
+        "Tempting to map 'reducing daily' (Ch. 48) to rate-distortion compression — rejected because the text describes an epistemic/ethical process, not an information-theoretic optimization."
+      ]
+    },
+    {
+      "id": 4,
+      "name_zh": "虚空与容纳",
+      "name_en": "Emptiness, Receptivity, and the Utility of the Void",
+      "chapters": [6, 11, 15, 16, 22, 28, 35, 39],
+      "theme": "The functional power of emptiness, the valley, the receptive feminine. Chapter 6: the valley spirit never dies (谷神不死). Chapter 11: thirty spokes share one hub — emptiness makes the wheel useful. Chapter 15: the ancient masters were subtle, profound, unfathomable. Chapter 16: attain utmost emptiness, maintain steadfast stillness. Chapter 22: the hollow is filled. Chapter 28: know the masculine, keep to the feminine, become the valley of the world. Chapter 35: the Dao is bland to the taste. Chapter 39: the noble takes the humble as root.",
+      "omega_directions": [
+        "fiber-structure",
+        "zeckendorf-representation"
+      ],
+      "mapping_rationale": "The fiber structure (fiber x = {w : Word m | Fold w = x}) is the formal embodiment of 'emptiness as capacity.' Each stable word x sits atop a fiber of multiple raw words that fold onto it — the stable form is 'empty' in the sense that it can receive (be the image of) multiple distinct inputs. The fiber cardinality measures this receptive capacity. The fiber is always nonempty (fiber_nonempty), and the canonical representative (choosePreimage) is just one of many — the stable element 'holds' all of them, like the hub that holds thirty spokes. Zeckendorf representation formalizes uniqueness of decomposition: every natural number has exactly one representation as non-consecutive Fibonacci numbers. This is a structural 'emptiness' result — the representation is maximally sparse (non-consecutive), yet complete (every number is covered). The sparseness constraint mirrors the Daoist aesthetic of 'less is sufficient.'",
+      "formal_strength": "moderate",
+      "loose_analogies_rejected": [
+        "Mapping the 'valley' to a minimum of some function — no formal function is specified in the text."
+      ]
+    },
+    {
+      "id": 5,
+      "name_zh": "德与滋养",
+      "name_en": "De (Virtue/Power) and Nourishment",
+      "chapters": [8, 10, 23, 38, 49, 51, 54, 55, 65, 79, 81],
+      "theme": "De (德) as the manifestation or particularization of Dao in individual beings. Chapter 8: highest good is like water. Chapter 10: nurturing all things without claiming. Chapter 38: high virtue is not virtuous, therefore truly virtuous. Chapter 49: the sage has no fixed mind, takes the people's mind as mind. Chapter 51: Dao gives birth, De nourishes, things take shape, circumstances complete them. Chapter 54: what is firmly planted cannot be pulled out. Chapter 55: one who embodies De fully is like a newborn. Chapter 65: the ancients who practiced Dao did not enlighten the people but kept them simple. Chapter 79: the sage keeps the left tally but does not press the other party. Chapter 81: the sage does not accumulate.",
+      "omega_directions": [
+        "ring-arithmetic",
+        "fiber-structure"
+      ],
+      "mapping_rationale": "The ring structure X_m ≅ Z/F_{m+2}Z is the Omega formalization of how universal structure (Dao = the polynomial x^2=x+1) manifests as concrete operational algebra at each resolution level. De is to Dao as the ring X_m is to the generating polynomial: each X_m is a finite, fully operational commutative ring whose arithmetic (stableAdd, stableMul, stableNeg) is self-consistent and complete, yet is only one level's 'expression' of the underlying constraint. The fiber structure connects: each element of X_m has a fiber measuring its 'nourishment capacity' — how many raw states it stabilizes — analogous to De's function of nourishing and completing what Dao generates. The FiberRing theorems (ring_add_eq, ring_mul_eq) show that algebraic operations respect the fiber decomposition, just as De operates harmoniously within Dao's framework.",
+      "formal_strength": "moderate",
+      "loose_analogies_rejected": [
+        "Mapping De directly to a group homomorphism — De is not described as a structure-preserving map in the text."
+      ]
+    },
+    {
+      "id": 6,
+      "name_zh": "回归与循环",
+      "name_en": "Return, Reversal, and Cyclic Motion",
+      "chapters": [14, 16, 25, 40, 50, 52, 56, 65],
+      "theme": "The cyclical nature of Dao's movement — return to the root, reversal as the characteristic motion. Chapter 14: reach back to the ancient beginning. Chapter 16: all things return to their root; returning to the root is stillness. Chapter 25: great means going forth, going forth means far-reaching, far-reaching means returning. Chapter 40: 反者道之动 — reversal is the movement of Dao. Chapter 52: return to the mother. Chapter 56: one who knows does not speak. Chapter 65: return to great conformity.",
+      "omega_directions": [
+        "dynamical-systems",
+        "modular-tower-inverse-limit"
+      ],
+      "mapping_rationale": "The shift dynamical system on X_∞ has well-defined periodic orbits: points where σ^n(a) = a. These are the formal objects corresponding to cyclic return. The fixed points of the shift (period-1 orbits) are literal 'returns to root.' The modular tower's projection maps π_{m+1→m} (restrict/modularProject) embody 反者道之动 precisely: moving 'forward' to higher resolution m+1 always carries within it a 'return' projection back to level m. The tower identity restrict(prefixWord a (m+1)) = prefixWord a m is the formal statement that going to higher resolution and projecting back returns you to where you started — the mathematical content of '反者道之动.' The ring arithmetic's modular structure (values mod F_{m+2}) means every computation cyclically wraps, formalizing return as intrinsic to the algebra.",
+      "formal_strength": "strong",
+      "loose_analogies_rejected": [
+        "Tempting to invoke topological conjugacy as a model for 'things returning to their nature' — but conjugacy is about equivalence of dynamical systems, not return within a single system."
+      ]
+    },
+    {
+      "id": 7,
+      "name_zh": "治国之道",
+      "name_en": "Governance and Political Philosophy",
+      "chapters": [3, 17, 18, 19, 29, 30, 31, 46, 53, 57, 58, 59, 60, 61, 66, 69, 72, 74, 75, 80],
+      "theme": "Practical governance through minimal intervention: the sage-ruler, statecraft, military restraint, and the ideal small state. Chapter 17: the best rulers are barely known. Chapter 18: when the great Dao is abandoned, benevolence and righteousness appear. Chapter 29: the world is a sacred vessel that cannot be controlled. Chapter 30: force leads to decay. Chapter 31: weapons are instruments of ill omen. Chapter 46: when Dao prevails, warhorses fertilize fields. Chapter 57: the more prohibitions, the poorer the people. Chapter 60: govern a great nation as you would cook a small fish. Chapter 61: a great state is like a low-lying estuary. Chapter 80: the ideal small state.",
+      "omega_directions": [
+        "fold-operator",
+        "rate-distortion-information-theory"
+      ],
+      "mapping_rationale": "The Fold operator as a governance model: it operates by purely local rewrite rules (each 11→10 or similar correction), never requiring global knowledge or centralized control. This is the formal structure of Laozi's 'govern a great nation as you would cook a small fish' — minimal, local interventions that propagate to global stability. The theorem Fold_stable (applying Fold to an already-stable word returns it unchanged) is the mathematical content of 'when Dao prevails, there is nothing to govern.' Rate-distortion theory provides the formal framework for Chapter 57's insight that excessive regulation (high 'rate' / many prohibitions) does not improve outcomes: the SPG error threshold (kappa function κ(ε) = (1+ε)/(1-ε)) formalizes the existence of a threshold beyond which additional control effort yields no improvement in fidelity — there is an optimal level of intervention, and exceeding it is wasteful.",
+      "formal_strength": "moderate",
+      "loose_analogies_rejected": [
+        "Mapping the hierarchy of rulers (Ch. 17) directly to the modular tower levels — this would require a formal ordering on political quality that the mathematics does not encode."
+      ]
+    },
+    {
+      "id": 8,
+      "name_zh": "柔弱胜刚强",
+      "name_en": "The Strength of Softness and Yielding",
+      "chapters": [7, 8, 13, 22, 36, 43, 52, 55, 61, 69, 73, 76, 78],
+      "theme": "Water as paradigm; the soft and yielding overcomes the hard and rigid. Chapter 8: highest good like water — benefits all, contends with none. Chapter 22: yield and overcome. Chapter 36: the soft and weak overcome the hard and strong. Chapter 43: the softest thing in the world overcomes the hardest. Chapter 52: use the light, return to clarity. Chapter 55: the supple infant. Chapter 76: the stiff and unbending is the disciple of death; the soft and yielding the disciple of life. Chapter 78: nothing is softer than water, yet nothing can resist it.",
+      "omega_directions": [
+        "golden-mean-shift",
+        "fold-operator",
+        "rate-distortion-information-theory"
+      ],
+      "mapping_rationale": "The No11 constraint is formally a 'yielding' constraint: it prevents rigidity (consecutive 1s, interpreted as adjacent 'hard' positions). The golden-mean shift's valid words are precisely those that 'yield' — they never persist in the high state. Yet this constraint produces maximal combinatorial richness: |X_m| = F_{m+2} grows exponentially, and h_top = log(φ) > 0. Softness (constraint compliance) generates more structure than rigidity (unconstrained binary words grow as 2^m but most are 'dead' under the Fold — they collapse). The Fold operator demonstrates this quantitatively: rigid (11-containing) words are folded into compliant ones, losing information in the process. The fiber sizes of stable words measure how many rigid words each soft word 'absorbs.' Rate-distortion connects: the noise budget framework (SPG module) shows that systems operating within their error threshold maintain fidelity, while those that exceed it (rigid, over-determined) catastrophically lose information — the soft approach is informationally optimal.",
+      "formal_strength": "moderate",
+      "loose_analogies_rejected": [
+        "Mapping water's physical fluidity to any specific topological property of X_∞ — the text uses water as metaphor for a behavioral principle, not a topological one."
+      ]
+    },
+    {
+      "id": 9,
+      "name_zh": "知足与限度",
+      "name_en": "Sufficiency, Limits, and Knowing When to Stop",
+      "chapters": [9, 12, 24, 29, 32, 33, 44, 46, 47, 71, 77, 81],
+      "theme": "The principle of self-limitation and contentment. Chapter 9: fill a cup to the brim and it will spill; retire when the work is done. Chapter 12: the five colors blind the eye. Chapter 24: one who stands on tiptoe is not steady. Chapter 29: the world is a sacred vessel — forcing it will fail. Chapter 32: know when to stop and you will be free from danger. Chapter 33: one who knows when enough is enough always has enough. Chapter 44: which is more harmful, fame or life? Chapter 46: no greater disaster than not knowing sufficiency. Chapter 47: without going out the door, one can know the whole world. Chapter 71: knowing that you do not know is the best. Chapter 77: the Dao of heaven takes from excess and supplements deficiency. Chapter 81: the sage does not compete.",
+      "omega_directions": [
+        "golden-mean-shift",
+        "zeckendorf-representation",
+        "rate-distortion-information-theory"
+      ],
+      "mapping_rationale": "The No11 constraint is literally a 'knowing when to stop' rule: after placing a 1, you must place a 0 before placing another 1. This is the formal content of 知足 (knowing sufficiency) — the system never takes two consecutive high values. Zeckendorf representation embodies 'the Dao of heaven takes from excess and supplements deficiency' (Ch. 77): any natural number can be decomposed into non-consecutive Fibonacci summands, and this decomposition is unique. The 'non-consecutive' requirement is exactly the No11 constraint applied to representations — it forbids excess (consecutive large summands) and the uniqueness guarantees optimality. Rate-distortion theory formalizes the information-theoretic limit: Chapter 47's 'without going out the door, one can know the whole world' corresponds to the rate-distortion function's guarantee that sufficient fidelity can be achieved with bounded information — there exists an optimal coding rate below which you cannot improve, and above which improvement is wasteful.",
+      "formal_strength": "strong",
+      "loose_analogies_rejected": [
+        "Mapping 'the five colors blind the eye' to information overload in Shannon theory — the text is about sensory/ethical moderation, not channel capacity."
+      ]
+    },
+    {
+      "id": 10,
+      "name_zh": "层级与分辨",
+      "name_en": "Hierarchy, Resolution, and Graded Knowing",
+      "chapters": [1, 14, 21, 38, 41, 47, 52, 56, 62, 70, 81],
+      "theme": "Levels of understanding and the graded nature of reality. Chapter 1: the named and the nameless as two modes of apprehension. Chapter 14: look at it — cannot be seen (called 'subtle'); listen — cannot be heard (called 'rarified'); grasp — cannot be held (called 'minute'). Chapter 21: dim and obscure, yet within it there is substance. Chapter 38: the hierarchy of De — high virtue, low virtue, benevolence, righteousness, propriety. Chapter 41: when the highest hears of Dao they diligently practice it; when the middle hears of Dao they sometimes keep it and sometimes lose it; when the lowest hears of Dao they laugh at it. Chapter 47: know without going outside. Chapter 52: see the small, this is called clarity. Chapter 56: those who know don't speak; those who speak don't know. Chapter 62: Dao is the treasure of the good and the refuge of the not-good. Chapter 70: my words are easy to understand, easy to practice, yet the world cannot understand or practice them. Chapter 81: true words are not beautiful.",
+      "omega_directions": [
+        "modular-tower-inverse-limit",
+        "fold-operator",
+        "spectral-theory"
+      ],
+      "mapping_rationale": "The modular tower {X_m}_{m≥0} with projection maps restrict: X_{m+1} → X_m is the definitive Omega structure for graded knowing. Each level m is a resolution at which the system is observed; the higher the m, the finer the discrimination. Chapter 38's hierarchy (Dao > De > benevolence > righteousness > propriety) maps to the tower levels where each projection 'coarsens' the view, losing information. Chapter 41's three types of listeners correspond to observing at different resolution levels: the highest practitioner accesses the full inverse limit X_∞, the middle accesses intermediate X_m, the lowest sees only the coarsest levels. The Fold operator connects: at each level, Fold stabilizes raw perception into structured understanding. The spectral theory (collision kernels, Cayley-Hamilton) provides the quantitative tool for analyzing how structure distributes across resolution levels — the eigenvalues of the collision kernel matrices determine the growth rates of moment sums across the tower, formalizing how 'dim and obscure' (low-resolution) observations contain structured information.",
+      "formal_strength": "strong",
+      "loose_analogies_rejected": [
+        "Mapping the three types of listeners to three eigenvalues — the number is coincidental and there is no formal bijection."
+      ]
+    },
+    {
+      "id": 11,
+      "name_zh": "自然与朴素",
+      "name_en": "Naturalness, Simplicity, and the Uncarved Block",
+      "chapters": [15, 19, 27, 28, 32, 37, 44, 57, 67, 68, 80, 81],
+      "theme": "Return to simplicity (朴 pu, the uncarved block), naturalness, the three treasures. Chapter 15: the ancient masters were cautious as one crossing a frozen stream. Chapter 19: embrace simplicity, reduce selfishness. Chapter 28: return to the uncarved block. Chapter 32: the Dao is forever nameless; the uncarved block, though small, none dare claim it as subject. Chapter 37: the nameless uncarved block — with it there will be no desire. Chapter 44: know contentment. Chapter 57: the more taboos, the poorer the people. Chapter 67: I have three treasures — compassion, frugality, not daring to be first. Chapter 68: a good warrior does not display anger. Chapter 80: the ideal small state — people tie knots instead of writing. Chapter 81: true words are not beautiful.",
+      "omega_directions": [
+        "golden-mean-shift",
+        "zeckendorf-representation"
+      ],
+      "mapping_rationale": "The 'uncarved block' (朴) is the state before differentiation — in Omega, this corresponds to the raw binary word space {0,1}^m before the No11 constraint and Fold are applied. But Laozi's point is that the uncarved block is the ideal, not the raw material. The golden-mean shift's stable words (X_m) are formally the 'carved' objects that are maximally simple: they satisfy the minimal constraint (No11) and nothing more. The set X_m is the simplest non-trivial subshift of {0,1}^m that has positive entropy — adding more constraints reduces richness, removing the constraint produces chaos. This is the mathematical content of 朴: the simplest structure that is still alive. Zeckendorf representation reinforces this: it is the unique, maximally sparse representation of each number — the mathematical 'uncarved block' of arithmetic decomposition. No simpler decomposition into Fibonacci numbers exists, yet it is complete.",
+      "formal_strength": "moderate",
+      "loose_analogies_rejected": [
+        "Mapping 'tying knots instead of writing' (Ch. 80) to binary encoding — historically interesting but formally ungrounded."
+      ]
+    },
+    {
+      "id": 12,
+      "name_zh": "玄同与整体统一",
+      "name_en": "Mysterious Unity and Holistic Integration",
+      "chapters": [4, 6, 10, 25, 42, 52, 56, 62, 73],
+      "theme": "The ultimate unity underlying all differentiation — 玄同 (mysterious sameness). Chapter 4: Dao is empty, yet its use is inexhaustible. Chapter 6: the valley spirit never dies — the mysterious feminine. Chapter 10: can you embrace unity without departing? Chapter 25: there was something formless and complete before heaven and earth. Chapter 42: the generative sequence Dao→one→two→three→ten thousand things. Chapter 52: having found the mother, know the children; knowing the children, return to the mother. Chapter 56: 玄同 — mysterious sameness: blunt the sharpness, untangle the knots, soften the glare, merge with dust. Chapter 62: Dao is the mysterious center of all things. Chapter 73: heaven's net is vast; though its meshes are wide, nothing slips through.",
+      "omega_directions": [
+        "modular-tower-inverse-limit",
+        "spectral-theory",
+        "dynamical-systems"
+      ],
+      "mapping_rationale": "The inverse limit X_∞ = lim←X_m is the formal unification: it is the single object that coherently contains all finite-resolution views simultaneously. The CompatibleFamily structure (seq: forall m, X m; compat: restrict(seq(m+1)) = seq m) is exactly 'mysterious unity' — a single infinite object that appears differently at each resolution yet is self-consistent across all of them. The bijection toFamily: X_∞ → CompatibleFamily is the theorem that this unity exists and is unique. The spectral theory (collision kernels) provides the analytical decomposition: the eigenvalues of companion matrices govern how moments distribute across the tower, revealing the hidden linear-algebraic unity beneath the combinatorial surface. The dynamical system on X_∞ (shift, periodic orbits, entropy) gives the complete invariant description — topological entropy h_top = log(φ) is a single number that captures the system's total complexity, much as the Dao is a single principle underlying all phenomena. Chapter 73's 'heaven's net' maps to the profinite topology: the open sets of X_∞ (cylinder sets from each finite level) collectively cover everything, even though each individual cylinder is coarse.",
+      "formal_strength": "strong",
+      "loose_analogies_rejected": [
+        "Mapping 玄同 to a specific isomorphism theorem — 玄同 is about experiential unity, not structural equivalence between two objects."
+      ]
+    }
+  ],
+  "structural_summary": {
+    "total_chapter_assignments": 135,
+    "unique_chapters_covered": 81,
+    "chapters_appearing_in_multiple_categories": [1, 3, 4, 6, 7, 8, 10, 11, 14, 15, 16, 17, 19, 21, 22, 23, 25, 27, 28, 29, 32, 36, 37, 38, 40, 41, 42, 43, 44, 46, 47, 51, 52, 55, 56, 57, 58, 61, 62, 65, 69, 73, 78, 80, 81],
+    "note": "Many chapters address multiple themes simultaneously — this is characteristic of the 道德经's holistic style. Each chapter is assigned to every category it substantially addresses. The 135 total assignments across 81 unique chapters reflect genuine thematic overlap.",
+    "omega_direction_frequency": {
+      "golden-mean-shift": 5,
+      "fold-operator": 5,
+      "modular-tower-inverse-limit": 4,
+      "dynamical-systems": 3,
+      "zeckendorf-representation": 3,
+      "rate-distortion-information-theory": 3,
+      "fiber-structure": 2,
+      "spectral-theory": 2,
+      "fibonacci-growth": 1,
+      "ring-arithmetic": 1
+    },
+    "strongest_correspondences": [
+      {
+        "text_concept": "道生一，一生二，二生三，三生万物 (Ch. 42)",
+        "omega_object": "x^2 = x+1 generating |X_m| = F_{m+2} via the golden-mean shift",
+        "why_strong": "Single generative equation → exponentially growing family of finite structures. The recursive structure F_{m+2} = F_{m+1} + F_m mirrors 'one generates two, two generates three.' This is not metaphor — it is the same abstract pattern: a single relation producing a hierarchy of increasingly complex objects through recursive self-application."
+      },
+      {
+        "text_concept": "道可道，非常道 (Ch. 1) — the named is not the eternal",
+        "omega_object": "X_∞ = lim←X_m (inverse limit, never directly computable)",
+        "why_strong": "Each X_m is 'nameable' (finite, computable), but the true object X_∞ is only accessible as the limit of all finite approximations — it is 'unnameable' in the precise mathematical sense that no single finite description captures it. The profinite topology makes this rigorous: X_∞ is compact and totally disconnected, its structure emergent from the compatible family constraint."
+      },
+      {
+        "text_concept": "反者道之动 (Ch. 40) — reversal is the movement of Dao",
+        "omega_object": "restrict: X_{m+1} → X_m (tower projection) and Fold idempotence",
+        "why_strong": "Every forward step (extending to X_{m+1}) carries an intrinsic reversal (projection back to X_m). The identity restrict(prefixWord a (m+1)) = prefixWord a m is the formal content: going forward and coming back returns you to where you started. Fold's idempotence (Fold(Fold(w)) = Fold(w)) is 'reversal is already complete in one step.'"
+      },
+      {
+        "text_concept": "No11 constraint as 知足 (knowing sufficiency)",
+        "omega_object": "No11 predicate on Word m",
+        "why_strong": "The constraint 'after a 1, you must stop (place a 0)' is a formal rule of self-limitation. It is not imposed externally but is constitutive of the space X_m. The resulting system has maximum entropy among all subshifts with forbidden word {11} — optimal richness from minimal self-restraint."
+      }
+    ]
+  }
+}

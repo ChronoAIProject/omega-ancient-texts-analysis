@@ -1,0 +1,12 @@
+道德经 — 第63章
+
+為無為，事無事，味無味。
+大小多少，報怨以德。
+圖難於其易，為大於其細；天下難事必作於易，天下大事必作於細。是以聖人終不為大，故能成其大。夫輕諾必寡信，多易必多難。是以聖人猶難之，
+故終無難矣
+
+--- Notes ---
+Source: 維基文庫《道德經（王弼本）》
+Chapter: 63
+Incipit: 為無為，事無事，味無味。
+Acquisition: fetched from Wikisource raw page and split into local chapter files.

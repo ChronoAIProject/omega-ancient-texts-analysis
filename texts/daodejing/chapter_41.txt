@@ -1,0 +1,23 @@
+道德经 — 第41章
+
+上士聞道，勤而行之；
+中士聞道，若存若亡；下士聞道，大笑之。不笑不足以為道。故建言有之﹕
+明道若昧，
+進道若退，
+夷道若纇，
+上德若谷，
+大白若辱，
+廣德若不足，
+建德若偷，
+質真若渝，
+大方無隅，
+大器晚成，
+大音希聲，
+大象無形，
+道隱無名。夫唯道，善貸且成。
+
+--- Notes ---
+Source: 維基文庫《道德經（王弼本）》
+Chapter: 41
+Incipit: 上士聞道，勤而行之；
+Acquisition: fetched from Wikisource raw page and split into local chapter files.

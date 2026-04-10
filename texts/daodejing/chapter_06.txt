@@ -1,0 +1,9 @@
+道德经 — 第6章
+
+谷神不死，是謂玄牝。玄牝之門，是謂天地根。緜緜若存，用之不勤。
+
+--- Notes ---
+Source: 維基文庫《道德經（王弼本）》
+Chapter: 6
+Incipit: 谷神不死，是謂玄牝。玄牝之門，是謂天地根。緜緜若存，用之不勤。
+Acquisition: fetched from Wikisource raw page and split into local chapter files.

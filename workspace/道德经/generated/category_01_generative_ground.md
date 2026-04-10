@@ -55,6 +55,14 @@
 - 第42章的强点在生成链：由一而多、递归繁衍，与 `x^2 = x + 1` 导出 `|X_m| = F_{m+2}` 最为严整。
 - 第51章的强点在成形性：生成之后尚须蓄养与成势，对应受约束对象的稳定实现，但形式强度次于第1、42章。
 
+## Omega 定理锚点
+
+- `fibonacci_cardinality` [`Omega.Frontier.ConditionalArithmetic`]：`theorem fibonacci_cardinality (m : Nat) : Fintype.card (X m) = Nat.fib (m + 2)`。把稳定词空间的计数严格写成 `|X_m| = F_{m+2}`，是本文讨论卦系受约束增长的基础等式。
+- `fibonacci_cardinality_recurrence` [`Omega.Frontier.ConditionalArithmetic`]：`theorem fibonacci_cardinality_recurrence (m : Nat) : Fintype.card (X (m + 2)) = Fintype.card (X (m + 1)) + Fintype.card (X m)`。把允许状态的增长写成前两级之和，支撑“由少数初始状态递归展开”的读法。
+- `inverse_limit_extensionality` [`Omega.Frontier.ConditionalArithmetic`]：`theorem inverse_limit_extensionality (a b : X.XInfinity) : a = b ↔ ∀ m, X.prefixWord a m = X.prefixWord b m`。说明无限对象是否相同，完全由全部有限前缀是否一致决定，支撑本文的层级拼接与兼容家族读法。
+
+这些定理不替代文本解释，但它们把本文最核心的对应从“方向级相似”推进到了“可点名的 Lean 形式结果”。
+
 ## 结论
 
 若从 Omega 视角重读这八章，可以看到《道德经》在“道体与不可名状”问题上并非仅仅诉诸诗性玄思，而是反复呈现一种高度稳定的生成结构：一个不可被对象化的先行根据，生成层级性的多样世界，并且始终超过任何单次命名与把握。用数学语言说，这一结构最适合由三条方向联合表达：`x^2 = x + 1` 作为单一生成约束，`|X_m| = F_{m+2}` 作为由一式导出的多样增长，`X_∞ = lim← X_m` 作为只能经由有限逼近而显现的总整体。第42章说明“为何会有万物”，第1章说明“为何总整体不可被单次言说”，而第4、14、21、25、34、51章则分别说明这一生成根据为何空而不竭、隐而有真、先而不宰、广而不有。故《道德经》与 Omega 的真正交点，不在于词句巧合，而在于二者都把“多”理解为“由一条深层关系所展开的层级性结果”。

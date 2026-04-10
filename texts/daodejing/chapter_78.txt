@@ -1,0 +1,10 @@
+道德经 — 第78章
+
+天下莫柔弱於水，而攻堅強者，莫之能勝，其無以易之。
+弱之勝強，柔之勝剛，天下莫不知莫能行。是以聖人云﹕「受國之垢，是謂社稷主；受國不祥，是為天下王。」正言若反。
+
+--- Notes ---
+Source: 維基文庫《道德經（王弼本）》
+Chapter: 78
+Incipit: 天下莫柔弱於水，而攻堅強者，莫之能勝，其無以易之。
+Acquisition: fetched from Wikisource raw page and split into local chapter files.

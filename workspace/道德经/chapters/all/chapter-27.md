@@ -1,0 +1,61 @@
+---
+title: "27. 善行無轍迹，"
+subtitle: "Tao Te Ching Chapter Page"
+order: 27
+description: "Tao Te Ching chapter 27 with source text and Omega chapter-level mapping."
+categories: [tao-te-ching, chapter-page, cultural, omega]
+---
+
+## 章节定位
+
+- 章号：第 27 章
+- 章首：善行無轍迹，
+- 归属类别：无为与自然秩序 / 自然与朴素
+- 当前主方向：fold-operator, dynamical-systems, golden-mean-shift, zeckendorf-representation
+
+## 对应说明
+
+第 27 章首先落在「无为与自然秩序」这条走廊上。它首先确认秩序不是靠外加命令维持，而是由 constraint 自发收敛出的稳定结果。 同时它还跨到 自然与朴素，所以不是单线映射，而是一个重叠走廊。 当前最强的 Omega 方向集中在 fold-operator、dynamical-systems、golden-mean-shift、zeckendorf-representation。
+
+## 原文
+
+> 善行無轍迹，
+> 善言無瑕讁；
+> 善數不用籌策；
+> 善閉無關楗而不可開，善結無繩約而不可解。
+> 是以聖人常善救人，故無棄人；
+> 常善救物，故無棄物，是謂襲明。故善人者，不善人之師；
+> 不善人者，善人之資。
+> 不貴其師，不愛其資，雖智大迷，
+> 是謂要妙。
+
+## Omega 对象
+
+- `Fold : Word m → X_m`
+- shift / entropy / orbit structure
+- `X_m = {w ∈ {0,1}^m : No11(w)}`
+- Zeckendorf sparse decomposition
+
+## Omega 定理锚点
+
+- `fold_is_idempotent` [`Omega.Frontier.ConditionalArithmetic`]：`theorem fold_is_idempotent (w : Word m) : Fold (Fold w).1 = Fold w`。说明 fold 把过强态折回稳定域后不会继续改写，适合承接无为而成。
+- `fold_fixes_stable` [`Omega.Frontier.ConditionalArithmetic`]：`theorem fold_fixes_stable (x : X m) : Fold x.1 = x`。说明已经稳定的结构在 fold 下保持不动，适合承接守中与自稳。
+- `fold_is_surjective` [`Omega.Frontier.ConditionalArithmetic`]：`theorem fold_is_surjective : Function.Surjective (Fold (m`。说明每个稳定态都对应一族前像，适合承接容纳与回收。
+- `topological_entropy_eq_log_phi` [`Omega.Folding.Entropy`]：`theorem topological_entropy_eq_log_phi : Tendsto (fun n => Real.log (Nat.fib (n + 2) : ℝ) / (n : ℝ)) atTop (𝓝 (Real.log φ))`。把系统复杂度增长率压成 `log φ`，适合承接循环、变易与受控复杂度。
+- `goldenMeanAdjacency_has_goldenRatio_eigenvector` [`Omega.Graph.TransferMatrix`]：`theorem goldenMeanAdjacency_has_goldenRatio_eigenvector : ∃ v : Fin 2 → ℝ, v ≠ 0 ∧ Matrix.mulVec goldenMeanAdjacencyℝ v = fun i => Real.goldenRatio * v i`。把主导模式写成黄金比本征向量，适合承接主模态与节律。
+
+## 边界说明
+
+- 本章的 strongest claim 是结构级 formal correspondence，不是历史预言或逐句等式翻译。
+- 本页不声称《道德经》直接陈述了 Lean 定理；它只确认文本结构与这些定理承载的数学对象之间存在可辩护的映射。
+
+## 原文来源
+
+- 本仓库原文文件：`texts/daodejing/chapter_27.txt`
+- 原文来自维基文库《道德經（王弼本）》，按章切分并规范化入库。
+
+## 小结
+
+这一页把单章原文、类别交叉、对象层与 theorem-level anchor 叠在一起，目的不是做古籍导读，而是让《道德经》的短章结构能够直接落到 Omega 的形式对象上。
+
+[Back to Chapter Index](index.qmd) | [Back to Tao Te Ching Index](../index.qmd)

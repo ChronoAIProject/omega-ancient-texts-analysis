@@ -1,0 +1,14 @@
+道德经 — 第48章
+
+為學日益，
+為道日損。
+損之又損，以至於無為。無為而無不為。
+取天下常以無事，
+及其有事，
+不足以取天下。
+
+--- Notes ---
+Source: 維基文庫《道德經（王弼本）》
+Chapter: 48
+Incipit: 為學日益，
+Acquisition: fetched from Wikisource raw page and split into local chapter files.

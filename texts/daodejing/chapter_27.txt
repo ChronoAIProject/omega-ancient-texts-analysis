@@ -1,0 +1,17 @@
+道德经 — 第27章
+
+善行無轍迹，
+善言無瑕讁；
+善數不用籌策；
+善閉無關楗而不可開，善結無繩約而不可解。
+是以聖人常善救人，故無棄人；
+常善救物，故無棄物，是謂襲明。故善人者，不善人之師；
+不善人者，善人之資。
+不貴其師，不愛其資，雖智大迷，
+是謂要妙。
+
+--- Notes ---
+Source: 維基文庫《道德經（王弼本）》
+Chapter: 27
+Incipit: 善行無轍迹，
+Acquisition: fetched from Wikisource raw page and split into local chapter files.

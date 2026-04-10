@@ -1,0 +1,17 @@
+道德经 — 第55章
+
+含德之厚，比於赤子。蜂蠆虺蛇不螫，猛獸不據，攫鳥不搏。
+骨弱筋柔而握固。
+未知牝牡之合而全作，
+精之至也。終日號而不嗄，
+和之至也。知和曰常，
+知常曰明。
+益生曰祥。
+心使氣曰強。
+物壯則老，謂之不道，不道早已。
+
+--- Notes ---
+Source: 維基文庫《道德經（王弼本）》
+Chapter: 55
+Incipit: 含德之厚，比於赤子。蜂蠆虺蛇不螫，猛獸不據，攫鳥不搏。
+Acquisition: fetched from Wikisource raw page and split into local chapter files.

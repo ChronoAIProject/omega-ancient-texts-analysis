@@ -1,0 +1,13 @@
+道德经 — 第70章
+
+吾言甚易知，甚易行。天下莫能知，莫能行。
+言有宗，事有君。
+夫唯無知，是以不我知。
+知我者希，則我者貴。
+是以聖人被褐懷玉。
+
+--- Notes ---
+Source: 維基文庫《道德經（王弼本）》
+Chapter: 70
+Incipit: 吾言甚易知，甚易行。天下莫能知，莫能行。
+Acquisition: fetched from Wikisource raw page and split into local chapter files.

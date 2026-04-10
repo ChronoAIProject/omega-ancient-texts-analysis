@@ -1,0 +1,11 @@
+道德经 — 第35章
+
+執大象，天下往。
+往而不害，安平太。
+樂與餌，過客止。道之出口，淡乎其無味，視之不足見，聽之不足聞，用之不足既。
+
+--- Notes ---
+Source: 維基文庫《道德經（王弼本）》
+Chapter: 35
+Incipit: 執大象，天下往。
+Acquisition: fetched from Wikisource raw page and split into local chapter files.

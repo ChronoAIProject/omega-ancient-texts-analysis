@@ -1,0 +1,14 @@
+道德经 — 第13章
+
+寵辱若驚，貴大患若身。何謂寵辱若驚？寵為下，得之若驚，失之若驚，是謂寵辱若驚。
+何謂貴大患若身？
+吾所以有大患者，為吾有身，
+及吾無身，
+吾有何患？故貴以身為天下，若可寄天下；
+愛以身為天下，若可託天下。
+
+--- Notes ---
+Source: 維基文庫《道德經（王弼本）》
+Chapter: 13
+Incipit: 寵辱若驚，貴大患若身。何謂寵辱若驚？寵為下，得之若驚，失之若驚，是謂寵辱若驚。
+Acquisition: fetched from Wikisource raw page and split into local chapter files.

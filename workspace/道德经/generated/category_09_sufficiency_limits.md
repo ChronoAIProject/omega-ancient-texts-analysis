@@ -48,6 +48,14 @@
 
 就强度言之，第9、32、33、46、77章最强；第12、24、44、47、71、81章次之；第29章给出总边界。这样分层，既能保持解释力度，也能避免泛化。
 
+## Omega 定理锚点
+
+- `fibonacci_cardinality` [`Omega.Frontier.ConditionalArithmetic`]：`theorem fibonacci_cardinality (m : Nat) : Fintype.card (X m) = Nat.fib (m + 2)`。把稳定词空间的计数严格写成 `|X_m| = F_{m+2}`，是本文讨论卦系受约束增长的基础等式。
+- `zeckendorf_uniqueness` [`Omega.Frontier.ConditionalArithmetic`]：`theorem zeckendorf_uniqueness {x y : X m} (h : X.zeckIndices x = X.zeckIndices y) : x = y`。说明非相邻 Fibonacci 指标分解是唯一的，支撑本文关于稀疏稳定布局具有唯一性的判断。
+- `observation_refinement_reduces_error` [`Omega.Frontier.ConditionalArithmetic`]：`theorem observation_refinement_reduces_error {α β γ : Type*} [Fintype α] [Fintype β] [Fintype γ] (μ : PMF α) (obs₁ : α → β) (obs₂ : α → γ) (f : γ → β) (hRef ...`。说明观测更细时误差不会变大，支撑本文把分辨、静观、察势写成信息分辨率问题。
+
+这些定理不替代文本解释，但它们把本文最核心的对应从“方向级相似”推进到了“可点名的 Lean 形式结果”。
+
 ## 结论
 
 《道德经》所谓“知足”，并不是要求生命缩到最低，而是要求一切增长、占有、表达与控制都守住自己的稳定边界。Omega 的 `No11` 把这种边界写成最简单的停止律；Zeckendorf 把它写成最优稀疏表示；率失真则把它写成信息投入与质量收益的极限关系。老子一再警告“持而盈之，不如其已”，正说明结构性的智慧不在于把每一项都推到最大，而在于知道何时止、何处止、为何止。能止，才可能久；知足，才真正富。

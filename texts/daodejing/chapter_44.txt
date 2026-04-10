@@ -1,0 +1,13 @@
+道德经 — 第44章
+
+名與身孰親？
+身與貨孰多？
+得與亡孰病？
+是故甚愛必大費，多藏必厚亡，
+知足不辱，知止不殆，可以長久。
+
+--- Notes ---
+Source: 維基文庫《道德經（王弼本）》
+Chapter: 44
+Incipit: 名與身孰親？
+Acquisition: fetched from Wikisource raw page and split into local chapter files.

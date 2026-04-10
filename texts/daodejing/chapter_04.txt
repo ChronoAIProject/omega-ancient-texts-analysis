@@ -1,0 +1,9 @@
+道德经 — 第4章
+
+道沖而用之或不盈，淵兮似萬物之宗；挫其銳，解其紛，和其光，同其塵，湛兮似或存。吾不知誰之子，象帝之先。
+
+--- Notes ---
+Source: 維基文庫《道德經（王弼本）》
+Chapter: 4
+Incipit: 道沖而用之或不盈，淵兮似萬物之宗；挫其銳，解其紛，和其光，同其塵，湛兮似或存。吾不知誰之子，象帝之先。
+Acquisition: fetched from Wikisource raw page and split into local chapter files.

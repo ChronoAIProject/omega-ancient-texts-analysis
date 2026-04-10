@@ -1,0 +1,10 @@
+道德经 — 第50章
+
+出生入死。
+生之徒，十有三；死之徒，十有三；人之生，動之死地，亦十有三。夫何故？以其生生之厚。蓋聞善攝生者，陸行不遇兕虎，入軍不被甲兵；兕無所投其角，虎無所措其爪，兵無所容其刃。夫何故？以其無死地。
+
+--- Notes ---
+Source: 維基文庫《道德經（王弼本）》
+Chapter: 50
+Incipit: 出生入死。
+Acquisition: fetched from Wikisource raw page and split into local chapter files.

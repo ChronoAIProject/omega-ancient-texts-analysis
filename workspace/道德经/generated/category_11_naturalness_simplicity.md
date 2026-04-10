@@ -42,6 +42,13 @@ Zeckendorf 表示也说明同一件事。一个自然数的最佳表示并不靠
 
 因此，第19、28、32、37章最强；第57、67、68、80、81章次之；第15、27、44章为风格与实践延伸。只有把朴理解成“最小充分结构”，而不是“空洞原始状态”，整个类目的数学对应才成立。
 
+## Omega 定理锚点
+
+- `fibonacci_cardinality` [`Omega.Frontier.ConditionalArithmetic`]：`theorem fibonacci_cardinality (m : Nat) : Fintype.card (X m) = Nat.fib (m + 2)`。把稳定词空间的计数严格写成 `|X_m| = F_{m+2}`，是本文讨论卦系受约束增长的基础等式。
+- `zeckendorf_uniqueness` [`Omega.Frontier.ConditionalArithmetic`]：`theorem zeckendorf_uniqueness {x y : X m} (h : X.zeckIndices x = X.zeckIndices y) : x = y`。说明非相邻 Fibonacci 指标分解是唯一的，支撑本文关于稀疏稳定布局具有唯一性的判断。
+
+这些定理不替代文本解释，但它们把本文最核心的对应从“方向级相似”推进到了“可点名的 Lean 形式结果”。
+
 ## 结论
 
 《道德经》的“自然与朴素”不是退回无形无制的混沌，而是找到一种最少加工、最低冗余、最可持续的结构状态。Omega 的 golden-mean shift 说明，极少的约束就足以生成丰富秩序；Zeckendorf 表示说明，最稀疏的分解反而最唯一、最完整。由此再读“见素抱朴”“无名之朴”“我无欲而民自朴”，便能看出老子真正维护的不是贫乏，而是一种高质量的简单：少到不乱，简到能生，朴到能久。

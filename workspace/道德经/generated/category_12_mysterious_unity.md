@@ -46,6 +46,14 @@
 
 第4、6、10、62、73章则从不同侧面支撑整体统一：或讲其不竭，或讲其持续，或讲其覆盖，或讲其工夫。只要守住“统一 = compatibility, not flattening”这一界线，就能避免把玄同说成空泛修辞。
 
+## Omega 定理锚点
+
+- `inverse_limit_extensionality` [`Omega.Frontier.ConditionalArithmetic`]：`theorem inverse_limit_extensionality (a b : X.XInfinity) : a = b ↔ ∀ m, X.prefixWord a m = X.prefixWord b m`。说明无限对象是否相同，完全由全部有限前缀是否一致决定，支撑本文的层级拼接与兼容家族读法。
+- `goldenMeanAdjacency_has_goldenRatio_eigenvector` [`Omega.Graph.TransferMatrix`]：`theorem goldenMeanAdjacency_has_goldenRatio_eigenvector : ∃ v : Fin 2 → ℝ, v ≠ 0 ∧ Matrix.mulVec goldenMeanAdjacencyℝ v = fun i => Real.goldenRatio * v i`。说明 golden-mean adjacency 具有黄金比本征向量，支撑本文把主导增长率与稳定结构联系起来。
+- `topological_entropy_eq_log_phi` [`Omega.Folding.Entropy`]：`theorem topological_entropy_eq_log_phi : Tendsto (fun n => Real.log (Nat.fib (n + 2) : ℝ) / (n : ℝ)) atTop (𝓝 (Real.log φ))`。把系统复杂度增长率写成 `log φ`，支撑本文关于变易具有受控节律而非任意散乱的判断。
+
+这些定理不替代文本解释，但它们把本文最核心的对应从“方向级相似”推进到了“可点名的 Lean 形式结果”。
+
 ## 结论
 
 《道德经》的“玄同”不是简单一元论，也不是好听却模糊的和谐口号。它真正指向的是一种高阶统一：万物可以分化、冲突、显现为不同层级与姿态，但仍被一个更深的兼容整体贯穿。Omega 的 inverse limit 为这一点提供了最清晰的形式对象，spectral 与 dynamics 则说明统一能够以少数不变量稳定表达。于是“和其光，同其尘”便不再只是诗意句法，而成为一种极严格的结构直觉：真正的整体，不怕多样；它只是要求多样在更深处仍能彼此相容。

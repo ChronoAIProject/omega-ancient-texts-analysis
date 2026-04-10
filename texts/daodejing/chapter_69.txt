@@ -1,0 +1,13 @@
+道德经 — 第69章
+
+用兵有言﹕「吾不敢為主而為客，不敢進寸而退尺。」是謂行無行，
+攘無臂，扔無敵，
+執無兵。
+禍莫大於輕敵，輕敵幾喪吾寶。
+故抗兵相加，哀者勝矣。
+
+--- Notes ---
+Source: 維基文庫《道德經（王弼本）》
+Chapter: 69
+Incipit: 用兵有言﹕「吾不敢為主而為客，不敢進寸而退尺。」是謂行無行，
+Acquisition: fetched from Wikisource raw page and split into local chapter files.

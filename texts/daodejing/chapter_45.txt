@@ -1,0 +1,14 @@
+道德经 — 第45章
+
+大成若缺，其用不弊。
+大盈若沖，其用不窮。
+大直若屈，其用不居。
+大巧若拙，其用不輟。
+大辯若訥，其用不差。
+躁勝寒，靜勝熱。清靜為天下正。
+
+--- Notes ---
+Source: 維基文庫《道德經（王弼本）》
+Chapter: 45
+Incipit: 大成若缺，其用不弊。
+Acquisition: fetched from Wikisource raw page and split into local chapter files.

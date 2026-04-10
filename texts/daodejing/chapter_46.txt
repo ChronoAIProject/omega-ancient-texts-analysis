@@ -1,0 +1,11 @@
+道德经 — 第46章
+
+天下有道，卻走馬以糞。
+天下無道，戎馬生於郊。
+禍莫大於不知足；咎莫大於欲得。故知足之足，常足矣。
+
+--- Notes ---
+Source: 維基文庫《道德經（王弼本）》
+Chapter: 46
+Incipit: 天下有道，卻走馬以糞。
+Acquisition: fetched from Wikisource raw page and split into local chapter files.

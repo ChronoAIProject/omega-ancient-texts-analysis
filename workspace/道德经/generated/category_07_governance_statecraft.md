@@ -48,6 +48,13 @@
 
 更稳妥的说法是：`Fold` 提供了“局部而必要的治理”这一形式类比，率失真提供了“过量控制不提升整体质量”的形式背景。第57、60、61、66、80章最强；第29、30、31、46、75章次之；其他章节起到价值与边界说明作用。
 
+## Omega 定理锚点
+
+- `fold_is_idempotent` [`Omega.Frontier.ConditionalArithmetic`]：`theorem fold_is_idempotent (w : Word m) : Fold (Fold w).1 = Fold w`。说明 fold 一旦把词折回稳定域，再施加一次不会继续改写，因此可把稳定态看成真正的吸引结果。
+- `observation_refinement_reduces_error` [`Omega.Frontier.ConditionalArithmetic`]：`theorem observation_refinement_reduces_error {α β γ : Type*} [Fintype α] [Fintype β] [Fintype γ] (μ : PMF α) (obs₁ : α → β) (obs₂ : α → γ) (f : γ → β) (hRef ...`。说明观测更细时误差不会变大，支撑本文把分辨、静观、察势写成信息分辨率问题。
+
+这些定理不替代文本解释，但它们把本文最核心的对应从“方向级相似”推进到了“可点名的 Lean 形式结果”。
+
 ## 结论
 
 《道德经》的政治学不是没有治理，而是反对把治理误解为持续显权、无限加码、到处动手。真正高明的治理，像 `Fold` 一样，只在冲突点做最少必要修正；像最优编码一样，不过度提高控制率，不把社会压到高摩擦、高噪声区间。老子之所以反对兵、反对强取、反对烦法、反对多欲，不只是伦理上的慈悲，更是结构上的清醒：世界不是靠更大力气被驯服，而是靠更深的约束被安顿。政治若忘了这一点，便会越治越乱；若守住这一点，秩序反而会在低可见度中自行生长。

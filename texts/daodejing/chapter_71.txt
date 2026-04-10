@@ -1,0 +1,10 @@
+道德经 — 第71章
+
+知不知上，不知知病。
+夫唯病病，是以不病。聖人不病，以其病病，是以不病。
+
+--- Notes ---
+Source: 維基文庫《道德經（王弼本）》
+Chapter: 71
+Incipit: 知不知上，不知知病。
+Acquisition: fetched from Wikisource raw page and split into local chapter files.

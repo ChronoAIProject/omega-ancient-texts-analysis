@@ -1,0 +1,15 @@
+道德经 — 第76章
+
+人之生也柔弱，其死也堅強。
+萬物草木之生也柔脆，其死也枯槁。
+故堅強者死之徒，柔弱者生之徒。
+是以兵強則不勝，
+木強則兵。
+強大處下，
+柔弱處上。
+
+--- Notes ---
+Source: 維基文庫《道德經（王弼本）》
+Chapter: 76
+Incipit: 人之生也柔弱，其死也堅強。
+Acquisition: fetched from Wikisource raw page and split into local chapter files.

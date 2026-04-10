@@ -48,6 +48,13 @@
 
 就强度言之，第51、38、10章最强；第8、49、54、55、79、81章次之；第23、65章提供制度与工夫论背景。凡文本强调“不争而利”“生而不有”“不积而多”，都与德的结构含义更近；若只是一般意义上的善良教诲，则不宜强拉到 Omega 框架中。
 
+## Omega 定理锚点
+
+- `stableValue_ring_isomorphism` [`Omega.Frontier.ConditionalArithmetic`]：`theorem stableValue_ring_isomorphism (m : Nat) : (∀ x y : X m, stableValue (X.stableAdd x y) = (stableValue x + stableValue y) % Nat.fib (m + 2)) ∧ (∀ x y : ...`。把稳定态上的加法与乘法对应到模 Fibonacci 数环，是本文把关系和平衡写成封闭运算的核心锚点。
+- `maxFiberMultiplicity_bounds` [`Omega.Combinatorics.FibonacciCube`]：`theorem maxFiberMultiplicity_bounds (m : Nat) : m / 2 + 1 ≤ X.maxFiberMultiplicity m ∧ X.maxFiberMultiplicity m ≤ Nat.fib (m + 2)`。给出最大 fiber 多重性的上下界，支撑本文把某些稳定卦象写成更强吸引子的判断。
+
+这些定理不替代文本解释，但它们把本文最核心的对应从“方向级相似”推进到了“可点名的 Lean 形式结果”。
+
 ## 结论
 
 从 Omega 角度看，《道德经》的“德”不是附着在“道”之外的一层伦理说明，而是“道”在具体层级上的养成能力、保持能力与完成能力。第51章把这一点说得最明：道负责生，德负责畜；第38章则指出，真正高的德并不以“我有德”为姿态。代数结构的自洽与 fiber 的承载力，为这一思想提供了两个清晰的形式比照：德既让系统内部关系可持续运作，也让外来输入得以安顿成形。于是“德厚”就不再只是道德夸饰，而是一种可比较的结构事实：越不争、越不占、越能容、越能久。

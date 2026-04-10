@@ -1,0 +1,11 @@
+道德经 — 第40章
+
+反者道之動，
+弱者道之用。
+天下萬物生於有，有生於無。
+
+--- Notes ---
+Source: 維基文庫《道德經（王弼本）》
+Chapter: 40
+Incipit: 反者道之動，
+Acquisition: fetched from Wikisource raw page and split into local chapter files.

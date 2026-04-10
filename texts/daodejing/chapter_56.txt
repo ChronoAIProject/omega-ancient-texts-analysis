@@ -1,0 +1,18 @@
+道德经 — 第56章
+
+知者不言，
+言者不知。
+塞其兌，閉其門，挫其銳，
+解其分，
+和其光，
+同其塵，
+是謂玄同。故不可得而親，不可得而疏；
+不可得而利，不可得而害；
+不可得而貴，不可得而賤。
+故為天下貴。
+
+--- Notes ---
+Source: 維基文庫《道德經（王弼本）》
+Chapter: 56
+Incipit: 知者不言，
+Acquisition: fetched from Wikisource raw page and split into local chapter files.

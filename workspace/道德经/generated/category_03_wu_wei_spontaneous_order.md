@@ -59,6 +59,13 @@
 
 因此，第37、48、57章最强；第17、63、64章次之；第3、10、27、43章则提供修身与政治层面的延伸支持。若把“飘风不终朝”直接译成某个衰减方程，或把“善行无辙迹”直接等同算法不可见性，那都越出了可证范围。
 
+## Omega 定理锚点
+
+- `fold_is_idempotent` [`Omega.Frontier.ConditionalArithmetic`]：`theorem fold_is_idempotent (w : Word m) : Fold (Fold w).1 = Fold w`。说明 fold 一旦把词折回稳定域，再施加一次不会继续改写，因此可把稳定态看成真正的吸引结果。
+- `topological_entropy_eq_log_phi` [`Omega.Folding.Entropy`]：`theorem topological_entropy_eq_log_phi : Tendsto (fun n => Real.log (Nat.fib (n + 2) : ℝ) / (n : ℝ)) atTop (𝓝 (Real.log φ))`。把系统复杂度增长率写成 `log φ`，支撑本文关于变易具有受控节律而非任意散乱的判断。
+
+这些定理不替代文本解释，但它们把本文最核心的对应从“方向级相似”推进到了“可点名的 Lean 形式结果”。
+
 ## 结论
 
 《道德经》关于“无为”的真正锋芒，不是劝人退出世界，而是指出一种更高效、更耐久的秩序生成方式：少做任意动作，让深层约束自己发挥；少做全局强压，让局部修正带来自稳；少做噪声式治理，让系统在其本性中完成化成。Omega 的 `Fold operator` 给出了这一思想最清晰的形式图像，而 `X_∞` 的动力系统则说明，一旦约束建立，复杂性与秩序可以并存，且都由结构自身推出。就此而言，老子的“无为而无不为”并非玄语，而是一种极严格的系统论直觉：真正高明的行动，是让秩序看起来像没有被行动过一样。

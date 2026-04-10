@@ -1,0 +1,13 @@
+道德经 — 第14章
+
+視之不見名曰夷，聽之不聞名曰希，搏之不得名曰微。此三者，不可致詰，故混而為一。
+其上不皦，其下不昧。繩繩不可名，復歸於無物。是謂無狀之狀，無物之象，
+是謂惚恍。
+迎之不見其首，隨之不見其後。執古之道，以御今之有。
+能知古始，是謂道紀。
+
+--- Notes ---
+Source: 維基文庫《道德經（王弼本）》
+Chapter: 14
+Incipit: 視之不見名曰夷，聽之不聞名曰希，搏之不得名曰微。此三者，不可致詰，故混而為一。
+Acquisition: fetched from Wikisource raw page and split into local chapter files.

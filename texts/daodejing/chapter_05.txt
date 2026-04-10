@@ -1,0 +1,12 @@
+道德经 — 第5章
+
+天地不仁，以萬物為芻狗；
+聖人不仁，以百姓為芻狗。
+天地之間，其猶橐籥乎？虛而不屈，動而愈出。
+多言數窮，不如守中。
+
+--- Notes ---
+Source: 維基文庫《道德經（王弼本）》
+Chapter: 5
+Incipit: 天地不仁，以萬物為芻狗；
+Acquisition: fetched from Wikisource raw page and split into local chapter files.

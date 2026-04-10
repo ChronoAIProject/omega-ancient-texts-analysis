@@ -1,0 +1,20 @@
+道德经 — 第25章
+
+有物混成，先天地生。
+寂兮寥兮，獨立而不改，
+周行而不殆，可以為天下母。
+吾不知其名，
+字之曰道，
+強為之名曰大。
+大曰逝，
+逝曰遠，遠曰反。
+故道大，天大，地大，王亦大。
+域中有四大，
+而王居其一焉。
+人法地，地法天，天法道，道法自然。
+
+--- Notes ---
+Source: 維基文庫《道德經（王弼本）》
+Chapter: 25
+Incipit: 有物混成，先天地生。
+Acquisition: fetched from Wikisource raw page and split into local chapter files.

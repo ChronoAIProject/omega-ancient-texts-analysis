@@ -1,0 +1,12 @@
+道德经 — 第34章
+
+大道氾兮，其可左右。
+萬物恃之而生而不辭，功成不名有。衣養萬物而不為主，常無欲，可名於小；
+萬物歸焉而不為主，可名為大。
+以其終不自為大，故能成其大。
+
+--- Notes ---
+Source: 維基文庫《道德經（王弼本）》
+Chapter: 34
+Incipit: 大道氾兮，其可左右。
+Acquisition: fetched from Wikisource raw page and split into local chapter files.

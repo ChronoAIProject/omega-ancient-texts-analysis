@@ -1,0 +1,17 @@
+道德经 — 第10章
+
+載營魄抱一，能無離乎？
+專氣致柔，能嬰兒乎？
+滌除玄覽，能無疵乎？
+愛國治民，能無知乎？
+天門開闔，能為雌乎？
+明白四達，能無為乎？
+生之，
+畜之。
+生而不有，為而不恃，長而不宰，是謂玄德。
+
+--- Notes ---
+Source: 維基文庫《道德經（王弼本）》
+Chapter: 10
+Incipit: 載營魄抱一，能無離乎？
+Acquisition: fetched from Wikisource raw page and split into local chapter files.

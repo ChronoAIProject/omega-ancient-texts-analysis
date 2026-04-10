@@ -1,0 +1,15 @@
+道德经 — 第23章
+
+希言自然。
+故飄風不終朝，驟雨不終日。孰為此者？天地。天地尚不能久，而況於人乎？
+故從事於道者，道者同於道，
+德者同於德，
+失者同於失。
+同於道者，道亦樂得之；同於德者，德亦樂得之；同於失者，失亦樂得之。
+信不足焉，有不信焉。
+
+--- Notes ---
+Source: 維基文庫《道德經（王弼本）》
+Chapter: 23
+Incipit: 希言自然。
+Acquisition: fetched from Wikisource raw page and split into local chapter files.

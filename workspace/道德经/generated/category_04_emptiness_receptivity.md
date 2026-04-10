@@ -46,6 +46,13 @@
 
 所以第11章为什么强于第15章？因为它明确说出“无之以为用”；第28章为什么强于第35章？因为它明确说出“为天下溪”，即把“虚”转化为承载位。凡文本把“空”说成结构功能，而不只是心理感受时，形式对应就更强。
 
+## Omega 定理锚点
+
+- `maxFiberMultiplicity_bounds` [`Omega.Combinatorics.FibonacciCube`]：`theorem maxFiberMultiplicity_bounds (m : Nat) : m / 2 + 1 ≤ X.maxFiberMultiplicity m ∧ X.maxFiberMultiplicity m ≤ Nat.fib (m + 2)`。给出最大 fiber 多重性的上下界，支撑本文把某些稳定卦象写成更强吸引子的判断。
+- `zeckendorf_uniqueness` [`Omega.Frontier.ConditionalArithmetic`]：`theorem zeckendorf_uniqueness {x y : X m} (h : X.zeckIndices x = X.zeckIndices y) : x = y`。说明非相邻 Fibonacci 指标分解是唯一的，支撑本文关于稀疏稳定布局具有唯一性的判断。
+
+这些定理不替代文本解释，但它们把本文最核心的对应从“方向级相似”推进到了“可点名的 Lean 形式结果”。
+
 ## 结论
 
 《道德经》的“虚空”不是贫乏，也不是抽象玄谈，而是一种能容纳多样输入、能为万物留下生成与回转空间的结构智慧。Omega 的 fiber 结构给出了最直接的形式图像：稳定态之所以有用，不在于它占了多少，而在于它能收多少。Zeckendorf 表示则说明，真正高明的构成方式往往最稀疏、最节制，却也最完整、最唯一。于是“谷”“无”“溪”“下”“洼”在老子这里就不再只是诗意意象，而成为一种严格可比较的结构原则：越能留空，越能承载；越不先自满，越能成为诸形之所归。

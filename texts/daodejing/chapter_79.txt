@@ -1,0 +1,13 @@
+道德经 — 第79章
+
+和大怨，必有餘怨，
+安可以為善？是以聖人執左契，
+而不責於人。有德司契，
+無德司徹。
+天道無親，常與善人。
+
+--- Notes ---
+Source: 維基文庫《道德經（王弼本）》
+Chapter: 79
+Incipit: 和大怨，必有餘怨，
+Acquisition: fetched from Wikisource raw page and split into local chapter files.

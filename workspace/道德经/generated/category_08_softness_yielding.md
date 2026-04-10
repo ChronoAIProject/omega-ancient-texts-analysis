@@ -46,6 +46,14 @@
 
 因此，第36章比第13章更强，因为它明确涉及过强触发反向；第43、76、78章比第7章更强，因为它们直接将柔弱说明为结构上的胜法。只要把握住“柔是长期稳定区间，刚是短时极化状态”这一点，整个类目便有清楚的数学对应边界。
 
+## Omega 定理锚点
+
+- `fibonacci_cardinality` [`Omega.Frontier.ConditionalArithmetic`]：`theorem fibonacci_cardinality (m : Nat) : Fintype.card (X m) = Nat.fib (m + 2)`。把稳定词空间的计数严格写成 `|X_m| = F_{m+2}`，是本文讨论卦系受约束增长的基础等式。
+- `fold_is_idempotent` [`Omega.Frontier.ConditionalArithmetic`]：`theorem fold_is_idempotent (w : Word m) : Fold (Fold w).1 = Fold w`。说明 fold 一旦把词折回稳定域，再施加一次不会继续改写，因此可把稳定态看成真正的吸引结果。
+- `observation_refinement_reduces_error` [`Omega.Frontier.ConditionalArithmetic`]：`theorem observation_refinement_reduces_error {α β γ : Type*} [Fintype α] [Fintype β] [Fintype γ] (μ : PMF α) (obs₁ : α → β) (obs₂ : α → γ) (f : γ → β) (hRef ...`。说明观测更细时误差不会变大，支撑本文把分辨、静观、察势写成信息分辨率问题。
+
+这些定理不替代文本解释，但它们把本文最核心的对应从“方向级相似”推进到了“可点名的 Lean 形式结果”。
+
 ## 结论
 
 《道德经》并不只是道德化地偏爱柔弱，而是在揭示一个深层结构事实：可持续的系统必然限制刚性堆叠，允许回转、间隔、低位与弹性存在。Omega 的 golden-mean shift 说明，真正活的词形从不让高态无节制相邻；`Fold` 说明，一切刚性极化终将被折回柔顺形；率失真框架则说明，超过阈值的硬压最终只会换来更大损耗。于是“柔弱胜刚强”便不只是古典箴言，而是一种精确的稳定性判断：能让、能曲、能下、能不争者，反而更强。

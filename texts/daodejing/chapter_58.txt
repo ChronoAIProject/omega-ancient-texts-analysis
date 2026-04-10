@@ -1,0 +1,18 @@
+道德经 — 第58章
+
+其政悶悶，其民淳淳；
+其政察察，其民缺缺。
+禍兮福之所倚，福兮禍之所伏。孰知其極？其無正。
+正復為奇，
+善復為妖。
+人之迷，其日固久。
+是以聖人方而不割，
+廉而不劌，
+直而不肆，
+光而不燿。
+
+--- Notes ---
+Source: 維基文庫《道德經（王弼本）》
+Chapter: 58
+Incipit: 其政悶悶，其民淳淳；
+Acquisition: fetched from Wikisource raw page and split into local chapter files.

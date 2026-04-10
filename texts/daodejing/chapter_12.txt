@@ -1,0 +1,11 @@
+道德经 — 第12章
+
+五色令人目盲，五音令人耳聾，五味令人口爽，馳騁畋獵令人心發狂，
+難得之貨令人行妨。
+是以聖人為腹不為目，故去彼取此。
+
+--- Notes ---
+Source: 維基文庫《道德經（王弼本）》
+Chapter: 12
+Incipit: 五色令人目盲，五音令人耳聾，五味令人口爽，馳騁畋獵令人心發狂，
+Acquisition: fetched from Wikisource raw page and split into local chapter files.

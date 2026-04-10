@@ -1,0 +1,13 @@
+道德经 — 第53章
+
+使我介然有知，行於大道，唯施是畏。
+大道甚夷，而民好徑。
+朝甚除，
+田甚蕪，倉甚虛；
+服文綵，帶利劍，厭飲食，財貨有餘；是為盜夸。非道也哉！
+
+--- Notes ---
+Source: 維基文庫《道德經（王弼本）》
+Chapter: 53
+Incipit: 使我介然有知，行於大道，唯施是畏。
+Acquisition: fetched from Wikisource raw page and split into local chapter files.

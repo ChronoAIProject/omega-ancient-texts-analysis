@@ -1,0 +1,15 @@
+道德经 — 第59章
+
+治人事天，莫若嗇。
+夫唯嗇，是謂早服；
+早服謂之重積德；
+重積德則無不克，無不克則莫知其極；
+莫知其極，可以有國；
+有國之母，可以長久；
+是謂深根固柢，長生久視之道。
+
+--- Notes ---
+Source: 維基文庫《道德經（王弼本）》
+Chapter: 59
+Incipit: 治人事天，莫若嗇。
+Acquisition: fetched from Wikisource raw page and split into local chapter files.
