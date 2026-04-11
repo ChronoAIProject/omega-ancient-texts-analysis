@@ -1,240 +1,255 @@
 {
   "work": "庄子",
-  "author": "庄周及后学 (Zhuang Zhou and later compilers)",
+  "author": "庄周及后学 (Zhuang Zhou and later redactors)",
   "total_chapters": 33,
-  "classification_method": "The 33 received chapters of the Zhuangzi (7 Inner, 15 Outer, 11 Miscellaneous) are clustered by thematic-structural affinity, then mapped only where a genuine formal correspondence can be defended with Omega objects derived from x^2 = x + 1 and formalized in Lean 4.",
-  "note_on_rigor": "Each omega_directions entry aims at structural correspondence rather than poetic resemblance. 'Formal correspondence' here means that the organization of the textual motif can be read as sharing an invariant pattern with an Omega construction (inverse limit, fold normalization, finite quotient, sparse representation, spectral scaling, scan-error monotonicity, etc.). 'Loose_analogies_rejected' records tempting but insufficiently rigorous comparisons that were deliberately excluded.",
+  "classification_method": "Thematic clustering of all 33 chapters across the Inner, Outer, and Miscellaneous books, followed by rigorous identification of structural correspondences with Omega mathematical objects formalized in Lean 4. Because the received text is composite, categories track recurrent conceptual architectures rather than assuming single-author doctrinal uniformity.",
+  "note_on_rigor": "Each omega_directions entry claims structural correspondence rather than decorative analogy. The question asked is whether a Zhuangzi theme organizes multiplicity, transformation, perspective, or intervention in a way that mirrors a specific Omega object or theorem family. Entries under 'loose_analogies_rejected' record tempting but excluded readings.",
   "categories": [
     {
       "id": 1,
-      "name_zh": "逍遥与逆极限自由",
-      "name_en": "Free Wandering and Inverse-Limit Freedom",
-      "chapters": [1, 7, 14, 21, 22, 32],
-      "theme": "This category gathers chapters in which freedom is not simple escape from all conditions, but the attainment of a mode of movement that is no longer trapped by any single finite standpoint. Chapter 1 uses the Kun-Peng transformation and '游无穷' to stage scale-transcending freedom. Chapter 7 turns ideal response into mirror-like receptivity. Chapter 14 presents circulation without accumulation. Chapters 21 and 22 explore ascent through increasingly subtle articulations of the Dao. Chapter 32 exposes the limits of skill and reputation that still remain dependent on external supports.",
+      "name_zh": "逍遥与尺度超越",
+      "name_en": "Free Wandering and Scale Transcendence",
+      "chapters": [1, 17, 21, 32],
+      "theme": "This category gathers chapters where Zhuangzi loosens fixed scale judgments and relocates understanding from local rank to trans-scalar mobility. Chapter 1 《逍遥游》 contrasts the Peng and the quail to undo provincial standards. Chapter 17 《秋水》 stages perspective reversal between river and sea. Chapter 21 《田子方》 deepens the theme through exemplary presence rather than argument. Chapter 32 《列御寇》 continues the issue of fame, capacity, and spiritual lightness under unstable worldly scales.",
       "omega_directions": [
         "modular-tower-inverse-limit",
-        "dynamical-systems"
+        "dynamical-systems",
+        "spectral-theory"
       ],
-      "mapping_rationale": "The strongest formal correspondence is with X_∞ as an inverse limit of finite resolutions X_m. Zhuangzi's '逍遥' is not mere boundlessness in the abstract; it is boundlessness achieved by no longer being confined to one local coordinate system. This matches the Omega picture in which no single X_m exhausts the object, while the compatible family across all levels does. The dynamical layer enters because free wandering is structurally closer to orbiting within a lawful phase space than to anarchic randomness: motion remains constrained, but the agent is no longer imprisoned by a single local obstruction.",
+      "mapping_rationale": "These chapters repeatedly insist that no single finite viewpoint exhausts the whole. That is structurally closest to the inverse-limit object X_∞, where identity is determined only by the compatible family of all finite prefixes, not by any one prefix alone. The wandering figure is therefore better modeled as an orbit-class in a lawful dynamical system than as a static state. Spectral language enters because Zhuangzi is not merely celebrating 'largeness'; he is distinguishing deep governing scale from noisy local comparison, which is exactly what a dominant mode does in the Omega spectral picture.",
       "formal_strength": "strong",
       "loose_analogies_rejected": [
-        "The Peng bird as a literal image of infinity or the golden spiral is rejected; the formal point is layered compatibility across scales, not visual shape.",
-        "Treating '游无穷' as a claim about numerical infinity is rejected; the relevant correspondence is inverse-limit coherence, not cardinal arithmetic."
+        "Treating the Peng bird as a literal exponential-growth graph is rejected; the point is trans-scalar structure, not numerical size by itself."
       ]
     },
     {
       "id": 2,
-      "name_zh": "齐物与模商等价",
-      "name_en": "Equalizing Things and Modular Equivalence",
-      "chapters": [2, 8, 9, 10, 17, 25, 33],
-      "theme": "These chapters unsettle fixed distinctions: this/that, useful/useless, noble/base, large/small, orthodox/heterodox. Chapter 2 is the explicit center, where '彼亦一是非，此亦一是非' and '万物与我为一' collapse privileged standpoints. Chapters 8-10 criticize artificial extensions and normative over-carving. Chapter 17 uses scale shifts to dislocate local certainty. Chapter 25 continues perspectival reversal, and Chapter 33 surveys rival teachings from a vantage that treats each as a partial articulation rather than an absolute terminus.",
+      "name_zh": "齐物与差异折平",
+      "name_en": "Equalizing Things and Folding Distinctions",
+      "chapters": [2, 17, 26, 27],
+      "theme": "These chapters address disputation, naming, and the instability of hard oppositions. Chapter 2 《齐物论》 is central: right/wrong, this/that, dream/waking are repeatedly loosened. Chapter 17 《秋水》 revisits the same problem through comparative scale. Chapter 26 《外物》 and Chapter 27 《寓言》 show how speech, utility, and exempla both reveal and distort what they aim to express.",
       "omega_directions": [
         "fold-operator",
-        "ring-arithmetic",
+        "spectral-theory",
         "modular-tower-inverse-limit"
       ],
-      "mapping_rationale": "The relevant Omega pattern is quotienting: many raw presentations collapse to one stable target, and equality is recovered only after passage through the correct invariant. Fold sends multiple unstable words to a unique stable representative; stableValue identifies elements modulo a finite Fibonacci modulus; tower projections remove distinctions that are not preserved across scales. Zhuangzi's '齐物' is not a denial that distinctions occur, but a refusal to absolutize distinctions that fail to survive passage to a more invariant level. That is formally close to quotienting by an equivalence relation.",
+      "mapping_rationale": "Qiwu is not a flat denial of all difference; it is a disciplined return from rigid binary fixation to a more stable field of compatibility. That is closest to Fold: not annihilation, but lawful normalization of over-insistent local conflict. Spectral theory matters because Zhuangzi is not saying all voices are equal in loudness; he is relocating attention from surface noise to deeper organizing patterns. Inverse-limit language is also appropriate because speech acts are finite cuts through a whole that they can never fully exhaust.",
       "formal_strength": "strong",
       "loose_analogies_rejected": [
-        "Reading '万物一体' as set-theoretic identity of all objects is rejected; the correspondence is quotient structure, not literal undifferentiated monism.",
-        "Equating all doctrinal schools in Chapter 33 with equal truth-values is rejected; the formal point is reduction to invariant classes, not indiscriminate relativism."
+        "Reading 齐物 as simple logical identity of all predicates is rejected; the text preserves difference while disarming absolutized contrast."
       ]
     },
     {
       "id": 3,
-      "name_zh": "养生与有界失真",
-      "name_en": "Nourishing Life and Bounded Distortion",
-      "chapters": [3, 4, 15, 19, 23, 31],
-      "theme": "This category centers on the problem of preserving viable form under finite capacity. Chapter 3 states the problem most sharply: finite life cannot track infinite cognitive appetite without damage. Chapter 4 develops '心斋' as reduction of interference. Chapter 15 refines self-discipline away from excitation. Chapter 19 studies embodied adaptation under difficulty. Chapter 23 warns against over-activation and doctrinal excess. Chapter 31 returns to sincerity and inward alignment as the condition for transmission that does not tear the subject apart.",
+      "name_zh": "养生保真与技艺阈值",
+      "name_en": "Nourishing Life, Skill, and Fidelity Thresholds",
+      "chapters": [3, 19, 20],
+      "theme": "This group centers on techniques of surviving and acting without tearing the world. Chapter 3 《养生主》 includes the Cook Ding episode, where precise contact follows natural seams. Chapter 19 《达生》 extends this logic to swimmers, craftsmen, and embodied ease. Chapter 20 《山木》 shows that survival in the human world depends on not presenting oneself as a blunt, over-exposed target.",
       "omega_directions": [
         "rate-distortion-information-theory",
-        "fiber-structure"
+        "fold-operator",
+        "zeckendorf-representation"
       ],
-      "mapping_rationale": "The rate-distortion correspondence is unusually tight because the chapters are explicitly about finite agents facing more structure than they can process without injury. Omega's scan-error framework formalizes what can be preserved at bounded resolution and what cannot. The fiber direction matters because adaptation is never the loss of all structure; many raw states can still fold into a stable target so long as the distortion budget is respected. '养生' thus matches bounded optimization under a stability constraint better than it matches mystical anti-intellectualism.",
+      "mapping_rationale": "Cook Ding's knife succeeds by minimizing damage while preserving structural fidelity; this is closest to rate-distortion and scan-error language, where finer resolution reduces destructive error. Fold is relevant because skill is not arbitrary force but lawful return to admissible trajectories. Zeckendorf representation enters because the best action is sparse, exact, and non-clustered: not maximum effort, but the unique minimally sufficient intervention pattern.",
       "formal_strength": "strong",
       "loose_analogies_rejected": [
-        "The claim is not that Zhuangzi anticipated Shannon theory in historical detail; only the finite-capacity / bounded-fidelity structure is formally comparable.",
-        "Treating every instance of quietness as compression is rejected; only passages about finite preservation under overload support the mapping."
+        "Identifying every artisan episode with optimization in the modern engineering sense is rejected; only seam-sensitive, low-damage structure is formally usable."
       ]
     },
     {
       "id": 4,
-      "name_zh": "技进于道与折叠归约",
-      "name_en": "Skill Advancing into Dao and Fold Reduction",
-      "chapters": [3, 13, 19, 21],
-      "theme": "These chapters present consummate skill not as accumulation of external control, but as entry into latent structure. Chapter 3's Cook Ding is the anchor: the knife proceeds along joints and gaps rather than through brute force. Chapter 13's wheelwright Bian shows the irreducibility of lived structure to dead verbal residue. Chapter 19 offers carpenter Qing and the swimmer as figures of alignment with pattern. Chapter 21 extends this into a model of transmission that cannot be reduced to explicit formula alone.",
+      "name_zh": "人间处世与最小干预",
+      "name_en": "Human Affairs and Minimal Intervention",
+      "chapters": [4, 11, 24],
+      "theme": "These chapters confront dangerous political and social interfaces. Chapter 4 《人间世》 asks how one can survive service among rulers without self-destruction. Chapter 11 《在宥》 criticizes coercive ordering and heavy-handed government. Chapter 24 《徐无鬼》 adds conversations about rule, reclusion, and the strategic use of non-excessive speech.",
       "omega_directions": [
         "fold-operator",
-        "zeckendorf-representation"
+        "rate-distortion-information-theory",
+        "fiber-structure"
       ],
-      "mapping_rationale": "This is the category with the strongest local correspondence to Fold. The Fold operator does not destroy arbitrarily; it normalizes by tracking lawful decomposition until a unique stable form remains. Cook Ding's cutting '因其固然' is structurally the same kind of operation: not forcing matter, but following the decomposition already implicit in the object. Zeckendorf representation sharpens the point by showing that a stable object has a unique sparse decomposition. Skill in these chapters is therefore closest to normalization by lawful factorization rather than to vague 'intuition.'",
+      "mapping_rationale": "The recurring problem is how to pass through a high-risk interface while adding as little distortion and friction as possible. That makes Fold and rate-distortion the natural formal directions: correct local redirection is preferable to blunt collision. Fiber structure matters because many outward roles, masks, and verbal surfaces can stabilize into the same survival form. Zhuangzi is therefore not teaching mere opportunism; he is analyzing lawful minimal intervention under hostile constraints.",
       "formal_strength": "strong",
       "loose_analogies_rejected": [
-        "Cook Ding's knife is not mapped to a specific algorithmic runtime claim or greedy algorithm complexity result; the correspondence is structural decomposition, not computational complexity.",
-        "Wheelwright Bian is not evidence that language is useless; rather, explicit code is not always identical with the normalization path embodied in practice."
+        "Reading these chapters as advocacy of pure passivity is rejected; the issue is strategic low-distortion action, not withdrawal from action altogether."
       ]
     },
     {
       "id": 5,
-      "name_zh": "德充与纤维容量",
-      "name_en": "Fulfilled Virtue and Fiber Capacity",
-      "chapters": [5, 20, 23, 24],
-      "theme": "The chapters grouped here portray virtue as a capacity to hold and transform many social encounters without breaking into reactive fragmentation. Chapter 5's deformed bodies with intact potency are central. Chapter 20's reflections on usefulness and shelter point toward a form whose efficacy is not exhausted by a single function. Chapter 23 extends this to communal nourishment. Chapter 24 studies the ruler or sage whose efficacy lies less in assertion than in the capacity to receive, stabilize, and redirect.",
+      "name_zh": "德充、形残与容纳能力",
+      "name_en": "Embodied Virtue, Deformation, and Receptive Capacity",
+      "chapters": [5, 20, 23, 31],
+      "theme": "This category gathers chapters where damaged appearance, low status, or obscured form conceal a deeper integrity. Chapter 5 《德充符》 is primary: physically marked or disabled figures become sites of completed virtue. Chapter 20 《山木》 shows the politics of being useful or useless. Chapter 23 《庚桑楚》 turns to inward completion without display. Chapter 31 《渔父》 opposes courtly cultivation to unforced integrity.",
       "omega_directions": [
         "fiber-structure",
-        "ring-arithmetic"
+        "fold-operator",
+        "zeckendorf-representation"
       ],
-      "mapping_rationale": "The formal analogue is the Fold fiber over a stable point: multiple distinct raw words fold to the same target, and the target's significance lies partly in its capacity to stabilize that multiplicity. '德充' in these chapters is less a moral score than a stable receiving-form. The ring direction enters because such a stable form can participate in consistent operations without losing identity. Virtue here is structurally closer to a stable carrier of many admissible inputs than to an ornamental ethical label.",
-      "formal_strength": "moderate",
+      "mapping_rationale": "These chapters strongly distinguish surface form from deeper stable value. Fiber structure gives the best formal analogue: many raw presentations can map to one stable image, and surface irregularity does not determine structural standing. Fold matters because the deeper worth is what remains under normalization rather than display. Zeckendorf sparsity is also relevant because the completed person is not overloaded with signs; integrity appears as a minimal but non-confusable pattern.",
+      "formal_strength": "strong",
       "loose_analogies_rejected": [
-        "Physical deformity is not mapped to numerical defect or error terms; the formal point concerns stable capacity under heterogeneous inputs.",
-        "Virtue is not treated as a scalar magnitude such as fiber size alone; multiplicity is only one structural aspect of the mapping."
+        "Treating bodily disability as a mere metaphor for hidden variables is rejected; the text's ethical and existential stakes must remain intact."
       ]
     },
     {
       "id": 6,
-      "name_zh": "大宗师与生成根基",
-      "name_en": "The Great Ancestral Master and the Generative Ground",
-      "chapters": [6, 11, 12, 16, 18, 22],
-      "theme": "These chapters focus on Dao as prior source, not as one object among others. Chapter 6 states this most directly with '夫道，有情有信，无为无形'. Chapters 11 and 12 describe non-coercive cosmic emergence. Chapter 16 reflects on damaged or restored nature in relation to original pattern. Chapter 18 reads life and death through transformation rather than absolute rupture. Chapter 22 continues to approach the root through failed and partial questionings.",
+      "name_zh": "宗师、死生与化生一体",
+      "name_en": "Masters, Death-Life Transformation, and Unified Process",
+      "chapters": [6, 18, 22],
+      "theme": "These chapters articulate the most explicit Zhuangzian treatment of death, transformation, and the unity of process. Chapter 6 《大宗师》 treats life and death as phases within a larger transformation. Chapter 18 《至乐》 refuses sentimental absolutization of death. Chapter 22 《知北游》 returns to the movement from the named to the ungraspable whole.",
       "omega_directions": [
         "modular-tower-inverse-limit",
-        "fibonacci-growth",
-        "golden-mean-shift"
+        "dynamical-systems",
+        "spectral-theory"
       ],
-      "mapping_rationale": "This category corresponds to the Omega generative axis itself. A single polynomial constraint x^2 = x + 1 generates the whole stable hierarchy; the golden-mean shift turns one forbidden local pattern into a global space; Fibonacci growth measures the recursively proliferating family; the inverse limit X_∞ gathers all finite layers into the object that no single finite layer can exhaust. Zhuangzi's Dao in these chapters is likewise not a highest member inside the world, but the prior generative condition from which patterned multiplicity continually arises.",
+      "mapping_rationale": "The strongest structure here is that local state changes do not destroy the larger process-object. Inverse-limit language captures this because no single phase is the whole, yet the whole is compatible with each finite stage. Dynamical-systems language is necessary because transformation is lawful motion rather than random collapse. Spectral language enters because the text repeatedly suggests that beneath visible alternation there is a deeper organizing rhythm that outlasts any one state.",
       "formal_strength": "strong",
       "loose_analogies_rejected": [
-        "The Dao is not identified with the number φ itself; the correspondence is with the generative structure induced by x^2 = x + 1, not a single constant.",
-        "Life-death transformation is not being read as a literal recurrence relation term-by-term; the analogy becomes formal only at the level of lawful generation and return."
+        "Equating death-life transformation with a simple conservation law is rejected; Zhuangzi's process ontology is subtler than mere quantity preservation."
       ]
     },
     {
       "id": 7,
-      "name_zh": "应帝王与动力秩序",
-      "name_en": "Responsive Governance and Dynamical Order",
-      "chapters": [7, 11, 14, 24, 32],
-      "theme": "These chapters concern rule, response, and the danger of forcing pattern from outside. Chapter 7 is decisive: the '至人之用心若镜' responds without hoarding, and the Hundun story warns that imposed articulation can kill the very medium of spontaneous order. Chapter 11 contrasts letting the world be with administering it by intrusive design. Chapter 14 emphasizes circulation rather than accumulation. Chapter 24 studies rulership through non-imposition. Chapter 32 returns to dependence, orbit, and the limits of derivative power.",
+      "name_zh": "应帝王、天地与天道治理",
+      "name_en": "Responsive Rule and Cosmic Governance",
+      "chapters": [7, 12, 13, 14],
+      "theme": "This category covers rulership, cosmic process, and the critique of coercive order. Chapter 7 《应帝王》 treats sagely responsiveness without possessive agency. Chapter 12 《天地》 expands from government to heaven-earth process. Chapter 13 《天道》 distinguishes genuine alignment from imitative display. Chapter 14 《天运》 examines motion, seasonality, and the mismatch between imposed norms and living process.",
       "omega_directions": [
         "dynamical-systems",
-        "golden-mean-shift"
+        "spectral-theory",
+        "fold-operator"
       ],
-      "mapping_rationale": "The formal correspondence is with lawful dynamics on a constrained space. The shift on X_∞ is not chaos without law; it is motion generated entirely by local admissibility constraints. Likewise, the best governance in these chapters does not mean absence of order, but order that is not externally over-written. The golden-mean shift supplies the constrained phase space; dynamical systems theory supplies the language of surjectivity, periodicity, and non-injective response. Zhuangzi's '应' is therefore structurally closer to equivariant motion than to policy prescription.",
+      "mapping_rationale": "These chapters are about governing by reading and aligning with an already-moving order rather than by replacing it. Dynamical systems therefore give the primary formal picture. Spectral theory is relevant because the ruler or sage must detect dominant patterns rather than micromanage every local fluctuation. Fold enters as the corrective logic: excess intervention must be folded back into more stable, less coercive alignment.",
       "formal_strength": "strong",
       "loose_analogies_rejected": [
-        "The Hundun story is not mapped to a specific entropy-loss calculation; the usable structure is over-resolution destroying spontaneous dynamics.",
-        "Mirror-like response is not treated as passive stasis; the relevant formal object is responsive evolution under constraint, not inaction as immobility."
+        "Interpreting sage-rule as centralized algorithmic control is rejected; Zhuangzi's emphasis falls on responsiveness to prior order, not total information capture."
       ]
     },
     {
       "id": 8,
-      "name_zh": "寓言梦蝶与自指不动点",
-      "name_en": "Parable, Butterfly Dream, and Self-Referential Fixed Points",
-      "chapters": [2, 18, 26, 27, 33],
-      "theme": "This category collects passages where discourse folds back upon its own conditions. Chapter 2's butterfly dream destabilizes the privileged location of the speaking self. Chapter 18 reconsiders grief and transformation by undoing identity fixation. Chapter 26 on fish-traps, rabbit-snares, and language makes explicit that representation is dispensable once meaning has been stabilized. Chapter 27 gives a meta-account of the Zhuangzi's own discursive strategies. Chapter 33 surveys competing teachings while implicitly positioning the text within that same surveyed field.",
+      "name_zh": "反技艺、反雕刻与制度过塑",
+      "name_en": "Anti-Artifice and Critique of Over-Structuring",
+      "chapters": [8, 9, 10],
+      "theme": "The Outer-book sequence 《骈拇》《马蹄》《胠箧》 is one of the clearest anti-artifice clusters in the received text. Extra toes, domesticated horses, and anti-theft policies all exemplify a single complaint: over-carving what was originally viable produces deformation rather than order.",
       "omega_directions": [
-        "dynamical-systems",
+        "golden-mean-shift",
         "fold-operator",
-        "zeckendorf-representation"
+        "rate-distortion-information-theory"
       ],
-      "mapping_rationale": "Self-reference becomes mathematically tractable when a process can fold its own output back into a stable state. Fold offers the retraction pattern; dynamical systems provide fixed and periodic points; Zeckendorf sparsity provides a model of how excess representational scaffolding can be discarded once the stable content is secured. These chapters are not merely 'mystical'; they repeatedly ask how signs, selves, and viewpoints stabilize, destabilize, and recur under recursive reflection.",
-      "formal_strength": "moderate",
+      "mapping_rationale": "These chapters argue that additional carving and regulation do not necessarily produce richer order. The golden-mean shift supplies the sharpest formal parallel: minimal admissibility constraints can generate structured abundance, while forced over-coding can destroy viability. Fold is relevant because distorted constructions require return to a stable domain. Rate-distortion sharpens the criticism: imposed optimization can raise the cost of representation while lowering fidelity to the underlying thing.",
+      "formal_strength": "strong",
       "loose_analogies_rejected": [
-        "Butterfly dream is not treated as a proof of undecidability or Gödel incompleteness; the defensible mapping is self-reference and fixed-point instability, not formal incompleteness.",
-        "Forgetting the trap is not anti-language absolutism; it concerns the dispensability of scaffolding after normalization, not the impossibility of expression."
+        "Treating every social norm as mathematically equivalent to an invalid word is rejected; the structural point concerns over-structuring, not normativity as such."
       ]
     },
     {
       "id": 9,
-      "name_zh": "秋水与谱论视差",
-      "name_en": "Autumn Floods and Spectral Parallax",
-      "chapters": [17, 21, 22, 24, 25, 33],
-      "theme": "Here the central issue is scale, viewpoint, and how different resolutions reveal different invariants. Chapter 17 is the obvious anchor, moving from the swollen river to the sea and then to the inadequacy of the well-frog. Chapters 21 and 22 turn the same problem into graded discourse on what can and cannot be said of Dao. Chapters 24 and 25 continue perspectival displacement in social and political registers. Chapter 33 provides a many-school map in which differences become legible only relative to a broader field.",
+      "name_zh": "刻意、缮性与稀疏规范",
+      "name_en": "Deliberate Practice, Nature Repair, and Sparse Norms",
+      "chapters": [15, 16, 23],
+      "theme": "Chapter 15 《刻意》 and Chapter 16 《缮性》 examine ascetic self-fashioning and the attempt to recover nature after cultural damage. Chapter 23 《庚桑楚》 belongs here as well because it tests how inward completion avoids doctrinal excess while still permitting disciplined cultivation.",
       "omega_directions": [
-        "spectral-theory",
-        "modular-tower-inverse-limit"
+        "zeckendorf-representation",
+        "fold-operator",
+        "golden-mean-shift"
       ],
-      "mapping_rationale": "Spectral theory is the right Omega analogue when one needs a language for scale-sensitive invariants rather than brute local description. Spectral data summarize how structure distributes across levels and perspectives; tower projections formalize resolution change itself. Zhuangzi's perspectival writing in these chapters does not simply assert relativism; it asks what survives when the observational scale changes. That is structurally close to passing from local data to spectral signatures or tower-compatible information.",
+      "mapping_rationale": "These chapters do not simply reject practice; they reject crowded, exhibitionist, or over-coded practice. That is structurally closest to sparse canonical form: the right repair pattern is minimal, exact, and non-clustered. Fold matters because damaged habit must be returned to a lawful normal form. The golden-mean shift adds a further constraint picture: sustainable life requires spacing and anti-overaccumulation rather than continuous intensification.",
       "formal_strength": "moderate",
       "loose_analogies_rejected": [
-        "The river and sea are not being mapped to eigenvectors or eigenvalues as images; the relevant correspondence lies in resolution change and invariant extraction.",
-        "Perspective shift is not equated with arbitrary subjectivism; the mathematical analogue concerns lawful re-expression across scales."
+        "Reading all self-cultivation in these chapters as a positive program of ascetic technique is rejected; Zhuangzi's criticism of deliberate effort remains decisive."
       ]
     },
     {
       "id": 10,
-      "name_zh": "外物让王与有限环算术",
-      "name_en": "External Things, Abdication, and Finite Ring Arithmetic",
-      "chapters": [26, 28, 29, 30, 31],
-      "theme": "These chapters revolve around value circulation, subtraction of excess, finite political or rhetorical games, and the problem of what remains after symbolic inflation has been cut away. Chapter 26 speaks directly of instrument and meaning. Chapter 28 stages abdication and the refusal of maximal worldly accumulation. Chapters 29 and 30 expose predation and display as closed competitive circuits. Chapter 31 returns to sincerity and unadorned transmission over ornamental excess.",
+      "name_zh": "认识分辨率与视角转换",
+      "name_en": "Epistemic Resolution and Perspective Scaling",
+      "chapters": [17, 22, 25, 32],
+      "theme": "These chapters emphasize that knowing depends on resolution, perspective, and the ability to move between scales. Chapter 17 《秋水》 is the key text of comparative scale. Chapter 22 《知北游》 turns from named distinctions to the elusive whole. Chapter 25 《则阳》 probes dialogic shifts in standpoint. Chapter 32 《列御寇》 continues the theme of unstable public judgment and the difficulty of fixing value from one angle.",
       "omega_directions": [
-        "ring-arithmetic",
-        "zeckendorf-representation",
-        "rate-distortion-information-theory"
+        "modular-tower-inverse-limit",
+        "rate-distortion-information-theory",
+        "spectral-theory"
       ],
-      "mapping_rationale": "The finite ring X_m ≅ Z/F_{m+2}Z models closed circulation under a fixed modulus: additions, subtractions, inverses, and multiplications all remain inside a bounded operational world. That is a useful formal analogue for these worldly chapters, where value and power circulate without ever becoming absolute. Zeckendorf sparsity adds the selective principle: keep only what is structurally necessary. Rate-distortion enters because worldly display usually inflates code-length without improving stable meaning. The result is a moderate but defensible correspondence between Zhuangzi's anti-excess politics and Omega's bounded arithmetic and sparse normalization.",
-      "formal_strength": "moderate",
+      "mapping_rationale": "The formal core here is that coarser and finer observations disclose different but related truths, and no single resolution captures the object completely. Inverse-limit language models this directly. Rate-distortion is relevant because better resolution can lower error, but not every increase in data is equally valuable. Spectral theory matters because what counts as genuine understanding is the ability to identify the dominant structural pattern rather than drown in local measurements.",
+      "formal_strength": "strong",
       "loose_analogies_rejected": [
-        "Kingship and banditry are not mapped to positive and negative elements in a moralized algebra; the relevant structure is bounded operational circulation, not moral sign-coding.",
-        "Sword ranks are not literal residue classes; the comparison concerns finite stratification under closed rules."
+        "Equating perspective change with relativism simpliciter is rejected; the chapters seek disciplined transposition across scales, not the abolition of structure."
       ]
     },
     {
       "id": 11,
-      "name_zh": "天籁缮性与最小约束",
-      "name_en": "Natural Pattern, Restored Nature, and Minimal Constraint",
-      "chapters": [8, 9, 10, 11, 15, 16],
-      "theme": "This category gathers Zhuangzi's critiques of over-carving and his search for the minimal constraint compatible with living order. Chapters 8-10 attack artificial extensions, domestication, and over-cleverness as violations of native articulation. Chapter 11 asks what happens when the world is allowed to settle by itself. Chapter 15 turns toward austere cultivation without decorative excess. Chapter 16 reflects on '缮性' as recovery of original pattern rather than fabrication of a new shell.",
+      "name_zh": "让王、盗跖与权力反讽",
+      "name_en": "Power, Refusal, and Inversion",
+      "chapters": [28, 29, 30],
+      "theme": "Chapter 28 《让王》 questions possession of the throne. Chapter 29 《盗跖》 inverts moral discourse through an outlaw's ferocious counter-speech. Chapter 30 《说剑》 performs yet another inversion by staging sword discourse within political theater. Together they expose the instability of prestige, legitimacy, and violent distinction.",
       "omega_directions": [
-        "golden-mean-shift",
-        "fibonacci-growth",
-        "zeckendorf-representation"
+        "fold-operator",
+        "rate-distortion-information-theory",
+        "spectral-theory"
       ],
-      "mapping_rationale": "The golden-mean shift is generated by a single minimal forbidden pattern, yet it still produces rich combinatorial life. This is precisely the sort of formal structure these chapters privilege: not no constraint, and not maximal regulation, but the least constraint sufficient for living articulation. Fibonacci growth shows how richness can emerge from such minimal law. Zeckendorf representation shows how sparse legality can still be complete. The chapters are therefore structurally closer to minimal admissibility than to romantic spontaneity without form.",
+      "mapping_rationale": "These chapters are not merely iconoclastic; they show how prestige systems distort signal and how oppositional speech can force a re-reading of dominant order. Fold is relevant because moral and political overstatements are repeatedly turned back on themselves. Rate-distortion clarifies how power amplifies noise and strategic masking. Spectral theory helps because the real issue is not every speech act equally, but which pattern actually governs the field of power.",
+      "formal_strength": "moderate",
+      "loose_analogies_rejected": [
+        "Treating transgressive speakers as mathematically privileged truth-tellers is rejected; inversion here is diagnostic, not automatically authoritative."
+      ]
+    },
+    {
+      "id": 12,
+      "name_zh": "寓言、外物与言意边界",
+      "name_en": "Parable, External Things, and the Limits of Discourse",
+      "chapters": [26, 27, 33],
+      "theme": "Chapter 26 《外物》 considers use, means, and attachment to externals. Chapter 27 《寓言》 reflects explicitly on indirect speech, borrowed voices, and adaptive utterance. Chapter 33 《天下》 retrospectively arranges schools and doctrines, exposing both the necessity and the insufficiency of discursive taxonomies.",
+      "omega_directions": [
+        "modular-tower-inverse-limit",
+        "rate-distortion-information-theory",
+        "spectral-theory"
+      ],
+      "mapping_rationale": "These chapters ask how language can point beyond itself without claiming total capture. Inverse-limit structure fits because doctrines and parables are finite approximations to a larger whole they cannot exhaust. Rate-distortion fits because indirect speech often preserves more truth with less damage than literal overstatement. Spectral theory enters because discourse is valuable insofar as it recovers dominant structure from a field of competing formulations.",
       "formal_strength": "strong",
       "loose_analogies_rejected": [
-        "Naturalness here is not a call for total lawlessness; the correspondence is with minimal admissibility constraints, not unconstrained randomness.",
-        "Critiques of craft or governance are not blanket rejections of all form; the mathematical analogue is the smallest sufficient rule-set, not absence of rule."
+        "Reducing all parable to information compression is rejected; parable in Zhuangzi changes stance and relation, not just message length."
       ]
     }
   ],
   "structural_summary": {
-    "total_chapter_assignments": 60,
+    "total_chapter_assignments": 41,
     "unique_chapters_covered": 33,
-    "chapters_appearing_in_multiple_categories": [2, 3, 7, 8, 9, 10, 11, 14, 15, 16, 17, 18, 19, 21, 22, 23, 24, 25, 26, 31, 32, 33],
-    "note": "As with the Zhuangzi itself, many chapters operate on several structural planes at once: cosmology, epistemology, political critique, and embodied practice often overlap. Multiple assignments therefore record real thematic overdetermination rather than indecision. The 60 assignments across 33 unique chapters are deliberate and reflect the text's recursive style.",
+    "chapters_appearing_in_multiple_categories": [17, 20, 22, 23, 26, 27, 32],
+    "note": "All 33 received chapters are covered. Overlap is lower than in the Dao De Jing file because the Zhuangzi corpus is more internally segmented by genre and editorial layer, but several hinge chapters (especially 17, 22, 26, 27, 32) necessarily bridge perspective, discourse, and ontology. The 41 total assignments reflect real thematic recurrence rather than inflation.",
     "omega_direction_frequency": {
-      "modular-tower-inverse-limit": 4,
-      "zeckendorf-representation": 4,
+      "modular-tower-inverse-limit": 5,
       "dynamical-systems": 3,
-      "golden-mean-shift": 3,
-      "fold-operator": 3,
-      "ring-arithmetic": 3,
-      "fibonacci-growth": 2,
+      "spectral-theory": 7,
+      "fold-operator": 8,
+      "rate-distortion-information-theory": 6,
       "fiber-structure": 2,
-      "rate-distortion-information-theory": 2,
-      "spectral-theory": 1
+      "zeckendorf-representation": 3,
+      "golden-mean-shift": 2
     },
     "strongest_correspondences": [
       {
-        "text_concept": "庖丁解牛、依乎天理、因其固然 (Ch. 3)",
-        "omega_object": "Fold operator plus rewrite-terminal uniqueness on stable outputs",
-        "why_strong": "Cook Ding does not impose arbitrary cuts; he follows the latent decomposition already carried by the ox. This is closely parallel to Fold normalization, where the process terminates at a unique stable representative by respecting structural admissibility rather than forcing a path from outside."
+        "text_concept": "庖丁解牛与因其固然 (Ch. 3)",
+        "omega_object": "`scanError_hasCertificate` plus `observation_refinement_reduces_error` in seam-sensitive, low-distortion action",
+        "why_strong": "Cook Ding succeeds not by adding force but by increasing structural resolution and reducing destructive contact. This is a rare case where the literary image mirrors the theorem family with unusual precision: finer observation lowers error, and successful action preserves the object."
       },
       {
-        "text_concept": "天地与我并生，而万物与我为一；彼亦一是非，此亦一是非 (Ch. 2)",
-        "omega_object": "Quotienting by Fold / stableValue invariants and tower coarsening",
-        "why_strong": "The chapter does not erase all differences at the raw level; it relocates significance to a more invariant level at which many apparent oppositions collapse. This matches the formal move from raw presentations to quotient classes or stable invariants."
+        "text_concept": "齐物论对是非彼此的折平 (Ch. 2)",
+        "omega_object": "`Fold : Word m → X m`, especially `fold_is_idempotent` and `fold_fixes_stable`",
+        "why_strong": "The chapter does not erase differences into blank sameness; it returns over-rigid oppositions to a more stable field where further forcing is unnecessary. That is structurally close to a canonical normal-form map that stops once stability is reached."
       },
       {
-        "text_concept": "吾生也有涯，而知也无涯。以有涯随无涯，殆已 (Ch. 3)",
-        "omega_object": "Prefix scan-error monotonicity and bounded rate-distortion tradeoff",
-        "why_strong": "A finite observer cannot preserve unlimited detail without damage. Omega's scan-error and bounded-fidelity theorems formalize exactly this kind of finite-capacity constraint: more resolution reduces error, but no finite resolution exhausts the whole object."
+        "text_concept": "逍遥游与秋水中的尺度转换 (Chs. 1 and 17)",
+        "omega_object": "X_∞ determined by `inverse_limit_extensionality`",
+        "why_strong": "No single finite scale or local perspective is authoritative. Identity and intelligibility arise only from the compatible relation among multiple resolutions, which is precisely the inverse-limit principle."
       },
       {
-        "text_concept": "夫道，有情有信，无为无形；可传而不可受，可得而不可见 (Ch. 6)",
-        "omega_object": "X_∞ as inverse-limit totality generated from finite compatible layers",
-        "why_strong": "The Dao is described as real yet not directly objectifiable. This corresponds strongly to the inverse-limit object: each finite layer is accessible and nameable, but the total object only appears through coherent compatibility across all layers and is not reducible to any one finite presentation."
+        "text_concept": "骈拇、马蹄、胠箧对人为雕刻的批判 (Chs. 8-10)",
+        "omega_object": "`fibonacci_cardinality` for structured richness under minimal admissibility",
+        "why_strong": "Zhuangzi's complaint is that added carving can deform what was viable. Omega proves an analogous point in a hard setting: sparse lawful constraint can generate rich structure, whereas over-forcing or invalid clustering collapses stability."
+      },
+      {
+        "text_concept": "大宗师与至乐对死生变化的处理 (Chs. 6 and 18)",
+        "omega_object": "`topological_entropy_eq_log_phi` within a lawful dynamical process",
+        "why_strong": "Transformation is neither inert sameness nor pure chaos. The dynamical picture of controlled positive entropy matches Zhuangzi's insistence that change belongs to a larger order rather than canceling intelligibility."
       }
     ]
   }
