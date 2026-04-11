@@ -36,6 +36,30 @@ def release_for_file(filename: str) -> str:
     # Default: cultural
     return "cultural-media-v1"
 
+
+# Map from NotebookLM auto-names to canonical names (for skip logic)
+PAPER_NAME_MAP = {
+    "Zero_Jitter_Information_Clocks_Parry_Gibbs_Rigidity_Jtp": "zero_jitter_information_clocks",
+    "Zeckendorf_Streaming_Normalization_Automata_Rairo_Ita": "zeckendorf_streaming_normalization_automata",
+    "Resolution_Folding_Core_Symbolic_Dynamics_Jnt": "resolution_folding_core_symbolic",
+    "Grg_Shell_Geometry_From_Stationary_Detector_Thermality_Grg": "grg_shell_geometry_from",
+    "Folded_Rotation_Histogram_Certificates_Siads": "folded_rotation_histogram_certificates",
+    "Folded_Rotation_Histogram_Etds": "folded_rotation_histogram",
+    "Fibonacci_Stabilization_Sharp_Threshold_Conjugacy_Nonlineari": "fibonacci_stabilization_sharp_threshold",
+    "Fibonacci_Moduli_Cross_Resolution_Arithmetic_Rint": "fibonacci_moduli_cross_resolution",
+    "Branch_Cubic_Regular_S4_Closure_Prym_Ray_Class_Jnt": "branch_cubic_regular_s4",
+}
+
+
+def canonical_version_exists(filename: str, existing_names: set) -> bool:
+    """Check if a canonical version of this file already exists in release."""
+    for long_prefix, canonical in PAPER_NAME_MAP.items():
+        if filename.startswith(long_prefix):
+            canonical_name = filename.replace(long_prefix, canonical)
+            if canonical_name in existing_names:
+                return True
+    return False
+
 TAG = "cultural-media-v1"  # default for --track filtering; actual routing via release_for_file
 
 
@@ -92,6 +116,9 @@ def upload_artifacts(track_filter: str = None, dry_run: bool = False):
                 continue
             target_release = release_for_file(f.name)
             if f.name in existing_by_release[target_release]:
+                continue
+            # Skip auto-named NotebookLM files if canonical version already exists
+            if canonical_version_exists(f.name, existing_by_release[target_release]):
                 continue
             if track_filter and track_filter not in f.name:
                 continue
