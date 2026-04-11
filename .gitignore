@@ -9,5 +9,6 @@ venv/
 *.wav
 *.mp4
 *.pdf
+workspace/artifacts/*/*_infographic.png
 node_modules/
 .DS_Store
