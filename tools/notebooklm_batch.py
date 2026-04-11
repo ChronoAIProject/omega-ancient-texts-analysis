@@ -33,10 +33,16 @@ ARTIFACTS_DIR = Path(__file__).parent.parent / "workspace" / "artifacts"
 MAX_RETRIES = 3
 RETRY_DELAY = 10
 DEFAULT_LANGUAGE_PROFILE = "zh_primary_bilingual"
+CLIENT_HTTP_TIMEOUT = 10.0
 SLIDES_TIMEOUT = 900
 INFOGRAPHIC_TIMEOUT = 900
 AUDIO_TIMEOUT = 900
 VIDEO_TIMEOUT = 1200
+ARTIFACT_CREATE_TIMEOUT = 60
+ARTIFACT_DOWNLOAD_TIMEOUT = 180
+POLL_RPC_TIMEOUT = 30
+POLL_RPC_RETRIES = 3
+POLL_ERROR_SLEEP = 5
 
 
 def build_generation_brief(language_profile: str, filepath: Path) -> str:
@@ -94,13 +100,74 @@ async def create_notebook_from_file(client, filepath: Path, language_profile: st
     return nb_id
 
 
+async def wait_for_completion_resilient(
+    client,
+    notebook_id: str,
+    task_id: str,
+    timeout: float,
+    artifact_name: str,
+):
+    """Poll artifact status with a hard timeout around each RPC call."""
+    loop = asyncio.get_running_loop()
+    start_time = loop.time()
+    current_interval = 2.0
+    consecutive_poll_errors = 0
+    last_status = None
+
+    while True:
+        elapsed = loop.time() - start_time
+        remaining = timeout - elapsed
+        if remaining <= 0:
+            raise TimeoutError(f"{artifact_name} task {task_id} timed out after {timeout}s")
+
+        try:
+            status = await asyncio.wait_for(
+                client.artifacts.poll_status(notebook_id, task_id),
+                timeout=min(POLL_RPC_TIMEOUT, max(1.0, remaining)),
+            )
+            consecutive_poll_errors = 0
+        except Exception as e:
+            consecutive_poll_errors += 1
+            print(
+                f"    poll error {consecutive_poll_errors}/{POLL_RPC_RETRIES}: "
+                f"{type(e).__name__}: {e}"
+            )
+            if consecutive_poll_errors >= POLL_RPC_RETRIES:
+                raise TimeoutError(
+                    f"{artifact_name} polling failed repeatedly for task {task_id}: {e}"
+                ) from e
+            await asyncio.sleep(min(POLL_ERROR_SLEEP * consecutive_poll_errors, remaining))
+            continue
+
+        if status.is_complete:
+            print(f"    status: {status.status}")
+            return status
+        if status.is_failed:
+            detail = status.error or status.error_code or status.status
+            raise RuntimeError(f"{artifact_name} task {task_id} failed: {detail}")
+
+        if status.status != last_status:
+            print(f"    status: {status.status}")
+            last_status = status.status
+
+        sleep_duration = min(current_interval, remaining)
+        await asyncio.sleep(sleep_duration)
+        current_interval = min(current_interval * 2, 10.0)
+
+
 async def generate_slides(client, nb_id: str, output_dir: Path, slug: str, slide_language: str):
     """Generate slide deck."""
     print(f"  Generating slides...")
-    status = await client.artifacts.generate_slide_deck(nb_id, language=slide_language)
-    await client.artifacts.wait_for_completion(nb_id, status.task_id, timeout=SLIDES_TIMEOUT)
+    status = await asyncio.wait_for(
+        client.artifacts.generate_slide_deck(nb_id, language=slide_language),
+        timeout=ARTIFACT_CREATE_TIMEOUT,
+    )
+    await wait_for_completion_resilient(client, nb_id, status.task_id, SLIDES_TIMEOUT, "slides")
     output = output_dir / f"{slug}_slides.pdf"
-    await client.artifacts.download_slide_deck(nb_id, str(output))
+    await asyncio.wait_for(
+        client.artifacts.download_slide_deck(nb_id, str(output)),
+        timeout=ARTIFACT_DOWNLOAD_TIMEOUT,
+    )
     print(f"  ✓ Slides: {output}")
     return output
 
@@ -108,10 +175,18 @@ async def generate_slides(client, nb_id: str, output_dir: Path, slug: str, slide
 async def generate_infographic(client, nb_id: str, output_dir: Path, slug: str, slide_language: str):
     """Generate infographic."""
     print(f"  Generating infographic...")
-    status = await client.artifacts.generate_infographic(nb_id, language=slide_language)
-    await client.artifacts.wait_for_completion(nb_id, status.task_id, timeout=INFOGRAPHIC_TIMEOUT)
+    status = await asyncio.wait_for(
+        client.artifacts.generate_infographic(nb_id, language=slide_language),
+        timeout=ARTIFACT_CREATE_TIMEOUT,
+    )
+    await wait_for_completion_resilient(
+        client, nb_id, status.task_id, INFOGRAPHIC_TIMEOUT, "infographic"
+    )
     output = output_dir / f"{slug}_infographic.png"
-    await client.artifacts.download_infographic(nb_id, str(output))
+    await asyncio.wait_for(
+        client.artifacts.download_infographic(nb_id, str(output)),
+        timeout=ARTIFACT_DOWNLOAD_TIMEOUT,
+    )
     print(f"  ✓ Infographic: {output}")
     return output
 
@@ -119,10 +194,16 @@ async def generate_infographic(client, nb_id: str, output_dir: Path, slug: str, 
 async def generate_audio(client, nb_id: str, output_dir: Path, slug: str):
     """Generate audio overview."""
     print(f"  Generating audio (1-3 min)...")
-    status = await client.artifacts.generate_audio(nb_id)
-    await client.artifacts.wait_for_completion(nb_id, status.task_id, timeout=AUDIO_TIMEOUT)
+    status = await asyncio.wait_for(
+        client.artifacts.generate_audio(nb_id),
+        timeout=ARTIFACT_CREATE_TIMEOUT,
+    )
+    await wait_for_completion_resilient(client, nb_id, status.task_id, AUDIO_TIMEOUT, "audio")
     output = output_dir / f"{slug}_audio.wav"
-    await client.artifacts.download_audio(nb_id, str(output))
+    await asyncio.wait_for(
+        client.artifacts.download_audio(nb_id, str(output)),
+        timeout=ARTIFACT_DOWNLOAD_TIMEOUT,
+    )
     print(f"  ✓ Audio: {output}")
     return output
 
@@ -131,10 +212,16 @@ async def generate_video(client, nb_id: str, output_dir: Path, slug: str):
     """Generate video."""
     print(f"  Generating video (2-5 min)...")
     try:
-        status = await client.artifacts.generate_video(nb_id)
-        await client.artifacts.wait_for_completion(nb_id, status.task_id, timeout=VIDEO_TIMEOUT)
+        status = await asyncio.wait_for(
+            client.artifacts.generate_video(nb_id),
+            timeout=ARTIFACT_CREATE_TIMEOUT,
+        )
+        await wait_for_completion_resilient(client, nb_id, status.task_id, VIDEO_TIMEOUT, "video")
         output = output_dir / f"{slug}_video.mp4"
-        await client.artifacts.download_video(nb_id, str(output))
+        await asyncio.wait_for(
+            client.artifacts.download_video(nb_id, str(output)),
+            timeout=ARTIFACT_DOWNLOAD_TIMEOUT,
+        )
         print(f"  ✓ Video: {output}")
         return output
     except Exception as e:
@@ -160,12 +247,50 @@ def collect_existing_artifacts(output_dir: Path, slug: str) -> dict[str, str]:
     return {name: str(path) for name, path in mapping.items() if path.exists()}
 
 
+def load_manifest(manifest_path: Path) -> dict:
+    if not manifest_path.exists():
+        return {}
+    try:
+        return json.loads(manifest_path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return {}
+
+
+async def resolve_notebook_id(
+    client,
+    filepath: Path,
+    output_dir: Path,
+    language_profile: str,
+    force_new_notebook: bool,
+) -> str:
+    manifest_path = output_dir / "manifest.json"
+    manifest = load_manifest(manifest_path)
+
+    if not force_new_notebook:
+        existing_id = manifest.get("notebook_id")
+        same_source = manifest.get("source") == str(filepath)
+        same_profile = manifest.get("language_profile") == language_profile
+        if existing_id and same_source and same_profile:
+            try:
+                await asyncio.wait_for(
+                    client.notebooks.get(existing_id),
+                    timeout=min(POLL_RPC_TIMEOUT, ARTIFACT_CREATE_TIMEOUT),
+                )
+                print(f"  Reusing notebook: [{existing_id[:8]}]")
+                return existing_id
+            except Exception as e:
+                print(f"  Existing notebook unusable, creating a new one... ({e})")
+
+    return await create_notebook_from_file(client, filepath, language_profile)
+
+
 async def process_file(
     client,
     filepath: Path,
     gen_type: str = "all",
     language_profile: str = DEFAULT_LANGUAGE_PROFILE,
     gen_types: list[str] | None = None,
+    force_new_notebook: bool = False,
 ):
     """Process a single file through NotebookLM."""
     slug = normalize_slug(filepath.stem)
@@ -180,7 +305,9 @@ async def process_file(
     print(f"Types: {', '.join(types_to_run)}")
     print(f"{'='*60}")
 
-    nb_id = await create_notebook_from_file(client, filepath, language_profile)
+    nb_id = await resolve_notebook_id(
+        client, filepath, output_dir, language_profile, force_new_notebook
+    )
     results = {"source": str(filepath), "notebook_id": nb_id, "language_profile": language_profile}
 
     generators = {
@@ -236,7 +363,7 @@ async def list_notebooks(client):
 
 
 async def main_async(args):
-    async with await NotebookLMClient.from_storage() as client:
+    async with await NotebookLMClient.from_storage(timeout=CLIENT_HTTP_TIMEOUT) as client:
         if not client.is_connected:
             await client.refresh_auth()
         if not client.is_connected:
@@ -254,7 +381,14 @@ async def main_async(args):
             if not path.exists():
                 print(f"文件不存在: {path}")
                 sys.exit(1)
-            await process_file(client, path, args.type, args.language_profile, args.types)
+            await process_file(
+                client,
+                path,
+                args.type,
+                args.language_profile,
+                args.types,
+                args.force_new_notebook,
+            )
 
         elif args.batch:
             batch_dir = Path(args.batch)
@@ -266,7 +400,14 @@ async def main_async(args):
             for i, f in enumerate(files):
                 print(f"\n[{i+1}/{len(files)}]")
                 try:
-                    await process_file(client, f, args.type, args.language_profile, args.types)
+                    await process_file(
+                        client,
+                        f,
+                        args.type,
+                        args.language_profile,
+                        args.types,
+                        args.force_new_notebook,
+                    )
                 except Exception as e:
                     print(f"  ✗ 失败: {f.name} — {e}")
                     continue
@@ -288,6 +429,11 @@ def main():
         choices=["zh_primary_bilingual", "zh", "en"],
         default=DEFAULT_LANGUAGE_PROFILE,
         help="媒体语言策略 (default: zh_primary_bilingual)",
+    )
+    parser.add_argument(
+        "--force-new-notebook",
+        action="store_true",
+        help="忽略已有 manifest 中的 notebook_id，强制重新创建 notebook",
     )
     parser.add_argument("--list", action="store_true", help="列出 notebooks")
     args = parser.parse_args()
