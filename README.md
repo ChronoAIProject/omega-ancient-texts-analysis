@@ -2,101 +2,143 @@
 
 > 古典著作自动化分析管线 — Omega 数学理论 x AI x 社交网络自动发布
 
-## 概述
+## 产出在哪里
 
-本项目构建一条端到端自动化管线：
+本项目的产出分布在**两个 repo + 三个 GitHub Release**：
 
-1. **文本采集** — 从公共领域获取经典古代著作（《易经》《道德经》《几何原本》等）
-2. **数学分析** — 使用 Omega 纯数学理论（基于 x²=x+1 的形式化框架）对文本进行结构性分析
-3. **LLM 生成** — AI 自动生成分析报告、解读文章、多媒体内容
-4. **自动发布** — 通过 n8n 工作流自动发布到社交网络（Twitter/X、LinkedIn、YouTube 等）
-
-## 架构
+### 文章源码和工具 → 本库
 
 ```
-┌─────────────┐     ┌──────────────┐     ┌─────────────┐     ┌──────────────┐
-│  Text Source │────>│ Omega Engine │────>│ LLM Content │────>│ Social Pub   │
-│  古典文本    │     │  数学分析     │     │  内容生成    │     │  自动发布     │
-└─────────────┘     └──────────────┘     └─────────────┘     └──────────────┘
-       │                   │                    │                    │
-   texts/             analysis/            content/             n8n/
-   corpus/            omega-bridge/        templates/           workflows/
+workspace/
+├── 道德经/          classification.json + 12 篇 category essay
+├── 易经/            classification.json + 12 篇 category essay
+├── 黄帝内经/        classification.json + 12 篇 category essay
+├── 孙子兵法/        classification.json + 10 篇 category essay
+├── 几何原本/        classification.json + 8 篇 category essay
+├── 庄子/            classification.json + 12 篇 category essay
+├── synthesis/       10 篇跨文本综合 essay（每篇追踪 1 个 Omega 定理跨 6 部经典）
+├── artifacts/       本地缓存的 NotebookLM 视频/slides/infographic
+texts/               古典原文语料库（易经 64 卦、道德经 81 章等）
+tools/               自动化脚本（见下方工具列表）
 ```
 
-## 目录结构
+### 展示网站 → [Omega-paper-series](https://github.com/the-omega-institute/Omega-paper-series)
 
+- **网站**: https://the-omega-institute.github.io/Omega-paper-series/
+- 348 个渲染页面：76 篇 category essay + 10 篇 synthesis + 9 篇论文 + 166 个逐卦/逐章 dossier + indexes
+- i18n 双语切换（EN/中文）
+- 7 支旗舰 master 视频嵌入首页
+
+### 视频/Slides → GitHub Releases（不在 repo 文件里）
+
+| Release | 内容 | Assets | 链接 |
+|---|---|---:|---|
+| `cultural-media-v1` | 文化内容视频+slides+infographic | 170+ | [→ 打开](https://github.com/the-omega-institute/Omega-paper-series/releases/tag/cultural-media-v1) |
+| `papers-media-v1` | 9 篇 Gen 2 论文视频+slides | 19 | [→ 打开](https://github.com/the-omega-institute/Omega-paper-series/releases/tag/papers-media-v1) |
+| `master-videos-v1` | 7 支旗舰中文 master 视频 | 19 | [→ 打开](https://github.com/the-omega-institute/Omega-paper-series/releases/tag/master-videos-v1) |
+
+**视频直链格式:**
 ```
-omega-ancient-texts-analysis/
-├── texts/                  # 古典文本语料库
-│   ├── yijing/            # 《易经》
-│   ├── daodejing/         # 《道德经》
-│   ├── elements/          # 《几何原本》
-│   └── ...
-├── analysis/              # Omega 数学分析模块
-│   ├── omega_bridge.py    # automath Lean4 结果桥接
-│   ├── structural.py      # 结构对应分析
-│   └── mapping.py         # 文本-数学映射
-├── content/               # LLM 内容生成
-│   ├── prompts/           # 分析提示词模板
-│   ├── templates/         # 输出格式模板
-│   └── generator.py       # 内容生成管线
-├── publish/               # 社交网络发布
-│   ├── platforms/         # 各平台适配器
-│   └── scheduler.py       # 发布调度
-├── n8n/                   # n8n 自动化工作流
-│   └── workflows/         # 导出的 n8n 工作流 JSON
-├── pipeline.py            # 主管线入口
-├── config.yaml            # 管线配置
-└── CLAUDE.md              # AI 工作规范
+https://github.com/the-omega-institute/Omega-paper-series/releases/download/{release-tag}/{filename}
 ```
 
-## 关联项目
+## 当前进度
 
-- [automath](https://github.com/the-omega-institute/automath) — Omega 数学发现引擎（Lean 4 形式化证明）
-- [chrono-ai-ceo](https://github.com/ChronoAIProject/chrono-ai-ceo) — 公司战略仓库
-- Ada 的 n8n 自动化工作流 — 对外发布自动化
+### 内容 (2026-04-13)
 
-## 技术栈
+| 古典著作 | 分类数 | Category Essay | 逐章/逐卦 Dossier | Master 视频 |
+|---|---:|---:|---:|:---:|
+| 道德经 | 12 | 12 | 81 章 | 中文 |
+| 易经 | 12 | 12 | 64 卦 + 21 GMS-valid | 中文 |
+| 黄帝内经 | 12 | 12 | — | 中文 |
+| 孙子兵法 | 10 | 10 | — | 中文 |
+| 几何原本 | 8 | 8 | — | 中文 |
+| 庄子 | 12 | 12 | — | 中文 |
+| **跨文本综合** | — | **10** | — | — |
+| **合计** | **66** | **76** | **166** | **7** |
 
-- Python 3.10+
-- n8n（工作流自动化）
-- NotebookLM（多媒体生成）
-- OpenAI API / Claude API（LLM 分析）
-- Lean 4 结果桥接（via automath discovery export）
+### NotebookLM 多媒体
+
+- ~270 个 NotebookLM notebooks（masters + mini-masters + categories + 64 卦 individual + 81 章 individual + synthesis + papers）
+- 视频持续生成中，`sync_artifacts.sh` 自动下载+上传到 Release
+- 预期总可发布视频: **~238 支**
+
+### 基础设施
+
+- MemPalace MCP server 注册到 Claude Code（26,524 drawers 语义搜索）
+- 16 个 theorem 反向索引（数学侧导航）
+- Broken-image handler（优雅降级未生成的 infographic）
+
+## 管线架构
+
+```
+古典原文 (texts/)
+    ↓
+Claude 分类 (classification.json)
+    ↓
+Codex 生成文章 (workspace/{work}/generated/*.md)
+    ↓
+Claude 审核 (无 backflow / 定理锚点准确)
+    ↓
+NotebookLM 生成视频/slides/infographic
+    ↓  tools/notebooklm_batch.py
+    ↓  tools/build_master_notebooks.py
+    ↓  tools/build_mini_masters.py
+    ↓
+sync_artifacts.sh → 下载到 workspace/artifacts/
+    ↓
+upload_to_github_release.py → 智能路由到 3 个 Release
+    ↓
+Omega-paper-series 展示网站自动嵌入（链接预埋）
+    ↓
+Ada n8n 工作流 → 社交网络自动发布
+```
+
+## 工具列表
+
+| 脚本 | 功能 |
+|---|---|
+| `tools/notebooklm_batch.py` | 批量上传文章到 NotebookLM + 触发视频/slides/infographic 生成（支持 zh/en 语言 profile） |
+| `tools/notebooklm_local.py` | 单文件 NotebookLM 处理 |
+| `tools/build_master_notebooks.py` | 为每部作品创建 1 个 master notebook（所有内容作为 sources） |
+| `tools/build_mini_masters.py` | 为每个 category 创建 mini-master notebook（category essay + 相关 dossiers） |
+| `tools/sync_artifacts.sh` | 从 NotebookLM 下载新 artifacts + 上传到 GitHub Release（可 cron 挂） |
+| `tools/upload_to_github_release.py` | 智能路由上传：cultural/papers/master 三个 release 自动分流 |
+| `tools/rename_paper_assets.py` | 将 NotebookLM 自动命名的论文文件重命名为 canonical 前缀 |
+| `tools/regenerate_chinese.py` | 清理 FAILED artifacts + 用 `language="zh"` 重新触发 |
+| `tools/build_theorem_index.py` | 通过 MemPalace 语义搜索生成 theorem → cultural citations 反向索引 |
+| `tools/mempalace_mcp.sh` | MemPalace MCP server wrapper（注册到 Claude Code） |
 
 ## 快速开始
 
 ```bash
-# 安装依赖
-pip install -r requirements.txt
+# 1. 安装依赖
+python3 -m venv .venv
+.venv/bin/pip install notebooklm-py mempalace pyyaml
 
-# 运行单篇分析
-python pipeline.py --text texts/yijing/hexagram_01.txt
+# 2. NotebookLM 登录（一次性）
+notebooklm login
 
-# 批量分析
-python pipeline.py --all
+# 3. 查看已有 notebooks
+.venv/bin/python3 tools/notebooklm_batch.py --list
 
-# 生成内容 + 发布
-python pipeline.py --all --publish
+# 4. 批量生成某部作品的视频
+.venv/bin/python3 tools/notebooklm_batch.py --batch workspace/庄子/generated/ --type slides
+
+# 5. 同步+上传到 Release
+bash tools/sync_artifacts.sh --once
+
+# 6. 持续轮询（每 60s）
+bash tools/sync_artifacts.sh
 ```
 
-## 路线图
+## 关联项目
 
-### Phase 1 (2026-04-07 ~ 04-13): 基础架构
-- [ ] 文本语料库搭建（至少 3 部经典著作）
-- [ ] Omega 数学分析桥接模块
-- [ ] LLM 内容生成管线
-- [ ] 基础 n8n 工作流
-
-### Phase 2 (2026-04-14 ~ 04-20): 自动化闭环
-- [ ] 社交网络自动发布
-- [ ] NotebookLM 多媒体整合
-- [ ] 定时调度 + 监控
-
-### Phase 3: 规模化
-- [ ] 更多古典文本覆盖
-- [ ] 多语言内容生成
-- [ ] 社区互动自动化
+| 项目 | 说明 |
+|---|---|
+| [automath](https://github.com/the-omega-institute/automath) | Omega 数学发现引擎 — 10,588+ Lean 4 定理 |
+| [Omega-paper-series](https://github.com/the-omega-institute/Omega-paper-series) | 统一展示站点 — 论文 + 文化解读 + 视频 |
+| [chrono-ai-ceo](https://github.com/ChronoAIProject/chrono-ai-ceo) | Chrono AI 公司战略仓库 |
 
 ## License
 
