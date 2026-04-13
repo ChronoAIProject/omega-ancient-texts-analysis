@@ -2,6 +2,28 @@
 
 > 古典著作自动化分析管线 — Omega 数学理论 x AI x 社交网络自动发布
 
+## 内容分层架构
+
+```
+Level 0 ─── Omega 研究院首页 (https://the-omega-institute.github.io/Omega-paper-series/)
+             │
+Level 1 ─── 7 支 Master 旗舰视频（每支覆盖一部完整经典，中文）
+             │   易经 · 道德经 · 黄帝内经 · 孙子兵法 · 几何原本 · 庄子 · 论文总览
+             │
+Level 2 ─── 10 支 Synthesis 跨文本综合视频
+             │   每支追踪 1 个 Omega 定理跨 6 部经典 + Gen 2 论文
+             │
+Level 3 ─── 76 支 Category 类别视频
+             │   每部经典拆成 8-12 个主题类别
+             │
+Level 4 ─── 145+ 支 Per-Unit 逐卦/逐章视频（持续生成中）
+                 易经 64 卦 · 道德经 81 章
+```
+
+**宣发策略**: Master 首发 → Synthesis 次发 → Category 日常 → Per-Unit 冲量
+
+**宣发/Agent 对接详见**: [AGENT_INTEGRATION.md](AGENT_INTEGRATION.md)（含 API endpoint、文件命名规则、n8n 对接方案、文案模板）
+
 ## 产出在哪里
 
 本项目的产出分布在**两个 repo + 三个 GitHub Release**：
