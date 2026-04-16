@@ -12,3 +12,12 @@ venv/
 workspace/artifacts/*/*_infographic.png
 node_modules/
 .DS_Store
+
+# Stage 5 publication pipeline runtime state
+workspace/dispatch_log.jsonl
+workspace/events.jsonl
+workspace/events.cursor
+workspace/.pipeline.lock
+workspace/.events.lock
+workspace/publication_state/
+workspace/validation_report.json
