@@ -19,5 +19,6 @@ workspace/events.jsonl
 workspace/events.cursor
 workspace/.pipeline.lock
 workspace/.events.lock
+workspace/.dispatch_log.lock
 workspace/publication_state/
 workspace/validation_report.json
