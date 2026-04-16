@@ -1,0 +1,26 @@
+{
+  "id": "hexagram-04-meng",
+  "type": "hexagram",
+  "book": "易经",
+  "sequence": 4,
+  "title_zh": "第四卦 蒙 — 山水",
+  "title_en": "Hexagram 04: Meng — Enveloping / Mountain over Water",
+  "name_zh": "蒙",
+  "name_pinyin": "meng",
+  "language": "zh",
+  "source_article": "workspace/易经/hexagrams/all/hexagram-04-meng.md",
+  "assets": {
+    "video": "hexagram-04-meng_video.mp4",
+    "slides": "hexagram-04-meng_slides.pdf",
+    "cover_4x3": "hexagram-04-meng_cover_4x3.png",
+    "cover_3x4": "hexagram-04-meng_cover_3x4.png"
+  },
+  "assets_status": {
+    "video": "present",
+    "slides": "present",
+    "cover_4x3": "present",
+    "cover_3x4": "present"
+  },
+  "ready_to_publish": true,
+  "timestamp": "2026-04-17T00:00:55+07:00"
+}

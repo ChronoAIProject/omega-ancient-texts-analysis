@@ -1,0 +1,26 @@
+{
+  "id": "hexagram-54-guimei",
+  "type": "hexagram",
+  "book": "易经",
+  "sequence": 54,
+  "title_zh": "第五十四卦 歸妹 — 雷泽",
+  "title_en": "Hexagram 54: Guimei — Converting the Maiden / Thunder over Lake",
+  "name_zh": "歸妹",
+  "name_pinyin": "guimei",
+  "language": "zh",
+  "source_article": "workspace/易经/hexagrams/all/hexagram-54-guimei.md",
+  "assets": {
+    "video": "hexagram-54-guimei_video.mp4",
+    "slides": "hexagram-54-guimei_slides.pdf",
+    "cover_4x3": "hexagram-54-guimei_cover_4x3.png",
+    "cover_3x4": "hexagram-54-guimei_cover_3x4.png"
+  },
+  "assets_status": {
+    "video": "missing",
+    "slides": "missing",
+    "cover_4x3": "missing",
+    "cover_3x4": "missing"
+  },
+  "ready_to_publish": false,
+  "timestamp": "2026-04-17T00:00:55+07:00"
+}

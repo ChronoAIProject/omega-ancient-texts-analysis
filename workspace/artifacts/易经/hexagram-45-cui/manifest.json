@@ -1,0 +1,26 @@
+{
+  "id": "hexagram-45-cui",
+  "type": "hexagram",
+  "book": "易经",
+  "sequence": 45,
+  "title_zh": "第四十五卦 萃 — 泽地",
+  "title_en": "Hexagram 45: Cui — Clustering / Lake over Earth",
+  "name_zh": "萃",
+  "name_pinyin": "cui",
+  "language": "zh",
+  "source_article": "workspace/易经/hexagrams/all/hexagram-45-cui.md",
+  "assets": {
+    "video": "hexagram-45-cui_video.mp4",
+    "slides": "hexagram-45-cui_slides.pdf",
+    "cover_4x3": "hexagram-45-cui_cover_4x3.png",
+    "cover_3x4": "hexagram-45-cui_cover_3x4.png"
+  },
+  "assets_status": {
+    "video": "missing",
+    "slides": "missing",
+    "cover_4x3": "missing",
+    "cover_3x4": "missing"
+  },
+  "ready_to_publish": false,
+  "timestamp": "2026-04-17T00:00:55+07:00"
+}

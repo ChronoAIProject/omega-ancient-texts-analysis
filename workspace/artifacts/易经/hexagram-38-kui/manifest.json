@@ -1,0 +1,26 @@
+{
+  "id": "hexagram-38-kui",
+  "type": "hexagram",
+  "book": "易经",
+  "sequence": 38,
+  "title_zh": "第三十八卦 睽 — 火泽",
+  "title_en": "Hexagram 38: Kui — Polarising / Flame over Lake",
+  "name_zh": "睽",
+  "name_pinyin": "kui",
+  "language": "zh",
+  "source_article": "workspace/易经/hexagrams/all/hexagram-38-kui.md",
+  "assets": {
+    "video": "hexagram-38-kui_video.mp4",
+    "slides": "hexagram-38-kui_slides.pdf",
+    "cover_4x3": "hexagram-38-kui_cover_4x3.png",
+    "cover_3x4": "hexagram-38-kui_cover_3x4.png"
+  },
+  "assets_status": {
+    "video": "missing",
+    "slides": "missing",
+    "cover_4x3": "missing",
+    "cover_3x4": "missing"
+  },
+  "ready_to_publish": false,
+  "timestamp": "2026-04-17T00:00:55+07:00"
+}

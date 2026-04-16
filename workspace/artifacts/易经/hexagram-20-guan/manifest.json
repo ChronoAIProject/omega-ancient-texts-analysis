@@ -1,0 +1,26 @@
+{
+  "id": "hexagram-20-guan",
+  "type": "hexagram",
+  "book": "易经",
+  "sequence": 20,
+  "title_zh": "第二十卦 觀 — 风地",
+  "title_en": "Hexagram 20: Guan — Viewing / Wind over Earth",
+  "name_zh": "觀",
+  "name_pinyin": "guan",
+  "language": "zh",
+  "source_article": "workspace/易经/hexagrams/all/hexagram-20-guan.md",
+  "assets": {
+    "video": "hexagram-20-guan_video.mp4",
+    "slides": "hexagram-20-guan_slides.pdf",
+    "cover_4x3": "hexagram-20-guan_cover_4x3.png",
+    "cover_3x4": "hexagram-20-guan_cover_3x4.png"
+  },
+  "assets_status": {
+    "video": "missing",
+    "slides": "missing",
+    "cover_4x3": "missing",
+    "cover_3x4": "missing"
+  },
+  "ready_to_publish": false,
+  "timestamp": "2026-04-17T00:00:55+07:00"
+}

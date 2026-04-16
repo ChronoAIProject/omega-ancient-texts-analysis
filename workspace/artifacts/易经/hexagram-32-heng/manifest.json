@@ -1,0 +1,26 @@
+{
+  "id": "hexagram-32-heng",
+  "type": "hexagram",
+  "book": "易经",
+  "sequence": 32,
+  "title_zh": "第三十二卦 恆 — 雷风",
+  "title_en": "Hexagram 32: Heng — Persevering / Thunder over Wind",
+  "name_zh": "恆",
+  "name_pinyin": "heng",
+  "language": "zh",
+  "source_article": "workspace/易经/hexagrams/all/hexagram-32-heng.md",
+  "assets": {
+    "video": "hexagram-32-heng_video.mp4",
+    "slides": "hexagram-32-heng_slides.pdf",
+    "cover_4x3": "hexagram-32-heng_cover_4x3.png",
+    "cover_3x4": "hexagram-32-heng_cover_3x4.png"
+  },
+  "assets_status": {
+    "video": "missing",
+    "slides": "missing",
+    "cover_4x3": "missing",
+    "cover_3x4": "missing"
+  },
+  "ready_to_publish": false,
+  "timestamp": "2026-04-17T00:00:55+07:00"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "hexagram-41-sun",
+  "type": "hexagram",
+  "book": "易经",
+  "sequence": 41,
+  "title_zh": "第四十一卦 損 — 山泽",
+  "title_en": "Hexagram 41: Sun — Diminishing / Mountain over Lake",
+  "name_zh": "損",
+  "name_pinyin": "sun",
+  "language": "zh",
+  "source_article": "workspace/易经/hexagrams/all/hexagram-41-sun.md",
+  "assets": {
+    "video": "hexagram-41-sun_video.mp4",
+    "slides": "hexagram-41-sun_slides.pdf",
+    "cover_4x3": "hexagram-41-sun_cover_4x3.png",
+    "cover_3x4": "hexagram-41-sun_cover_3x4.png"
+  },
+  "assets_status": {
+    "video": "missing",
+    "slides": "missing",
+    "cover_4x3": "missing",
+    "cover_3x4": "missing"
+  },
+  "ready_to_publish": false,
+  "timestamp": "2026-04-17T00:00:55+07:00"
+}

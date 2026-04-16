@@ -1,0 +1,26 @@
+{
+  "id": "hexagram-10-lu",
+  "type": "hexagram",
+  "book": "易经",
+  "sequence": 10,
+  "title_zh": "第十卦 履 — 天泽",
+  "title_en": "Hexagram 10: Lu — Treading / Heaven over Lake",
+  "name_zh": "履",
+  "name_pinyin": "lu",
+  "language": "zh",
+  "source_article": "workspace/易经/hexagrams/all/hexagram-10-lu.md",
+  "assets": {
+    "video": "hexagram-10-lu_video.mp4",
+    "slides": "hexagram-10-lu_slides.pdf",
+    "cover_4x3": "hexagram-10-lu_cover_4x3.png",
+    "cover_3x4": "hexagram-10-lu_cover_3x4.png"
+  },
+  "assets_status": {
+    "video": "missing",
+    "slides": "missing",
+    "cover_4x3": "missing",
+    "cover_3x4": "missing"
+  },
+  "ready_to_publish": false,
+  "timestamp": "2026-04-17T00:00:55+07:00"
+}

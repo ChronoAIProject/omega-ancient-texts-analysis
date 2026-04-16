@@ -1,0 +1,26 @@
+{
+  "id": "hexagram-58-dui",
+  "type": "hexagram",
+  "book": "易经",
+  "sequence": 58,
+  "title_zh": "第五十八卦 兌 — 泽",
+  "title_en": "Hexagram 58: Dui — Open / Lake",
+  "name_zh": "兌",
+  "name_pinyin": "dui",
+  "language": "zh",
+  "source_article": "workspace/易经/hexagrams/all/hexagram-58-dui.md",
+  "assets": {
+    "video": "hexagram-58-dui_video.mp4",
+    "slides": "hexagram-58-dui_slides.pdf",
+    "cover_4x3": "hexagram-58-dui_cover_4x3.png",
+    "cover_3x4": "hexagram-58-dui_cover_3x4.png"
+  },
+  "assets_status": {
+    "video": "missing",
+    "slides": "missing",
+    "cover_4x3": "missing",
+    "cover_3x4": "missing"
+  },
+  "ready_to_publish": false,
+  "timestamp": "2026-04-17T00:00:55+07:00"
+}

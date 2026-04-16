@@ -1,0 +1,26 @@
+{
+  "id": "hexagram-36-mingyi",
+  "type": "hexagram",
+  "book": "易经",
+  "sequence": 36,
+  "title_zh": "第三十六卦 明夷 — 地火",
+  "title_en": "Hexagram 36: Mingyi — Intelligence Hidden / Earth over Flame",
+  "name_zh": "明夷",
+  "name_pinyin": "mingyi",
+  "language": "zh",
+  "source_article": "workspace/易经/hexagrams/all/hexagram-36-mingyi.md",
+  "assets": {
+    "video": "hexagram-36-mingyi_video.mp4",
+    "slides": "hexagram-36-mingyi_slides.pdf",
+    "cover_4x3": "hexagram-36-mingyi_cover_4x3.png",
+    "cover_3x4": "hexagram-36-mingyi_cover_3x4.png"
+  },
+  "assets_status": {
+    "video": "missing",
+    "slides": "missing",
+    "cover_4x3": "missing",
+    "cover_3x4": "missing"
+  },
+  "ready_to_publish": false,
+  "timestamp": "2026-04-17T00:00:55+07:00"
+}

@@ -1,0 +1,10 @@
+{
+  "source": "workspace/synthesis/notebooklm_sources/synthesis_05_inverse_limit_modular_tower_source.md",
+  "notebook_id": "ed8385ab-2f3a-47f5-96f1-73adb0873a06",
+  "language_profile": "zh_primary_bilingual",
+  "slides": "/Users/lexa/Desktop/lexa/omega/omega-ancient-texts-analysis/workspace/artifacts/synthesis_05_inverse_limit_modular_tower/synthesis_05_inverse_limit_modular_tower_slides.pdf",
+  "timestamp": "2026-04-11T17:34:24",
+  "infographic": "/Users/lexa/Desktop/lexa/omega/omega-ancient-texts-analysis/workspace/artifacts/synthesis_05_inverse_limit_modular_tower/synthesis_05_inverse_limit_modular_tower_infographic.png",
+  "video": "/Users/lexa/Desktop/lexa/omega/omega-ancient-texts-analysis/workspace/artifacts/synthesis_05_inverse_limit_modular_tower/synthesis_05_inverse_limit_modular_tower_video.mp4",
+  "media_builder": "fallback_from_slides"
+}

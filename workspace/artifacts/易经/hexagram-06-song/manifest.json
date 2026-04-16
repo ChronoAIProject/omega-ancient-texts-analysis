@@ -1,0 +1,26 @@
+{
+  "id": "hexagram-06-song",
+  "type": "hexagram",
+  "book": "易经",
+  "sequence": 6,
+  "title_zh": "第六卦 訟 — 天水",
+  "title_en": "Hexagram 06: Song — Arguing / Heaven over Water",
+  "name_zh": "訟",
+  "name_pinyin": "song",
+  "language": "zh",
+  "source_article": "workspace/易经/hexagrams/all/hexagram-06-song.md",
+  "assets": {
+    "video": "hexagram-06-song_video.mp4",
+    "slides": "hexagram-06-song_slides.pdf",
+    "cover_4x3": "hexagram-06-song_cover_4x3.png",
+    "cover_3x4": "hexagram-06-song_cover_3x4.png"
+  },
+  "assets_status": {
+    "video": "present",
+    "slides": "present",
+    "cover_4x3": "present",
+    "cover_3x4": "present"
+  },
+  "ready_to_publish": true,
+  "timestamp": "2026-04-17T00:00:55+07:00"
+}

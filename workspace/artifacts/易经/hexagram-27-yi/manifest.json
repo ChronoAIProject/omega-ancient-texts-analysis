@@ -1,0 +1,26 @@
+{
+  "id": "hexagram-27-yi",
+  "type": "hexagram",
+  "book": "易经",
+  "sequence": 27,
+  "title_zh": "第二十七卦 頤 — 山雷",
+  "title_en": "Hexagram 27: Yi — Swallowing / Mountain over Thunder",
+  "name_zh": "頤",
+  "name_pinyin": "yi",
+  "language": "zh",
+  "source_article": "workspace/易经/hexagrams/all/hexagram-27-yi.md",
+  "assets": {
+    "video": "hexagram-27-yi_video.mp4",
+    "slides": "hexagram-27-yi_slides.pdf",
+    "cover_4x3": "hexagram-27-yi_cover_4x3.png",
+    "cover_3x4": "hexagram-27-yi_cover_3x4.png"
+  },
+  "assets_status": {
+    "video": "missing",
+    "slides": "missing",
+    "cover_4x3": "missing",
+    "cover_3x4": "missing"
+  },
+  "ready_to_publish": false,
+  "timestamp": "2026-04-17T00:00:55+07:00"
+}

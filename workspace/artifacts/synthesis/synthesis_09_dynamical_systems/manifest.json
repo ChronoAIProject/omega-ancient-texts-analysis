@@ -1,0 +1,10 @@
+{
+  "source": "workspace/synthesis/notebooklm_sources/synthesis_09_dynamical_systems_source.md",
+  "notebook_id": "1b1a2e2e-ea25-4dde-9b5c-27072a34ce5f",
+  "language_profile": "zh_primary_bilingual",
+  "slides": "/Users/lexa/Desktop/lexa/omega/omega-ancient-texts-analysis/workspace/artifacts/synthesis_09_dynamical_systems/synthesis_09_dynamical_systems_slides.pdf",
+  "timestamp": "2026-04-11T17:34:36",
+  "infographic": "/Users/lexa/Desktop/lexa/omega/omega-ancient-texts-analysis/workspace/artifacts/synthesis_09_dynamical_systems/synthesis_09_dynamical_systems_infographic.png",
+  "video": "/Users/lexa/Desktop/lexa/omega/omega-ancient-texts-analysis/workspace/artifacts/synthesis_09_dynamical_systems/synthesis_09_dynamical_systems_video.mp4",
+  "media_builder": "fallback_from_slides"
+}

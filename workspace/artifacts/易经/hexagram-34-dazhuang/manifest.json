@@ -1,0 +1,26 @@
+{
+  "id": "hexagram-34-dazhuang",
+  "type": "hexagram",
+  "book": "易经",
+  "sequence": 34,
+  "title_zh": "第三十四卦 大壯 — 雷天",
+  "title_en": "Hexagram 34: Dazhuang — Great Invigorating / Thunder over Heaven",
+  "name_zh": "大壯",
+  "name_pinyin": "dazhuang",
+  "language": "zh",
+  "source_article": "workspace/易经/hexagrams/all/hexagram-34-dazhuang.md",
+  "assets": {
+    "video": "hexagram-34-dazhuang_video.mp4",
+    "slides": "hexagram-34-dazhuang_slides.pdf",
+    "cover_4x3": "hexagram-34-dazhuang_cover_4x3.png",
+    "cover_3x4": "hexagram-34-dazhuang_cover_3x4.png"
+  },
+  "assets_status": {
+    "video": "missing",
+    "slides": "missing",
+    "cover_4x3": "missing",
+    "cover_3x4": "missing"
+  },
+  "ready_to_publish": false,
+  "timestamp": "2026-04-17T00:00:55+07:00"
+}

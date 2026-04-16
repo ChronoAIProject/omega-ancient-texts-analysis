@@ -1,0 +1,26 @@
+{
+  "id": "hexagram-29-kan",
+  "type": "hexagram",
+  "book": "易经",
+  "sequence": 29,
+  "title_zh": "第二十九卦 坎 — 水",
+  "title_en": "Hexagram 29: Kan — Gorge / Water",
+  "name_zh": "坎",
+  "name_pinyin": "kan",
+  "language": "zh",
+  "source_article": "workspace/易经/hexagrams/all/hexagram-29-kan.md",
+  "assets": {
+    "video": "hexagram-29-kan_video.mp4",
+    "slides": "hexagram-29-kan_slides.pdf",
+    "cover_4x3": "hexagram-29-kan_cover_4x3.png",
+    "cover_3x4": "hexagram-29-kan_cover_3x4.png"
+  },
+  "assets_status": {
+    "video": "missing",
+    "slides": "missing",
+    "cover_4x3": "missing",
+    "cover_3x4": "missing"
+  },
+  "ready_to_publish": false,
+  "timestamp": "2026-04-17T00:00:55+07:00"
+}

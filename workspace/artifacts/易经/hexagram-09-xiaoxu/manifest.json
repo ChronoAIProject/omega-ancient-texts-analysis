@@ -1,0 +1,26 @@
+{
+  "id": "hexagram-09-xiaoxu",
+  "type": "hexagram",
+  "book": "易经",
+  "sequence": 9,
+  "title_zh": "第九卦 小畜 — 风天",
+  "title_en": "Hexagram 09: Xiaoxu — Small Harvest / Wind over Heaven",
+  "name_zh": "小畜",
+  "name_pinyin": "xiaoxu",
+  "language": "zh",
+  "source_article": "workspace/易经/hexagrams/all/hexagram-09-xiaoxu.md",
+  "assets": {
+    "video": "hexagram-09-xiaoxu_video.mp4",
+    "slides": "hexagram-09-xiaoxu_slides.pdf",
+    "cover_4x3": "hexagram-09-xiaoxu_cover_4x3.png",
+    "cover_3x4": "hexagram-09-xiaoxu_cover_3x4.png"
+  },
+  "assets_status": {
+    "video": "missing",
+    "slides": "present",
+    "cover_4x3": "present",
+    "cover_3x4": "present"
+  },
+  "ready_to_publish": false,
+  "timestamp": "2026-04-17T00:00:55+07:00"
+}

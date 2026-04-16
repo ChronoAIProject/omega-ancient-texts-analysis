@@ -1,0 +1,26 @@
+{
+  "id": "hexagram-59-huan",
+  "type": "hexagram",
+  "book": "易经",
+  "sequence": 59,
+  "title_zh": "第五十九卦 渙 — 风水",
+  "title_en": "Hexagram 59: Huan — Dispersing / Wind over Water",
+  "name_zh": "渙",
+  "name_pinyin": "huan",
+  "language": "zh",
+  "source_article": "workspace/易经/hexagrams/all/hexagram-59-huan.md",
+  "assets": {
+    "video": "hexagram-59-huan_video.mp4",
+    "slides": "hexagram-59-huan_slides.pdf",
+    "cover_4x3": "hexagram-59-huan_cover_4x3.png",
+    "cover_3x4": "hexagram-59-huan_cover_3x4.png"
+  },
+  "assets_status": {
+    "video": "missing",
+    "slides": "missing",
+    "cover_4x3": "missing",
+    "cover_3x4": "missing"
+  },
+  "ready_to_publish": false,
+  "timestamp": "2026-04-17T00:00:55+07:00"
+}

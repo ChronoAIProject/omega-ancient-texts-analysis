@@ -1,0 +1,26 @@
+{
+  "id": "hexagram-21-shihe",
+  "type": "hexagram",
+  "book": "易经",
+  "sequence": 21,
+  "title_zh": "第二十一卦 噬嗑 — 火雷",
+  "title_en": "Hexagram 21: Shihe — Gnawing Bite / Flame over Thunder",
+  "name_zh": "噬嗑",
+  "name_pinyin": "shihe",
+  "language": "zh",
+  "source_article": "workspace/易经/hexagrams/all/hexagram-21-shihe.md",
+  "assets": {
+    "video": "hexagram-21-shihe_video.mp4",
+    "slides": "hexagram-21-shihe_slides.pdf",
+    "cover_4x3": "hexagram-21-shihe_cover_4x3.png",
+    "cover_3x4": "hexagram-21-shihe_cover_3x4.png"
+  },
+  "assets_status": {
+    "video": "missing",
+    "slides": "missing",
+    "cover_4x3": "missing",
+    "cover_3x4": "missing"
+  },
+  "ready_to_publish": false,
+  "timestamp": "2026-04-17T00:00:55+07:00"
+}

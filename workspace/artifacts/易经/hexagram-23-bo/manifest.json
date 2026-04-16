@@ -1,0 +1,26 @@
+{
+  "id": "hexagram-23-bo",
+  "type": "hexagram",
+  "book": "易经",
+  "sequence": 23,
+  "title_zh": "第二十三卦 剝 — 山地",
+  "title_en": "Hexagram 23: Bo — Stripping / Mountain over Earth",
+  "name_zh": "剝",
+  "name_pinyin": "bo",
+  "language": "zh",
+  "source_article": "workspace/易经/hexagrams/all/hexagram-23-bo.md",
+  "assets": {
+    "video": "hexagram-23-bo_video.mp4",
+    "slides": "hexagram-23-bo_slides.pdf",
+    "cover_4x3": "hexagram-23-bo_cover_4x3.png",
+    "cover_3x4": "hexagram-23-bo_cover_3x4.png"
+  },
+  "assets_status": {
+    "video": "missing",
+    "slides": "missing",
+    "cover_4x3": "missing",
+    "cover_3x4": "missing"
+  },
+  "ready_to_publish": false,
+  "timestamp": "2026-04-17T00:00:55+07:00"
+}

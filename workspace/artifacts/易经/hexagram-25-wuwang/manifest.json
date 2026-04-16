@@ -1,0 +1,26 @@
+{
+  "id": "hexagram-25-wuwang",
+  "type": "hexagram",
+  "book": "易经",
+  "sequence": 25,
+  "title_zh": "第二十五卦 无妄 — 天雷",
+  "title_en": "Hexagram 25: Wuwang — Innocence / Heaven over Thunder",
+  "name_zh": "无妄",
+  "name_pinyin": "wuwang",
+  "language": "zh",
+  "source_article": "workspace/易经/hexagrams/all/hexagram-25-wuwang.md",
+  "assets": {
+    "video": "hexagram-25-wuwang_video.mp4",
+    "slides": "hexagram-25-wuwang_slides.pdf",
+    "cover_4x3": "hexagram-25-wuwang_cover_4x3.png",
+    "cover_3x4": "hexagram-25-wuwang_cover_3x4.png"
+  },
+  "assets_status": {
+    "video": "missing",
+    "slides": "missing",
+    "cover_4x3": "missing",
+    "cover_3x4": "missing"
+  },
+  "ready_to_publish": false,
+  "timestamp": "2026-04-17T00:00:55+07:00"
+}

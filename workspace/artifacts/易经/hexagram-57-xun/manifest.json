@@ -1,0 +1,26 @@
+{
+  "id": "hexagram-57-xun",
+  "type": "hexagram",
+  "book": "易经",
+  "sequence": 57,
+  "title_zh": "第五十七卦 巽 — 风",
+  "title_en": "Hexagram 57: Xun — Ground / Wind",
+  "name_zh": "巽",
+  "name_pinyin": "xun",
+  "language": "zh",
+  "source_article": "workspace/易经/hexagrams/all/hexagram-57-xun.md",
+  "assets": {
+    "video": "hexagram-57-xun_video.mp4",
+    "slides": "hexagram-57-xun_slides.pdf",
+    "cover_4x3": "hexagram-57-xun_cover_4x3.png",
+    "cover_3x4": "hexagram-57-xun_cover_3x4.png"
+  },
+  "assets_status": {
+    "video": "missing",
+    "slides": "missing",
+    "cover_4x3": "missing",
+    "cover_3x4": "missing"
+  },
+  "ready_to_publish": false,
+  "timestamp": "2026-04-17T00:00:55+07:00"
+}

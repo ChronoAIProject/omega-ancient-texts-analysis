@@ -1,0 +1,26 @@
+{
+  "id": "hexagram-55-feng",
+  "type": "hexagram",
+  "book": "易经",
+  "sequence": 55,
+  "title_zh": "第五十五卦 豐 — 雷火",
+  "title_en": "Hexagram 55: Feng — Abounding / Thunder over Flame",
+  "name_zh": "豐",
+  "name_pinyin": "feng",
+  "language": "zh",
+  "source_article": "workspace/易经/hexagrams/all/hexagram-55-feng.md",
+  "assets": {
+    "video": "hexagram-55-feng_video.mp4",
+    "slides": "hexagram-55-feng_slides.pdf",
+    "cover_4x3": "hexagram-55-feng_cover_4x3.png",
+    "cover_3x4": "hexagram-55-feng_cover_3x4.png"
+  },
+  "assets_status": {
+    "video": "missing",
+    "slides": "missing",
+    "cover_4x3": "missing",
+    "cover_3x4": "missing"
+  },
+  "ready_to_publish": false,
+  "timestamp": "2026-04-17T00:00:55+07:00"
+}
