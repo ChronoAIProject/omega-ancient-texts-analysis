@@ -129,33 +129,100 @@ def extract_book_from_source(source: str) -> str | None:
     return None
 
 
+# Keyword fallback for categorizing artifacts without manifest.json.
+# Each book has distinctive English slugs in its category directory names.
+CATEGORY_KEYWORDS: dict[str, tuple[str, ...]] = {
+    "易经": (
+        "primal_creation", "binary_duality", "dynamic_change", "cyclic_completion",
+        "obstruction", "emptiness_receptivity", "strategic_formation",
+        "pure_states", "hexagram",
+        "configuration_energy", "emergent_multiplication",
+        "weakness_strength_adversarial", "discrete_arithmetic",
+        "structural_recurrence", "excess_deficiency_reversal",
+        "epistemic_resolution", "perspective_scaling",
+        "power_refusal", "integrative_doctrine", "multiscale_closure",
+    ),
+    "道德经": (
+        "generative_ground", "wu_wei", "spontaneous_order", "water_valley",
+        "reversal_return", "softness_weakness", "uncarved_block", "sage_governance",
+        "dao", "dark_feminine",
+        "human_affairs_minimal_intervention", "embodied_virtue",
+        "receptive_capacity", "anti_artifice", "self_cultivation",
+        "sparse_norms", "responsive_rule", "cosmic_governance",
+        "overstructuring",
+    ),
+    "黄帝内经": (
+        "cosmic_timing", "seasonal_regulation", "organ_governance", "somatic_polity",
+        "channels_networks", "circulatory_coupling", "diagnosis", "pulse_diagnostic",
+        "meridian", "yin_yang_body",
+        "pathogenesis", "pathogenic_factors", "needling_law",
+        "qi_blood_fluids", "metabolic_allocation", "spirit_emotion",
+        "cognitive_state", "pain_bi_jue", "critical_syndromes",
+    ),
+    "孙子兵法": (
+        "strategic_estimation", "pre_battle_computation", "speed_logistics",
+        "cost_of_war", "total_victory", "strategic_compression", "dispositions_defense",
+        "winnable_geometry", "deception",
+        "maneuver_variation", "adaptive_tactics", "marching_field_signs",
+        "terrain_topology", "state_constrained_positioning",
+        "fire_attack", "exogenous_intervention",
+    ),
+    "几何原本": (
+        "definitions_postulates", "admissible_constructions", "congruence_rigidity",
+        "plane_configurations", "parallelism_axiom", "global_coherence",
+        "similarity_proportion", "solid_geometry", "incommensurable",
+        "geometric_algebra", "area_identities", "proportion_similarity",
+        "cross_scale_transfer",
+    ),
+    "庄子": (
+        "free_wandering", "scale_transcendence", "equalizing_things",
+        "folding_distinctions", "nourishing_life", "skillful_fidelity",
+        "spontaneous_transformation", "zhuangzi_butterfly",
+        "death_life_transformation", "unified_process",
+        "parable_external_things", "discursive_limits",
+    ),
+    "论语": (
+        "ren_benevolence", "ritual_propriety", "filial_piety", "junzi_character",
+        "zhengming_rectification", "gentleman_virtue",
+    ),
+}
+
+
+def classify_by_keywords(dirname: str) -> str | None:
+    """Fallback: infer book from distinctive keywords in the directory name."""
+    lower = dirname.lower()
+    for book, keywords in CATEGORY_KEYWORDS.items():
+        for kw in keywords:
+            if kw in lower:
+                return book
+    return None
+
+
 def detect_category_book(artifact_dir: Path) -> tuple[str, list[str]]:
     manifest_path = artifact_dir / "manifest.json"
-    if not manifest_path.exists():
-        return "unknown", [
-            f"WARNING {artifact_dir.name}: manifest.json missing, using categories/unknown"
+
+    # Try manifest-based classification first
+    if manifest_path.exists():
+        try:
+            manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+            source = manifest.get("source")
+            if isinstance(source, str) and source.strip():
+                book = extract_book_from_source(source)
+                if book is not None:
+                    return book, []
+        except (OSError, json.JSONDecodeError):
+            pass
+
+    # Fallback: keyword classification based on directory name
+    kw_book = classify_by_keywords(artifact_dir.name)
+    if kw_book is not None:
+        return kw_book, [
+            f"INFO {artifact_dir.name}: classified as {kw_book} via keyword fallback"
         ]
 
-    try:
-        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
-    except (OSError, json.JSONDecodeError) as exc:
-        return "unknown", [
-            f"WARNING {artifact_dir.name}: could not read manifest.json ({exc}), using categories/unknown"
-        ]
-
-    source = manifest.get("source")
-    if not isinstance(source, str) or not source.strip():
-        return "unknown", [
-            f"WARNING {artifact_dir.name}: manifest.json has no usable 'source', using categories/unknown"
-        ]
-
-    book = extract_book_from_source(source)
-    if book is None:
-        return "unknown", [
-            f"WARNING {artifact_dir.name}: could not determine book from source '{source}', using categories/unknown"
-        ]
-
-    return book, []
+    return "unknown", [
+        f"WARNING {artifact_dir.name}: no manifest and no keyword match, using categories/unknown"
+    ]
 
 
 def classify_artifact(root: Path, artifact_dir: Path) -> ArtifactPlan:

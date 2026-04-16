@@ -429,11 +429,16 @@ def build_category_entry(artifact_dir: Path, generated_index: dict[str, Path]) -
     title_en = extract_category_english_title(article_text, title_zh) or title_case_slug(slug)
     media = artifact_media_paths(artifact_dir)
 
+    # Sequence offset: categories get 1000+n so they don't collide with
+    # per-chapter sequence numbers (hexagrams 1-64, daodejing 1-81).
+    # Lydia's script sorts by sequence within a book; without this offset,
+    # hexagram-01 and category_01 both get sequence=1 and interleave.
     return {
         "id": artifact_dir.name,
         "book": book,
         "book_en": meta["en"],
-        "sequence": sequence,
+        "sequence": 1000 + sequence,
+        "sequence_raw": sequence,
         "title_zh": title_zh,
         "title_en": title_en,
         "language": meta["lang"],
@@ -561,10 +566,47 @@ def build_registry() -> list[dict[str, Any]]:
     if not ARTIFACTS_DIR.is_dir():
         return entries
 
-    for artifact_dir in sorted(path for path in ARTIFACTS_DIR.iterdir() if path.is_dir()):
-        entry = build_entry(artifact_dir, generated_index)
-        if entry is not None:
-            entries.append(entry)
+    # After restructure_artifacts.py, each artifact lives under one of these
+    # organizational parents: 易经/, 道德经/, 黄帝内经/, 孙子兵法/, 几何原本/,
+    # 庄子/, 论语/, categories/<book>/, synthesis/, masters/, papers/.
+    # An artifact directory is any directory that matches a known naming
+    # pattern (hexagram-*, daodejing_chapter-*, category_*, synthesis_*,
+    # master_*), OR contains a manifest.json or media file. Empty planned
+    # directories are still registered so the registry tracks the full
+    # roadmap, not just produced content.
+    artifact_name_prefixes = (
+        "hexagram-", "daodejing_chapter-",
+        "category_", "synthesis_", "master_",
+    )
+
+    def is_artifact_dir(path: Path) -> bool:
+        if not path.is_dir():
+            return False
+        name = path.name
+        if name.startswith(artifact_name_prefixes):
+            return True
+        if (path / "manifest.json").exists():
+            return True
+        for item in path.iterdir():
+            lname = item.name.lower()
+            if lname.endswith("_slides.pdf") or lname.endswith("_video.mp4"):
+                return True
+        return False
+
+    seen: set[Path] = set()
+    # Walk up to 3 levels deep: artifacts/<book>/<item>/ or
+    # artifacts/categories/<book>/<item>/
+    for candidate in sorted(ARTIFACTS_DIR.rglob("*")):
+        if not candidate.is_dir():
+            continue
+        if candidate in seen:
+            continue
+        # Skip intermediate organizational dirs (易经/, categories/, etc.)
+        if is_artifact_dir(candidate):
+            seen.add(candidate)
+            entry = build_entry(candidate, generated_index)
+            if entry is not None:
+                entries.append(entry)
 
     entries.sort(key=sort_key)
     return entries
