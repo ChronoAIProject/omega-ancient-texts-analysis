@@ -1,0 +1,26 @@
+{
+  "id": "hexagram-12-pi",
+  "type": "hexagram",
+  "book": "易经",
+  "sequence": 12,
+  "title_zh": "第十二卦 否 — 天地",
+  "title_en": "Hexagram 12: Pi — Obstruction / Heaven over Earth",
+  "name_zh": "否",
+  "name_pinyin": "pi",
+  "language": "zh",
+  "source_article": "workspace/易经/hexagrams/all/hexagram-12-pi.md",
+  "assets": {
+    "video": "hexagram-12-pi_video.mp4",
+    "slides": "hexagram-12-pi_slides.pdf",
+    "cover_4x3": "hexagram-12-pi_cover_4x3.png",
+    "cover_3x4": "hexagram-12-pi_cover_3x4.png"
+  },
+  "assets_status": {
+    "video": "missing",
+    "slides": "missing",
+    "cover_4x3": "missing",
+    "cover_3x4": "missing"
+  },
+  "ready_to_publish": false,
+  "timestamp": "2026-04-16T23:15:18+07:00"
+}

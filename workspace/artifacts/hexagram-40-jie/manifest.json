@@ -1,0 +1,26 @@
+{
+  "id": "hexagram-40-jie",
+  "type": "hexagram",
+  "book": "易经",
+  "sequence": 40,
+  "title_zh": "第四十卦 解 — 雷水",
+  "title_en": "Hexagram 40: Jie — Deliverance / Thunder over Water",
+  "name_zh": "解",
+  "name_pinyin": "jie",
+  "language": "zh",
+  "source_article": "workspace/易经/hexagrams/all/hexagram-40-jie.md",
+  "assets": {
+    "video": "hexagram-40-jie_video.mp4",
+    "slides": "hexagram-40-jie_slides.pdf",
+    "cover_4x3": "hexagram-40-jie_cover_4x3.png",
+    "cover_3x4": "hexagram-40-jie_cover_3x4.png"
+  },
+  "assets_status": {
+    "video": "missing",
+    "slides": "missing",
+    "cover_4x3": "missing",
+    "cover_3x4": "missing"
+  },
+  "ready_to_publish": false,
+  "timestamp": "2026-04-16T23:15:18+07:00"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "hexagram-48-jing",
+  "type": "hexagram",
+  "book": "易经",
+  "sequence": 48,
+  "title_zh": "第四十八卦 井 — 水风",
+  "title_en": "Hexagram 48: Jing — Welling / Water over Wind",
+  "name_zh": "井",
+  "name_pinyin": "jing",
+  "language": "zh",
+  "source_article": "workspace/易经/hexagrams/all/hexagram-48-jing.md",
+  "assets": {
+    "video": "hexagram-48-jing_video.mp4",
+    "slides": "hexagram-48-jing_slides.pdf",
+    "cover_4x3": "hexagram-48-jing_cover_4x3.png",
+    "cover_3x4": "hexagram-48-jing_cover_3x4.png"
+  },
+  "assets_status": {
+    "video": "missing",
+    "slides": "missing",
+    "cover_4x3": "missing",
+    "cover_3x4": "missing"
+  },
+  "ready_to_publish": false,
+  "timestamp": "2026-04-16T23:15:18+07:00"
+}

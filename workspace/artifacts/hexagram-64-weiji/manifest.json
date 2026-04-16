@@ -1,0 +1,26 @@
+{
+  "id": "hexagram-64-weiji",
+  "type": "hexagram",
+  "book": "易经",
+  "sequence": 64,
+  "title_zh": "第六十四卦 未濟 — 火水",
+  "title_en": "Hexagram 64: Weiji — Before Completion / Flame over Water",
+  "name_zh": "未濟",
+  "name_pinyin": "weiji",
+  "language": "zh",
+  "source_article": "workspace/易经/hexagrams/all/hexagram-64-weiji.md",
+  "assets": {
+    "video": "hexagram-64-weiji_video.mp4",
+    "slides": "hexagram-64-weiji_slides.pdf",
+    "cover_4x3": "hexagram-64-weiji_cover_4x3.png",
+    "cover_3x4": "hexagram-64-weiji_cover_3x4.png"
+  },
+  "assets_status": {
+    "video": "missing",
+    "slides": "missing",
+    "cover_4x3": "missing",
+    "cover_3x4": "missing"
+  },
+  "ready_to_publish": false,
+  "timestamp": "2026-04-16T23:15:18+07:00"
+}

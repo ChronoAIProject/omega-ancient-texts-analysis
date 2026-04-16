@@ -1,0 +1,26 @@
+{
+  "id": "hexagram-60-jie",
+  "type": "hexagram",
+  "book": "易经",
+  "sequence": 60,
+  "title_zh": "第六十卦 節 — 水泽",
+  "title_en": "Hexagram 60: Jie — Articulating / Water over Lake",
+  "name_zh": "節",
+  "name_pinyin": "jie",
+  "language": "zh",
+  "source_article": "workspace/易经/hexagrams/all/hexagram-60-jie.md",
+  "assets": {
+    "video": "hexagram-60-jie_video.mp4",
+    "slides": "hexagram-60-jie_slides.pdf",
+    "cover_4x3": "hexagram-60-jie_cover_4x3.png",
+    "cover_3x4": "hexagram-60-jie_cover_3x4.png"
+  },
+  "assets_status": {
+    "video": "missing",
+    "slides": "missing",
+    "cover_4x3": "missing",
+    "cover_3x4": "missing"
+  },
+  "ready_to_publish": false,
+  "timestamp": "2026-04-16T23:15:18+07:00"
+}

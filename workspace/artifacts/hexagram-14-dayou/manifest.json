@@ -1,0 +1,26 @@
+{
+  "id": "hexagram-14-dayou",
+  "type": "hexagram",
+  "book": "易经",
+  "sequence": 14,
+  "title_zh": "第十四卦 大有 — 火天",
+  "title_en": "Hexagram 14: Dayou — Great Possessing / Flame over Heaven",
+  "name_zh": "大有",
+  "name_pinyin": "dayou",
+  "language": "zh",
+  "source_article": "workspace/易经/hexagrams/all/hexagram-14-dayou.md",
+  "assets": {
+    "video": "hexagram-14-dayou_video.mp4",
+    "slides": "hexagram-14-dayou_slides.pdf",
+    "cover_4x3": "hexagram-14-dayou_cover_4x3.png",
+    "cover_3x4": "hexagram-14-dayou_cover_3x4.png"
+  },
+  "assets_status": {
+    "video": "missing",
+    "slides": "missing",
+    "cover_4x3": "missing",
+    "cover_3x4": "missing"
+  },
+  "ready_to_publish": false,
+  "timestamp": "2026-04-16T23:15:18+07:00"
+}

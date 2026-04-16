@@ -1,0 +1,26 @@
+{
+  "id": "hexagram-03-zhun",
+  "type": "hexagram",
+  "book": "易经",
+  "sequence": 3,
+  "title_zh": "第三卦 屯 — 水雷",
+  "title_en": "Hexagram 03: Zhun — Sprouting / Water over Thunder",
+  "name_zh": "屯",
+  "name_pinyin": "zhun",
+  "language": "zh",
+  "source_article": "workspace/易经/hexagrams/all/hexagram-03-zhun.md",
+  "assets": {
+    "video": "hexagram-03-zhun_video.mp4",
+    "slides": "hexagram-03-zhun_slides.pdf",
+    "cover_4x3": "hexagram-03-zhun_cover_4x3.png",
+    "cover_3x4": "hexagram-03-zhun_cover_3x4.png"
+  },
+  "assets_status": {
+    "video": "present",
+    "slides": "present",
+    "cover_4x3": "missing",
+    "cover_3x4": "missing"
+  },
+  "ready_to_publish": false,
+  "timestamp": "2026-04-16T23:15:18+07:00"
+}

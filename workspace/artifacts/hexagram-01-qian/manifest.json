@@ -1,0 +1,26 @@
+{
+  "id": "hexagram-01-qian",
+  "type": "hexagram",
+  "book": "易经",
+  "sequence": 1,
+  "title_zh": "第一卦 乾 — 天",
+  "title_en": "Hexagram 01: Qian — Force / Heaven",
+  "name_zh": "乾",
+  "name_pinyin": "qian",
+  "language": "zh",
+  "source_article": "workspace/易经/hexagrams/all/hexagram-01-qian.md",
+  "assets": {
+    "video": "hexagram-01-qian_video.mp4",
+    "slides": "hexagram-01-qian_slides.pdf",
+    "cover_4x3": "hexagram-01-qian_cover_4x3.png",
+    "cover_3x4": "hexagram-01-qian_cover_3x4.png"
+  },
+  "assets_status": {
+    "video": "present",
+    "slides": "present",
+    "cover_4x3": "missing",
+    "cover_3x4": "missing"
+  },
+  "ready_to_publish": false,
+  "timestamp": "2026-04-16T23:15:18+07:00"
+}

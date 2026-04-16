@@ -1,0 +1,26 @@
+{
+  "id": "hexagram-53-jian",
+  "type": "hexagram",
+  "book": "易经",
+  "sequence": 53,
+  "title_zh": "第五十三卦 漸 — 风山",
+  "title_en": "Hexagram 53: Jian — Infiltrating / Wind over Mountain",
+  "name_zh": "漸",
+  "name_pinyin": "jian",
+  "language": "zh",
+  "source_article": "workspace/易经/hexagrams/all/hexagram-53-jian.md",
+  "assets": {
+    "video": "hexagram-53-jian_video.mp4",
+    "slides": "hexagram-53-jian_slides.pdf",
+    "cover_4x3": "hexagram-53-jian_cover_4x3.png",
+    "cover_3x4": "hexagram-53-jian_cover_3x4.png"
+  },
+  "assets_status": {
+    "video": "missing",
+    "slides": "missing",
+    "cover_4x3": "missing",
+    "cover_3x4": "missing"
+  },
+  "ready_to_publish": false,
+  "timestamp": "2026-04-16T23:15:18+07:00"
+}

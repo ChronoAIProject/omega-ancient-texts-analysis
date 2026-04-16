@@ -1,0 +1,26 @@
+{
+  "id": "hexagram-51-zhen",
+  "type": "hexagram",
+  "book": "易经",
+  "sequence": 51,
+  "title_zh": "第五十一卦 震 — 雷",
+  "title_en": "Hexagram 51: Zhen — Shake / Thunder",
+  "name_zh": "震",
+  "name_pinyin": "zhen",
+  "language": "zh",
+  "source_article": "workspace/易经/hexagrams/all/hexagram-51-zhen.md",
+  "assets": {
+    "video": "hexagram-51-zhen_video.mp4",
+    "slides": "hexagram-51-zhen_slides.pdf",
+    "cover_4x3": "hexagram-51-zhen_cover_4x3.png",
+    "cover_3x4": "hexagram-51-zhen_cover_3x4.png"
+  },
+  "assets_status": {
+    "video": "missing",
+    "slides": "missing",
+    "cover_4x3": "missing",
+    "cover_3x4": "missing"
+  },
+  "ready_to_publish": false,
+  "timestamp": "2026-04-16T23:15:18+07:00"
+}

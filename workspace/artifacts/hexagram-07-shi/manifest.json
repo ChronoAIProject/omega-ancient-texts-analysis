@@ -1,0 +1,26 @@
+{
+  "id": "hexagram-07-shi",
+  "type": "hexagram",
+  "book": "易经",
+  "sequence": 7,
+  "title_zh": "第七卦 師 — 地水",
+  "title_en": "Hexagram 07: Shi — Leading / Earth over Water",
+  "name_zh": "師",
+  "name_pinyin": "shi",
+  "language": "zh",
+  "source_article": "workspace/易经/hexagrams/all/hexagram-07-shi.md",
+  "assets": {
+    "video": "hexagram-07-shi_video.mp4",
+    "slides": "hexagram-07-shi_slides.pdf",
+    "cover_4x3": "hexagram-07-shi_cover_4x3.png",
+    "cover_3x4": "hexagram-07-shi_cover_3x4.png"
+  },
+  "assets_status": {
+    "video": "present",
+    "slides": "present",
+    "cover_4x3": "missing",
+    "cover_3x4": "missing"
+  },
+  "ready_to_publish": false,
+  "timestamp": "2026-04-16T23:15:18+07:00"
+}

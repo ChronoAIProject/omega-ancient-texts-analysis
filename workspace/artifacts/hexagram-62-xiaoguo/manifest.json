@@ -1,0 +1,26 @@
+{
+  "id": "hexagram-62-xiaoguo",
+  "type": "hexagram",
+  "book": "易经",
+  "sequence": 62,
+  "title_zh": "第六十二卦 小過 — 雷山",
+  "title_en": "Hexagram 62: Xiaoguo — Small Exceeding / Thunder over Mountain",
+  "name_zh": "小過",
+  "name_pinyin": "xiaoguo",
+  "language": "zh",
+  "source_article": "workspace/易经/hexagrams/all/hexagram-62-xiaoguo.md",
+  "assets": {
+    "video": "hexagram-62-xiaoguo_video.mp4",
+    "slides": "hexagram-62-xiaoguo_slides.pdf",
+    "cover_4x3": "hexagram-62-xiaoguo_cover_4x3.png",
+    "cover_3x4": "hexagram-62-xiaoguo_cover_3x4.png"
+  },
+  "assets_status": {
+    "video": "missing",
+    "slides": "missing",
+    "cover_4x3": "missing",
+    "cover_3x4": "missing"
+  },
+  "ready_to_publish": false,
+  "timestamp": "2026-04-16T23:15:18+07:00"
+}

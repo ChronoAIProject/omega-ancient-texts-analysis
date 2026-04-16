@@ -1,0 +1,26 @@
+{
+  "id": "hexagram-61-zhongfu",
+  "type": "hexagram",
+  "book": "易经",
+  "sequence": 61,
+  "title_zh": "第六十一卦 中孚 — 风泽",
+  "title_en": "Hexagram 61: Zhongfu — Inner Truth / Wind over Lake",
+  "name_zh": "中孚",
+  "name_pinyin": "zhongfu",
+  "language": "zh",
+  "source_article": "workspace/易经/hexagrams/all/hexagram-61-zhongfu.md",
+  "assets": {
+    "video": "hexagram-61-zhongfu_video.mp4",
+    "slides": "hexagram-61-zhongfu_slides.pdf",
+    "cover_4x3": "hexagram-61-zhongfu_cover_4x3.png",
+    "cover_3x4": "hexagram-61-zhongfu_cover_3x4.png"
+  },
+  "assets_status": {
+    "video": "missing",
+    "slides": "missing",
+    "cover_4x3": "missing",
+    "cover_3x4": "missing"
+  },
+  "ready_to_publish": false,
+  "timestamp": "2026-04-16T23:15:18+07:00"
+}
