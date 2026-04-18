@@ -33,16 +33,16 @@ ARTIFACTS_DIR = Path(__file__).parent.parent / "workspace" / "artifacts"
 MAX_RETRIES = 3
 RETRY_DELAY = 10
 DEFAULT_LANGUAGE_PROFILE = "zh_primary_bilingual"
-CLIENT_HTTP_TIMEOUT = 30.0       # was 10.0 — too tight, causes poll timeouts on slow responses
-SLIDES_TIMEOUT = 900
-INFOGRAPHIC_TIMEOUT = 900
-AUDIO_TIMEOUT = 900
-VIDEO_TIMEOUT = 2400             # was 1200 — NotebookLM video gen can take 20-40 min for long content
-ARTIFACT_CREATE_TIMEOUT = 60
-ARTIFACT_DOWNLOAD_TIMEOUT = 300  # was 180 — video files can be 30-60MB
-POLL_RPC_TIMEOUT = 30
-POLL_RPC_RETRIES = 3
-POLL_ERROR_SLEEP = 5
+CLIENT_HTTP_TIMEOUT = 30.0       # per-request HTTP timeout
+SLIDES_TIMEOUT = 3600            # 1 hour — no artificial ceiling
+INFOGRAPHIC_TIMEOUT = 3600
+AUDIO_TIMEOUT = 3600
+VIDEO_TIMEOUT = 7200             # 2 hours — NotebookLM video gen has no predictable upper bound
+ARTIFACT_CREATE_TIMEOUT = 120    # task creation can be slow under load
+ARTIFACT_DOWNLOAD_TIMEOUT = 600  # large video files need time
+POLL_RPC_TIMEOUT = 60            # individual poll can be slow
+POLL_RPC_RETRIES = 10            # was 3 — DNS flaps need more retries
+POLL_ERROR_SLEEP = 10            # was 5 — back off more on errors
 
 
 def build_generation_brief(language_profile: str, filepath: Path) -> str:
