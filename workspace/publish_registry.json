@@ -3567,7 +3567,8 @@
     "slides": "artifacts/synthesis/synthesis_01_no11_golden_mean_shift/synthesis_01_no11_golden_mean_shift_slides.pdf",
     "cover_4x3": "artifacts/synthesis/synthesis_01_no11_golden_mean_shift/synthesis_01_no11_golden_mean_shift_cover_4x3.png",
     "cover_3x4": "artifacts/synthesis/synthesis_01_no11_golden_mean_shift/synthesis_01_no11_golden_mean_shift_cover_3x4.png",
-    "ready": true
+    "ready": false,
+    "_note": "no_audio_stream — awaiting NotebookLM regeneration"
   },
   {
     "id": "synthesis_02_fibonacci_growth_recurrence",
@@ -3583,7 +3584,8 @@
     "slides": "artifacts/synthesis/synthesis_02_fibonacci_growth_recurrence/synthesis_02_fibonacci_growth_recurrence_slides.pdf",
     "cover_4x3": "artifacts/synthesis/synthesis_02_fibonacci_growth_recurrence/synthesis_02_fibonacci_growth_recurrence_cover_4x3.png",
     "cover_3x4": "artifacts/synthesis/synthesis_02_fibonacci_growth_recurrence/synthesis_02_fibonacci_growth_recurrence_cover_3x4.png",
-    "ready": true
+    "ready": false,
+    "_note": "no_audio_stream — awaiting NotebookLM regeneration"
   },
   {
     "id": "synthesis_03_fold_operator",
@@ -3599,7 +3601,8 @@
     "slides": "artifacts/synthesis/synthesis_03_fold_operator/synthesis_03_fold_operator_slides.pdf",
     "cover_4x3": "artifacts/synthesis/synthesis_03_fold_operator/synthesis_03_fold_operator_cover_4x3.png",
     "cover_3x4": "artifacts/synthesis/synthesis_03_fold_operator/synthesis_03_fold_operator_cover_3x4.png",
-    "ready": true
+    "ready": false,
+    "_note": "no_audio_stream — awaiting NotebookLM regeneration"
   },
   {
     "id": "synthesis_04_zeckendorf_uniqueness",
@@ -3615,7 +3618,8 @@
     "slides": "artifacts/synthesis/synthesis_04_zeckendorf_uniqueness/synthesis_04_zeckendorf_uniqueness_slides.pdf",
     "cover_4x3": "artifacts/synthesis/synthesis_04_zeckendorf_uniqueness/synthesis_04_zeckendorf_uniqueness_cover_4x3.png",
     "cover_3x4": "artifacts/synthesis/synthesis_04_zeckendorf_uniqueness/synthesis_04_zeckendorf_uniqueness_cover_3x4.png",
-    "ready": true
+    "ready": false,
+    "_note": "no_audio_stream — awaiting NotebookLM regeneration"
   },
   {
     "id": "synthesis_05_inverse_limit_modular_tower",
@@ -3631,7 +3635,8 @@
     "slides": "artifacts/synthesis/synthesis_05_inverse_limit_modular_tower/synthesis_05_inverse_limit_modular_tower_slides.pdf",
     "cover_4x3": "artifacts/synthesis/synthesis_05_inverse_limit_modular_tower/synthesis_05_inverse_limit_modular_tower_cover_4x3.png",
     "cover_3x4": "artifacts/synthesis/synthesis_05_inverse_limit_modular_tower/synthesis_05_inverse_limit_modular_tower_cover_3x4.png",
-    "ready": true
+    "ready": false,
+    "_note": "no_audio_stream — awaiting NotebookLM regeneration"
   },
   {
     "id": "synthesis_06_spectral_theory",
@@ -3647,7 +3652,8 @@
     "slides": "artifacts/synthesis/synthesis_06_spectral_theory/synthesis_06_spectral_theory_slides.pdf",
     "cover_4x3": "artifacts/synthesis/synthesis_06_spectral_theory/synthesis_06_spectral_theory_cover_4x3.png",
     "cover_3x4": "artifacts/synthesis/synthesis_06_spectral_theory/synthesis_06_spectral_theory_cover_3x4.png",
-    "ready": true
+    "ready": false,
+    "_note": "no_audio_stream — awaiting NotebookLM regeneration"
   },
   {
     "id": "synthesis_07_rate_distortion",
@@ -3663,7 +3669,8 @@
     "slides": "artifacts/synthesis/synthesis_07_rate_distortion/synthesis_07_rate_distortion_slides.pdf",
     "cover_4x3": "artifacts/synthesis/synthesis_07_rate_distortion/synthesis_07_rate_distortion_cover_4x3.png",
     "cover_3x4": "artifacts/synthesis/synthesis_07_rate_distortion/synthesis_07_rate_distortion_cover_3x4.png",
-    "ready": true
+    "ready": false,
+    "_note": "no_audio_stream — awaiting NotebookLM regeneration"
   },
   {
     "id": "synthesis_08_ring_arithmetic",
@@ -3679,7 +3686,8 @@
     "slides": "artifacts/synthesis/synthesis_08_ring_arithmetic/synthesis_08_ring_arithmetic_slides.pdf",
     "cover_4x3": "artifacts/synthesis/synthesis_08_ring_arithmetic/synthesis_08_ring_arithmetic_cover_4x3.png",
     "cover_3x4": "artifacts/synthesis/synthesis_08_ring_arithmetic/synthesis_08_ring_arithmetic_cover_3x4.png",
-    "ready": true
+    "ready": false,
+    "_note": "no_audio_stream — awaiting NotebookLM regeneration"
   },
   {
     "id": "synthesis_09_dynamical_systems",
@@ -3695,7 +3703,8 @@
     "slides": "artifacts/synthesis/synthesis_09_dynamical_systems/synthesis_09_dynamical_systems_slides.pdf",
     "cover_4x3": "artifacts/synthesis/synthesis_09_dynamical_systems/synthesis_09_dynamical_systems_cover_4x3.png",
     "cover_3x4": "artifacts/synthesis/synthesis_09_dynamical_systems/synthesis_09_dynamical_systems_cover_3x4.png",
-    "ready": true
+    "ready": false,
+    "_note": "no_audio_stream — awaiting NotebookLM regeneration"
   },
   {
     "id": "synthesis_10_fiber_scan_observation",
@@ -3711,7 +3720,8 @@
     "slides": "artifacts/synthesis/synthesis_10_fiber_scan_observation/synthesis_10_fiber_scan_observation_slides.pdf",
     "cover_4x3": "artifacts/synthesis/synthesis_10_fiber_scan_observation/synthesis_10_fiber_scan_observation_cover_4x3.png",
     "cover_3x4": "artifacts/synthesis/synthesis_10_fiber_scan_observation/synthesis_10_fiber_scan_observation_cover_3x4.png",
-    "ready": true
+    "ready": false,
+    "_note": "no_audio_stream — awaiting NotebookLM regeneration"
   },
   {
     "id": "master_Omega_Research_Papers_Overview",

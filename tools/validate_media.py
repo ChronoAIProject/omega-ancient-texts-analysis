@@ -82,12 +82,8 @@ def relative_file_label(path: Path, artifacts_root: Path) -> str:
 
 
 def discover_video_files(artifacts_root: Path) -> list[Path]:
-    video_files: list[Path] = []
-    for artifact_dir in sorted(artifacts_root.iterdir()):
-        if not artifact_dir.is_dir():
-            continue
-        video_files.extend(sorted(artifact_dir.glob(VIDEO_PATTERN)))
-    return video_files
+    """Recursively find all *_video.mp4 files under artifacts_root."""
+    return sorted(artifacts_root.rglob(VIDEO_PATTERN))
 
 
 def discover_in_dir(target_dir: Path) -> list[Path]:
