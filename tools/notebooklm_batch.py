@@ -233,7 +233,7 @@ def resolve_types(gen_type: str, gen_types: list[str] | None) -> list[str]:
     if gen_types:
         return gen_types
     if gen_type == "all":
-        return ["slides", "infographic", "audio"]
+        return ["slides", "infographic", "audio", "video"]
     return [gen_type]
 
 
@@ -294,7 +294,15 @@ async def process_file(
 ):
     """Process a single file through NotebookLM."""
     slug = normalize_slug(filepath.stem)
-    output_dir = ARTIFACTS_DIR / slug
+    # After restructure_artifacts.py, artifact dirs live under per-book
+    # subdirectories (e.g. artifacts/易经/hexagram-01-qian/).
+    # Search for existing dir first; fall back to flat ARTIFACTS_DIR.
+    existing = list(ARTIFACTS_DIR.rglob(slug))
+    existing_dirs = [p for p in existing if p.is_dir()]
+    if existing_dirs:
+        output_dir = existing_dirs[0]
+    else:
+        output_dir = ARTIFACTS_DIR / slug
     output_dir.mkdir(parents=True, exist_ok=True)
     slide_language = "en" if language_profile == "en" else "zh"
     types_to_run = resolve_types(gen_type, gen_types)
