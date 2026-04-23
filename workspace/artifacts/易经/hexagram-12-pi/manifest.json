@@ -22,5 +22,11 @@
     "cover_3x4": "missing"
   },
   "ready_to_publish": false,
-  "timestamp": "2026-04-17T00:00:55+07:00"
+  "timestamp": "2026-04-19T19:54:56",
+  "source": "workspace/易经/hexagrams/all/hexagram-12-pi.md",
+  "notebook_id": "563f6847-5ba5-4337-87ab-3647f8a3d920",
+  "language_profile": "zh_primary_bilingual",
+  "slides": "/Users/lexa/Desktop/lexa/omega/omega-ancient-texts-analysis/workspace/artifacts/易经/hexagram-12-pi/hexagram-12-pi_slides.pdf",
+  "audio": "/Users/lexa/Desktop/lexa/omega/omega-ancient-texts-analysis/workspace/artifacts/易经/hexagram-12-pi/hexagram-12-pi_audio.wav",
+  "infographic": "error: infographic task  timed out after 3600s"
 }

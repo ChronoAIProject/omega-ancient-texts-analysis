@@ -18,6 +18,7 @@ from pathlib import Path
 
 REPO = "the-omega-institute/Omega-paper-series"
 ARTIFACTS_DIR = Path(__file__).parent.parent / "workspace" / "artifacts"
+MEDIA_SUFFIXES = {".mp4", ".pdf", ".png", ".wav"}
 
 # Route artifacts to releases by filename pattern
 def release_for_file(filename: str) -> str:
@@ -67,6 +68,17 @@ def gh(*args) -> subprocess.CompletedProcess:
     return subprocess.run(["gh"] + list(args), capture_output=True, text=True, timeout=300)
 
 
+def require_gh_success(result: subprocess.CompletedProcess, action: str) -> None:
+    if result.returncode == 0:
+        return
+    detail = (result.stderr or result.stdout).strip()
+    print(f"Error: gh failed while trying to {action}.", file=sys.stderr)
+    if detail:
+        print(detail[:1000], file=sys.stderr)
+    print("Run: gh auth login -h github.com", file=sys.stderr)
+    raise SystemExit(1)
+
+
 def ensure_release(tag: str = None):
     """Create release(s) if they don't exist."""
     tags = [tag] if tag else ["cultural-media-v1", "papers-media-v1", "master-videos-v1"]
@@ -79,17 +91,33 @@ def ensure_release(tag: str = None):
         r = gh("release", "view", t, "-R", REPO)
         if r.returncode != 0:
             print(f"Creating release {t}...")
-            gh("release", "create", t, "-R", REPO, "--title", titles.get(t, t), "--notes", f"Assets for {t}")
+            created = gh(
+                "release",
+                "create",
+                t,
+                "-R",
+                REPO,
+                "--title",
+                titles.get(t, t),
+                "--notes",
+                f"Assets for {t}",
+            )
+            require_gh_success(created, f"create release {t}")
 
 
-def list_existing_assets_all() -> dict[str, set]:
+def list_existing_assets_all(required: bool = True) -> dict[str, set]:
     """Get names of already-uploaded assets for each release."""
     result = {}
     for tag in ["cultural-media-v1", "papers-media-v1", "master-videos-v1"]:
         r = gh("release", "view", tag, "-R", REPO, "--json", "assets", "--jq", ".assets[].name")
         if r.returncode == 0 and r.stdout.strip():
             result[tag] = set(r.stdout.strip().split("\n"))
+        elif r.returncode == 0:
+            result[tag] = set()
+        elif required:
+            require_gh_success(r, f"list assets for release {tag}")
         else:
+            print(f"  [WARN] Could not list {tag}; dry run will assume no existing assets")
             result[tag] = set()
     return result
 
@@ -99,43 +127,53 @@ def list_existing_assets() -> set:
     return list_existing_assets_all().get("cultural-media-v1", set())
 
 
+def iter_media_files() -> list[Path]:
+    """Recursively list media artifacts from the current hierarchical layout."""
+    return sorted(
+        path
+        for path in ARTIFACTS_DIR.rglob("*")
+        if path.is_file() and path.suffix in MEDIA_SUFFIXES
+    )
+
+
 def upload_artifacts(track_filter: str = None, dry_run: bool = False):
     """Upload all artifacts to the appropriate release (routed by filename)."""
-    existing_by_release = list_existing_assets_all()
+    existing_by_release = list_existing_assets_all(required=not dry_run)
     print(f"  Existing: cultural={len(existing_by_release['cultural-media-v1'])}, "
           f"papers={len(existing_by_release['papers-media-v1'])}, "
           f"master={len(existing_by_release['master-videos-v1'])}")
 
     uploaded_by_release = {"cultural-media-v1": 0, "papers-media-v1": 0, "master-videos-v1": 0}
-    for artifact_dir in sorted(ARTIFACTS_DIR.iterdir()):
-        if not artifact_dir.is_dir():
+    seen_by_release = {tag: set(names) for tag, names in existing_by_release.items()}
+    for f in iter_media_files():
+        target_release = release_for_file(f.name)
+        if f.name in seen_by_release[target_release]:
+            continue
+        # Skip auto-named NotebookLM files if canonical version already exists.
+        if canonical_version_exists(f.name, seen_by_release[target_release]):
+            continue
+        if track_filter and track_filter not in f.name:
             continue
 
-        for f in sorted(artifact_dir.iterdir()):
-            if f.suffix not in (".mp4", ".pdf", ".png", ".wav"):
-                continue
-            target_release = release_for_file(f.name)
-            if f.name in existing_by_release[target_release]:
-                continue
-            # Skip auto-named NotebookLM files if canonical version already exists
-            if canonical_version_exists(f.name, existing_by_release[target_release]):
-                continue
-            if track_filter and track_filter not in f.name:
-                continue
-
-            if dry_run:
-                print(f"  [DRY RUN] {target_release} ← {f.name} ({f.stat().st_size // 1024}KB)")
+        if dry_run:
+            rel = f.relative_to(ARTIFACTS_DIR).as_posix()
+            print(f"  [DRY RUN] {target_release} ← {rel} ({f.stat().st_size // 1024}KB)")
+            uploaded_by_release[target_release] += 1
+            seen_by_release[target_release].add(f.name)
+        else:
+            rel = f.relative_to(ARTIFACTS_DIR).as_posix()
+            print(f"  → {target_release}: {rel} ({f.stat().st_size // 1024}KB)")
+            r = gh("release", "upload", target_release, str(f), "-R", REPO, "--clobber")
+            if r.returncode == 0:
+                print(f"    ✓ uploaded")
+                uploaded_by_release[target_release] += 1
+                seen_by_release[target_release].add(f.name)
             else:
-                print(f"  → {target_release}: {f.name} ({f.stat().st_size // 1024}KB)")
-                r = gh("release", "upload", target_release, str(f), "-R", REPO, "--clobber")
-                if r.returncode == 0:
-                    print(f"    ✓ uploaded")
-                    uploaded_by_release[target_release] += 1
-                else:
-                    print(f"    ✗ failed: {r.stderr[:200]}")
+                print(f"    ✗ failed: {r.stderr[:200]}")
 
     total = sum(uploaded_by_release.values())
-    print(f"\n{'[DRY RUN] ' if dry_run else ''}Uploaded: {total} new assets")
+    label = "Would upload" if dry_run else "Uploaded"
+    print(f"\n{'[DRY RUN] ' if dry_run else ''}{label}: {total} new assets")
     for t, n in uploaded_by_release.items():
         if n:
             print(f"  {t}: {n}")
@@ -147,7 +185,8 @@ def main():
     parser.add_argument("--track", help="Filter by track name")
     args = parser.parse_args()
 
-    ensure_release()
+    if not args.dry_run:
+        ensure_release()
     upload_artifacts(track_filter=args.track, dry_run=args.dry_run)
 
     # Print download URLs
