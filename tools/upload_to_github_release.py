@@ -12,6 +12,7 @@ Usage:
 
 import argparse
 import json
+import re
 import subprocess
 import sys
 from pathlib import Path
@@ -60,6 +61,15 @@ def canonical_version_exists(filename: str, existing_names: set) -> bool:
             if canonical_name in existing_names:
                 return True
     return False
+
+
+def normalize_asset_name(filename: str) -> str:
+    """Normalize a local filename to the form used by GitHub CLI release assets."""
+    # gh release upload normalizes characters like spaces/colon into dots.
+    normalized = re.sub(r"[^A-Za-z0-9._-]", ".", filename)
+    normalized = re.sub(r"\.+", ".", normalized)
+    normalized = normalized.strip(".")
+    return normalized
 
 TAG = "cultural-media-v1"  # default for --track filtering; actual routing via release_for_file
 
@@ -145,9 +155,14 @@ def upload_artifacts(track_filter: str = None, dry_run: bool = False):
 
     uploaded_by_release = {"cultural-media-v1": 0, "papers-media-v1": 0, "master-videos-v1": 0}
     seen_by_release = {tag: set(names) for tag, names in existing_by_release.items()}
+    seen_by_release_norm = {
+        tag: {normalize_asset_name(name) for name in names}
+        for tag, names in existing_by_release.items()
+    }
     for f in iter_media_files():
         target_release = release_for_file(f.name)
-        if f.name in seen_by_release[target_release]:
+        normalized_name = normalize_asset_name(f.name)
+        if f.name in seen_by_release[target_release] or normalized_name in seen_by_release_norm[target_release]:
             continue
         # Skip auto-named NotebookLM files if canonical version already exists.
         if canonical_version_exists(f.name, seen_by_release[target_release]):
@@ -160,6 +175,7 @@ def upload_artifacts(track_filter: str = None, dry_run: bool = False):
             print(f"  [DRY RUN] {target_release} ← {rel} ({f.stat().st_size // 1024}KB)")
             uploaded_by_release[target_release] += 1
             seen_by_release[target_release].add(f.name)
+            seen_by_release_norm[target_release].add(normalized_name)
         else:
             rel = f.relative_to(ARTIFACTS_DIR).as_posix()
             print(f"  → {target_release}: {rel} ({f.stat().st_size // 1024}KB)")
@@ -168,6 +184,7 @@ def upload_artifacts(track_filter: str = None, dry_run: bool = False):
                 print(f"    ✓ uploaded")
                 uploaded_by_release[target_release] += 1
                 seen_by_release[target_release].add(f.name)
+                seen_by_release_norm[target_release].add(normalized_name)
             else:
                 print(f"    ✗ failed: {r.stderr[:200]}")
 
