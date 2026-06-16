@@ -4,6 +4,14 @@ Auto-populated by broadcast-local exports. Inputs are videos, captions, covers, 
 
 Upstream producer: `../../../omega-broadcast-local/` (local-only; may not exist on every machine).
 
+## Program Board
+
+Current human-facing broadcast board:
+
+[`PROGRAM_BOARD.md`](PROGRAM_BOARD.md)
+
+Use it for data trends, style shifts, scope, relative performance, and whether new measures were actually implemented.
+
 ## Buckets
 
 ```text
